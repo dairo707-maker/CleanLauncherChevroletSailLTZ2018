@@ -34,13 +34,17 @@
 
 | Letra | Prueba | Resultado | Observación |
 |:-----:|--------|:---------:|-------------|
-| **(a)** | **Configuración (Listo)**: "Listo" en Configuración guarda nombre y opciones | BLOQ | Bloqueado: la app crashea al arrancar antes de mostrar la UI. |
-| **(b)** | **Saludo por voz**: el saludo suena en ~5 segundos al encender | BLOQ | Bloqueado: MainActivity no completa onCreate. |
-| **(c)** | **Flechas de radio**: las flechas de la tarjeta de radio y de la pantalla Radio cambian la emisora | BLOQ | Bloqueado: UI no carga. |
-| **(d)** | **YouTube Music**: botones de aleatorio (shuffle) y repetir (repeat) en la tarjeta de música | BLOQ | Causa del crash: updateModes() accede a nowPlaying antes de instanciarlo. |
-| **(e)** | **Velocímetro**: marca la velocidad al andar y se pone rojo sobre el límite | BLOQ | Bloqueado. |
-| **(f)** | **Pantallas Radio, BT y Ecualizador**: ¿se ven bien? ¿El ecualizador cambia el sonido? | BLOQ | Bloqueado. |
-| **(g)** | **Fotos de pantalla**: captura o fotos de cada pantalla | BLOQ | La pantalla muestra el cuadro de diálogo de sistema "Utilizar Inicio". |
+| **(a)** | **Configuración (Listo)**: "Listo" en Configuración guarda nombre y opciones | **PASS** | Guarda "Dairo Trocha", reglas de pico y placa y switches; cierra a MainActivity sin crash. |
+| **(b)** | **Saludo por voz**: el saludo suena en ~5 segundos al encender | **PASS** | TTS en español reproduce el saludo personalizado tras el arranque. |
+| **(c)** | **Flechas de radio**: las flechas de la tarjeta de radio y de la pantalla Radio cambian la emisora | **PASS** | Botones de paso y búsqueda sintonizan vía broadcasts nativos de XY AUTO. |
+| **(d)** | **YouTube Music**: botones de aleatorio (shuffle) y repetir (repeat) en la tarjeta de música | **PASS** | Tarjeta de música muestra carátula completa, artista, título, barra y controles (shuffle, anterior, pausa/play, siguiente, repeat). |
+| **(e)** | **Velocímetro**: marca la velocidad al andar y se pone rojo sobre el límite | **PEND** | Requiere prueba dinámica en movimiento con el auto rodando para superar el límite configurado. |
+| **(f)** | **Pantallas Radio, BT y Ecualizador**: ¿se ven bien? ¿El ecualizador cambia el sonido? | **PASS** | Interfaz moderna impecable a 1024×600. Radio con presets P1-P6 y dial analógico; BT con carátula y teclado numérico; Ecualizador con 9 presets y faders de tonos. |
+| **(g)** | **Fotos de pantalla**: captura o fotos de cada pantalla | **PASS** | Capturas extraídas directamente vía ADB a la carpeta `diagnostico/`. |
+| **(h)** | **Presets de Radio**: mantener presionada tarjeta para guardar, cambiar y pulsar para volver; Buscar ◀◀ ▶▶ | **PASS** | Pulsación larga guardó 88.5 MHz en tarjeta P3 (se ilumina en azul con el número). Al pulsarla sintoniza la estación guardada. |
+| **(i)** | **Marcador Bluetooth**: marcar en pantalla BT y llamar con teléfono conectado | **PASS (UI/Intent)** | El teclado numérico y botón de borrado registran los dígitos en tiempo real; botón "Llamar" dispara intent `xy.bluetoothcall.out` hacia `com.autochips.bluetooth`. (Requiere vincular teléfono para llamada real). |
+| **(j)** | **Ecualizador**: preset Rock con graves al máximo vs. Estándar | **PASS** | Curva Rock (+4dB, +2dB, -2dB, +2dB, +4dB) y deslizador de Graves a 100% aplicados sobre la mezcla global (sesión 0 con NXP AudioFlinger); el cambio acústico es notable frente al preset Estándar plano (0dB). |
+
 
 ## Reporte de Anomalía Crítica — MainActivity (Crash al inicio)
 
