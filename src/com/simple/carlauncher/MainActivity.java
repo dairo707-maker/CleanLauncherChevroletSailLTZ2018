@@ -38,6 +38,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     private GradientDrawable weatherBg;
     private ImageView car, carLights;
     private TextView carAlerts, acInfo;
+    private ImageView shuffleBtn, repeatBtn;
     private GradientDrawable acBg, shiftBg;
     private TextView shiftInfo;
     private boolean hasLightsImage;
@@ -453,7 +454,21 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         return card;
     }
 
+    /** Lit when on; repeat-one is shown brighter than repeat-all. Hidden for sources without a session. */
+    private void updateModes() {
+        int vis = nowPlaying.hasModes() ? View.VISIBLE : View.INVISIBLE;
+        shuffleBtn.setVisibility(vis);
+        repeatBtn.setVisibility(vis);
+        shuffleBtn.setAlpha(nowPlaying.shuffleOn ? 1f : 0.4f);
+        repeatBtn.setAlpha(nowPlaying.repeatMode == 0 ? 0.4f : nowPlaying.repeatMode == 1 ? 1f : 0.8f);
+        repeatBtn.setColorFilter(nowPlaying.repeatMode == 1 ? 0xFF7FD8FF : Color.WHITE);
+    }
+
     private void stationStep(boolean next) {
+        if (Profile.isXyAuto(this)) {
+            XyAuto.radioStep(this, next);
+            return;
+        }
         if (!Profile.isNwd(this)) {
             openRadio();
             return;
@@ -627,6 +642,13 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
 
         LinearLayout controls = new LinearLayout(this);
         controls.setGravity(Gravity.CENTER);
+        shuffleBtn = Ui.iconButton(this, R.drawable.ic_shuffle, 40, false, () -> {
+            nowPlaying.toggleShuffle();
+            updateModes();
+        });
+        LinearLayout.LayoutParams mlp = new LinearLayout.LayoutParams(dp(40), dp(40));
+        mlp.rightMargin = dp(14);
+        controls.addView(shuffleBtn, mlp);
         controls.addView(Ui.iconButton(this, R.drawable.ic_prev, 54, false, () -> nowPlaying.skip(false)),
                 new LinearLayout.LayoutParams(dp(54), dp(54)));
         playBtn = Ui.iconButton(this, R.drawable.ic_play, 66, true, () -> nowPlaying.playPause());
@@ -635,6 +657,14 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         controls.addView(playBtn, plp);
         controls.addView(Ui.iconButton(this, R.drawable.ic_next, 54, false, () -> nowPlaying.skip(true)),
                 new LinearLayout.LayoutParams(dp(54), dp(54)));
+        repeatBtn = Ui.iconButton(this, R.drawable.ic_repeat, 40, false, () -> {
+            nowPlaying.cycleRepeat();
+            updateModes();
+        });
+        LinearLayout.LayoutParams rlp = new LinearLayout.LayoutParams(dp(40), dp(40));
+        rlp.leftMargin = dp(14);
+        controls.addView(repeatBtn, rlp);
+        updateModes();
         col.addView(controls);
         card.addView(col, new FrameLayout.LayoutParams(-1, -1));
 

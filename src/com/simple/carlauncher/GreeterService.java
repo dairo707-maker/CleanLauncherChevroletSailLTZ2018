@@ -28,7 +28,7 @@ import java.util.List;
 public class GreeterService extends Service {
 
     private static final String TAG = "Greeter";
-    private static final long DELAY_MS = 20_000;
+    private static final long DELAY_MS = 4_000; // short: the speech engine is warmed up at start
     private static final long MIN_INTERVAL_MS = 60_000; // only skip duplicate wake signals
 
     // MCU source ids (ApplicationList.xml "Source") of the last audio source before ACC off.
@@ -45,6 +45,7 @@ public class GreeterService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        Tts.warm(this); // loading the Spanish voice takes seconds on this CPU; do it before the greeting
         radio.bind(this);
         sound.bind(this, () -> handler.post(() -> EqAuto.apply(this, sound)));
         IntentFilter f = new IntentFilter();

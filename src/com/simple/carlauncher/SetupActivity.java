@@ -112,6 +112,14 @@ public class SetupActivity extends Activity {
         picoPlaca = toggle(card, "Recordar pico y placa (Cartagena)", Profile.picoPlacaEnabled(this));
         speedVol = toggle(card, "Subir el volumen según la velocidad (GPS)", SpeedVolume.enabled(this));
         readMsgs = toggle(card, "Leer mensajes en voz alta", Profile.prefs(this).getBoolean("read_messages", false));
+        fatigue = toggle(card, "Avisar pausas por cansancio (2 h manejando)", DriverAssist.fatigueEnabled(this));
+        speedAlert = toggle(card, "Avisar por voz si paso el límite de velocidad", DriverAssist.speedEnabled(this));
+        card.addView(label("Límite de velocidad (km/h)"));
+        speedLimit = new EditText(this);
+        speedLimit.setInputType(InputType.TYPE_CLASS_NUMBER);
+        speedLimit.setText(String.valueOf(DriverAssist.limit(this)));
+        speedLimit.setTextColor(Color.WHITE);
+        card.addView(speedLimit);
         card.addView(label("Último dígito de la placa"));
         plate = new EditText(this);
         plate.setInputType(InputType.TYPE_CLASS_NUMBER);

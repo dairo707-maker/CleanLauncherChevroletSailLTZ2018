@@ -22,10 +22,18 @@ final class Tts {
     private static boolean ready;
     private static final List<String> pending = new ArrayList<>();
 
+    /** Starts the engine ahead of time so the first phrase is not delayed. */
+    static synchronized void warm(Context c) {
+        if (tts != null) return;
+        say(c, " ");
+        pending.clear();
+    }
+
     /** Speaks after whatever is already being said. */
     static synchronized void say(Context c, String text) {
-        if (text == null || text.trim().isEmpty()) return;
+        if (text == null) return;
         if (ready) {
+            if (text.trim().isEmpty()) return;
             tts.speak(text, TextToSpeech.QUEUE_ADD, new Bundle(), "cl" + System.nanoTime());
             return;
         }

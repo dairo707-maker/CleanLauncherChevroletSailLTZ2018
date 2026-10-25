@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.media.AudioManager;
 import android.media.MediaMetadata;
 import android.media.session.MediaController;
+import android.os.Bundle;
 import android.media.session.MediaSessionManager;
 import android.media.session.PlaybackState;
 import android.os.SystemClock;
@@ -266,6 +267,52 @@ final class NowPlaying {
     /** Duration (ms) of the app session's track; -1 if unknown. */
     long duration() {
         return current() == Source.APP ? app.duration : -1;
+    }
+
+    /**
+     * Shuffle/repeat of the playing app. The framework MediaController has no such commands, so use
+     * the app's own custom action (YouTube Music, Spotify publish them) or the media-compat command.
+     */
+    boolean hasModes() {
+        return controller != null;
+    }
+
+    boolean shuffleOn;
+    int repeatMode; // 0 none, 1 all, 2 one (media-compat values)
+
+    void toggleShuffle() {
+        if (!hasModes()) return;
+        shuffleOn = !shuffleOn;
+        if (!customAction("shuffle")) {
+            Bundle b = new Bundle();
+            b.putInt("android.support.v4.media.session.action.ARGUMENT_SHUFFLE_MODE", shuffleOn ? 1 : 0);
+            controller.getTransportControls().sendCustomAction(
+                    "android.support.v4.media.session.action.SET_SHUFFLE_MODE", b);
+        }
+    }
+
+    /** None -> all -> one -> none. */
+    void cycleRepeat() {
+        if (!hasModes()) return;
+        repeatMode = repeatMode == 0 ? 1 : repeatMode == 1 ? 2 : 0;
+        if (!customAction("repeat")) {
+            Bundle b = new Bundle();
+            b.putInt("android.support.v4.media.session.action.ARGUMENT_REPEAT_MODE", repeatMode);
+            controller.getTransportControls().sendCustomAction(
+                    "android.support.v4.media.session.action.SET_REPEAT_MODE", b);
+        }
+    }
+
+    private boolean customAction(String key) {
+        PlaybackState st = controller.getPlaybackState();
+        if (st == null || st.getCustomActions() == null) return false;
+        for (PlaybackState.CustomAction a : st.getCustomActions()) {
+            if (a.getAction().toLowerCase(java.util.Locale.US).contains(key)) {
+                controller.getTransportControls().sendCustomAction(a, a.getExtras());
+                return true;
+            }
+        }
+        return false;
     }
 
     void playPause() {

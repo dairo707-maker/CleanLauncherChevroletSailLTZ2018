@@ -31,6 +31,24 @@ final class XyAuto {
         return p.length == 2 ? p : null;
     }
 
+    /**
+     * Next/previous saved station without opening the factory app: its FmBroadcastReceiver takes
+     * media buttons. If the radio is not playing yet, open it instead (that turns the tuner on).
+     */
+    static void radioStep(Context c, boolean next) {
+        if (fmStation(c) == null) {
+            Ui.launch(c, RADIO);
+            return;
+        }
+        int code = next ? android.view.KeyEvent.KEYCODE_MEDIA_NEXT : android.view.KeyEvent.KEYCODE_MEDIA_PREVIOUS;
+        for (int action : new int[]{android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.ACTION_UP}) {
+            Intent i = new Intent(Intent.ACTION_MEDIA_BUTTON).setPackage("com.android.fmradio");
+            i.putExtra(Intent.EXTRA_KEY_EVENT, new android.view.KeyEvent(action, code));
+            c.sendBroadcast(i);
+        }
+        Log.d(TAG, "radio step next=" + next);
+    }
+
     static final String ACC_ON = "xy.android.acc.on";
     static final String ACC_OFF = "xy.android.acc.off";
     /** Headlight switch; sent by system_server on every change. Its extras are not documented. */
