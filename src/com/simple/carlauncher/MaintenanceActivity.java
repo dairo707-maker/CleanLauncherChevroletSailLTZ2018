@@ -66,11 +66,19 @@ public class MaintenanceActivity extends Activity {
 
     private void refresh() {
         list.removeAllViews();
-        if (!Odometer.isConfigured(this)) {
-            TextView hint = Ui.text(this, "Configura el kilometraje en Aceite para medir también por km.", 14, 0xB3FFFFFF);
-            hint.setPadding(dp(4), dp(4), dp(4), dp(10));
-            list.addView(hint);
-        }
+        // Odometer and oil settings live in the oil screen; this used to be unreachable from here.
+        TextView odo = Ui.text(this, Odometer.isConfigured(this)
+                ? "Kilometraje actual: " + OilActivity.fmt(Odometer.currentKm(this)) + " km  ·  ajustar / aceite ›"
+                : "Toca aquí para poner el kilometraje del tablero (así se mide también por km) ›", 15, Color.WHITE);
+        odo.setPadding(dp(16), dp(14), dp(16), dp(14));
+        GradientDrawable obg = new GradientDrawable();
+        obg.setCornerRadius(dp(14));
+        obg.setColor(Odometer.isConfigured(this) ? 0x334F7BFF : 0xCCFF9800);
+        odo.setBackground(obg);
+        odo.setOnClickListener(v -> startActivity(new Intent(this, OilActivity.class)));
+        LinearLayout.LayoutParams olp = new LinearLayout.LayoutParams(-1, -2);
+        olp.bottomMargin = dp(10);
+        list.addView(odo, olp);
         List<Maintenance.Item> items = Maintenance.items(this);
         for (Maintenance.Item it : items) list.addView(row(it));
     }
@@ -124,9 +132,40 @@ public class MaintenanceActivity extends Activity {
                     Toast.makeText(this, "¡Listo! Registrado: " + it.name, Toast.LENGTH_SHORT).show();
                     refresh();
                 })
-                .setNeutralButton("Editar intervalo", (d, w) -> editInterval(it))
-                .setNegativeButton("Cancelar", null)
+                .setNeutralButton("Otra fecha…", (d, w) -> pickDate(it))
+                .setNegativeButton("Editar intervalo", (d, w) -> editInterval(it))
                 .show();
+    }
+
+    /** Done on another day: pick the date, then the km of that day (or leave it empty). */
+    private void pickDate(Maintenance.Item it) {
+        java.util.Calendar now = java.util.Calendar.getInstance();
+        android.app.DatePickerDialog dp = new android.app.DatePickerDialog(this,
+                android.R.style.Theme_Material_Dialog_Alert, (v, y, m, d) -> {
+            java.util.Calendar when = java.util.Calendar.getInstance();
+            when.set(y, m, d, 12, 0, 0);
+            EditText km = number("Kilometraje ese día (opcional)", 0);
+            km.setText("");
+            LinearLayout box = new LinearLayout(this);
+            box.setPadding(dp(24), dp(8), dp(24), 0);
+            box.addView(km, new LinearLayout.LayoutParams(-1, -2));
+            new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert)
+                    .setTitle(it.name + " · " + d + "/" + (m + 1) + "/" + y)
+                    .setView(box)
+                    .setPositiveButton("Registrar", (dd, w) -> {
+                        int k = -1;
+                        try {
+                            k = Integer.parseInt(km.getText().toString().trim());
+                        } catch (NumberFormatException ignored) { }
+                        Maintenance.markDone(this, it.id, when, k);
+                        Toast.makeText(this, "Registrado: " + it.name, Toast.LENGTH_SHORT).show();
+                        refresh();
+                    })
+                    .setNegativeButton("Cancelar", null)
+                    .show();
+        }, now.get(java.util.Calendar.YEAR), now.get(java.util.Calendar.MONTH), now.get(java.util.Calendar.DAY_OF_MONTH));
+        dp.getDatePicker().setMaxDate(System.currentTimeMillis());
+        dp.show();
     }
 
     private void editInterval(Maintenance.Item it) {

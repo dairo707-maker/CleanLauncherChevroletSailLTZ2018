@@ -174,17 +174,22 @@ final class Maintenance {
 
     /** Registers the item as done today at the current odometer reading and logs it to the CSV. */
     static void markDone(Context c, String id) {
-        long now = System.currentTimeMillis();
-        int km = Odometer.isConfigured(c) ? Odometer.currentKm(c) : -1;
+        markDone(c, id, Calendar.getInstance(), Odometer.isConfigured(c) ? Odometer.currentKm(c) : -1);
+    }
+
+    /** Done on a past date (e.g. registered late) at that odometer reading; km -1 = unknown. */
+    static void markDone(Context c, String id, Calendar when, int km) {
+        long ms = when.getTimeInMillis();
         if ("aceite".equals(id)) {
-            if (km >= 0) Odometer.setLastChangeKm(c, km);
-            else Odometer.prefs(c).edit().putLong("last_change_ms", now).apply();
+            SharedPreferences.Editor e = Odometer.prefs(c).edit().putLong("last_change_ms", ms);
+            if (km >= 0) e.putInt("last_change_km", km);
+            e.apply();
         } else {
-            SharedPreferences.Editor e = prefs(c).edit().putLong("ms_" + id, now);
+            SharedPreferences.Editor e = prefs(c).edit().putLong("ms_" + id, ms);
             if (km >= 0) e.putInt("km_" + id, km);
             e.apply();
         }
-        logDone(c, id);
+        logDone(c, id, when, km);
     }
 
     static void setInterval(Context c, String id, int km, int months) {
@@ -195,11 +200,14 @@ final class Maintenance {
 
     /** Appends a row to mantenimiento.csv: fecha,km,item,categoria,intervalo_km,intervalo_meses. */
     static void logDone(Context c, String id) {
+        logDone(c, id, Calendar.getInstance(), Odometer.isConfigured(c) ? Odometer.currentKm(c) : -1);
+    }
+
+    static void logDone(Context c, String id, Calendar when, int km) {
         for (Item it : items(c)) {
             if (!it.id.equals(id)) continue;
-            int km = Odometer.isConfigured(c) ? Odometer.currentKm(c) : -1;
             FuelLog.append(FuelLog.maintFile(c), "fecha,km,item,categoria,intervalo_km,intervalo_meses",
-                    String.format(Locale.US, "%s,%s,%s,%s,%d,%d", PicoPlaca.iso(Calendar.getInstance()),
+                    String.format(Locale.US, "%s,%s,%s,%s,%d,%d", PicoPlaca.iso(when),
                             km >= 0 ? String.valueOf(km) : "", it.id, categoryName(it.category),
                             it.intervalKm, it.intervalMonths));
             return;

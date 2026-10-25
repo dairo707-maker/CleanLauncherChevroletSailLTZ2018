@@ -418,8 +418,8 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         oilBg.setCornerRadius(dp(14));
         oilInfo.setBackground(oilBg);
         Ui.pressable(oilInfo, 0.92f);
-        oilInfo.setOnClickListener(v -> startActivity(new Intent(this,
-                ObdClient.alert() != null ? ObdActivity.class : MaintenanceActivity.class)));
+        oilInfo.setOnClickListener(v -> startActivity(new Intent(this, ObdClient.alert() != null ? ObdActivity.class
+                : !Odometer.isConfigured(this) ? OilActivity.class : MaintenanceActivity.class)));
         LinearLayout pills = new LinearLayout(this);
         pills.setGravity(Gravity.CENTER);
         pills.addView(oilInfo);
@@ -445,8 +445,36 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         updateAc();
 
         Ui.pressable(card, 0.97f);
-        card.setOnClickListener(v -> openSettings());
+        card.setOnClickListener(v -> openCalendar());
         return card;
+    }
+
+    /** Calendar app if there is one; otherwise a month view that marks holidays and pico y placa. */
+    private void openCalendar() {
+        Intent cal = Intent.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_APP_CALENDAR);
+        if (safeStart(cal)) return;
+        android.widget.CalendarView view = new android.widget.CalendarView(this);
+        TextView info = Ui.text(this, dayInfo(Calendar.getInstance()), 16, Color.WHITE);
+        info.setPadding(dp(16), dp(8), dp(16), dp(12));
+        view.setOnDateChangeListener((v, y, m, d) -> {
+            Calendar day = Calendar.getInstance();
+            day.set(y, m, d, 8, 0, 0);
+            info.setText(dayInfo(day));
+        });
+        LinearLayout box = new LinearLayout(this);
+        box.setOrientation(LinearLayout.VERTICAL);
+        box.addView(view, new LinearLayout.LayoutParams(dp(420), dp(330)));
+        box.addView(info);
+        new android.app.AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert)
+                .setView(box)
+                .setPositiveButton("Cerrar", null)
+                .show();
+    }
+
+    private String dayInfo(Calendar day) {
+        String s = new java.text.SimpleDateFormat("EEEE d 'de' MMMM", new java.util.Locale("es")).format(day.getTime());
+        if (PicoPlaca.isHoliday(day)) return s + " · Festivo";
+        return s + (PicoPlaca.appliesToday(this, day) ? " · Pico y placa 7–9 y 18–20" : " · Sin pico y placa");
     }
 
     // ---------- FM ----------
@@ -677,27 +705,27 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
 
         LinearLayout controls = new LinearLayout(this);
         controls.setGravity(Gravity.CENTER);
-        shuffleBtn = Ui.iconButton(this, R.drawable.ic_shuffle, 40, false, () -> {
+        shuffleBtn = Ui.iconButton(this, R.drawable.ic_shuffle, 34, false, () -> {
             nowPlaying.toggleShuffle();
             updateModes();
         });
-        LinearLayout.LayoutParams mlp = new LinearLayout.LayoutParams(dp(40), dp(40));
-        mlp.rightMargin = dp(14);
+        LinearLayout.LayoutParams mlp = new LinearLayout.LayoutParams(dp(34), dp(34));
+        mlp.rightMargin = dp(6);
         controls.addView(shuffleBtn, mlp);
-        controls.addView(Ui.iconButton(this, R.drawable.ic_prev, 54, false, () -> nowPlaying.skip(false)),
-                new LinearLayout.LayoutParams(dp(54), dp(54)));
-        playBtn = Ui.iconButton(this, R.drawable.ic_play, 66, true, () -> nowPlaying.playPause());
-        LinearLayout.LayoutParams plp = new LinearLayout.LayoutParams(dp(66), dp(66));
-        plp.setMargins(dp(18), 0, dp(18), 0);
+        controls.addView(Ui.iconButton(this, R.drawable.ic_prev, 48, false, () -> nowPlaying.skip(false)),
+                new LinearLayout.LayoutParams(dp(48), dp(48)));
+        playBtn = Ui.iconButton(this, R.drawable.ic_play, 58, true, () -> nowPlaying.playPause());
+        LinearLayout.LayoutParams plp = new LinearLayout.LayoutParams(dp(58), dp(58));
+        plp.setMargins(dp(10), 0, dp(10), 0);
         controls.addView(playBtn, plp);
-        controls.addView(Ui.iconButton(this, R.drawable.ic_next, 54, false, () -> nowPlaying.skip(true)),
-                new LinearLayout.LayoutParams(dp(54), dp(54)));
-        repeatBtn = Ui.iconButton(this, R.drawable.ic_repeat, 40, false, () -> {
+        controls.addView(Ui.iconButton(this, R.drawable.ic_next, 48, false, () -> nowPlaying.skip(true)),
+                new LinearLayout.LayoutParams(dp(48), dp(48)));
+        repeatBtn = Ui.iconButton(this, R.drawable.ic_repeat, 34, false, () -> {
             nowPlaying.cycleRepeat();
             updateModes();
         });
-        LinearLayout.LayoutParams rlp = new LinearLayout.LayoutParams(dp(40), dp(40));
-        rlp.leftMargin = dp(14);
+        LinearLayout.LayoutParams rlp = new LinearLayout.LayoutParams(dp(34), dp(34));
+        rlp.leftMargin = dp(6);
         controls.addView(repeatBtn, rlp);
         updateModes();
         col.addView(controls);

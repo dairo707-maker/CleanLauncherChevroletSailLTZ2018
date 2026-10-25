@@ -306,6 +306,7 @@ final class NowPlaying {
     private boolean customAction(String key) {
         PlaybackState st = controller.getPlaybackState();
         if (st == null || st.getCustomActions() == null) return false;
+        android.util.Log.d("NowPlaying", controller.getPackageName() + " custom actions: " + st.getCustomActions());
         for (PlaybackState.CustomAction a : st.getCustomActions()) {
             if (a.getAction().toLowerCase(java.util.Locale.US).contains(key)) {
                 controller.getTransportControls().sendCustomAction(a, a.getExtras());
