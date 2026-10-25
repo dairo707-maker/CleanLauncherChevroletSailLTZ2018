@@ -27,5 +27,65 @@
   - `fatigue.isChecked()` (línea 317)
   - `speedAlert.isChecked()` (línea 318)
   - `limitKmh()` -> `speedLimit.getText()` (líneas 319 / 331)
-  Sin embargo, los campos `fatigue`, `speedAlert` y `speedLimit` nunca se instancian en `buildProfile()` ni en `buildPermissions()`, por lo que son `null`. Al intentar evaluar `.isChecked()`, se produce un `NullPointerException` antes de que se ejecute `.apply()` en las preferencias compartidas (`SharedPreferences`), abortando el guardado de todas las configuraciones.
+  
+---
+
+# Checklist de pruebas — Entrega 3 (Clean Launcher para Chevrolet Sail LTZ 2018)
+
+| Letra | Prueba | Resultado | Observación |
+|:-----:|--------|:---------:|-------------|
+| **(a)** | **Configuración (Listo)**: "Listo" en Configuración guarda nombre y opciones | BLOQ | Bloqueado: la app crashea al arrancar antes de mostrar la UI. |
+| **(b)** | **Saludo por voz**: el saludo suena en ~5 segundos al encender | BLOQ | Bloqueado: MainActivity no completa onCreate. |
+| **(c)** | **Flechas de radio**: las flechas de la tarjeta de radio y de la pantalla Radio cambian la emisora | BLOQ | Bloqueado: UI no carga. |
+| **(d)** | **YouTube Music**: botones de aleatorio (shuffle) y repetir (repeat) en la tarjeta de música | BLOQ | Causa del crash: updateModes() accede a nowPlaying antes de instanciarlo. |
+| **(e)** | **Velocímetro**: marca la velocidad al andar y se pone rojo sobre el límite | BLOQ | Bloqueado. |
+| **(f)** | **Pantallas Radio, BT y Ecualizador**: ¿se ven bien? ¿El ecualizador cambia el sonido? | BLOQ | Bloqueado. |
+| **(g)** | **Fotos de pantalla**: captura o fotos de cada pantalla | BLOQ | La pantalla muestra el cuadro de diálogo de sistema "Utilizar Inicio". |
+
+## Reporte de Anomalía Crítica — MainActivity (Crash al inicio)
+
+### Síntoma
+Al pulsar "Inicio" o seleccionar Clean Launcher en el radio, la interfaz no abre en absoluto; la pantalla parpadea y vuelve a mostrar el diálogo del sistema *"Utilizar Inicio como aplicación de la pantalla principal"*.
+
+### Evidencia en Logcat (`diagnostico/logcat_pruebas3.txt`)
+```
+10-25 15:43:08.563  9137  9137 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 15:43:08.563  9137  9137 E AndroidRuntime: Process: com.simple.carlauncher, PID: 9137
+10-25 15:43:08.563  9137  9137 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.simple.carlauncher/com.simple.carlauncher.MainActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:43:08.563  9137  9137 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.updateModes(MainActivity.java:493)
+10-25 15:43:08.563  9137  9137 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.buildMusicCard(MainActivity.java:701)
+10-25 15:43:08.563  9137  9137 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.onCreate(MainActivity.java:90)
+```
+
+### Causa Raíz
+En `MainActivity.java`:
+1. En la línea 90 (`onCreate`):
+   ```java
+   cards.addView(buildMusicCard(), weight(1.05f, dp(12)));
+   ```
+2. Dentro de `buildMusicCard()`, en la línea 701 se ejecuta:
+   ```java
+   updateModes();
+   ```
+3. Dentro de `updateModes()`, en la línea 493 se evalúa:
+   ```java
+   int vis = nowPlaying.hasModes() ? View.VISIBLE : View.INVISIBLE;
+   ```
+4. **Sin embargo**, `nowPlaying` se inicializa **después**, en la línea 97:
+   ```java
+   radio.bind(this);
+   nowPlaying = NowPlaying.get(this); // <- Línea 97
+   ```
+Como `buildMusicCard()` corre en la línea 90, `nowPlaying` es `null` en ese instante, disparando `NullPointerException` de inmediato.
+
+### Corrección Requerida
+Mover la inicialización de `nowPlaying` antes de construir las vistas en `onCreate()`, o agregar guardia contra null en `updateModes()`:
+- En `MainActivity.java:onCreate()`, mover `nowPlaying = NowPlaying.get(this);` antes de la línea 81 (antes de `cards.addView(...)`).
+- Además, por seguridad defensiva en `updateModes()`:
+  ```java
+  private void updateModes() {
+      if (nowPlaying == null || shuffleBtn == null || repeatBtn == null) return;
+      int vis = nowPlaying.hasModes() ? View.VISIBLE : View.INVISIBLE;
+      ...
+  ```
 

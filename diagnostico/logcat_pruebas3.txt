@@ -1,0 +1,276 @@
+﻿--------- beginning of crash
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: Process: com.simple.carlauncher, PID: 1290
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.widget.CompoundButton.isChecked()' on a null object reference
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.finishSetup(SetupActivity.java:317)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.$r8$lambda$LAgBQnH9tWzpmQpdQQ-mS8p9aj4(Unknown Source:0)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda9.run(D8$$SyntheticClass:0)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.lambda$button$9(SetupActivity.java:204)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda0.onClick(D8$$SyntheticClass:0)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at android.view.View.performClick(View.java:6301)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:24993)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:790)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 14:18:49.112  1290  1290 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: Process: com.simple.carlauncher, PID: 3709
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.widget.CompoundButton.isChecked()' on a null object reference
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.finishSetup(SetupActivity.java:317)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.$r8$lambda$LAgBQnH9tWzpmQpdQQ-mS8p9aj4(Unknown Source:0)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda9.run(D8$$SyntheticClass:0)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.lambda$button$9(SetupActivity.java:204)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda0.onClick(D8$$SyntheticClass:0)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at android.view.View.performClick(View.java:6301)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:24993)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:790)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 14:19:29.126  3709  3709 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: Process: com.simple.carlauncher, PID: 3790
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.widget.CompoundButton.isChecked()' on a null object reference
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.finishSetup(SetupActivity.java:317)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.$r8$lambda$LAgBQnH9tWzpmQpdQQ-mS8p9aj4(Unknown Source:0)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda9.run(D8$$SyntheticClass:0)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.lambda$button$9(SetupActivity.java:204)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda0.onClick(D8$$SyntheticClass:0)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at android.view.View.performClick(View.java:6301)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:24993)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:790)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 14:20:45.800  3790  3790 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: Process: com.simple.carlauncher, PID: 3963
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.widget.CompoundButton.isChecked()' on a null object reference
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.finishSetup(SetupActivity.java:317)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.$r8$lambda$LAgBQnH9tWzpmQpdQQ-mS8p9aj4(Unknown Source:0)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda9.run(D8$$SyntheticClass:0)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.lambda$button$9(SetupActivity.java:204)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda0.onClick(D8$$SyntheticClass:0)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at android.view.View.performClick(View.java:6301)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:24993)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:790)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 14:21:55.322  3963  3963 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: Process: com.simple.carlauncher, PID: 4780
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.widget.CompoundButton.isChecked()' on a null object reference
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.finishSetup(SetupActivity.java:317)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.$r8$lambda$LAgBQnH9tWzpmQpdQQ-mS8p9aj4(Unknown Source:0)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda9.run(D8$$SyntheticClass:0)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.lambda$button$9(SetupActivity.java:204)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda0.onClick(D8$$SyntheticClass:0)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at android.view.View.performClick(View.java:6301)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:24993)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:790)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 14:41:25.753  4780  4780 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: Process: com.simple.carlauncher, PID: 6911
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.widget.CompoundButton.isChecked()' on a null object reference
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.finishSetup(SetupActivity.java:317)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.$r8$lambda$LAgBQnH9tWzpmQpdQQ-mS8p9aj4(Unknown Source:0)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda9.run(D8$$SyntheticClass:0)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.lambda$button$9(SetupActivity.java:204)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda0.onClick(D8$$SyntheticClass:0)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at android.view.View.performClick(View.java:6301)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:24993)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:790)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 15:17:20.099  6911  6911 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: Process: com.simple.carlauncher, PID: 7385
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.widget.CompoundButton.isChecked()' on a null object reference
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.finishSetup(SetupActivity.java:317)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.$r8$lambda$LAgBQnH9tWzpmQpdQQ-mS8p9aj4(Unknown Source:0)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda9.run(D8$$SyntheticClass:0)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity.lambda$button$9(SetupActivity.java:204)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at com.simple.carlauncher.SetupActivity$$ExternalSyntheticLambda0.onClick(D8$$SyntheticClass:0)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at android.view.View.performClick(View.java:6301)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:24993)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:790)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 15:20:30.434  7385  7385 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: Process: com.simple.carlauncher, PID: 8359
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.simple.carlauncher/com.simple.carlauncher.MainActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2805)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2883)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1613)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.updateModes(MainActivity.java:493)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.buildMusicCard(MainActivity.java:701)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.onCreate(MainActivity.java:90)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7027)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7018)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1214)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2758)
+10-25 15:31:27.821  8359  8359 E AndroidRuntime: 	... 9 more
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: Process: com.simple.carlauncher, PID: 8852
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.simple.carlauncher/com.simple.carlauncher.MainActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2805)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2883)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1613)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.updateModes(MainActivity.java:493)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.buildMusicCard(MainActivity.java:701)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.onCreate(MainActivity.java:90)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7027)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7018)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1214)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2758)
+10-25 15:39:32.055  8852  8852 E AndroidRuntime: 	... 9 more
+--------- beginning of system
+--------- beginning of main
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: Process: com.simple.carlauncher, PID: 9027
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.simple.carlauncher/com.simple.carlauncher.MainActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2805)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2883)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1613)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.updateModes(MainActivity.java:493)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.buildMusicCard(MainActivity.java:701)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.onCreate(MainActivity.java:90)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7027)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7018)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1214)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2758)
+10-25 15:43:29.232  9027  9027 E AndroidRuntime: 	... 9 more
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: Process: com.simple.carlauncher, PID: 9058
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.simple.carlauncher/com.simple.carlauncher.MainActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2805)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2883)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1613)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.updateModes(MainActivity.java:493)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.buildMusicCard(MainActivity.java:701)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.onCreate(MainActivity.java:90)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7027)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7018)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1214)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2758)
+10-25 15:43:31.910  9058  9058 E AndroidRuntime: 	... 9 more
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: Process: com.simple.carlauncher, PID: 9085
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.simple.carlauncher/com.simple.carlauncher.MainActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2805)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2883)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1613)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.updateModes(MainActivity.java:493)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.buildMusicCard(MainActivity.java:701)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.onCreate(MainActivity.java:90)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7027)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7018)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1214)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2758)
+10-25 15:43:34.448  9085  9085 E AndroidRuntime: 	... 9 more
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: Process: com.simple.carlauncher, PID: 9112
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.simple.carlauncher/com.simple.carlauncher.MainActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2805)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2883)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1613)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.updateModes(MainActivity.java:493)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.buildMusicCard(MainActivity.java:701)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.onCreate(MainActivity.java:90)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7027)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7018)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1214)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2758)
+10-25 15:43:39.566  9112  9112 E AndroidRuntime: 	... 9 more
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: FATAL EXCEPTION: main
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: Process: com.simple.carlauncher, PID: 9137
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.simple.carlauncher/com.simple.carlauncher.MainActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2805)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2883)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1613)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:940)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean com.simple.carlauncher.NowPlaying.hasModes()' on a null object reference
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.updateModes(MainActivity.java:493)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.buildMusicCard(MainActivity.java:701)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.onCreate(MainActivity.java:90)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7027)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:7018)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1214)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2758)
+10-25 15:43:41.115  9137  9137 E AndroidRuntime: 	... 9 more
