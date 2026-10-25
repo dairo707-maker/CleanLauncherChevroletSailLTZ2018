@@ -1,0 +1,141 @@
+# Guía para el agente local (Antigravity / Gemini Flash)
+
+Esta guía es para el agente que ejecuta los scripts de `tools\windows\` en la PC del dueño.
+El dueño es quien decide. Si algo no está claro, **pregunta al humano antes de actuar**.
+
+## 1. Tu rol
+
+Solo **ejecutas, verificas y reportas**.
+
+Prohibido, sin excepción:
+
+- Modificar código Java (`src/`), `AndroidManifest.xml`, `build.sh` o cualquier archivo que no esté en esta guía.
+- Tocar "Parameter Settings" o el MCU del radio. Solo el humano puede hacerlo.
+- Hacer un "factory reset" o restaurar de fábrica.
+- Ejecutar comandos `adb` que no aparezcan en esta guía. Si crees que necesitas uno, pregunta.
+- Subir (`git push`) archivos distintos a los indicados en cada tarea.
+- Subir `tools\sail_source.png`.
+- Usar `--force` en git, reescribir historial o cambiar de rama.
+
+Si una tarea falla, **no improvises**. Anota el error, ejecuta T7 si hay que revertir, y reporta.
+
+## 2. Requisitos previos (verifica antes de T1)
+
+Ejecuta en `cmd`, dentro de la carpeta raíz del repo (la que contiene `build.sh`):
+
+1. `adb version` imprime una línea que empieza con `Android Debug Bridge version`.
+2. `where adb` imprime una ruta que termina en `adb.exe`.
+3. `py --version` imprime `Python 3.`.
+4. `git status` y `git branch --show-current` imprimen `claude/amazing-lamport-auessa`.
+5. Confirma con el humano: radio encendido, Wi-Fi del radio activo, IP `192.168.1.7` reservada en el router.
+
+Si alguno falla, reporta cuál y detente.
+
+Formato del reporte después de cada tarea:
+
+```
+TAREA: T<n> <nombre>
+RESULTADO: OK | FALLO | PENDIENTE_HUMANO
+CODIGO DE SALIDA: <número>
+ULTIMAS LINEAS: <las últimas 10 líneas de la salida>
+```
+
+## 3. Tareas
+
+Todas las tareas se hacen desde la carpeta raíz del repo, en `cmd`.
+
+### T1. Conectar
+
+- Comando: `tools\windows\conectar.bat`
+- Éxito: aparece la línea `CONECTADO: 192.168.1.7:5555 esta en estado device.` y el código de salida es `0`.
+- Si el código es `2` (la salida dice `ESTADO: unauthorized`): **pide al humano** aceptar el mensaje en la pantalla del radio con "Permitir siempre". Luego repite T1 una vez.
+- Si el código es `1` (la salida dice `FALLO:`): **detente**. Pide al humano el Plan B (instalar por USB, ver TUTORIAL.md sección 9). No sigas con las demás tareas.
+- Reporta: estado final (`device`, `unauthorized` o fallo) y código de salida.
+
+### T2. Respaldo
+
+- Antes del comando, **pide al humano** que haga "Export the config" en "Parameter Settings" del radio, guardando en USB. Tú no tocas el radio.
+- Comando: `tools\windows\respaldo.bat`
+- Éxito: la salida termina con `LISTO. Respaldo guardado en:` seguido de una línea `C:\RadioBackup\AAAA-MM-DD_HHMM`.
+- Verifica con `dir C:\RadioBackup\<carpeta>`: deben existir `README_RESPALDO.txt`, `paquetes_todos.txt`, `launcher_por_defecto.txt` y la carpeta `apk`.
+- Reporta: la ruta final y la línea de `launcher_por_defecto.txt` que contiene `/` (el componente HOME original).
+
+### T3. Diagnóstico y subida
+
+1. Comando: `git pull`
+2. Comando: `tools\windows\diagnostico.bat`
+   - El script muestra una cuenta de 60 segundos. **El humano** hace las pruebas (cambiar a Radio, cambiar a Bluetooth música, poner reversa con el auto detenido, encender y apagar luces). Tú no tocas el radio.
+   - Éxito: la salida contiene `Diagnostico terminado en:`.
+   - Verifica que existan y tengan contenido: `diagnostico\diagnostico_radio.txt`, `diagnostico\broadcasts.txt`, `diagnostico\logcat_eventos.txt`.
+3. Subida (solo si T2 y T3 terminaron bien):
+   - `git add diagnostico backup\xyauto`
+   - `git commit -m "Diagnóstico del radio"`
+   - `git push origin claude/amazing-lamport-auessa`
+   - Éxito: el último mensaje de `git push` menciona `claude/amazing-lamport-auessa`.
+4. Reporta: rutas creadas y el hash del commit. Si `git commit` dice "nothing to commit", reporta eso y no lo trates como error.
+
+### T4. Imagen del carro
+
+1. **Pide al humano** descargar la imagen desde `https://www.pngegg.com/es/png-wylrc` y guardarla como `tools\sail_source.png`. Si el archivo no existe, detente y pregunta.
+2. Comando: `py tools\car_image.py tools\sail_source.png`
+   - Éxito: aparece `Listo:` seguido de las dos rutas. Deben existir `res\drawable-nodpi\sail.png` y `res\drawable-nodpi\sail_lights.png`.
+   - Si aparece `La imagen no tiene fondo transparente`: detente y pide al humano otra imagen con fondo transparente.
+   - Si aparece `No module named PIL`: ejecuta `py -m pip install pillow` y repite el comando.
+3. Subida (solo esos dos archivos):
+   - `git add res\drawable-nodpi\sail.png res\drawable-nodpi\sail_lights.png`
+   - `git commit -m "Imagen del carro Sail"`
+   - `git push origin claude/amazing-lamport-auessa`
+4. Reporta: tamaños de los PNG (`dir res\drawable-nodpi\sail*.png`) y el resultado del push.
+
+### T5. Descargar APK e instalar
+
+1. Comando: `git pull`
+2. Obtén el ID de la última ejecución exitosa de "Build APK" en la rama:
+   - `gh run list --workflow build.yml --branch claude/amazing-lamport-auessa --status success --limit 1 --json databaseId --jq ".[0].databaseId"`
+   - Éxito: imprime un número. Si no imprime nada, detente y reporta. Puede que `gh` no esté autenticado.
+3. Descarga el artefacto (reemplaza `<ID>` por el número del paso 2):
+   - `gh run download <ID> --dir build\artifact`
+4. Copia el APK a la ruta por defecto:
+   - PowerShell: `Copy-Item build\artifact\CleanLauncher-*\CleanLauncher.apk build\CleanLauncher.apk -Force`
+   - Verifica que exista `build\CleanLauncher.apk`.
+5. Instala: `tools\windows\instalar.bat`
+   - Éxito: aparecen `Success` (de `adb install`) y la línea `LISTO. Cambios registrados en C:\RadioBackup\cambios_aplicados.txt`.
+   - Si aparece `AVISO: set-home-activity no confirmado`: **pide al humano** fijar HOME a mano (Home, "Inicio", "Siempre"). Eso no es un fallo de la tarea, repórtalo.
+   - Si aparece `ERROR: la instalacion fallo`: detente y ve a T7 solo si el radio quedó raro. Si no, reporta.
+6. Reporta: el `Success` o el error, y si HOME quedó fijado o hay que hacerlo a mano.
+
+### T6. Checklist de pruebas
+
+El humano hace las pruebas físicas. Tú anotas los resultados.
+
+1. Crea `diagnostico\pruebas.md` con esta tabla y pide al humano el resultado de cada fila:
+
+   ```
+   | # | Prueba | Resultado (OK/FALLO) | Observación |
+   |---|--------|----------------------|-------------|
+   | 1 | HOME: al pulsar Home aparece Clean Launcher | | |
+   | 2 | Reinicio del radio (apagar 30 s y encender): vuelve el launcher | | |
+   | 3 | ACC off/on: al dar contacto aparece el launcher y la fuente de audio se restaura | | |
+   | 4 | Botones del volante: volumen, cambio de fuente, siguiente/anterior | | |
+   | 5 | Radio: sintonía y presets | | |
+   | 6 | Bluetooth: conectar el teléfono y reproducir música | | |
+   | 7 | Volumen: el overlay aparece al subir o bajar | | |
+   | 8 | Pantalla apagada: los botones del volante siguen funcionando | | |
+   ```
+
+2. Verificación de solo lectura para la fila 1: `adb -s 192.168.1.7:5555 shell dumpsys activity activities` y busca la línea que contiene `mResumedActivity`. Debe mencionar `com.simple.carlauncher`.
+3. Sube los resultados (solo `diagnostico\pruebas.md`):
+   - `git add diagnostico\pruebas.md`
+   - `git commit -m "Pruebas en el radio"`
+   - `git push origin claude/amazing-lamport-auessa`
+4. Reporta: la tabla completa con resultados. Cualquier FALLO se reporta primero.
+
+### T7. Revertir (solo si algo falla)
+
+Úsalo solo si el humano lo pide o si una prueba crítica falla (HOME, arranque, audio).
+
+1. Comando: `tools\windows\restaurar.bat`
+2. El script pregunta `[S,N]?`. **Pide al humano** que responda. Tú no respondes por él.
+3. Éxito: la salida termina con `LISTO. Revisa C:\RadioBackup\cambios_aplicados.txt`.
+4. Después: `tools\windows\conectar.bat` (T1) para confirmar que el radio responde.
+5. Reporta: las líneas de `cambios_aplicados.txt` generadas por la reversión. Si el radio no responde, **no** hagas nada más: pide al humano llevar el radio con un técnico.

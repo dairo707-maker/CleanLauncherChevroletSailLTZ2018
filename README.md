@@ -1,14 +1,26 @@
-# Clean Launcher
+# Clean Launcher — Chevrolet Sail LTZ 2018
 
-[![Build APK](https://github.com/jhontandazo008/CleanLauncher/actions/workflows/build.yml/badge.svg)](https://github.com/jhontandazo008/CleanLauncher/actions/workflows/build.yml)
+Launcher Android limpio y a medida para el radio **XY AUTO 9216BJ** (CANBUS 3.7, MCU 4.0, 1024×600)
+de un Chevrolet Sail LTZ 2018 en Cartagena. Basado en el Clean Launcher original para radios NWD
+(Chevrolet Epica), que sigue soportado: las funciones NWD se activan solas si el radio las tiene.
 
-![Clean Launcher en el radio](docs/screenshot.png)
+**Para instalarlo paso a paso: [`docs/TUTORIAL.md`](docs/TUTORIAL.md).**
+El trabajo en el PC (ADB, respaldo, diagnóstico, instalación) lo puede ejecutar un agente local
+siguiendo [`docs/AGENTE_LOCAL.md`](docs/AGENTE_LOCAL.md) con los scripts de [`tools/windows/`](tools/windows/).
 
-Launcher Android limpio, ligero y a medida para un radio de auto chino **NWD (Allwinner T3, Android 7.1.1)**
-instalado en un Chevrolet Epica. Reemplaza el launcher de fábrica con una interfaz limpia y rápida
-que se comunica directamente con los servicios propietarios del radio.
+## Novedades para el Sail
 
-## Funciones
+- **Respaldo y reversión completos** antes de tocar el radio (`respaldo.bat` / `restaurar.bat`).
+- **Mantenimiento por km o tiempo** (aceite, llantas, alineación, frenos, filtros, bujías, refrigerante,
+  correa, suspensión/rodamientos) con notificación, voz y alertas sobre la imagen del carro.
+- **Combustible y costos**: tanqueadas, km/gal, costo/km y gasto mensual; CSV listos para Power BI.
+- **Pico y placa de Cartagena** con rotación editable y festivos de Colombia.
+- **Volumen según la velocidad** (GPS).
+- **Escáner OBD2** (ELM327 Bluetooth) con modo simulación: check engine, temperatura, batería, consumo estimado.
+- **Diagnóstico del radio** dentro de la app (plan B si no hay ADB por Wi-Fi).
+- Imagen del Sail con luces encendidas/apagadas (`tools/car_image.py`).
+
+## Funciones heredadas (radio NWD)
 
 - **Pantalla principal** con hora, clima (Open-Meteo, por GPS o IP) y reproducción actual.
 - **Radio FM**: dial, presets y sintonía hablando por Binder con `com.nwd.radio.service`.
