@@ -1,0 +1,191 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.RINGTONE_PICKER:
+        11ea1be com.android.providers.media/.RingtonePickerActivity filter 79e9c08
+          Action: "android.intent.action.RINGTONE_PICKER"
+          Category: "android.intent.category.DEFAULT"
+
+Receiver Resolver Table:
+  Full MIME Types:
+      application/com.mediatek.omacp-554:
+        646f21f com.android.providers.media/.OmaReceiver filter 5d483fa
+          Action: "com.mediatek.omacp.settings"
+          Type: "application/com.mediatek.omacp-554"
+
+  Base MIME Types:
+      application:
+        646f21f com.android.providers.media/.OmaReceiver filter 5d483fa
+          Action: "com.mediatek.omacp.settings"
+          Type: "application/com.mediatek.omacp-554"
+
+  Schemes:
+      file:
+        cf4b96c com.android.providers.media/.MediaScannerReceiver filter 49f078f
+          Action: "android.intent.action.MEDIA_MOUNTED"
+          Scheme: "file"
+        cf4b96c com.android.providers.media/.MediaScannerReceiver filter 39dfa1c
+          Action: "android.intent.action.MEDIA_UNMOUNTED"
+          Scheme: "file"
+        cf4b96c com.android.providers.media/.MediaScannerReceiver filter a203625
+          Action: "android.intent.action.MEDIA_SCANNER_SCAN_FILE"
+          Scheme: "file"
+
+  Non-Data Actions:
+      android.intent.action.PRE_BOOT_COMPLETED:
+        a3a0b35 com.android.providers.media/.MediaUpgradeReceiver filter ab93c69
+          Action: "android.intent.action.PRE_BOOT_COMPLETED"
+      android.intent.action.BOOT_COMPLETED:
+        cf4b96c com.android.providers.media/.MediaScannerReceiver filter 37ce6ee
+          Action: "android.intent.action.BOOT_COMPLETED"
+      com.mediatek.omacp.capability:
+        646f21f com.android.providers.media/.OmaReceiver filter 90e8dab
+          Action: "com.mediatek.omacp.capability"
+
+  MIME Typed Actions:
+      com.mediatek.omacp.settings:
+        646f21f com.android.providers.media/.OmaReceiver filter 5d483fa
+          Action: "com.mediatek.omacp.settings"
+          Type: "application/com.mediatek.omacp-554"
+
+Service Resolver Table:
+  Non-Data Actions:
+      android.media.IMediaScannerService:
+        a1f1bca com.android.providers.media/.MediaScannerService filter 7e1def0
+          Action: "android.media.IMediaScannerService"
+
+Provider Resolver Table:
+  Non-Data Actions:
+      android.content.action.DOCUMENTS_PROVIDER:
+        1f2913b com.android.providers.media/.MediaDocumentsProvider filter baaeb33
+          Action: "android.content.action.DOCUMENTS_PROVIDER"
+
+Registered ContentProviders:
+  com.android.providers.media/.MediaDocumentsProvider:
+    Provider{1f2913b com.android.providers.media/.MediaDocumentsProvider}
+  com.android.providers.media/.MediaProvider:
+    Provider{b2a0058 com.android.providers.media/.MediaProvider}
+
+ContentProvider Authorities:
+  [media]:
+    Provider{b2a0058 com.android.providers.media/.MediaProvider}
+      applicationInfo=ApplicationInfo{90d25b1 com.android.providers.media}
+  [com.android.providers.media.documents]:
+    Provider{1f2913b com.android.providers.media/.MediaDocumentsProvider}
+      applicationInfo=ApplicationInfo{3fb2a96 com.android.providers.media}
+
+Key Set Manager:
+  [com.android.providers.media]
+      Signing KeySets: 6
+
+Packages:
+  Package [com.android.providers.media] (2e3dad9):
+    userId=10016
+    sharedUser=SharedUserSetting{ea942a2 android.media/10016}
+    pkg=Package{87ba66d com.android.providers.media}
+    codePath=/system/priv-app/MtkMediaProvider
+    resourcePath=/system/priv-app/MtkMediaProvider
+    legacyNativeLibraryDir=/system/priv-app/MtkMediaProvider/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=803 minSdk=27 targetSdk=25
+    versionName=9.1
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{3fb2a96 com.android.providers.media}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    privateFlags=[ PRIVILEGED PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ]
+    dataDir=/data/user/0/com.android.providers.media
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{eef0617 [aa7e44b2]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    requested permissions:
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.WRITE_SETTINGS
+      android.permission.WAKE_LOCK
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.WRITE_MEDIA_STORAGE
+      android.permission.ACCESS_MTP
+      android.permission.MANAGE_USERS
+      android.permission.INTERACT_ACROSS_USERS
+      android.permission.GET_TASKS
+      android.permission.READ_EXTERNAL_STORAGE
+    install permissions:
+      android.permission.ACCESS_CACHE_FILESYSTEM: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.UPDATE_DEVICE_STATS: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MANAGE_USB: granted=true
+      android.permission.ACCESS_ALL_DOWNLOADS: granted=true
+      android.permission.ACCESS_DOWNLOAD_MANAGER: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.ACCESS_MTP: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.CLEAR_APP_CACHE: granted=true
+      android.permission.CONNECTIVITY_INTERNAL: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MODIFY_NETWORK_ACCOUNTING: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+    User 0: ceDataInode=-4294484761 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+
+Shared users:
+  SharedUser [android.media] (ea942a2):
+    userId=10016
+    install permissions:
+      android.permission.ACCESS_CACHE_FILESYSTEM: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.UPDATE_DEVICE_STATS: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MANAGE_USB: granted=true
+      android.permission.ACCESS_ALL_DOWNLOADS: granted=true
+      android.permission.ACCESS_DOWNLOAD_MANAGER: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.ACCESS_MTP: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.CLEAR_APP_CACHE: granted=true
+      android.permission.CONNECTIVITY_INTERNAL: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MODIFY_NETWORK_ACCOUNTING: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+    User 0: 
+      gids=[2001, 1023, 1015, 3003, 3007, 1024]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.android.providers.media]
+    path: /system/priv-app/MtkMediaProvider/MtkMediaProvider.apk
+      arm: /system/priv-app/MtkMediaProvider/oat/arm/MtkMediaProvider.odex[status=kOatUpToDate, compilation_filter=quick
+      en]
+      used by other apps: [com.android.providers.downloads]
+
+
+Compiler stats:
+  [com.android.providers.media]
+    (No recorded stats)

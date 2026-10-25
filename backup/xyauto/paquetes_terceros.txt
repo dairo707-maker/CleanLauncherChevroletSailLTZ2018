@@ -1,0 +1,12 @@
+package:com.pve.naviguide
+package:com.acloud.stub.extradio
+package:com.directv.dtvlatam
+package:tunein.player
+package:com.google.android.verifier
+package:com.waze
+package:com.xygala.canbus
+package:com.apple.android.music
+package:com.tima.carnet.vt
+package:com.google.android.apps.photos
+package:com.android.calculator2
+package:com.google.android.apps.youtube.music

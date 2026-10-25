@@ -1,0 +1,137 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        b16a10f com.acloud.stub.video/.QtActivity filter b412ef2
+          Action: "android.intent.action.MAIN"
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.LAUNCHER"
+          Category: "android.intent.category.DEFAULT"
+      android.intent.action.VIEW:
+        b16a10f com.acloud.stub.video/.QtActivity filter b412ef2
+          Action: "android.intent.action.MAIN"
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.LAUNCHER"
+          Category: "android.intent.category.DEFAULT"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      com.gla.action.resolutionChange:
+        e4f559c com.acloud.stub.video/com.acloud.newinterface.ResolutionChangeReceiver filter c2951fd
+          Action: "com.gla.action.resolutionChange"
+
+Service Resolver Table:
+  Non-Data Actions:
+      com.acloud.intent.start.video.service:
+        6852ba5 com.acloud.stub.video/.service.VtmInitService filter cdd3e54
+          Action: "com.acloud.intent.start.video.service"
+
+Key Set Manager:
+  [com.acloud.stub.video]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.acloud.stub.video] (aac59a7):
+    userId=10038
+    pkg=Package{4725266 com.acloud.stub.video}
+    codePath=/system/app/GalaVideo
+    resourcePath=/system/app/GalaVideo
+    legacyNativeLibraryDir=/system/app/GalaVideo/lib
+    primaryCpuAbi=armeabi-v7a
+    secondaryCpuAbi=null
+    versionCode=11223 minSdk=19 targetSdk=21
+    versionName=1.12.23
+    splits=[base]
+    apkSigningVersion=1
+    applicationInfo=ApplicationInfo{9e0b7a com.acloud.stub.video}
+    flags=[ SYSTEM HAS_CODE ALLOW_TASK_REPARENTING ALLOW_CLEAR_USER_DATA ALLOW_BACKUP LARGE_HEAP ]
+    dataDir=/data/user/0/com.acloud.stub.video
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{5263f2b [b4addb29]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_TASK_REPARENTING ALLOW_CLEAR_USER_DATA ALLOW_BACKUP LARGE_HEAP ]
+    requested permissions:
+      android.permission.RECEIVE_USER_PRESENT
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.CHANGE_WIFI_STATE
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.INTERNET
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.EXPAND_STATUS_BAR
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.BLUETOOTH
+      android.permission.WAKE_LOCK
+      android.permission.WRITE_SETTINGS
+      android.permission.ACCESS_COARSE_LOCATION
+      android.permission.READ_PHONE_STATE
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.VIBRATE
+      android.permission.ACCESS_DOWNLOAD_MANAGER
+      android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+      android.permission.SYSTEM_ALERT_WINDOW
+      android.permission.DISABLE_KEYGUARD
+      android.permission.GET_TASKS
+      android.permission.BROADCAST_STICKY
+      android.permission.KILL_BACKGROUND_PROCESSES
+      android.permission.ACCESS_MTK_MMHW
+      adndroid.permission.MOUNT_UNMOUNT_FILESYSTEMS
+      android.permission.READ_OWNER_DATA
+      android.permission.WRITE_OWNER_DATA
+      android.permission.STATUS_BAR
+      android.permission.INTERNAL_SYSTEM_WINDOW
+      android.permission.WRITE_SECURE_SETTINGS
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+      android.permission.MANAGE_ACTIVITY_STACKS
+    install permissions:
+      android.permission.DOWNLOAD_WITHOUT_NOTIFICATION: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.INTERNAL_SYSTEM_WINDOW: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.EXPAND_STATUS_BAR: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true
+      android.permission.READ_PHONE_STATE: granted=true
+      android.permission.ACCESS_DOWNLOAD_MANAGER: granted=true
+      android.permission.BROADCAST_STICKY: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.DISABLE_KEYGUARD: granted=true
+      android.permission.KILL_BACKGROUND_PROCESSES: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.MANAGE_ACTIVITY_STACKS: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.STATUS_BAR: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=-4294484751 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      gids=[3002, 3003]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.acloud.stub.video]
+    path: /system/app/GalaVideo/GalaVideo.apk
+      arm: /data/dalvik-cache/arm/system@app@GalaVideo@GalaVideo.apk@classes.dex[status=kOatUpToDate, compilation_filter
+      =quicken]
+
+
+Compiler stats:
+  [com.acloud.stub.video]
+     GalaVideo.apk - 5190

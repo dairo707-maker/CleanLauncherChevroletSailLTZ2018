@@ -1,0 +1,137 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        6ba6e7b com.mediatek.mtklogger/.MainActivity filter e81bda1
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+      com.mediatek.aee.Debugtoolbox:
+        92cb498 com.mediatek.mtklogger/.debugtool.DebugToolboxActivity filter 8afbc6
+          Action: "com.mediatek.aee.Debugtoolbox"
+          Category: "android.intent.category.DEFAULT"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      com.mediatek.mtklogger.bypass:
+        c9f64f1 com.mediatek.mtklogger/.framework.LogReceiver filter 6134208
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "com.mediatek.mtklogger.ADB_CMD"
+          Action: "com.mediatek.mdlogger.AUTOSTART_COMPLETE"
+          Action: "com.mediatek.log2server.EXCEPTION_HAPPEND"
+          Action: "com.mediatek.mtklogger.bypass"
+          Category: "android.intent.category.DEFAULT"
+      com.mediatek.mtklogger.ADB_CMD:
+        c9f64f1 com.mediatek.mtklogger/.framework.LogReceiver filter 6134208
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "com.mediatek.mtklogger.ADB_CMD"
+          Action: "com.mediatek.mdlogger.AUTOSTART_COMPLETE"
+          Action: "com.mediatek.log2server.EXCEPTION_HAPPEND"
+          Action: "com.mediatek.mtklogger.bypass"
+          Category: "android.intent.category.DEFAULT"
+      com.mediatek.log2server.EXCEPTION_HAPPEND:
+        c9f64f1 com.mediatek.mtklogger/.framework.LogReceiver filter 6134208
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "com.mediatek.mtklogger.ADB_CMD"
+          Action: "com.mediatek.mdlogger.AUTOSTART_COMPLETE"
+          Action: "com.mediatek.log2server.EXCEPTION_HAPPEND"
+          Action: "com.mediatek.mtklogger.bypass"
+          Category: "android.intent.category.DEFAULT"
+      android.intent.action.BOOT_COMPLETED:
+        c9f64f1 com.mediatek.mtklogger/.framework.LogReceiver filter 6134208
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "com.mediatek.mtklogger.ADB_CMD"
+          Action: "com.mediatek.mdlogger.AUTOSTART_COMPLETE"
+          Action: "com.mediatek.log2server.EXCEPTION_HAPPEND"
+          Action: "com.mediatek.mtklogger.bypass"
+          Category: "android.intent.category.DEFAULT"
+      com.mediatek.mdlogger.AUTOSTART_COMPLETE:
+        c9f64f1 com.mediatek.mtklogger/.framework.LogReceiver filter 6134208
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "com.mediatek.mtklogger.ADB_CMD"
+          Action: "com.mediatek.mdlogger.AUTOSTART_COMPLETE"
+          Action: "com.mediatek.log2server.EXCEPTION_HAPPEND"
+          Action: "com.mediatek.mtklogger.bypass"
+          Category: "android.intent.category.DEFAULT"
+
+Service Resolver Table:
+  Non-Data Actions:
+      com.mediatek.mtklogger.MTKLoggerService:
+        40598d6 com.mediatek.mtklogger/.framework.MTKLoggerService filter 35339fa
+          Action: "com.mediatek.mtklogger.MTKLoggerService"
+      com.mediatek.mtklogger.C2KLoggerService:
+        6777757 com.mediatek.mtklogger/.framework.C2KLoggerService filter 7760bab
+          Action: "com.mediatek.mtklogger.C2KLoggerService"
+          Category: "android.intent.category.DEFAULT"
+
+Key Set Manager:
+  [com.mediatek.mtklogger]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.mediatek.mtklogger] (4300425):
+    userId=10046
+    pkg=Package{bf4401c com.mediatek.mtklogger}
+    codePath=/system/app/MTKLogger
+    resourcePath=/system/app/MTKLogger
+    legacyNativeLibraryDir=/system/app/MTKLogger/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=40000 minSdk=14 targetSdk=23
+    versionName=5.0.0
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{b848244 com.mediatek.mtklogger}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    dataDir=/data/user/0/com.mediatek.mtklogger
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{bb45f2d [b4addb29]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    requested permissions:
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.VIBRATE
+      android.permission.SYSTEM_ALERT_WINDOW
+      android.permission.GET_TASKS
+      android.permission.READ_FRAME_BUFFER
+      android.permission.MANAGE_USERS
+      android.permission.WRITE_MEDIA_STORAGE
+      android.permission.RAISED_THREAD_PRIORITY
+      android.permission.READ_LOGS
+      android.permission.DUMP
+      com.mediatek.engineermode.permission.WIFI_LOG
+    install permissions:
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.READ_LOGS: granted=true
+      com.mediatek.engineermode.permission.WIFI_LOG: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.READ_FRAME_BUFFER: granted=true
+      android.permission.DUMP: granted=true
+    User 0: ceDataInode=-4294484779 installed=true hidden=false suspended=false stopped=true notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      gids=[1023, 1015, 1007]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.mediatek.mtklogger]
+    path: /system/app/MTKLogger/MTKLogger.apk
+      arm: /system/app/MTKLogger/oat/arm/MTKLogger.odex[status=kOatUpToDate, compilation_filter=quicken]
+
+
+Compiler stats:
+  [com.mediatek.mtklogger]
+    (No recorded stats)

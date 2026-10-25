@@ -1,0 +1,73 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.settings.WEBVIEW_LICENSE:
+        882198 com.mediatek.webview/com.android.webview.chromium.LicenseActivity filter 4ad519c
+          Action: "android.settings.WEBVIEW_LICENSE"
+          Category: "android.intent.category.DEFAULT"
+
+Registered ContentProviders:
+  com.mediatek.webview/com.android.webview.chromium.LicenseContentProvider:
+    Provider{7c2cdf1 com.mediatek.webview/com.android.webview.chromium.LicenseContentProvider}
+
+ContentProvider Authorities:
+  [com.mediatek.webview.LicenseContentProvider]:
+    Provider{7c2cdf1 com.mediatek.webview/com.android.webview.chromium.LicenseContentProvider}
+      applicationInfo=ApplicationInfo{2174dd6 com.mediatek.webview}
+
+Key Set Manager:
+  [com.mediatek.webview]
+      Signing KeySets: 7
+
+Packages:
+  Package [com.mediatek.webview] (7f0d0f):
+    userId=10052
+    pkg=Package{16b926e com.mediatek.webview}
+    codePath=/system/app/MtkWebView
+    resourcePath=/system/app/MtkWebView
+    legacyNativeLibraryDir=/system/app/MtkWebView/lib
+    primaryCpuAbi=armeabi-v7a
+    secondaryCpuAbi=null
+    versionCode=302912560 minSdk=21 targetSdk=27
+    versionName=58.0.3029.125 (alps-mp-o1.mp1-15-arm)
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{2174dd6 com.mediatek.webview}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ]
+    dataDir=/data/user/0/com.mediatek.webview
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{7278857 [d7f1f224]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    requested permissions:
+      android.permission.INTERNET
+      android.permission.ACCESS_NETWORK_STATE
+    install permissions:
+      android.permission.INTERNET: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+    User 0: ceDataInode=-4294484561 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      gids=[3003]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.mediatek.webview]
+    path: /system/app/MtkWebView/MtkWebView.apk
+      arm: /system/app/MtkWebView/oat/arm/MtkWebView.odex[status=kOatUpToDate, compilation_filter=quicken]
+
+
+Compiler stats:
+  [com.mediatek.webview]
+    (No recorded stats)

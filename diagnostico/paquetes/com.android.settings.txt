@@ -1,0 +1,1944 @@
+Activity Resolver Table:
+  Full MIME Types:
+      vnd.android.cursor.item/telephony-carrier:
+        b252f3 com.android.settings/.Settings$ApnEditorActivity filter 2d55352
+          Action: "android.intent.action.VIEW"
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          Type: "vnd.android.cursor.item/telephony-carrier"
+      vnd.android.document/root:
+        c258bb0 com.android.settings/.Settings$PublicVolumeSettingsActivity filter 5fcbdd
+          Action: "android.provider.action.DOCUMENT_ROOT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "content"
+          Authority: "com.android.externalstorage.documents": -1
+          Type: "vnd.android.document/root"
+      vnd.android.cursor.dir/telephony-carrier:
+        b252f3 com.android.settings/.Settings$ApnEditorActivity filter 7a3a623
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          Type: "vnd.android.cursor.dir/telephony-carrier"
+
+  Base MIME Types:
+      vnd.android.document:
+        c258bb0 com.android.settings/.Settings$PublicVolumeSettingsActivity filter 5fcbdd
+          Action: "android.provider.action.DOCUMENT_ROOT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "content"
+          Authority: "com.android.externalstorage.documents": -1
+          Type: "vnd.android.document/root"
+      vnd.android.cursor.dir:
+        b252f3 com.android.settings/.Settings$ApnEditorActivity filter 7a3a623
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          Type: "vnd.android.cursor.dir/telephony-carrier"
+      vnd.android.cursor.item:
+        b252f3 com.android.settings/.Settings$ApnEditorActivity filter 2d55352
+          Action: "android.intent.action.VIEW"
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          Type: "vnd.android.cursor.item/telephony-carrier"
+
+  Schemes:
+      printjob:
+        6ac4a29 com.android.settings/.Settings$PrintJobSettingsActivity filter 9fbfaaa
+          Action: "android.settings.ACTION_PRINT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "printjob"
+          Path: "PatternMatcher{GLOB: *}"
+          mPriority=1, mHasPartialTypes=false
+      package:
+        aaa41ae com.android.settings/.datausage.AppDataUsageActivity filter ee04578
+          Action: "android.settings.IGNORE_BACKGROUND_DATA_RESTRICTIONS_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "package"
+          mPriority=1, mHasPartialTypes=false
+        5152b4f com.android.settings/.fuelgauge.RequestIgnoreBatteryOptimizations filter d785451
+          Action: "android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "package"
+          mPriority=1, mHasPartialTypes=false
+        b4fb2dc com.android.settings/.applications.InstalledAppDetails filter d92c4b6
+          Action: "android.settings.APPLICATION_DETAILS_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "package"
+          mPriority=1, mHasPartialTypes=false
+        b965fe5 com.android.settings/.Settings$AppPictureInPictureSettingsActivity filter 2521c61
+          Action: "android.settings.PICTURE_IN_PICTURE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "package"
+        5ccaba com.android.settings/.Settings$AppDrawOverlaySettingsActivity filter 36dfc2f
+          Action: "android.settings.action.MANAGE_OVERLAY_PERMISSION"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "package"
+          mPriority=1, mHasPartialTypes=false
+        3232d6b com.android.settings/.Settings$AppWriteSettingsActivity filter 96acbc5
+          Action: "android.settings.action.MANAGE_WRITE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "package"
+          mPriority=1, mHasPartialTypes=false
+        99320c8 com.android.settings/.Settings$ManageAppExternalSourcesActivity filter be82c4b
+          Action: "android.settings.MANAGE_UNKNOWN_APP_SOURCES"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "package"
+          mPriority=1, mHasPartialTypes=false
+        a521561 com.android.settings/.applications.autofill.AutofillPickerTrampolineActivity filter 4b30317
+          Action: "android.settings.REQUEST_SET_AUTOFILL_SERVICE"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "package"
+          mPriority=1, mHasPartialTypes=false
+      content:
+        c258bb0 com.android.settings/.Settings$PublicVolumeSettingsActivity filter 5fcbdd
+          Action: "android.provider.action.DOCUMENT_ROOT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "content"
+          Authority: "com.android.externalstorage.documents": -1
+          Type: "vnd.android.document/root"
+
+  Non-Data Actions:
+      android.settings.FINGERPRINT_SETUP:
+        17cd886 com.android.settings/.fingerprint.SetupFingerprintEnrollIntroduction filter c3ad1f0
+          Action: "android.settings.FINGERPRINT_SETUP"
+          Category: "android.intent.category.DEFAULT"
+      android.net.wifi.PICK_WIFI_NETWORK:
+        9c53547 com.android.settings/.wifi.WifiPickerActivity filter 5f6f5d2
+          Action: "android.net.wifi.PICK_WIFI_NETWORK"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.SHOW_REGULATORY_INFO:
+        b1d8174 com.android.settings/.RegulatoryInfoDisplayActivity filter 31acef8
+          Action: "android.settings.SHOW_REGULATORY_INFO"
+          Category: "android.intent.category.DEFAULT"
+      android.nfc.action.NOT_NFC_TWO_SIM_DIALOG_REQUEST:
+        cb9a69d com.android.settings/com.mediatek.nfc.SwitchErrorActivity filter 2153b22
+          Action: "android.nfc.action.SWITCH_FAIL_DIALOG_REQUEST"
+          Action: "android.nfc.action.NOT_NFC_SIM_DIALOG_REQUEST"
+          Action: "android.nfc.action.NOT_NFC_TWO_SIM_DIALOG_REQUEST"
+          Category: "android.intent.category.DEFAULT"
+      com.android.settings.action.SUPPORT_SETTINGS:
+        63df712 com.android.settings/.support.SupportDashboardActivity filter 4ef3035
+          Action: "com.android.settings.action.SUPPORT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.SHOW_MANUAL:
+        395dee3 com.android.settings/.ManualDisplayActivity filter 340f65b
+          Action: "android.settings.SHOW_MANUAL"
+          Category: "android.intent.category.DEFAULT"
+      com.android.settings.action.SETTINGS:
+        74b40e0 com.android.settings/.Settings$NetworkDashboardActivity filter 4e5ed2b
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=11, mHasPartialTypes=false
+        60f0f99 com.android.settings/.Settings$ConnectedDeviceDashboardActivity filter 5bf6b46
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=10, mHasPartialTypes=false
+        480725e com.android.settings/.Settings$DateTimeSettingsActivity filter 9495d0b
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=240, mHasPartialTypes=false
+        3d863f com.android.settings/.Settings$LanguageAndInputSettingsActivity filter 1aebee7
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=260, mHasPartialTypes=false
+        cd38b0c com.android.settings/.Settings$DisplaySettingsActivity filter 725ba48
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=7, mHasPartialTypes=false
+        1b80c55 com.android.settings/.Settings$DeviceInfoSettingsActivity filter 5ffc492
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=-10, mHasPartialTypes=false
+        ddd566a com.android.settings/.Settings$MemorySettingsActivity filter 72aec8c
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=3, mHasPartialTypes=false
+        78e475b com.android.settings/.Settings$SecuritySettingsActivity filter 1a71845
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=4, mHasPartialTypes=false
+        cb44bf8 com.android.settings/.Settings$AccessibilitySettingsActivity filter 3c6c79f
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=2, mHasPartialTypes=false
+        1ba18d1 com.android.settings/.Settings$StorageDashboardActivity filter b1bf3b4
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=5, mHasPartialTypes=false
+        2726f36 com.android.settings/.Settings$DevelopmentSettingsActivity filter 1248d9
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=50, mHasPartialTypes=false
+        25ffe37 com.android.settings/.Settings$PrintSettingsActivity filter cd59995
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=2, mHasPartialTypes=false
+        7de2fa4 com.android.settings/.Settings$WifiDisplaySettingsActivity filter b53502
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=6, mHasPartialTypes=false
+        8f6710d com.android.settings/.Settings$PowerUsageSummaryActivity filter 5829168
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=8, mHasPartialTypes=false
+        46e48c2 com.android.settings/.Settings$DataPlanUsageSummaryActivity filter b938675
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=10, mHasPartialTypes=false
+        52c46d3 com.android.settings/.Settings$DataUsageSummaryActivity filter 24a9e7b
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=10, mHasPartialTypes=false
+        ba0a210 com.android.settings/.Settings$UserSettingsActivity filter b430f2d
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=8, mHasPartialTypes=false
+        d261109 com.android.settings/.Settings$ConfigureNotificationSettingsActivity filter 737a212
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=160, mHasPartialTypes=false
+        85c2f0e com.android.settings/.Settings$SoundSettingsActivity filter f28f699
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=6, mHasPartialTypes=false
+        86a7d2f com.android.settings/.Settings$NotificationAppListActivity filter 2e9cd5e
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=150, mHasPartialTypes=false
+        8d5cf3c com.android.settings/.Settings$SimSettingsActivity filter 80e9d37
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=2, mHasPartialTypes=false
+        c95b4c5 com.android.settings/.Settings$AdvancedAppsActivity filter 3518ce6
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=120, mHasPartialTypes=false
+        e302e1a com.android.settings/.backup.BackupSettingsActivity filter 5199172
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=60, mHasPartialTypes=false
+        aabbd4b com.android.settings/.Settings$AppAndNotificationDashboardActivity filter afb5240
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=9, mHasPartialTypes=false
+        1cea328 com.android.settings/.Settings$UserAndAccountDashboardActivity filter d91b579
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=3, mHasPartialTypes=false
+        3a1d841 com.android.settings/.Settings$SystemDashboardActivity filter 45c4f1f
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=-1, mHasPartialTypes=false
+        63df712 com.android.settings/.support.SupportDashboardActivity filter c63526c
+          Action: "com.android.settings.action.SETTINGS"
+          mPriority=-2, mHasPartialTypes=false
+      android.net.wifi.action.REQUEST_ENABLE:
+        f1311e6 com.android.settings/.wifi.RequestToggleWiFiActivity filter 1a9e2a4
+          Action: "android.net.wifi.action.REQUEST_ENABLE"
+          Action: "android.net.wifi.action.REQUEST_DISABLE"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS:
+        876e327 com.android.settings/.Settings$NotificationAccessSettingsActivity filter 22d2a4f
+          Action: "android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.USER_SETTINGS:
+        ba0a210 com.android.settings/.Settings$UserSettingsActivity filter 2daa757
+          Action: "android.settings.USER_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.settings.USER_DICTIONARY_INSERT:
+        afec9d4 com.android.settings/.inputmethod.UserDictionaryAddWordActivity filter fef9efb
+          Action: "com.android.settings.USER_DICTIONARY_INSERT"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.HOME_SETTINGS:
+        c95b4c5 com.android.settings/.Settings$AdvancedAppsActivity filter e315f41
+          Action: "android.settings.MANAGE_DEFAULT_APPS_SETTINGS"
+          Action: "android.settings.HOME_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.DISPLAY_SETTINGS:
+        cd38b0c com.android.settings/.Settings$DisplaySettingsActivity filter 6f8683a
+          Action: "com.android.settings.DISPLAY_SETTINGS"
+          Action: "android.settings.DISPLAY_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.LOCATION_SOURCE_SETTINGS:
+        df2b77d com.android.settings/.Settings$LocationSettingsActivity filter 4003c89
+          Action: "android.settings.LOCATION_SOURCE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.BLUETOOTH_SETTINGS:
+        bee6672 com.android.settings/.Settings$BluetoothSettingsActivity filter 1219064
+          Action: "android.settings.BLUETOOTH_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.credentials.INSTALL:
+        5e48ac3 com.android.settings/.CredentialStorage filter bb3c766
+          Action: "com.android.credentials.UNLOCK"
+          Action: "com.android.credentials.INSTALL"
+          Action: "com.android.credentials.RESET"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.APPLICATION_DEVELOPMENT_SETTINGS:
+        2726f36 com.android.settings/.Settings$DevelopmentSettingsActivity filter f5e9720
+          Action: "android.settings.APPLICATION_DEVELOPMENT_SETTINGS"
+          Action: "com.android.settings.APPLICATION_DEVELOPMENT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+        a68af40 com.android.settings/.development.DevelopmentSettingsDisabledActivity filter ad1529e
+          Action: "android.settings.APPLICATION_DEVELOPMENT_SETTINGS"
+          Action: "com.android.settings.APPLICATION_DEVELOPMENT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=-1, mHasPartialTypes=false
+      android.provider.Telephony.ACTION_CHANGE_DEFAULT:
+        f784e79 com.android.settings/.SmsDefaultDialog filter b6e7129
+          Action: "android.provider.Telephony.ACTION_CHANGE_DEFAULT"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.SETTINGS:
+        8b877be com.android.settings/.Settings filter 7003c6e
+          Action: "android.settings.SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.settings.SETUP_LOCK_SCREEN:
+        5fb101f com.android.settings/.password.SetupChooseLockGeneric filter f6d68f
+          Action: "com.android.settings.SETUP_LOCK_SCREEN"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.HARD_KEYBOARD_SETTINGS:
+        1c97f6c com.android.settings/.Settings$PhysicalKeyboardActivity filter 6460c00
+          Action: "android.settings.HARD_KEYBOARD_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.VR_LISTENER_SETTINGS:
+        1265935 com.android.settings/.Settings$VrListenersSettingsActivity filter 7d3f6e5
+          Action: "android.settings.VR_LISTENER_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.settings.sim.SIM_SUB_INFO_SETTINGS:
+        8d5cf3c com.android.settings/.Settings$SimSettingsActivity filter 949dfd1
+          Action: "com.android.settings.sim.SIM_SUB_INFO_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ADD_ACCOUNT_SETTINGS:
+        8051ca com.android.settings/.accounts.AddAccountSettings filter ae8e2b2
+          Action: "android.settings.ADD_ACCOUNT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.MANAGED_PROFILE_SETTINGS:
+        bca8f3b com.android.settings/.Settings$ManagedProfileSettingsActivity filter 1147cbd
+          Action: "android.settings.MANAGED_PROFILE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.USAGE_ACCESS_SETTINGS:
+        f852658 com.android.settings/.Settings$UsageAccessSettingsActivity filter 5d0afd
+          Action: "android.settings.USAGE_ACCESS_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.settings.TRUSTED_CREDENTIALS_USER:
+        d7053b1 com.android.settings/.Settings$TrustedCredentialsSettingsActivity filter 1abfca8
+          Action: "com.android.settings.TRUSTED_CREDENTIALS"
+          Action: "com.android.settings.TRUSTED_CREDENTIALS_USER"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.app.action.CONFIRM_FRP_CREDENTIAL:
+        e39c096 com.android.settings/.password.ConfirmDeviceCredentialActivity filter 86b2184
+          Action: "android.app.action.CONFIRM_DEVICE_CREDENTIAL"
+          Action: "android.app.action.CONFIRM_FRP_CREDENTIAL"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.app.action.ADD_DEVICE_ADMIN:
+        148e417 com.android.settings/.DeviceAdminAdd filter 1183b54
+          Action: "android.app.action.ADD_DEVICE_ADMIN"
+          Category: "android.intent.category.DEFAULT"
+      mediatek.settings.NFC_SETTINGS:
+        2525004 com.android.settings/.Settings$NfcSettingsActivity filter 5f38304
+          Action: "mediatek.settings.NFC_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.LICENSE:
+        88579ed com.android.settings/.SettingsLicenseActivity filter 6b75e63
+          Action: "android.settings.LICENSE"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.nfc.cardemulation.action.ACTION_CHANGE_DEFAULT:
+        6495022 com.android.settings/.nfc.PaymentDefaultDialog filter 58beeb0
+          Action: "android.nfc.cardemulation.action.ACTION_CHANGE_DEFAULT"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.BACKUP_AND_RESET_SETTINGS:
+        e302e1a com.android.settings/.backup.BackupSettingsActivity filter 49d3cd4
+          Action: "android.settings.PRIVACY_SETTINGS"
+          Action: "android.settings.BACKUP_AND_RESET_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ACTION_OTHER_SOUND_SETTINGS:
+        85c2f0e com.android.settings/.Settings$SoundSettingsActivity filter 1fdade3
+          Action: "com.android.settings.SOUND_SETTINGS"
+          Action: "android.settings.SOUND_SETTINGS"
+          Action: "android.settings.ACTION_OTHER_SOUND_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ACCOUNT_SYNC_SETTINGS:
+        fedaab3 com.android.settings/.Settings$AccountSyncSettingsActivity filter ee55667
+          Action: "android.settings.ACCOUNT_SYNC_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.intent.action.MAIN:
+        ba66870 com.android.settings/.Settings filter 8976f0f
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        74b40e0 com.android.settings/.Settings$NetworkDashboardActivity filter 9f7b17a
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        60f0f99 com.android.settings/.Settings$ConnectedDeviceDashboardActivity filter 20c3b21
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        4cc7e9 com.android.settings/.Settings$WifiSettingsActivity filter b50685d
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "com.android.settings.SHORTCUT"
+        9c53547 com.android.settings/.wifi.WifiPickerActivity filter b78d6a3
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        cd04c6e com.android.settings/.Settings$ConfigureWifiSettingsActivity filter 2b02d59
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "android.intent.category.DEFAULT"
+        70e3f0f com.android.settings/.Settings$SavedAccessPointsSettingsActivity filter db839ff
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        ce19b9c com.android.settings/.Settings$WifiInfoActivity filter 35693cc
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEVELOPMENT_PREFERENCE"
+          Category: "android.intent.category.DEFAULT"
+        20f9a5 com.android.settings/.wifi.WifiConfigInfo filter 8ad4615
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEVELOPMENT_PREFERENCE"
+          Category: "android.intent.category.DEFAULT"
+        4b8c17a com.android.settings/.Settings$WifiAPITestActivity filter 65f6d2a
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEVELOPMENT_PREFERENCE"
+          Category: "android.intent.category.DEFAULT"
+        bf9bd2b com.android.settings/.wifi.WifiStatusTest filter 260771b
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEVELOPMENT_PREFERENCE"
+          Category: "android.intent.category.DEFAULT"
+        b3ad588 com.android.settings/.Settings$ApnSettingsActivity filter e8569f7
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        bee6672 com.android.settings/.Settings$BluetoothSettingsActivity filter 6a122cd
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "com.android.settings.SHORTCUT"
+          Category: "android.intent.category.DEFAULT"
+        44c8b21 com.android.settings/.Settings$TetherSettingsActivity filter e2a1ec9
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "com.android.settings.SHORTCUT"
+        3817b46 com.android.settings/.Settings$WifiP2pSettingsActivity filter 5c689ce
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        fd50107 com.android.settings/.Settings$VpnSettingsActivity filter 18c87fc
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "com.android.settings.SHORTCUT"
+        480725e com.android.settings/.Settings$DateTimeSettingsActivity filter 5c574da
+          Action: "android.intent.action.MAIN"
+          Action: "android.intent.action.QUICK_CLOCK"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "android.intent.category.DEFAULT"
+        66bc234 com.android.settings/.Settings$LocalePickerActivity filter be1de01
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        3d863f com.android.settings/.Settings$LanguageAndInputSettingsActivity filter 69604a6
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "android.intent.category.DEFAULT"
+        945b85d com.android.settings/.Settings$ManageAssistActivity filter 28dc532
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        5ca05d2 com.android.settings/.Settings$KeyboardLayoutPickerActivity filter f1e6283
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        1c97f6c com.android.settings/.Settings$PhysicalKeyboardActivity filter b7b4c39
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        736a6a3 com.android.settings/.Settings$SpellCheckersSettingsActivity filter 1cf027e
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "android.intent.category.DEFAULT"
+        e1ccda0 com.android.settings/.inputmethod.InputMethodAndSubtypeEnablerActivity filter 8ffe82c
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "android.intent.category.DEFAULT"
+        2aa7d59 com.android.settings/.Settings$UserDictionarySettingsActivity filter a54c88a
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        9ead1e com.android.settings/.Settings$ZenModeSettingsActivity filter 39d4971
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "com.android.settings.SHORTCUT"
+        f8309ff com.android.settings/.wallpaper.WallpaperSuggestionActivity filter 1ec0bad
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.FIRST_IMPRESSION"
+        f8309ff com.android.settings/.wallpaper.WallpaperSuggestionActivity filter 1dddee2
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.PERSONALIZE"
+        21123cc com.android.settings/.support.NewDeviceIntroSuggestionActivity filter a2cf273
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.FIRST_IMPRESSION"
+        5fc9615 com.android.settings/.Settings$ZenModeScheduleRuleSettingsActivity filter ceab5a9
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        b847d2a com.android.settings/.Settings$ZenModeEventRuleSettingsActivity filter 85a42cf
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        e08471b com.android.settings/.Settings$ZenModeExternalRuleSettingsActivity filter 2100365
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        cd38b0c com.android.settings/.Settings$DisplaySettingsActivity filter e623ceb
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "com.android.settings.SHORTCUT"
+        912b0b8 com.android.settings/.Settings$NightDisplaySettingsActivity filter 58270e1
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "com.android.settings.SHORTCUT"
+        51d7e91 com.android.settings/.Settings$NightDisplaySuggestionActivity filter ea5bcc7
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.FIRST_IMPRESSION"
+        1b80c55 com.android.settings/.Settings$DeviceInfoSettingsActivity filter d543a1d
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        f4541f6 com.android.settings/.Settings$ManageApplicationsActivity filter 47f5b19
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "com.android.settings.SHORTCUT"
+        ddd566a com.android.settings/.Settings$MemorySettingsActivity filter b77dbf
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.SHORTCUT"
+        4da39f7 com.android.settings/.Settings$RunningServicesActivity filter a3165b7
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.MONKEY"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        a9e2064 com.android.settings/.Settings$StorageUseActivity filter 51ce48d
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.MONKEY"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        48a72cd com.android.settings/.Settings$NotificationStationActivity filter cfe7642
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "com.android.settings.SHORTCUT"
+        57b8782 com.android.settings/.Settings$BackgroundCheckSummaryActivity filter 5224b90
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        df2b77d com.android.settings/.Settings$LocationSettingsActivity filter 181b48e
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "com.android.settings.SHORTCUT"
+        78e475b com.android.settings/.Settings$SecuritySettingsActivity filter 68890bc
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        96e7e93 com.android.settings/.MonitoringCertInfoActivity filter ba88ccb
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        74eded0 com.android.settings/.Settings$PrivacySettingsActivity filter f25f3c1
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        9586ec9 com.android.settings/.Settings$DeviceAdminSettingsActivity filter 1312aa7
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        f852658 com.android.settings/.Settings$UsageAccessSettingsActivity filter da4f3f2
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        4de99ce com.android.settings/.Settings$IccLockSettingsActivity filter a67b8c0
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        cb44bf8 com.android.settings/.Settings$AccessibilitySettingsActivity filter 70a5d3e
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "com.android.settings.SHORTCUT"
+        8f870ef com.android.settings/.accessibility.AccessibilitySettingsForSetupWizardActivity filter 5179cb5
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.DISPLAY_SETTINGS"
+        c0b17fc com.android.settings/.Settings$AccessibilityDaltonizerSettingsActivity filter 35a3ebb
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        af02e85 com.android.settings/.Settings$CaptioningSettingsActivity filter 5f24f31
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        64e84da com.android.settings/.SetupRedactionInterstitial filter 77e3da2
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.LOCK_SCREEN_REDACTION"
+        6852d0b com.android.settings/.fingerprint.FingerprintSuggestionActivity filter a2b369
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.FINGERPRINT_ENROLL"
+        6852d0b com.android.settings/.fingerprint.FingerprintSuggestionActivity filter 42691ee
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.FIRST_IMPRESSION"
+        befb7e8 com.android.settings/.Settings$ScreenLockSuggestionActivity filter aaa1d25
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.LOCK_SCREEN"
+          mPriority=1, mHasPartialTypes=false
+        48a2e01 com.android.settings/.Settings$FingerprintEnrollSuggestionActivity filter eeddefa
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.FIRST_IMPRESSION"
+          mPriority=2, mHasPartialTypes=false
+        ea014a6 com.android.settings/.Settings$StatusActivity filter 4944cab
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        ed78ee7 com.android.settings/.Settings$SimStatusActivity filter 9c2ef08
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        cfc6a94 com.android.settings/.Settings$ImeiInformationActivity filter 50466a1
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        1ba18d1 com.android.settings/.Settings$StorageDashboardActivity filter c490887
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        25ffe37 com.android.settings/.Settings$PrintSettingsActivity filter 366054c
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        26aa93d com.android.settings/.Settings$AndroidBeamSettingsActivity filter 1f2177
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        7de2fa4 com.android.settings/.Settings$WifiDisplaySettingsActivity filter 610664d
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        928d532 com.android.settings/.Display filter 4da5e13
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEVELOPMENT_PREFERENCE"
+        e043283 com.android.settings/.RadioInfo filter f560850
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEVELOPMENT_PREFERENCE"
+        37f9c00 com.android.settings/.BandMode filter c0a1a49
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        6dd9c39 com.android.settings/.Settings$TestingSettingsActivity filter 1c59f4e
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        f0b127e com.android.settings/.UsageStatsActivity filter 1d11205
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEVELOPMENT_PREFERENCE"
+        8f6710d com.android.settings/.Settings$PowerUsageSummaryActivity filter 89d7c8b
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "com.android.settings.SHORTCUT"
+        fedaab3 com.android.settings/.Settings$AccountSyncSettingsActivity filter 2a35c14
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        8051ca com.android.settings/.accounts.AddAccountSettings filter 1e6f203
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        2cd73df com.android.settings/.CryptKeeper filter e642580
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.HOME"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=10, mHasPartialTypes=false
+        842782c com.android.settings/.FallbackHome filter 51127b9
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.HOME"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=-1000, mHasPartialTypes=false
+        2f2c2f5 com.android.settings/.Settings$CryptKeeperSettingsActivity filter edcab5f
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        46e48c2 com.android.settings/.Settings$DataPlanUsageSummaryActivity filter aa619ac
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "com.android.settings.SHORTCUT"
+        52c46d3 com.android.settings/.Settings$DataUsageSummaryActivity filter 446160a
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "com.android.settings.SHORTCUT"
+        741d88a com.android.settings/.Settings$DreamSettingsActivity filter 43788d6
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "com.android.settings.SHORTCUT"
+        ba0a210 com.android.settings/.Settings$UserSettingsActivity filter a5ff244
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        bbf6efb com.android.settings/.Settings$PaymentSettingsActivity filter df861f3
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        574eb18 com.android.settings/.Settings$SpecialAccessSettingsActivity filter 336dcae
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        876e327 com.android.settings/.Settings$NotificationAccessSettingsActivity filter 83945dc
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        1265935 com.android.settings/.Settings$VrListenersSettingsActivity filter 49815ba
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        ef99971 com.android.settings/.Settings$PictureInPictureSettingsActivity filter 702e3c8
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        b6cf356 com.android.settings/.Settings$ZenAccessSettingsActivity filter 3fe1447
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        d261109 com.android.settings/.Settings$ConfigureNotificationSettingsActivity filter 2331d9d
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "com.android.settings.SHORTCUT"
+        85c2f0e com.android.settings/.Settings$SoundSettingsActivity filter 49063e0
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "com.android.settings.SHORTCUT"
+        a0bffd7 com.android.settings/.Settings$AppNotificationSettingsActivity filter cc7de0c
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        659a0c4 com.android.settings/.Settings$ChannelNotificationSettingsActivity filter 901616a
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        8d5cf3c com.android.settings/.Settings$SimSettingsActivity filter 34c2a36
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        ebd5bad com.android.settings/.sim.SimDialogActivity filter 8a8b3c2
+          Action: "android.intent.action.MAIN"
+        d5ceee2 com.android.settings/.Settings$VolteSettingsActivity filter a5d5d3
+          Action: "android.intent.action.MAIN"
+          Action: "action.com.mediatek.settings.VolteSettings"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        626c273 com.android.settings/.Settings$WifiCallingSettingsActivity filter 1f48510
+          Action: "android.intent.action.MAIN"
+          Action: "android.settings.WIFI_CALLING_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        5b20530 com.android.settings/.Settings$WifiCallingSuggestionActivity filter 7b809
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.FIRST_IMPRESSION"
+        e302e1a com.android.settings/.backup.BackupSettingsActivity filter f73ae7d
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+        d8105a9 com.android.settings/.Settings$DoubleTapPowerSuggestionActivity filter 885dcca
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.GESTURE"
+        95f172e com.android.settings/.Settings$DoubleTwistSuggestionActivity filter 880be3b
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.GESTURE"
+        22112cf com.android.settings/.Settings$AmbientDisplaySuggestionActivity filter 5692958
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.GESTURE"
+        6ea445c com.android.settings/.Settings$AmbientDisplayPickupSuggestionActivity filter a6f9ab1
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.GESTURE"
+        dbb5365 com.android.settings/.Settings$SwipeToNotificationSuggestionActivity filter 88cfb96
+          Action: "android.intent.action.MAIN"
+          Category: "com.android.settings.suggested.category.GESTURE"
+        2525004 com.android.settings/.Settings$NfcSettingsActivity filter 3b230ed
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        149783a com.android.settings/.Settings$NfcServiceStatusActivity filter 3a7cb70
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        5c60ceb com.android.settings/.Settings$TetherWifiSettingsActivity filter 70deee9
+          Action: "android.intent.action.MAIN"
+          Action: "mediatek.intent.action.WIFI_TETHER"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "com.android.settings.SHORTCUT"
+        6054a48 com.android.settings/.Settings$HdmiSettingsActivity filter 7162e9c
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        892c0e1 com.android.settings/.Settings$SmartCallFwdActivity filter ab70c7a
+          Action: "android.intent.action.MAIN"
+          Action: "mediatek.settings.SMART_CALL_FWD_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+        c46de06 com.android.settings/.Settings$AdvancedCallingOptionsActivity filter 619ac2b
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        768cc7 com.android.settings/.Settings$AdvancedWifiCallingActivity filter fa59888
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.DEFAULT"
+        a48c2f4 com.android.settings/com.ATCSetting.mainui.MainActivity filter f2b9221
+          Action: "android.intent.action.MAIN"
+      android.settings.NOTIFICATION_POLICY_ACCESS_SETTINGS:
+        b6cf356 com.android.settings/.Settings$ZenAccessSettingsActivity filter 5a1d386
+          Action: "android.settings.NOTIFICATION_POLICY_ACCESS_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.nfc.action.NOT_NFC_SIM_DIALOG_REQUEST:
+        cb9a69d com.android.settings/com.mediatek.nfc.SwitchErrorActivity filter 2153b22
+          Action: "android.nfc.action.SWITCH_FAIL_DIALOG_REQUEST"
+          Action: "android.nfc.action.NOT_NFC_SIM_DIALOG_REQUEST"
+          Action: "android.nfc.action.NOT_NFC_TWO_SIM_DIALOG_REQUEST"
+          Category: "android.intent.category.DEFAULT"
+      android.intent.action.MANAGE_PACKAGE_STORAGE:
+        a9e2064 com.android.settings/.Settings$StorageUseActivity filter 6904124
+          Action: "android.intent.action.MANAGE_PACKAGE_STORAGE"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.nfc.action.SWITCH_FAIL_DIALOG_REQUEST:
+        cb9a69d com.android.settings/com.mediatek.nfc.SwitchErrorActivity filter 2153b22
+          Action: "android.nfc.action.SWITCH_FAIL_DIALOG_REQUEST"
+          Action: "android.nfc.action.NOT_NFC_SIM_DIALOG_REQUEST"
+          Action: "android.nfc.action.NOT_NFC_TWO_SIM_DIALOG_REQUEST"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.INTERNAL_STORAGE_SETTINGS:
+        1ba18d1 com.android.settings/.Settings$StorageDashboardActivity filter baaf0c6
+          Action: "android.settings.INTERNAL_STORAGE_SETTINGS"
+          Action: "android.settings.MEMORY_CARD_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.MANAGE_APPLICATIONS_SETTINGS:
+        f4541f6 com.android.settings/.Settings$ManageApplicationsActivity filter e678a60
+          Action: "android.settings.APPLICATION_SETTINGS"
+          Action: "android.settings.MANAGE_APPLICATIONS_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.SHOW_REMOTE_BUGREPORT_DIALOG:
+        9198a1d com.android.settings/.RemoteBugreportActivity filter 4942a38
+          Action: "android.settings.SHOW_REMOTE_BUGREPORT_DIALOG"
+          Category: "android.intent.category.DEFAULT"
+      action.com.mediatek.settings.VolteSettings:
+        d5ceee2 com.android.settings/.Settings$VolteSettingsActivity filter a5d5d3
+          Action: "android.intent.action.MAIN"
+          Action: "action.com.mediatek.settings.VolteSettings"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+      android.settings.SYNC_SETTINGS:
+        1cea328 com.android.settings/.Settings$UserAndAccountDashboardActivity filter eb52be
+          Action: "android.settings.SYNC_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.app.action.SET_PROFILE_OWNER:
+        762d492 com.android.settings/.SetProfileOwner filter bbca43
+          Action: "android.app.action.SET_PROFILE_OWNER"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1000, mHasPartialTypes=false
+      android.settings.WEBVIEW_SETTINGS:
+        cc52e63 com.android.settings/.WebViewImplementation filter 28b4227
+          Action: "android.settings.WEBVIEW_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.NFC_PAYMENT_SETTINGS:
+        bbf6efb com.android.settings/.Settings$PaymentSettingsActivity filter 3fb5c62
+          Action: "android.settings.NFC_PAYMENT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.settings.TTS_SETTINGS:
+        7a91a60 com.android.settings/.Settings$TextToSpeechSettingsActivity filter d32d616
+          Action: "com.android.settings.TTS_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.mediatek.settings.cdma.SIM_DIALOG:
+        f49ab19 com.android.settings/com.mediatek.settings.cdma.CdmaSimDialogActivity filter f4d90a5
+          Action: "com.mediatek.settings.cdma.SIM_DIALOG"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.ACTION_APP_NOTIFICATION_REDACTION:
+        2d5a7de com.android.settings/.notification.RedactionSettingsStandalone filter 4d3ca33
+          Action: "android.settings.ACTION_APP_NOTIFICATION_REDACTION"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.MEMORY_CARD_SETTINGS:
+        1ba18d1 com.android.settings/.Settings$StorageDashboardActivity filter baaf0c6
+          Action: "android.settings.INTERNAL_STORAGE_SETTINGS"
+          Action: "android.settings.MEMORY_CARD_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ACCESSIBILITY_SETTINGS:
+        cb44bf8 com.android.settings/.Settings$AccessibilitySettingsActivity filter cf459f9
+          Action: "android.settings.ACCESSIBILITY_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.WIFI_CALLING_SETTINGS:
+        626c273 com.android.settings/.Settings$WifiCallingSettingsActivity filter 1f48510
+          Action: "android.intent.action.MAIN"
+          Action: "android.settings.WIFI_CALLING_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+      com.mediatek.voicewakeup.VOW_KEYGUARD_CONFIRM:
+        1d24dbf com.android.settings/com.mediatek.settings.inputmethod.VowKeyguardConfirm filter bbd3e0f
+          Action: "com.mediatek.voicewakeup.VOW_KEYGUARD_CONFIRM"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.PRIVACY_SETTINGS:
+        e302e1a com.android.settings/.backup.BackupSettingsActivity filter 49d3cd4
+          Action: "android.settings.PRIVACY_SETTINGS"
+          Action: "android.settings.BACKUP_AND_RESET_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      mediatek.settings.SMART_CALL_FWD_SETTINGS:
+        892c0e1 com.android.settings/.Settings$SmartCallFwdActivity filter ab70c7a
+          Action: "android.intent.action.MAIN"
+          Action: "mediatek.settings.SMART_CALL_FWD_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+      com.android.settings.MONITORING_CERT_INFO:
+        96e7e93 com.android.settings/.MonitoringCertInfoActivity filter 7e88b9a
+          Action: "com.android.settings.MONITORING_CERT_INFO"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.MOBILE_DATA_USAGE:
+        af57c8c com.android.settings/.Settings$MobileDataUsageListActivity filter 4312498
+          Action: "android.settings.MOBILE_DATA_USAGE"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.WIRELESS_SETTINGS:
+        74b40e0 com.android.settings/.Settings$NetworkDashboardActivity filter 845a9a5
+          Action: "android.settings.WIRELESS_SETTINGS"
+          Action: "android.settings.AIRPLANE_MODE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.USER_DICTIONARY_SETTINGS:
+        2aa7d59 com.android.settings/.Settings$UserDictionarySettingsActivity filter bbb72f5
+          Action: "android.settings.USER_DICTIONARY_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.WIFI_IP_SETTINGS:
+        cd04c6e com.android.settings/.Settings$ConfigureWifiSettingsActivity filter 8eb3da0
+          Action: "android.settings.WIFI_IP_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.APPLICATION_SETTINGS:
+        f4541f6 com.android.settings/.Settings$ManageApplicationsActivity filter e678a60
+          Action: "android.settings.APPLICATION_SETTINGS"
+          Action: "android.settings.MANAGE_APPLICATIONS_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.net.conn.PROMPT_LOST_VALIDATION:
+        6c0dfd5 com.android.settings/.wifi.WifiNoInternetDialog filter a292e91
+          Action: "android.net.conn.PROMPT_LOST_VALIDATION"
+          Category: "android.intent.category.DEFAULT"
+      com.android.settings.TRUSTED_CREDENTIALS:
+        d7053b1 com.android.settings/.Settings$TrustedCredentialsSettingsActivity filter 1abfca8
+          Action: "com.android.settings.TRUSTED_CREDENTIALS"
+          Action: "com.android.settings.TRUSTED_CREDENTIALS_USER"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.credentials.UNLOCK:
+        78e475b com.android.settings/.Settings$SecuritySettingsActivity filter d1154af
+          Action: "android.settings.SECURITY_SETTINGS"
+          Action: "android.credentials.UNLOCK"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.credentials.UNLOCK:
+        5e48ac3 com.android.settings/.CredentialStorage filter bb3c766
+          Action: "com.android.credentials.UNLOCK"
+          Action: "com.android.credentials.INSTALL"
+          Action: "com.android.credentials.RESET"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ZEN_MODE_PRIORITY_SETTINGS:
+        81063ea com.android.settings/.Settings$ZenModePrioritySettingsActivity filter 35510c4
+          Action: "android.settings.ZEN_MODE_PRIORITY_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.intent.action.QUICK_CLOCK:
+        480725e com.android.settings/.Settings$DateTimeSettingsActivity filter 5c574da
+          Action: "android.intent.action.MAIN"
+          Action: "android.intent.action.QUICK_CLOCK"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "android.intent.category.DEFAULT"
+      android.net.vpn.SETTINGS:
+        fd50107 com.android.settings/.Settings$VpnSettingsActivity filter 6d9a0ef
+          Action: "android.settings.VPN_SETTINGS"
+          Action: "android.net.vpn.SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ZEN_MODE_AUTOMATION_SETTINGS:
+        9ead1e com.android.settings/.Settings$ZenModeSettingsActivity filter 4bee356
+          Action: "android.settings.ZEN_MODE_AUTOMATION_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.DEVICE_INFO_SETTINGS:
+        1b80c55 com.android.settings/.Settings$DeviceInfoSettingsActivity filter 50032f4
+          Action: "android.settings.DEVICE_INFO_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.credentials.RESET:
+        5e48ac3 com.android.settings/.CredentialStorage filter bb3c766
+          Action: "com.android.credentials.UNLOCK"
+          Action: "com.android.credentials.INSTALL"
+          Action: "com.android.credentials.RESET"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.net.wifi.action.REQUEST_SCAN_ALWAYS_AVAILABLE:
+        e6806db com.android.settings/.wifi.WifiScanModeActivity filter 25b69b
+          Action: "android.net.wifi.action.REQUEST_SCAN_ALWAYS_AVAILABLE"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.SECURITY_SETTINGS:
+        78e475b com.android.settings/.Settings$SecuritySettingsActivity filter d1154af
+          Action: "android.settings.SECURITY_SETTINGS"
+          Action: "android.credentials.UNLOCK"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.intent.action.POWER_USAGE_SUMMARY:
+        8f6710d com.android.settings/.Settings$PowerUsageSummaryActivity filter e60625a
+          Action: "android.intent.action.POWER_USAGE_SUMMARY"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.SHOW_ADMIN_SUPPORT_DETAILS:
+        cc3d578 com.android.settings/.ShowAdminSupportDetailsDialog filter c5be628
+          Action: "android.settings.SHOW_ADMIN_SUPPORT_DETAILS"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.ZEN_MODE_SETTINGS:
+        9ead1e com.android.settings/.Settings$ZenModeSettingsActivity filter c995b18
+          Action: "android.settings.ZEN_MODE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ZEN_MODE_EXTERNAL_RULE_SETTINGS:
+        e08471b com.android.settings/.Settings$ZenModeExternalRuleSettingsActivity filter 9e3b45c
+          Action: "android.settings.ZEN_MODE_EXTERNAL_RULE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.VPN_SETTINGS:
+        fd50107 com.android.settings/.Settings$VpnSettingsActivity filter 6d9a0ef
+          Action: "android.settings.VPN_SETTINGS"
+          Action: "android.net.vpn.SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.intent.action.PICK_ACTIVITY:
+        d3ca451 com.android.settings/.ActivityPicker filter 7433a11
+          Action: "android.intent.action.PICK_ACTIVITY"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.net.wifi.action.REQUEST_DISABLE:
+        f1311e6 com.android.settings/.wifi.RequestToggleWiFiActivity filter 1a9e2a4
+          Action: "android.net.wifi.action.REQUEST_ENABLE"
+          Action: "android.net.wifi.action.REQUEST_DISABLE"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.MANAGE_ALL_APPLICATIONS_SETTINGS:
+        488d4b6 com.android.settings/.Settings$AllApplicationsActivity filter f5b53ea
+          Action: "android.settings.MANAGE_ALL_APPLICATIONS_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.ASSIST_GESTURE_SETTINGS:
+        9d635b7 com.android.settings/.Settings$AssistGestureSettingsActivity filter 2c47782
+          Action: "android.settings.ASSIST_GESTURE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.ENTERPRISE_PRIVACY_SETTINGS:
+        71cd124 com.android.settings/.Settings$EnterprisePrivacySettingsActivity filter 6e40b97
+          Action: "android.settings.ENTERPRISE_PRIVACY_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.WIFI_SETTINGS:
+        4cc7e9 com.android.settings/.Settings$WifiSettingsActivity filter 4333234
+          Action: "android.settings.WIFI_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.APP_NOTIFICATION_SETTINGS:
+        a0bffd7 com.android.settings/.Settings$AppNotificationSettingsActivity filter ed3453f
+          Action: "android.settings.APP_NOTIFICATION_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.AIRPLANE_MODE_SETTINGS:
+        74b40e0 com.android.settings/.Settings$NetworkDashboardActivity filter 845a9a5
+          Action: "android.settings.WIRELESS_SETTINGS"
+          Action: "android.settings.AIRPLANE_MODE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.MANAGE_UNKNOWN_APP_SOURCES:
+        4d6348d com.android.settings/.Settings$ManageExternalSourcesActivity filter becf91a
+          Action: "android.settings.MANAGE_UNKNOWN_APP_SOURCES"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.net.conn.PROMPT_UNVALIDATED:
+        6c0dfd5 com.android.settings/.wifi.WifiNoInternetDialog filter 13f20b8
+          Action: "android.net.conn.PROMPT_UNVALIDATED"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.SOUND_SETTINGS:
+        85c2f0e com.android.settings/.Settings$SoundSettingsActivity filter 1fdade3
+          Action: "com.android.settings.SOUND_SETTINGS"
+          Action: "android.settings.SOUND_SETTINGS"
+          Action: "android.settings.ACTION_OTHER_SOUND_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.VOICE_CONTROL_DO_NOT_DISTURB_MODE:
+        5458642 com.android.settings/.notification.ZenModeVoiceActivity filter 96ca653
+          Action: "android.settings.VOICE_CONTROL_DO_NOT_DISTURB_MODE"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE"
+      android.settings.VOICE_INPUT_SETTINGS:
+        945b85d com.android.settings/.Settings$ManageAssistActivity filter f8d593d
+          Action: "android.settings.VOICE_INPUT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.MANAGE_DOMAIN_URLS:
+        68e7653 com.android.settings/.Settings$ManageDomainUrlsActivity filter 65197de
+          Action: "android.settings.MANAGE_DOMAIN_URLS"
+          Category: "android.intent.category.DEFAULT"
+      com.mediatek.settings.NFC_SERVICE_STATUS:
+        149783a com.android.settings/.Settings$NfcServiceStatusActivity filter 95ab9b3
+          Action: "com.mediatek.settings.NFC_SERVICE_STATUS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.APP_MEMORY_USAGE:
+        9e7db90 com.android.settings/.Settings$AppMemoryUsageActivity filter 1a18fd5
+          Action: "android.settings.APP_MEMORY_USAGE"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.action.MANAGE_OVERLAY_PERMISSION:
+        dfe8c89 com.android.settings/.Settings$OverlaySettingsActivity filter d524a0e
+          Action: "android.settings.action.MANAGE_OVERLAY_PERMISSION"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.WIFI_SAVED_NETWORK_SETTINGS:
+        70e3f0f com.android.settings/.Settings$SavedAccessPointsSettingsActivity filter eaa9d1e
+          Action: "android.settings.WIFI_SAVED_NETWORK_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.VOICE_CONTROL_AIRPLANE_MODE:
+        f29c48e com.android.settings/.AirplaneModeVoiceActivity filter 3543107
+          Action: "android.settings.VOICE_CONTROL_AIRPLANE_MODE"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE"
+      android.settings.NFCSHARING_SETTINGS:
+        26aa93d com.android.settings/.Settings$AndroidBeamSettingsActivity filter d771776
+          Action: "android.settings.NFCSHARING_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ZEN_MODE_SCHEDULE_RULE_SETTINGS:
+        5fc9615 com.android.settings/.Settings$ZenModeScheduleRuleSettingsActivity filter ef47530
+          Action: "android.settings.ZEN_MODE_SCHEDULE_RULE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.NIGHT_DISPLAY_SETTINGS:
+        912b0b8 com.android.settings/.Settings$NightDisplaySettingsActivity filter 5f4ce06
+          Action: "android.settings.NIGHT_DISPLAY_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ACCESSIBILITY_SETTINGS_FOR_SUW:
+        8f870ef com.android.settings/.accessibility.AccessibilitySettingsForSetupWizardActivity filter 6fa0ec
+          Action: "android.settings.ACCESSIBILITY_SETTINGS_FOR_SUW"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.app.action.CONFIRM_DEVICE_CREDENTIAL:
+        e39c096 com.android.settings/.password.ConfirmDeviceCredentialActivity filter 86b2184
+          Action: "android.app.action.CONFIRM_DEVICE_CREDENTIAL"
+          Action: "android.app.action.CONFIRM_FRP_CREDENTIAL"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.NOTIFICATION_SETTINGS:
+        d261109 com.android.settings/.Settings$ConfigureNotificationSettingsActivity filter 3467474
+          Action: "android.settings.NOTIFICATION_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.DREAM_SETTINGS:
+        741d88a com.android.settings/.Settings$DreamSettingsActivity filter 7a314f1
+          Action: "android.settings.DREAM_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.action.MANAGE_WRITE_SETTINGS:
+        28024af com.android.settings/.Settings$WriteSettingsActivity filter 404e23c
+          Action: "android.settings.action.MANAGE_WRITE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.INPUT_METHOD_SUBTYPE_SETTINGS:
+        e1ccda0 com.android.settings/.inputmethod.InputMethodAndSubtypeEnablerActivity filter 35aa3df
+          Action: "android.settings.INPUT_METHOD_SUBTYPE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.CAST_SETTINGS:
+        7de2fa4 com.android.settings/.Settings$WifiDisplaySettingsActivity filter 27db1e4
+          Action: "android.settings.CAST_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.settings.ACCESSIBILITY_COLOR_SPACE_SETTINGS:
+        c0b17fc com.android.settings/.Settings$AccessibilityDaltonizerSettingsActivity filter 5cb0f4a
+          Action: "com.android.settings.ACCESSIBILITY_COLOR_SPACE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.settings.APPLICATION_DEVELOPMENT_SETTINGS:
+        2726f36 com.android.settings/.Settings$DevelopmentSettingsActivity filter f5e9720
+          Action: "android.settings.APPLICATION_DEVELOPMENT_SETTINGS"
+          Action: "com.android.settings.APPLICATION_DEVELOPMENT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+        a68af40 com.android.settings/.development.DevelopmentSettingsDisabledActivity filter ad1529e
+          Action: "android.settings.APPLICATION_DEVELOPMENT_SETTINGS"
+          Action: "com.android.settings.APPLICATION_DEVELOPMENT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=-1, mHasPartialTypes=false
+      com.android.settings.WIFI_DIALOG:
+        a1720bc com.android.settings/.wifi.WifiDialogActivity filter 73ba80d
+          Action: "com.android.settings.WIFI_DIALOG"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.MANAGE_DEFAULT_APPS_SETTINGS:
+        c95b4c5 com.android.settings/.Settings$AdvancedAppsActivity filter e315f41
+          Action: "android.settings.MANAGE_DEFAULT_APPS_SETTINGS"
+          Action: "android.settings.HOME_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ACTION_PRINT_SETTINGS:
+        25ffe37 com.android.settings/.Settings$PrintSettingsActivity filter 680817f
+          Action: "android.settings.ACTION_PRINT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.app.action.START_ENCRYPTION:
+        2f2c2f5 com.android.settings/.Settings$CryptKeeperSettingsActivity filter 47e77fe
+          Action: "android.app.action.START_ENCRYPTION"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.INPUT_METHOD_SETTINGS:
+        53a6845 com.android.settings/.Settings$AvailableVirtualKeyboardActivity filter 33bda94
+          Action: "android.settings.INPUT_METHOD_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.settings.DISPLAY_SETTINGS:
+        cd38b0c com.android.settings/.Settings$DisplaySettingsActivity filter 6f8683a
+          Action: "com.android.settings.DISPLAY_SETTINGS"
+          Action: "android.settings.DISPLAY_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      mediatek.intent.action.CLEAR_MOTION_SETTINGS:
+        19b9a com.android.settings/com.mediatek.settings.display.ClearMotionSettings filter efe76e
+          Action: "mediatek.intent.action.CLEAR_MOTION_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.LOCALE_SETTINGS:
+        66bc234 com.android.settings/.Settings$LocalePickerActivity filter 1827e8
+          Action: "android.settings.LOCALE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.app.action.SET_NEW_PASSWORD:
+        1345ccb com.android.settings/.password.SetNewPasswordActivity filter 131d1c
+          Action: "android.app.action.SET_NEW_PASSWORD"
+          Action: "android.app.action.SET_NEW_PARENT_PROFILE_PASSWORD"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.appwidget.action.APPWIDGET_BIND:
+        7938ca8 com.android.settings/.AllowBindAppWidgetActivity filter b1b597c
+          Action: "android.appwidget.action.APPWIDGET_BIND"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.appwidget.action.APPWIDGET_PICK:
+        9e43c1 com.android.settings/.AppWidgetPickActivity filter c02c86f
+          Action: "android.appwidget.action.APPWIDGET_PICK"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS:
+        44dd766 com.android.settings/.Settings$HighPowerApplicationsActivity filter e7036db
+          Action: "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.TETHER_PROVISIONING_UI:
+        ba9faa7 com.android.settings/.TetherProvisioningActivity filter a994ed0
+          Action: "android.settings.TETHER_PROVISIONING_UI"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.APN_SETTINGS:
+        b3ad588 com.android.settings/.Settings$ApnSettingsActivity filter 4df31f6
+          Action: "android.settings.APN_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      mediatek.intent.action.WIFI_TETHER:
+        5c60ceb com.android.settings/.Settings$TetherWifiSettingsActivity filter 70deee9
+          Action: "android.intent.action.MAIN"
+          Action: "mediatek.intent.action.WIFI_TETHER"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE_LAUNCH"
+          Category: "com.android.settings.SHORTCUT"
+      android.app.action.CONFIRM_DEVICE_CREDENTIAL_WITH_USER:
+        5e8cb54 com.android.settings/.password.ConfirmDeviceCredentialActivity$InternalActivity filter 9ebad6d
+          Action: "android.app.action.CONFIRM_DEVICE_CREDENTIAL_WITH_USER"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      com.android.settings.SOUND_SETTINGS:
+        85c2f0e com.android.settings/.Settings$SoundSettingsActivity filter 1fdade3
+          Action: "com.android.settings.SOUND_SETTINGS"
+          Action: "android.settings.SOUND_SETTINGS"
+          Action: "android.settings.ACTION_OTHER_SOUND_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.CAPTIONING_SETTINGS:
+        af02e85 com.android.settings/.Settings$CaptioningSettingsActivity filter c2bdfd8
+          Action: "android.settings.CAPTIONING_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ZEN_MODE_EVENT_RULE_SETTINGS:
+        b847d2a com.android.settings/.Settings$ZenModeEventRuleSettingsActivity filter cff072e
+          Action: "android.settings.ZEN_MODE_EVENT_RULE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.intent.action.CREATE_SHORTCUT:
+        90a5afd com.android.settings/.CreateShortcut filter eb0b9c
+          Action: "android.intent.action.CREATE_SHORTCUT"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.CHANNEL_NOTIFICATION_SETTINGS:
+        659a0c4 com.android.settings/.Settings$ChannelNotificationSettingsActivity filter 96355
+          Action: "android.settings.CHANNEL_NOTIFICATION_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.ACTION_CONDITION_PROVIDER_SETTINGS:
+        9ead1e com.android.settings/.Settings$ZenModeSettingsActivity filter 90f2fd7
+          Action: "android.settings.ACTION_CONDITION_PROVIDER_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.bluetooth.devicepicker.action.LAUNCH:
+        dd003f2 com.android.settings/.bluetooth.DevicePickerActivity filter a9cae93
+          Action: "android.bluetooth.devicepicker.action.LAUNCH"
+          Category: "android.intent.category.DEFAULT"
+      android.settings.DATE_SETTINGS:
+        480725e com.android.settings/.Settings$DateTimeSettingsActivity filter 32cde85
+          Action: "android.settings.DATE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.app.action.SET_NEW_PARENT_PROFILE_PASSWORD:
+        1345ccb com.android.settings/.password.SetNewPasswordActivity filter 131d1c
+          Action: "android.app.action.SET_NEW_PASSWORD"
+          Action: "android.app.action.SET_NEW_PARENT_PROFILE_PASSWORD"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.VOICE_CONTROL_BATTERY_SAVER_MODE:
+        1f19a43 com.android.settings/.fuelgauge.BatterySaverModeVoiceActivity filter 5b24a26
+          Action: "android.settings.VOICE_CONTROL_BATTERY_SAVER_MODE"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE"
+      android.settings.BATTERY_SAVER_SETTINGS:
+        3b148c0 com.android.settings/.Settings$BatterySaverSettingsActivity filter f55c981
+          Action: "android.settings.BATTERY_SAVER_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.PICTURE_IN_PICTURE_SETTINGS:
+        ef99971 com.android.settings/.Settings$PictureInPictureSettingsActivity filter 33c1c6b
+          Action: "android.settings.PICTURE_IN_PICTURE_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.NFC_SETTINGS:
+        60f0f99 com.android.settings/.Settings$ConnectedDeviceDashboardActivity filter e6b4588
+          Action: "android.settings.NFC_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+      android.settings.STORAGE_MANAGER_SETTINGS:
+        b26a9f9 com.android.settings/.Settings$AutomaticStorageManagerSettingsActivity filter 65fd9c3
+          Action: "android.settings.STORAGE_MANAGER_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1, mHasPartialTypes=false
+
+  MIME Typed Actions:
+      android.intent.action.EDIT:
+        b252f3 com.android.settings/.Settings$ApnEditorActivity filter 2d55352
+          Action: "android.intent.action.VIEW"
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          Type: "vnd.android.cursor.item/telephony-carrier"
+      android.intent.action.VIEW:
+        b252f3 com.android.settings/.Settings$ApnEditorActivity filter 2d55352
+          Action: "android.intent.action.VIEW"
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          Type: "vnd.android.cursor.item/telephony-carrier"
+      android.provider.action.DOCUMENT_ROOT_SETTINGS:
+        c258bb0 com.android.settings/.Settings$PublicVolumeSettingsActivity filter 5fcbdd
+          Action: "android.provider.action.DOCUMENT_ROOT_SETTINGS"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "content"
+          Authority: "com.android.externalstorage.documents": -1
+          Type: "vnd.android.document/root"
+      android.intent.action.INSERT:
+        b252f3 com.android.settings/.Settings$ApnEditorActivity filter 7a3a623
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          Type: "vnd.android.cursor.dir/telephony-carrier"
+
+Receiver Resolver Table:
+  Full MIME Types:
+      application/com.mediatek.omacp-apn:
+        6d66d3e com.android.settings/com.mediatek.apn.OmacpApnReceiver filter 58429ed
+          Action: "com.mediatek.omacp.settings"
+          Type: "application/com.mediatek.omacp-apn"
+      application/com.mediatek.omacp-ap0004:
+        a89979f com.android.settings/com.mediatek.lbs.LbsReceiver filter e5dc004
+          Action: "com.mediatek.omacp.settings"
+          Type: "application/com.mediatek.omacp-ap0004"
+
+  Base MIME Types:
+      application:
+        a89979f com.android.settings/com.mediatek.lbs.LbsReceiver filter e5dc004
+          Action: "com.mediatek.omacp.settings"
+          Type: "application/com.mediatek.omacp-ap0004"
+        6d66d3e com.android.settings/com.mediatek.apn.OmacpApnReceiver filter 58429ed
+          Action: "com.mediatek.omacp.settings"
+          Type: "application/com.mediatek.omacp-apn"
+
+  Schemes:
+      android_secret_code:
+        cc230ec com.android.settings/.TestingSettingsBroadcastReceiver filter 4b99658
+          Action: "android.provider.Telephony.SECRET_CODE"
+          Scheme: "android_secret_code"
+          Authority: "4636": -1
+
+  Non-Data Actions:
+      android.net.wifi.WIFI_STATE_CHANGED:
+        c1eecb5 com.android.settings/.widget.SettingsAppWidgetProvider filter ee403b1
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+          Action: "android.appwidget.action.APPWIDGET_ENABLED"
+          Action: "android.appwidget.action.APPWIDGET_DISABLED"
+          Action: "android.net.wifi.WIFI_STATE_CHANGED"
+          Action: "android.net.conn.BACKGROUND_DATA_SETTING_CHANGED"
+          Action: "android.location.MODE_CHANGED"
+          Action: "com.android.sync.SYNC_CONN_STATUS_CHANGED"
+      com.mediatek.internal.omh.cardcheck:
+        e481f4a com.android.settings/com.mediatek.settings.cdma.OmhEventReceiver filter a43dab3
+          Action: "com.mediatek.internal.omh.cardcheck"
+      android.intent.action.LOCKED_BOOT_COMPLETED:
+        b7a0ebb com.android.settings/com.mediatek.settings.RestoreRotationReceiver filter 85a4022
+          Action: "android.intent.action.LOCKED_BOOT_COMPLETED"
+      android.location.MODE_CHANGED:
+        c1eecb5 com.android.settings/.widget.SettingsAppWidgetProvider filter ee403b1
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+          Action: "android.appwidget.action.APPWIDGET_ENABLED"
+          Action: "android.appwidget.action.APPWIDGET_DISABLED"
+          Action: "android.net.wifi.WIFI_STATE_CHANGED"
+          Action: "android.net.conn.BACKGROUND_DATA_SETTING_CHANGED"
+          Action: "android.location.MODE_CHANGED"
+          Action: "com.android.sync.SYNC_CONN_STATUS_CHANGED"
+      android.intent.action.USER_INITIALIZE:
+        3176fd8 com.android.settings/.SettingsInitialize filter c4abf3b
+          Action: "android.intent.action.USER_INITIALIZE"
+          Action: "android.intent.action.PRE_BOOT_COMPLETED"
+      android.provider.Contacts.PROFILE_CHANGED:
+        e1e9f31 com.android.settings/.users.ProfileUpdateReceiver filter c1bb096
+          Action: "android.provider.Contacts.PROFILE_CHANGED"
+      autochips.intent.action.ARM2_BACKCAR_EXIT:
+        870e616 com.android.settings/.display.Arm2BackcarExitReceiver filter 68677e9
+          Action: "autochips.intent.action.ARM2_BACKCAR_EXIT"
+      android.appwidget.action.APPWIDGET_DISABLED:
+        c1eecb5 com.android.settings/.widget.SettingsAppWidgetProvider filter ee403b1
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+          Action: "android.appwidget.action.APPWIDGET_ENABLED"
+          Action: "android.appwidget.action.APPWIDGET_DISABLED"
+          Action: "android.net.wifi.WIFI_STATE_CHANGED"
+          Action: "android.net.conn.BACKGROUND_DATA_SETTING_CHANGED"
+          Action: "android.location.MODE_CHANGED"
+          Action: "com.android.sync.SYNC_CONN_STATUS_CHANGED"
+      android.net.conn.BACKGROUND_DATA_SETTING_CHANGED:
+        c1eecb5 com.android.settings/.widget.SettingsAppWidgetProvider filter ee403b1
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+          Action: "android.appwidget.action.APPWIDGET_ENABLED"
+          Action: "android.appwidget.action.APPWIDGET_DISABLED"
+          Action: "android.net.wifi.WIFI_STATE_CHANGED"
+          Action: "android.net.conn.BACKGROUND_DATA_SETTING_CHANGED"
+          Action: "android.location.MODE_CHANGED"
+          Action: "com.android.sync.SYNC_CONN_STATUS_CHANGED"
+      android.intent.action.PRE_BOOT_COMPLETED:
+        3176fd8 com.android.settings/.SettingsInitialize filter c4abf3b
+          Action: "android.intent.action.USER_INITIALIZE"
+          Action: "android.intent.action.PRE_BOOT_COMPLETED"
+      android.intent.action.BOOT_COMPLETED:
+        930db97 com.android.settings/com.ATCSetting.mainui.BootCompletedReceiver filter 4f8d870
+          Action: "android.intent.action.BOOT_COMPLETED"
+      com.mediatek.omacp.capability:
+        a89979f com.android.settings/com.mediatek.lbs.LbsReceiver filter 19c1417
+          Action: "com.mediatek.agps.OMACP_UPDATED"
+          Action: "com.mediatek.omacp.capability"
+          mPriority=1000, mHasPartialTypes=false
+      android.appwidget.action.APPWIDGET_ENABLED:
+        c1eecb5 com.android.settings/.widget.SettingsAppWidgetProvider filter ee403b1
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+          Action: "android.appwidget.action.APPWIDGET_ENABLED"
+          Action: "android.appwidget.action.APPWIDGET_DISABLED"
+          Action: "android.net.wifi.WIFI_STATE_CHANGED"
+          Action: "android.net.conn.BACKGROUND_DATA_SETTING_CHANGED"
+          Action: "android.location.MODE_CHANGED"
+          Action: "com.android.sync.SYNC_CONN_STATUS_CHANGED"
+      android.appwidget.action.APPWIDGET_UPDATE:
+        c1eecb5 com.android.settings/.widget.SettingsAppWidgetProvider filter ee403b1
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+          Action: "android.appwidget.action.APPWIDGET_ENABLED"
+          Action: "android.appwidget.action.APPWIDGET_DISABLED"
+          Action: "android.net.wifi.WIFI_STATE_CHANGED"
+          Action: "android.net.conn.BACKGROUND_DATA_SETTING_CHANGED"
+          Action: "android.location.MODE_CHANGED"
+          Action: "com.android.sync.SYNC_CONN_STATUS_CHANGED"
+      com.mediatek.agps.OMACP_UPDATED:
+        a89979f com.android.settings/com.mediatek.lbs.LbsReceiver filter 19c1417
+          Action: "com.mediatek.agps.OMACP_UPDATED"
+          Action: "com.mediatek.omacp.capability"
+          mPriority=1000, mHasPartialTypes=false
+      com.android.sync.SYNC_CONN_STATUS_CHANGED:
+        c1eecb5 com.android.settings/.widget.SettingsAppWidgetProvider filter ee403b1
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+          Action: "android.appwidget.action.APPWIDGET_ENABLED"
+          Action: "android.appwidget.action.APPWIDGET_DISABLED"
+          Action: "android.net.wifi.WIFI_STATE_CHANGED"
+          Action: "android.net.conn.BACKGROUND_DATA_SETTING_CHANGED"
+          Action: "android.location.MODE_CHANGED"
+          Action: "com.android.sync.SYNC_CONN_STATUS_CHANGED"
+
+  MIME Typed Actions:
+      com.mediatek.omacp.settings:
+        a89979f com.android.settings/com.mediatek.lbs.LbsReceiver filter e5dc004
+          Action: "com.mediatek.omacp.settings"
+          Type: "application/com.mediatek.omacp-ap0004"
+        6d66d3e com.android.settings/com.mediatek.apn.OmacpApnReceiver filter 58429ed
+          Action: "com.mediatek.omacp.settings"
+          Type: "application/com.mediatek.omacp-apn"
+
+Service Resolver Table:
+  Non-Data Actions:
+      android.service.quicksettings.action.QS_TILE:
+        a7fb184 com.android.settings/.qstile.DevelopmentTiles$ShowLayout filter dd8401f
+          Action: "android.service.quicksettings.action.QS_TILE"
+        8cfd6d com.android.settings/.qstile.DevelopmentTiles$GPUProfiling filter f96ef6c
+          Action: "android.service.quicksettings.action.QS_TILE"
+        8d4da2 com.android.settings/.qstile.DevelopmentTiles$ForceRTL filter 9bf0935
+          Action: "android.service.quicksettings.action.QS_TILE"
+        71d9a33 com.android.settings/.qstile.DevelopmentTiles$AnimationSpeed filter f2341ca
+          Action: "android.service.quicksettings.action.QS_TILE"
+      com.mediatek.settings.sim.SIM_SELECT_SERVICE:
+        30861f0 com.android.settings/com.mediatek.settings.sim.SimSelectService filter e0c67be
+          Action: "com.mediatek.settings.sim.SIM_SELECT_SERVICE"
+
+Provider Resolver Table:
+  Non-Data Actions:
+      android.content.action.SEARCH_INDEXABLES_PROVIDER:
+        8090369 com.android.settings/.search.SettingsSearchIndexablesProvider filter 6e5fe79
+          Action: "android.content.action.SEARCH_INDEXABLES_PROVIDER"
+
+Registered ContentProviders:
+  com.android.settings/android.support.v4.content.FileProvider:
+    Provider{716a1ee com.android.settings/android.support.v4.content.FileProvider}
+  com.android.settings/.search.SettingsSearchIndexablesProvider:
+    Provider{8090369 com.android.settings/.search.SettingsSearchIndexablesProvider}
+
+ContentProvider Authorities:
+  [com.android.settings.files]:
+    Provider{716a1ee com.android.settings/android.support.v4.content.FileProvider}
+      applicationInfo=ApplicationInfo{60da68f com.android.settings}
+  [com.android.settings]:
+    Provider{8090369 com.android.settings/.search.SettingsSearchIndexablesProvider}
+      applicationInfo=ApplicationInfo{60da68f com.android.settings}
+
+Key Set Manager:
+  [com.android.settings]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.android.settings] (512a1fe):
+    userId=1000
+    sharedUser=SharedUserSetting{82d6e61 android.uid.system/1000}
+    pkg=Package{93f1f40 com.android.settings}
+    codePath=/system/priv-app/MtkSettings
+    resourcePath=/system/priv-app/MtkSettings
+    legacyNativeLibraryDir=/system/priv-app/MtkSettings/lib
+    primaryCpuAbi=armeabi-v7a
+    secondaryCpuAbi=null
+    versionCode=27 minSdk=8 targetSdk=23
+    versionName=9.1
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{60da68f com.android.settings}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    privateFlags=[ PRIVILEGED DEFAULT_TO_DEVICE_PROTECTED_STORAGE DIRECT_BOOT_AWARE ]
+    dataDir=/data/user_de/0/com.android.settings
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{e29ad1c [b4addb29]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    requested permissions:
+      android.permission.REQUEST_NETWORK_SCORES
+      android.permission.WRITE_MEDIA_STORAGE
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.WRITE_SETTINGS
+      android.permission.WRITE_SECURE_SETTINGS
+      android.permission.DEVICE_POWER
+      android.permission.CHANGE_CONFIGURATION
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+      android.permission.VIBRATE
+      android.permission.BLUETOOTH
+      android.permission.BLUETOOTH_ADMIN
+      android.permission.BLUETOOTH_PRIVILEGED
+      android.permission.NFC
+      android.permission.HARDWARE_TEST
+      android.permission.CALL_PHONE
+      android.permission.MODIFY_AUDIO_SETTINGS
+      android.permission.MASTER_CLEAR
+      com.google.android.googleapps.permission.GOOGLE_AUTH
+      android.permission.ACCESS_DOWNLOAD_MANAGER
+      android.permission.READ_CONTACTS
+      android.permission.WRITE_CONTACTS
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.ACCESS_WIMAX_STATE
+      android.permission.CHANGE_WIMAX_STATE
+      android.permission.ACCESS_WIFI_STATE
+      com.android.certinstaller.INSTALL_AS_USER
+      android.permission.CHANGE_WIFI_STATE
+      android.permission.TETHER_PRIVILEGED
+      android.permission.INTERNET
+      android.permission.CLEAR_APP_USER_DATA
+      android.permission.READ_PHONE_STATE
+      android.permission.MODIFY_PHONE_STATE
+      android.permission.ACCESS_COARSE_LOCATION
+      android.permission.WRITE_APN_SETTINGS
+      android.permission.ACCESS_CHECKIN_PROPERTIES
+      android.permission.READ_USER_DICTIONARY
+      android.permission.WRITE_USER_DICTIONARY
+      android.permission.FORCE_STOP_PACKAGES
+      android.permission.PACKAGE_USAGE_STATS
+      android.permission.BATTERY_STATS
+      com.android.launcher.permission.READ_SETTINGS
+      com.android.launcher.permission.WRITE_SETTINGS
+      android.permission.MOVE_PACKAGE
+      android.permission.USE_CREDENTIALS
+      android.permission.BACKUP
+      android.permission.READ_SYNC_STATS
+      android.permission.READ_SYNC_SETTINGS
+      android.permission.WRITE_SYNC_SETTINGS
+      android.permission.STATUS_BAR
+      android.permission.MANAGE_USB
+      android.permission.SET_POINTER_SPEED
+      android.permission.SET_KEYBOARD_LAYOUT
+      android.permission.INTERACT_ACROSS_USERS_FULL
+      android.permission.COPY_PROTECTED_DATA
+      android.permission.MANAGE_USERS
+      android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS
+      android.permission.READ_PROFILE
+      android.permission.CONFIGURE_WIFI_DISPLAY
+      android.permission.CONFIGURE_DISPLAY_COLOR_MODE
+      android.permission.SET_TIME
+      android.permission.ACCESS_NOTIFICATIONS
+      android.permission.REBOOT
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.MANAGE_DEVICE_ADMINS
+      android.permission.READ_SEARCH_INDEXABLES
+      android.permission.OEM_UNLOCK_STATE
+      android.permission.MANAGE_USER_OEM_UNLOCK_STATE
+      android.permission.OVERRIDE_WIFI_CONFIG
+      android.permission.USE_FINGERPRINT
+      android.permission.MANAGE_FINGERPRINT
+      android.permission.USER_ACTIVITY
+      android.permission.CHANGE_APP_IDLE_STATE
+      android.permission.PEERS_MAC_ADDRESS
+      android.permission.MANAGE_NOTIFICATIONS
+      android.permission.DELETE_PACKAGES
+      android.permission.MANAGE_APP_OPS_RESTRICTIONS
+      android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS
+      android.permission.READ_PRINT_SERVICES
+      android.permission.NETWORK_SETTINGS
+      android.permission.READ_PRIVILEGED_PHONE_STATE
+    install permissions:
+      android.permission.REAL_GET_TASKS: granted=true
+      android.permission.ACCESS_CACHE_FILESYSTEM: granted=true
+      android.permission.DOWNLOAD_WITHOUT_NOTIFICATION: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.READ_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.CONFIGURE_WIFI_DISPLAY: granted=true
+      android.permission.CONFIGURE_DISPLAY_COLOR_MODE: granted=true
+      android.permission.ACCESS_WIMAX_STATE: granted=true
+      android.permission.RECOVERY: granted=true
+      android.permission.READ_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_FINE_LOCATION: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+      android.permission.RESTART_PACKAGES: granted=true
+      android.permission.USE_CREDENTIALS: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.ACCESS_CHECKIN_PROPERTIES: granted=true
+      android.permission.MODIFY_AUDIO_ROUTING: granted=true
+      android.permission.ACCESS_MOCK_LOCATION: granted=true
+      android.permission.GET_APP_OPS_STATS: granted=true
+      android.permission.INSTALL_LOCATION_PROVIDER: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.CLEAR_APP_USER_DATA: granted=true
+      android.permission.INSTALL_PACKAGES: granted=true
+      android.permission.SHUTDOWN: granted=true
+      android.permission.CHANGE_COMPONENT_ENABLED_STATE: granted=true
+      android.permission.NFC: granted=true
+      android.permission.INTERNAL_SYSTEM_WINDOW: granted=true
+      android.permission.NETWORK_SETTINGS: granted=true
+      android.permission.CALL_PRIVILEGED: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.MASTER_CLEAR: granted=true
+      android.permission.WRITE_SYNC_SETTINGS: granted=true
+      android.permission.READ_REJECT: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      com.google.android.googleapps.permission.GOOGLE_AUTH: granted=true
+      android.permission.PEERS_MAC_ADDRESS: granted=true
+      android.permission.DEVICE_POWER: granted=true
+      android.permission.RECEIVE_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.READ_PRINT_SERVICES: granted=true
+      android.permission.EXPAND_STATUS_BAR: granted=true
+      android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS: granted=true
+      android.permission.READ_PROFILE: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.CHANGE_WIFI_MULTICAST_STATE: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.REORDER_TASKS: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.CONTROL_VPN: granted=true
+      android.permission.UPDATE_DEVICE_STATS: granted=true
+      android.permission.BLUETOOTH_STACK: granted=true
+      android.permission.MANAGE_FINGERPRINT: granted=true
+      android.permission.NET_ADMIN: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+      android.permission.MANAGE_USB: granted=true
+      android.permission.INTERACT_ACROSS_USERS_FULL: granted=true
+      android.permission.STOP_APP_SWITCHES: granted=true
+      android.permission.BATTERY_STATS: granted=true
+      android.permission.PACKAGE_USAGE_STATS: granted=true
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS: granted=true
+      android.permission.TETHER_PRIVILEGED: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+      android.permission.MOVE_PACKAGE: granted=true
+      android.permission.READ_SEARCH_INDEXABLES: granted=true
+      android.permission.READ_PHONE_STATE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_LOCATION_EXTRA_COMMANDS: granted=true
+      android.permission.READ_PRIVILEGED_PHONE_STATE: granted=true
+      android.permission.TRIGGER_TIME_ZONE_RULES_CHECK: granted=true
+      android.permission.SEND_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_DOWNLOAD_MANAGER: granted=true
+      android.permission.BROADCAST_STICKY: granted=true
+      android.permission.BLUETOOTH_PRIVILEGED: granted=true
+      android.permission.CALL_PHONE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.HARDWARE_TEST: granted=true
+      android.permission.WRITE_SMS: granted=true
+      android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE: granted=true
+      android.permission.WRITE_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.BIND_JOB_SERVICE: granted=true
+      android.permission.CONFIRM_FULL_BACKUP: granted=true
+      android.permission.SET_TIME: granted=true
+      android.permission.WRITE_APN_SETTINGS: granted=true
+      com.google.android.providers.settings.permission.WRITE_GSETTINGS: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.ACCESS_BLUETOOTH_SHARE: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.FLASHLIGHT: granted=true
+      android.permission.DELETE_CACHE_FILES: granted=true
+      android.permission.SET_WALLPAPER_COMPONENT: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.DISABLE_KEYGUARD: granted=true
+      android.permission.BACKUP: granted=true
+      android.permission.CAMERA: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.CHANGE_CONFIGURATION: granted=true
+      android.permission.USER_ACTIVITY: granted=true
+      android.permission.LOCAL_MAC_ADDRESS: granted=true
+      android.permission.COPY_PROTECTED_DATA: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.SET_WALLPAPER: granted=true
+      android.permission.SET_KEYBOARD_LAYOUT: granted=true
+      android.permission.WRITE_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MANAGE_APP_OPS_RESTRICTIONS: granted=true
+      android.permission.KILL_BACKGROUND_PROCESSES: granted=true
+      android.permission.MANAGE_USER_OEM_UNLOCK_STATE: granted=true
+      android.permission.USE_FINGERPRINT: granted=true
+      android.permission.REQUEST_NETWORK_SCORES: granted=true
+      android.permission.WRITE_USER_DICTIONARY: granted=true
+      android.permission.READ_SYNC_STATS: granted=true
+      android.permission.REBOOT: granted=true
+      android.permission.OEM_UNLOCK_STATE: granted=true
+      android.permission.MANAGE_DEVICE_ADMINS: granted=true
+      android.permission.CHANGE_APP_IDLE_STATE: granted=true
+      android.permission.SET_POINTER_SPEED: granted=true
+      android.permission.MANAGE_NOTIFICATIONS: granted=true
+      android.permission.NET_TUNNELING: granted=true
+      android.permission.CONNECTIVITY_INTERNAL: granted=true
+      android.permission.READ_SYNC_SETTINGS: granted=true
+      android.permission.GET_ACCOUNTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.OVERRIDE_WIFI_CONFIG: granted=true
+      android.permission.FORCE_STOP_PACKAGES: granted=true
+      android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS: granted=true
+      android.permission.ACCESS_NOTIFICATIONS: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+      android.permission.VIBRATE: granted=true
+      com.android.certinstaller.INSTALL_AS_USER: granted=true
+      android.permission.MANAGE_ACTIVITY_STACKS: granted=true
+      android.permission.READ_USER_DICTIONARY: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.CHANGE_WIMAX_STATE: granted=true
+      android.permission.REQUEST_INSTALL_PACKAGES: granted=true
+      android.permission.MODIFY_PHONE_STATE: granted=true
+      android.permission.STATUS_BAR: granted=true
+      android.permission.RECORD_AUDIO: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+      android.permission.DUMP: granted=true
+      android.permission.LOCATION_HARDWARE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.READ_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.BIND_NETWORK_RECOMMENDATION_SERVICE: granted=true
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+      android.permission.MEDIA_CONTENT_CONTROL: granted=true
+      android.permission.DELETE_PACKAGES: granted=true
+    User 0: ceDataInode=-4294484813 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      disabledComponents:
+        com.android.settings.CryptKeeper
+        com.android.settings.Settings$ConnectedDeviceDashboardActivity
+        com.android.settings.Settings$PowerUsageSummaryActivity
+        com.android.settings.Settings$SimSettingsActivity
+        com.android.settings.Settings$PrintSettingsActivity
+        com.android.settings.Settings$PaymentSettingsActivity
+        com.android.settings.Settings$BluetoothSettingsActivity
+        com.android.settings.Settings$DataPlanUsageSummaryActivity
+      enabledComponents:
+        com.android.settings.Settings$DevelopmentSettingsActivity
+        com.android.settings.Settings$NetworkDashboardActivity
+        com.android.settings.Settings$WifiDisplaySettingsActivity
+        com.android.settings.Settings$DateTimeSettingsActivity
+        com.android.settings.backup.BackupSettingsActivity
+        com.android.settings.Settings$WifiSettingsActivity
+        com.android.settings.WebViewImplementation
+        com.android.settings.Settings$UserSettingsActivity
+        com.android.settings.Settings$DataUsageSummaryActivity
+
+Shared users:
+  SharedUser [android.uid.system] (82d6e61):
+    userId=1000
+    install permissions:
+      android.permission.REAL_GET_TASKS: granted=true
+      android.permission.ACCESS_CACHE_FILESYSTEM: granted=true
+      android.permission.DOWNLOAD_WITHOUT_NOTIFICATION: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.READ_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.CONFIGURE_WIFI_DISPLAY: granted=true
+      android.permission.CONFIGURE_DISPLAY_COLOR_MODE: granted=true
+      android.permission.ACCESS_WIMAX_STATE: granted=true
+      android.permission.RECOVERY: granted=true
+      android.permission.READ_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_FINE_LOCATION: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+      android.permission.RESTART_PACKAGES: granted=true
+      android.permission.USE_CREDENTIALS: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.ACCESS_CHECKIN_PROPERTIES: granted=true
+      android.permission.MODIFY_AUDIO_ROUTING: granted=true
+      android.permission.ACCESS_MOCK_LOCATION: granted=true
+      android.permission.GET_APP_OPS_STATS: granted=true
+      android.permission.INSTALL_LOCATION_PROVIDER: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.CLEAR_APP_USER_DATA: granted=true
+      android.permission.INSTALL_PACKAGES: granted=true
+      android.permission.SHUTDOWN: granted=true
+      android.permission.CHANGE_COMPONENT_ENABLED_STATE: granted=true
+      android.permission.NFC: granted=true
+      android.permission.INTERNAL_SYSTEM_WINDOW: granted=true
+      android.permission.NETWORK_SETTINGS: granted=true
+      android.permission.CALL_PRIVILEGED: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.MASTER_CLEAR: granted=true
+      android.permission.WRITE_SYNC_SETTINGS: granted=true
+      android.permission.READ_REJECT: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      com.google.android.googleapps.permission.GOOGLE_AUTH: granted=true
+      android.permission.PEERS_MAC_ADDRESS: granted=true
+      android.permission.DEVICE_POWER: granted=true
+      android.permission.RECEIVE_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.READ_PRINT_SERVICES: granted=true
+      android.permission.EXPAND_STATUS_BAR: granted=true
+      android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS: granted=true
+      android.permission.READ_PROFILE: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.CHANGE_WIFI_MULTICAST_STATE: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.REORDER_TASKS: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.CONTROL_VPN: granted=true
+      android.permission.UPDATE_DEVICE_STATS: granted=true
+      android.permission.BLUETOOTH_STACK: granted=true
+      android.permission.MANAGE_FINGERPRINT: granted=true
+      android.permission.NET_ADMIN: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+      android.permission.MANAGE_USB: granted=true
+      android.permission.INTERACT_ACROSS_USERS_FULL: granted=true
+      android.permission.STOP_APP_SWITCHES: granted=true
+      android.permission.BATTERY_STATS: granted=true
+      android.permission.PACKAGE_USAGE_STATS: granted=true
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS: granted=true
+      android.permission.TETHER_PRIVILEGED: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+      android.permission.MOVE_PACKAGE: granted=true
+      android.permission.READ_SEARCH_INDEXABLES: granted=true
+      android.permission.READ_PHONE_STATE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_LOCATION_EXTRA_COMMANDS: granted=true
+      android.permission.READ_PRIVILEGED_PHONE_STATE: granted=true
+      android.permission.TRIGGER_TIME_ZONE_RULES_CHECK: granted=true
+      android.permission.SEND_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_DOWNLOAD_MANAGER: granted=true
+      android.permission.BROADCAST_STICKY: granted=true
+      android.permission.BLUETOOTH_PRIVILEGED: granted=true
+      android.permission.CALL_PHONE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.HARDWARE_TEST: granted=true
+      android.permission.WRITE_SMS: granted=true
+      android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE: granted=true
+      android.permission.WRITE_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.BIND_JOB_SERVICE: granted=true
+      android.permission.CONFIRM_FULL_BACKUP: granted=true
+      android.permission.SET_TIME: granted=true
+      android.permission.WRITE_APN_SETTINGS: granted=true
+      com.google.android.providers.settings.permission.WRITE_GSETTINGS: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.ACCESS_BLUETOOTH_SHARE: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.FLASHLIGHT: granted=true
+      android.permission.DELETE_CACHE_FILES: granted=true
+      android.permission.SET_WALLPAPER_COMPONENT: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.DISABLE_KEYGUARD: granted=true
+      android.permission.BACKUP: granted=true
+      android.permission.CAMERA: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.CHANGE_CONFIGURATION: granted=true
+      android.permission.USER_ACTIVITY: granted=true
+      android.permission.LOCAL_MAC_ADDRESS: granted=true
+      android.permission.COPY_PROTECTED_DATA: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.SET_WALLPAPER: granted=true
+      android.permission.SET_KEYBOARD_LAYOUT: granted=true
+      android.permission.WRITE_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MANAGE_APP_OPS_RESTRICTIONS: granted=true
+      android.permission.KILL_BACKGROUND_PROCESSES: granted=true
+      android.permission.MANAGE_USER_OEM_UNLOCK_STATE: granted=true
+      android.permission.USE_FINGERPRINT: granted=true
+      android.permission.REQUEST_NETWORK_SCORES: granted=true
+      android.permission.WRITE_USER_DICTIONARY: granted=true
+      android.permission.READ_SYNC_STATS: granted=true
+      android.permission.REBOOT: granted=true
+      android.permission.OEM_UNLOCK_STATE: granted=true
+      android.permission.MANAGE_DEVICE_ADMINS: granted=true
+      android.permission.CHANGE_APP_IDLE_STATE: granted=true
+      android.permission.SET_POINTER_SPEED: granted=true
+      android.permission.MANAGE_NOTIFICATIONS: granted=true
+      android.permission.NET_TUNNELING: granted=true
+      android.permission.CONNECTIVITY_INTERNAL: granted=true
+      android.permission.READ_SYNC_SETTINGS: granted=true
+      android.permission.GET_ACCOUNTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.OVERRIDE_WIFI_CONFIG: granted=true
+      android.permission.FORCE_STOP_PACKAGES: granted=true
+      android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS: granted=true
+      android.permission.ACCESS_NOTIFICATIONS: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+      android.permission.VIBRATE: granted=true
+      com.android.certinstaller.INSTALL_AS_USER: granted=true
+      android.permission.MANAGE_ACTIVITY_STACKS: granted=true
+      android.permission.READ_USER_DICTIONARY: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.CHANGE_WIMAX_STATE: granted=true
+      android.permission.REQUEST_INSTALL_PACKAGES: granted=true
+      android.permission.MODIFY_PHONE_STATE: granted=true
+      android.permission.STATUS_BAR: granted=true
+      android.permission.RECORD_AUDIO: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+      android.permission.DUMP: granted=true
+      android.permission.LOCATION_HARDWARE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.READ_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.BIND_NETWORK_RECOMMENDATION_SERVICE: granted=true
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+      android.permission.MEDIA_CONTENT_CONTROL: granted=true
+      android.permission.DELETE_PACKAGES: granted=true
+    User 0: 
+      gids=[2001, 3002, 1023, 1015, 3003, 3001, 3007, 1002, 3010, 3011, 3005, 1016]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.android.settings]
+    path: /system/priv-app/MtkSettings/MtkSettings.apk
+      arm: /system/priv-app/MtkSettings/oat/arm/MtkSettings.odex[status=kOatUpToDate, compilation_filter=quicken]
+
+
+Compiler stats:
+  [com.android.settings]
+    (No recorded stats)

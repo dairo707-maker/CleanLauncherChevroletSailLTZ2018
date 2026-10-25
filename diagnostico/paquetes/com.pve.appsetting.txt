@@ -1,0 +1,65 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      xy.modelkeysetting.Start:
+        7baf79e com.pve.appsetting/.XYAppSettingView filter 4bae406
+          Action: "xy.modelkeysetting.Start"
+          Category: "android.intent.category.DEFAULT"
+
+Key Set Manager:
+  [com.pve.appsetting]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.pve.appsetting] (5db1ee1):
+    userId=10065
+    pkg=Package{fdc6048 com.pve.appsetting}
+    codePath=/system/app/XYAppSettingView
+    resourcePath=/system/app/XYAppSettingView
+    legacyNativeLibraryDir=/system/app/XYAppSettingView/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=1 minSdk=17 targetSdk=17
+    versionName=1.0.1
+    splits=[base]
+    apkSigningVersion=1
+    applicationInfo=ApplicationInfo{441c27f com.pve.appsetting}
+    flags=[ SYSTEM DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    dataDir=/data/user/0/com.pve.appsetting
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{67cb24c [b4addb29]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    requested permissions:
+      android.permission.WRITE_SETTINGS
+      android.permission.WRITE_SECURE_SETTINGS
+      android.permission.GET_TASKS
+    install permissions:
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+    User 0: ceDataInode=-4294484605 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.pve.appsetting]
+    path: /system/app/XYAppSettingView/XYAppSettingView.apk
+      arm: /data/dalvik-cache/arm/system@app@XYAppSettingView@XYAppSettingView.apk@classes.dex[status=kOatUpToDate, comp
+      ilation_filter=quicken]
+
+
+Compiler stats:
+  [com.pve.appsetting]
+     XYAppSettingView.apk - 250

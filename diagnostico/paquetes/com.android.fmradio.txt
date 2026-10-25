@@ -1,0 +1,171 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        48f52c2 com.android.fmradio/.FmMainActivity filter 23f8207
+          Action: "android.intent.action.MAIN"
+          Action: "xy.android.start.fmradio"
+          Category: "android.intent.category.DEFAULT"
+      com.mediatek.fmradio.FmRadioEmActivity:
+        4988d3 com.android.fmradio/.FmEmActivity filter 712af34
+          Action: "com.mediatek.fmradio.FmRadioEmActivity"
+          Category: "android.intent.category.LAUNCHER"
+      xy.android.start.fmradio:
+        48f52c2 com.android.fmradio/.FmMainActivity filter 23f8207
+          Action: "android.intent.action.MAIN"
+          Action: "xy.android.start.fmradio"
+          Category: "android.intent.category.DEFAULT"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      xy.android.mcu.radioreset:
+        d31bc10 com.android.fmradio/.FmBroadcastReceiver filter 4f16046
+          Action: "android.intent.action.MEDIA_BUTTON"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "xy.android.mcu.radioreset"
+          Action: "xy.setfm.freq"
+          Action: "xy.open.freq"
+          Action: "com.yunos.intent.FM_SET_CURRENT"
+      android.intent.action.BOOT_COMPLETED:
+        d31bc10 com.android.fmradio/.FmBroadcastReceiver filter 4f16046
+          Action: "android.intent.action.MEDIA_BUTTON"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "xy.android.mcu.radioreset"
+          Action: "xy.setfm.freq"
+          Action: "xy.open.freq"
+          Action: "com.yunos.intent.FM_SET_CURRENT"
+      xy.open.freq:
+        d31bc10 com.android.fmradio/.FmBroadcastReceiver filter 4f16046
+          Action: "android.intent.action.MEDIA_BUTTON"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "xy.android.mcu.radioreset"
+          Action: "xy.setfm.freq"
+          Action: "xy.open.freq"
+          Action: "com.yunos.intent.FM_SET_CURRENT"
+      com.yunos.intent.FM_SET_CURRENT:
+        d31bc10 com.android.fmradio/.FmBroadcastReceiver filter 4f16046
+          Action: "android.intent.action.MEDIA_BUTTON"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "xy.android.mcu.radioreset"
+          Action: "xy.setfm.freq"
+          Action: "xy.open.freq"
+          Action: "com.yunos.intent.FM_SET_CURRENT"
+      xy.setfm.freq:
+        d31bc10 com.android.fmradio/.FmBroadcastReceiver filter 4f16046
+          Action: "android.intent.action.MEDIA_BUTTON"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "xy.android.mcu.radioreset"
+          Action: "xy.setfm.freq"
+          Action: "xy.open.freq"
+          Action: "com.yunos.intent.FM_SET_CURRENT"
+      android.intent.action.MEDIA_BUTTON:
+        d31bc10 com.android.fmradio/.FmBroadcastReceiver filter 4f16046
+          Action: "android.intent.action.MEDIA_BUTTON"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "xy.android.mcu.radioreset"
+          Action: "xy.setfm.freq"
+          Action: "xy.open.freq"
+          Action: "com.yunos.intent.FM_SET_CURRENT"
+
+Service Resolver Table:
+  Non-Data Actions:
+      com.android.fmradio.fmtestService:
+        9da2309 com.android.fmradio/.FmtestService filter 9a8e421
+          Action: "com.android.fmradio.fmtestService"
+      com.android.fmradio.IFmRadioService:
+        a83d90e com.android.fmradio/.FmService filter f5cf288
+          Action: "com.android.fmradio.IFmRadioService"
+
+Registered ContentProviders:
+  com.android.fmradio/.FmProvider:
+    Provider{519df2f com.android.fmradio/.FmProvider}
+
+ContentProvider Authorities:
+  [com.android.fmradio]:
+    Provider{519df2f com.android.fmradio/.FmProvider}
+      applicationInfo=ApplicationInfo{b5e893c com.android.fmradio}
+
+Key Set Manager:
+  [com.android.fmradio]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.android.fmradio] (30e2e2b):
+    userId=10006
+    pkg=Package{c84567a com.android.fmradio}
+    codePath=/system/priv-app/FMRadio
+    resourcePath=/system/priv-app/FMRadio
+    legacyNativeLibraryDir=/system/priv-app/FMRadio/lib
+    primaryCpuAbi=armeabi-v7a
+    secondaryCpuAbi=null
+    versionCode=3 minSdk=21 targetSdk=23
+    versionName=3.0
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{b5e893c com.android.fmradio}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVILEGED PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_UNRESIZEABLE ]
+    dataDir=/data/user/0/com.android.fmradio
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{578e6c5 [b4addb29]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    requested permissions:
+      android.permission.ACCESS_COARSE_LOCATION
+      android.permission.ACCESS_FINE_LOCATION
+      android.permission.ACCESS_FM_RADIO
+      android.permission.ACCESS_MOCK_LOCATION
+      android.permission.BLUETOOTH
+      android.permission.INTERNET
+      android.permission.MODIFY_AUDIO_ROUTING
+      android.permission.MODIFY_AUDIO_SETTINGS
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+      android.permission.RECORD_AUDIO
+      android.permission.WAKE_LOCK
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.FOREGROUND_SERVICE
+      android.permission.INTERACT_ACROSS_USERS
+      android.permission.WRITE_SETTINGS
+      android.permission.READ_EXTERNAL_STORAGE
+    install permissions:
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.ACCESS_FINE_LOCATION: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.MODIFY_AUDIO_ROUTING: granted=true
+      android.permission.ACCESS_MOCK_LOCATION: granted=true
+      android.permission.ACCESS_FM_RADIO: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true
+      android.permission.RECORD_AUDIO: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=-4294484772 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      gids=[3002, 3003]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.android.fmradio]
+    path: /system/priv-app/FMRadio/FMRadio.apk
+      arm: /data/dalvik-cache/arm/system@priv-app@FMRadio@FMRadio.apk@classes.dex[status=kOatUpToDate, compilation_filte
+      r=quicken]
+
+
+Compiler stats:
+  [com.android.fmradio]
+     FMRadio.apk - 2125

@@ -1,0 +1,222 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        fef7dbc com.tima.carnet.vt/.SplashActivity filter 42c30aa
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      com.tima.carnet.transfer.RECEIVE_MESSAGE_RESPONSE_ACTION:
+        cb00145 com.tima.carnet.vt/com.tima.lib.transfer.receivers.ResponseReceiver filter 96ce795
+          Action: "com.tima.carnet.transfer.RECEIVE_MESSAGE_RESPONSE_ACTION"
+      mirror_disconnect_action:
+        7b1c09a com.tima.carnet.vt/.app.main.receiver.ScreenBroadcastReceiver filter b279f7f
+          Action: "mirror_success_action"
+          Action: "mirror_disconnect_action"
+      mirror_success_action:
+        7b1c09a com.tima.carnet.vt/.app.main.receiver.ScreenBroadcastReceiver filter b279f7f
+          Action: "mirror_success_action"
+          Action: "mirror_disconnect_action"
+      com.tima.carnet.transfer.RECEIVE_MESSAGE_ACTION:
+        7a1dcb com.tima.carnet.vt/com.tima.lib.transfer.receivers.MessageReceiver filter db1cb4c
+          Action: "com.tima.carnet.transfer.RECEIVE_MESSAGE_ACTION"
+
+Service Resolver Table:
+  Non-Data Actions:
+      com.tima.carnet.vt.messenger:
+        f14b9a8 com.tima.carnet.vt/com.blankj.utilcode.util.MessengerUtils$ServerService filter 74a289e
+          Action: "com.tima.carnet.vt.messenger"
+      android.intent.action.CONFIGURATION_CHANGED:
+        c546cc1 com.tima.carnet.vt/com.vmlite.rplay.MainService filter e30b6d9
+          Action: "android.intent.action.CONFIGURATION_CHANGED"
+      com.vmlite.rplay.MainService:
+        c546cc1 com.tima.carnet.vt/com.vmlite.rplay.MainService filter e59fd20
+          Action: "com.vmlite.rplay.MainService"
+
+Registered ContentProviders:
+  com.tima.carnet.vt/android.support.v4.content.FileProvider:
+    Provider{75b4c66 com.tima.carnet.vt/android.support.v4.content.FileProvider}
+  com.tima.carnet.vt/com.blankj.utilcode.util.UtilsFileProvider:
+    Provider{acba7 com.tima.carnet.vt/com.blankj.utilcode.util.UtilsFileProvider}
+
+ContentProvider Authorities:
+  [com.tima.carnet.vt]:
+    Provider{75b4c66 com.tima.carnet.vt/android.support.v4.content.FileProvider}
+      applicationInfo=ApplicationInfo{8cfc854 com.tima.carnet.vt}
+  [com.tima.carnet.vt.utilcode.provider]:
+    Provider{acba7 com.tima.carnet.vt/com.blankj.utilcode.util.UtilsFileProvider}
+      applicationInfo=ApplicationInfo{8cfc854 com.tima.carnet.vt}
+
+Key Set Manager:
+  [com.tima.carnet.vt]
+      Signing KeySets: 11
+
+Packages:
+  Package [com.tima.carnet.vt] (4817d31):
+    userId=10071
+    pkg=Package{d74e423 com.tima.carnet.vt}
+    codePath=/data/app/com.tima.carnet.vt-EkWMst_bMVX_j3eNmc7ANA==
+    resourcePath=/data/app/com.tima.carnet.vt-EkWMst_bMVX_j3eNmc7ANA==
+    legacyNativeLibraryDir=/data/app/com.tima.carnet.vt-EkWMst_bMVX_j3eNmc7ANA==/lib
+    primaryCpuAbi=armeabi-v7a
+    secondaryCpuAbi=null
+    versionCode=417249272 minSdk=16 targetSdk=22
+    versionName=3.12.240829
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{8cfc854 com.tima.carnet.vt}
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    dataDir=/data/user/0/com.tima.carnet.vt
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2025-09-28 16:25:13
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2025-09-28 16:25:20
+    installerPackageName=com.google.android.packageinstaller
+    signatures=PackageSignatures{47a13fd [d712a0fe]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    requested permissions:
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.BLUETOOTH
+      android.permission.BLUETOOTH_ADMIN
+      android.permission.INTERNET
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.CHANGE_NETWORK_STATE
+      android.permission.CHANGE_WIFI_STATE
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.ACCESS_COARSE_LOCATION
+      android.permission.ACCESS_FINE_LOCATION
+      android.permission.READ_PHONE_STATE
+      android.permission.CHANGE_WIFI_MULTICAST_STATE
+      android.permission.WAKE_LOCK
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+      android.permission.WRITE_SETTINGS
+      android.permission.CHANGE_CONFIGURATION
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.GET_ACCOUNTS
+      android.permission.VIBRATE
+      android.permission.MODIFY_AUDIO_SETTINGS
+      android.permission.GET_TASKS
+      com.android.vending.CHECK_LICENSE
+    install permissions:
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.ACCESS_FINE_LOCATION: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.CHANGE_WIFI_MULTICAST_STATE: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.INTERNET: granted=true
+      com.android.vending.CHECK_LICENSE: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true
+      android.permission.READ_PHONE_STATE: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.GET_ACCOUNTS: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=-4294484634 installed=true hidden=false suspended=false stopped=true notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      gids=[3002, 3003, 3001]
+      runtime permissions:
+
+Hidden system packages:
+  Package [com.tima.carnet.vt] (7e305d8):
+    userId=10071
+    pkg=Package{87e3cbb com.tima.carnet.vt}
+    codePath=/vendor/operator/app/timash_foreign
+    resourcePath=/vendor/operator/app/timash_foreign
+    legacyNativeLibraryDir=/data/app-lib/timash_foreign
+    primaryCpuAbi=armeabi-v7a
+    secondaryCpuAbi=null
+    versionCode=416006851 minSdk=16 targetSdk=22
+    versionName=3.11.200921
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{cbfc8f2 com.tima.carnet.vt}
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    pkgFlagsEx=[ OPERATOR ]
+    dataDir=null
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2025-09-28 16:25:20
+    signatures=PackageSignatures{a0e7b43 []}
+    installPermissionsFixed=false installStatus=1
+    pkgFlags=[ ]
+    requested permissions:
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.BLUETOOTH
+      android.permission.BLUETOOTH_ADMIN
+      android.permission.INTERNET
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.CHANGE_NETWORK_STATE
+      android.permission.CHANGE_WIFI_STATE
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.ACCESS_COARSE_LOCATION
+      android.permission.ACCESS_FINE_LOCATION
+      android.permission.READ_PHONE_STATE
+      android.permission.CHANGE_WIFI_MULTICAST_STATE
+      android.permission.WAKE_LOCK
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+      android.permission.WRITE_SETTINGS
+      android.permission.CHANGE_CONFIGURATION
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.GET_ACCOUNTS
+      android.permission.VIBRATE
+      android.permission.MODIFY_AUDIO_SETTINGS
+      android.permission.GET_TASKS
+      com.android.vending.CHECK_LICENSE
+    install permissions:
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.ACCESS_FINE_LOCATION: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.CHANGE_WIFI_MULTICAST_STATE: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.INTERNET: granted=true
+      com.android.vending.CHECK_LICENSE: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true
+      android.permission.READ_PHONE_STATE: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.GET_ACCOUNTS: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=0 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+      gids=[3002, 3003, 3001]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.tima.carnet.vt]
+    path: /data/app/com.tima.carnet.vt-EkWMst_bMVX_j3eNmc7ANA==/base.apk
+      arm: /data/app/com.tima.carnet.vt-EkWMst_bMVX_j3eNmc7ANA==/oat/arm/base.odex[status=kOatUpToDate, compilation_filt
+      er=quicken]
+
+
+Compiler stats:
+  [com.tima.carnet.vt]
+     timash_foreign.apk - 3109

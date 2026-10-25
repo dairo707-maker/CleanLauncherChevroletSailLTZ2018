@@ -1,0 +1,96 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      com.mediatek.filemanager.ADD_FILE:
+        3bdb580 com.mediatek.filemanager/.FileManagerSelectFileActivity filter cc7b5f4
+          Action: "com.mediatek.filemanager.ADD_FILE"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.OPENABLE"
+      com.mediatek.filemanager.DOWNLOAD_LOCATION:
+        61377b9 com.mediatek.filemanager/.FileManagerSelectPathActivity filter 9d6bc7
+          Action: "com.mediatek.filemanager.DOWNLOAD_LOCATION"
+          Category: "android.intent.category.DEFAULT"
+      android.intent.action.MAIN:
+        6da87fe com.mediatek.filemanager/.FileManagerOperationActivity filter d50c7e1
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+      android.intent.action.SEARCH:
+        cef7b5f com.mediatek.filemanager/.FileManagerSearchActivity filter 151d906
+          Action: "android.intent.action.SEARCH"
+          Category: "android.intent.category.DEFAULT"
+
+Service Resolver Table:
+  Non-Data Actions:
+      com.mediatek.filemanager.service.FileManagerService:
+        408a9ac com.mediatek.filemanager/.service.FileManagerService filter 46b0d48
+          Action: "com.mediatek.filemanager.service.FileManagerService"
+
+Key Set Manager:
+  [com.mediatek.filemanager]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.mediatek.filemanager] (8ecfbeb):
+    userId=10033
+    pkg=Package{40ac33a com.mediatek.filemanager}
+    codePath=/system/app/FileManager
+    resourcePath=/system/app/FileManager
+    legacyNativeLibraryDir=/system/app/FileManager/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=1 minSdk=27 targetSdk=23
+    versionName=1.0
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{26ad675 com.mediatek.filemanager}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    dataDir=/data/user/0/com.mediatek.filemanager
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{853260a [b4addb29]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    requested permissions:
+      android.permission.VIBRATE
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.WRITE_MEDIA_STORAGE
+      android.permission.DISABLE_KEYGUARD
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+      android.permission.WAKE_LOCK
+      android.permission.NFC
+      android.permission.REQUEST_INSTALL_PACKAGES
+      android.permission.READ_EXTERNAL_STORAGE
+    install permissions:
+      android.permission.NFC: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS: granted=true
+      android.permission.DISABLE_KEYGUARD: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.REQUEST_INSTALL_PACKAGES: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=-4294484503 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      gids=[1023, 1015]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.mediatek.filemanager]
+    path: /system/app/FileManager/FileManager.apk
+      arm: /system/app/FileManager/oat/arm/FileManager.odex[status=kOatUpToDate, compilation_filter=quicken]
+
+
+Compiler stats:
+  [com.mediatek.filemanager]
+    (No recorded stats)

@@ -1,0 +1,1437 @@
+Activity Resolver Table:
+  Schemes:
+      apple-musics:
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter 9d252d1
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "musicsdk"
+          Scheme: "http"
+          Scheme: "https"
+          Scheme: "apple-music"
+          Scheme: "apple-musics"
+          Authority: "applemusic": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "search.itunes.apple.com": -1
+          Authority: "finance-app.itunes.apple.com": -1
+          Authority: "finance-app.itunes.apple.com": -1
+          Path: "PatternMatcher{GLOB: /authenticate-v.*}"
+          Path: "PatternMatcher{GLOB: /.*\/artist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/album/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/playlist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/lyrics/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/post/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/curator/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/radio/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/music-video/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/station/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/activity/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/charts/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGrouping/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /foryou}"
+          Path: "PatternMatcher{PREFIX: /for-you}"
+          Path: "PatternMatcher{PREFIX: /new}"
+          Path: "PatternMatcher{PREFIX: /video}"
+          Path: "PatternMatcher{PREFIX: /playlists}"
+          Path: "PatternMatcher{PREFIX: /charts}"
+          Path: "PatternMatcher{PREFIX: /applemusicradio}"
+          Path: "PatternMatcher{PREFIX: /newmusic}"
+          Path: "PatternMatcher{PREFIX: /browse}"
+          Path: "PatternMatcher{PREFIX: /browse/*}"
+          Path: "PatternMatcher{PREFIX: /connect}"
+          Path: "PatternMatcher{PREFIX: /mymusic}"
+          Path: "PatternMatcher{PREFIX: /library}"
+          Path: "PatternMatcher{PREFIX: /radio}"
+          Path: "PatternMatcher{PREFIX: /radio/*}"
+          Path: "PatternMatcher{PREFIX: /beats1}"
+          Path: "PatternMatcher{PREFIX: /subscribe}"
+          Path: "PatternMatcher{PREFIX: /individual}"
+          Path: "PatternMatcher{PREFIX: /family}"
+          Path: "PatternMatcher{PREFIX: /musicrenew}"
+          Path: "PatternMatcher{PREFIX: /studentSubscriptionOffers}"
+          Path: "PatternMatcher{PREFIX: /student}"
+          Path: "PatternMatcher{PREFIX: /viewGrouping/.*}"
+          Path: "PatternMatcher{PREFIX: /viewArtist/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/artist/.*}"
+          Path: "PatternMatcher{GLOB: /album/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/playlist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/post/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/curator/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/radio/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/music-video/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/station/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/activity/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/charts/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGrouping/.*}"
+          Path: "PatternMatcher{GLOB: /WebObjects/MZStore.woa/wa/viewMultiRoom}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGenre/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewArtist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/socialProfile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/socialProfile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/profile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/profile/.*}"
+          Path: "PatternMatcher{PREFIX: /foryou}"
+          Path: "PatternMatcher{PREFIX: /for-you}"
+          Path: "PatternMatcher{PREFIX: /new}"
+          Path: "PatternMatcher{PREFIX: /video}"
+          Path: "PatternMatcher{PREFIX: /playlists}"
+          Path: "PatternMatcher{PREFIX: /charts}"
+          Path: "PatternMatcher{PREFIX: /applemusicradio}"
+          Path: "PatternMatcher{PREFIX: /newmusic}"
+          Path: "PatternMatcher{PREFIX: /browse}"
+          Path: "PatternMatcher{PREFIX: /browse/*}"
+          Path: "PatternMatcher{PREFIX: /library}"
+          Path: "PatternMatcher{PREFIX: /connect}"
+          Path: "PatternMatcher{PREFIX: /mymusic}"
+          Path: "PatternMatcher{PREFIX: /radio}"
+          Path: "PatternMatcher{PREFIX: /radio/*}"
+          Path: "PatternMatcher{PREFIX: /beats1}"
+          Path: "PatternMatcher{PREFIX: /subscribe}"
+          Path: "PatternMatcher{PREFIX: /individual}"
+          Path: "PatternMatcher{PREFIX: /family}"
+          Path: "PatternMatcher{PREFIX: /musicrenew}"
+          Path: "PatternMatcher{PREFIX: /studentSubscriptionOffers}"
+          Path: "PatternMatcher{PREFIX: /viewMultiRoom/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGrouping/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /viewBrand/.*}"
+          Path: "PatternMatcher{PREFIX: /viewArtist/.*}"
+          Path: "PatternMatcher{PREFIX: /collection/.*}"
+          Path: "PatternMatcher{PREFIX: /socialProfile/.*}"
+          Path: "PatternMatcher{PREFIX: /socialProfile/.*}"
+          Path: "PatternMatcher{PREFIX: /carrier}"
+          Path: "PatternMatcher{PREFIX: /WebObjects/MZContentLink.woa/wa/link?app=music*}"
+          AutoVerify=true
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter 26f2136
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "apple-music"
+          Scheme: "apple-musics"
+          Authority: "": -1 WILD
+          Authority: "": -1 WILD
+          AutoVerify=true
+      musics:
+        9c41230 com.apple.android.music/.commerce.activities.ChromeTabsActivity filter 86d113c
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Scheme: "musics"
+          Authority: "buy.itunes.apple.com": -1
+          Path: "PatternMatcher{LITERAL: /WebObjects/MZFinance.woa/wa/userSignedPayPalBA*?.*}"
+      applemusic:
+        7268ea9 com.apple.android.music/.mli.MLIChromeTabActivity filter 218cec5
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "applemusic"
+          Authority: "transfer-music": -1
+          AutoVerify=true
+      http:
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter 9d252d1
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "musicsdk"
+          Scheme: "http"
+          Scheme: "https"
+          Scheme: "apple-music"
+          Scheme: "apple-musics"
+          Authority: "applemusic": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "search.itunes.apple.com": -1
+          Authority: "finance-app.itunes.apple.com": -1
+          Authority: "finance-app.itunes.apple.com": -1
+          Path: "PatternMatcher{GLOB: /authenticate-v.*}"
+          Path: "PatternMatcher{GLOB: /.*\/artist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/album/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/playlist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/lyrics/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/post/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/curator/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/radio/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/music-video/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/station/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/activity/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/charts/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGrouping/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /foryou}"
+          Path: "PatternMatcher{PREFIX: /for-you}"
+          Path: "PatternMatcher{PREFIX: /new}"
+          Path: "PatternMatcher{PREFIX: /video}"
+          Path: "PatternMatcher{PREFIX: /playlists}"
+          Path: "PatternMatcher{PREFIX: /charts}"
+          Path: "PatternMatcher{PREFIX: /applemusicradio}"
+          Path: "PatternMatcher{PREFIX: /newmusic}"
+          Path: "PatternMatcher{PREFIX: /browse}"
+          Path: "PatternMatcher{PREFIX: /browse/*}"
+          Path: "PatternMatcher{PREFIX: /connect}"
+          Path: "PatternMatcher{PREFIX: /mymusic}"
+          Path: "PatternMatcher{PREFIX: /library}"
+          Path: "PatternMatcher{PREFIX: /radio}"
+          Path: "PatternMatcher{PREFIX: /radio/*}"
+          Path: "PatternMatcher{PREFIX: /beats1}"
+          Path: "PatternMatcher{PREFIX: /subscribe}"
+          Path: "PatternMatcher{PREFIX: /individual}"
+          Path: "PatternMatcher{PREFIX: /family}"
+          Path: "PatternMatcher{PREFIX: /musicrenew}"
+          Path: "PatternMatcher{PREFIX: /studentSubscriptionOffers}"
+          Path: "PatternMatcher{PREFIX: /student}"
+          Path: "PatternMatcher{PREFIX: /viewGrouping/.*}"
+          Path: "PatternMatcher{PREFIX: /viewArtist/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/artist/.*}"
+          Path: "PatternMatcher{GLOB: /album/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/playlist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/post/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/curator/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/radio/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/music-video/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/station/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/activity/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/charts/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGrouping/.*}"
+          Path: "PatternMatcher{GLOB: /WebObjects/MZStore.woa/wa/viewMultiRoom}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGenre/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewArtist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/socialProfile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/socialProfile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/profile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/profile/.*}"
+          Path: "PatternMatcher{PREFIX: /foryou}"
+          Path: "PatternMatcher{PREFIX: /for-you}"
+          Path: "PatternMatcher{PREFIX: /new}"
+          Path: "PatternMatcher{PREFIX: /video}"
+          Path: "PatternMatcher{PREFIX: /playlists}"
+          Path: "PatternMatcher{PREFIX: /charts}"
+          Path: "PatternMatcher{PREFIX: /applemusicradio}"
+          Path: "PatternMatcher{PREFIX: /newmusic}"
+          Path: "PatternMatcher{PREFIX: /browse}"
+          Path: "PatternMatcher{PREFIX: /browse/*}"
+          Path: "PatternMatcher{PREFIX: /library}"
+          Path: "PatternMatcher{PREFIX: /connect}"
+          Path: "PatternMatcher{PREFIX: /mymusic}"
+          Path: "PatternMatcher{PREFIX: /radio}"
+          Path: "PatternMatcher{PREFIX: /radio/*}"
+          Path: "PatternMatcher{PREFIX: /beats1}"
+          Path: "PatternMatcher{PREFIX: /subscribe}"
+          Path: "PatternMatcher{PREFIX: /individual}"
+          Path: "PatternMatcher{PREFIX: /family}"
+          Path: "PatternMatcher{PREFIX: /musicrenew}"
+          Path: "PatternMatcher{PREFIX: /studentSubscriptionOffers}"
+          Path: "PatternMatcher{PREFIX: /viewMultiRoom/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGrouping/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /viewBrand/.*}"
+          Path: "PatternMatcher{PREFIX: /viewArtist/.*}"
+          Path: "PatternMatcher{PREFIX: /collection/.*}"
+          Path: "PatternMatcher{PREFIX: /socialProfile/.*}"
+          Path: "PatternMatcher{PREFIX: /socialProfile/.*}"
+          Path: "PatternMatcher{PREFIX: /carrier}"
+          Path: "PatternMatcher{PREFIX: /WebObjects/MZContentLink.woa/wa/link?app=music*}"
+          AutoVerify=true
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter 3584b0d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "music.apple.com": -1
+          Authority: "itun.es": -1
+          Path: "PatternMatcher{GLOB: /.*}"
+          AutoVerify=true
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter c841ac2
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Scheme: "http"
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Path: "PatternMatcher{GLOB: /.*\/deeplink}"
+          AutoVerify=true
+        a986c2e com.apple.android.music/.deeplink filter 872b0d3
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Scheme: "http"
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Path: "PatternMatcher{PREFIX: /deeplink}"
+          Path: "PatternMatcher{PREFIX: /deeplink}"
+          AutoVerify=true
+      https:
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter 9d252d1
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "musicsdk"
+          Scheme: "http"
+          Scheme: "https"
+          Scheme: "apple-music"
+          Scheme: "apple-musics"
+          Authority: "applemusic": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "search.itunes.apple.com": -1
+          Authority: "finance-app.itunes.apple.com": -1
+          Authority: "finance-app.itunes.apple.com": -1
+          Path: "PatternMatcher{GLOB: /authenticate-v.*}"
+          Path: "PatternMatcher{GLOB: /.*\/artist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/album/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/playlist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/lyrics/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/post/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/curator/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/radio/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/music-video/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/station/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/activity/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/charts/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGrouping/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /foryou}"
+          Path: "PatternMatcher{PREFIX: /for-you}"
+          Path: "PatternMatcher{PREFIX: /new}"
+          Path: "PatternMatcher{PREFIX: /video}"
+          Path: "PatternMatcher{PREFIX: /playlists}"
+          Path: "PatternMatcher{PREFIX: /charts}"
+          Path: "PatternMatcher{PREFIX: /applemusicradio}"
+          Path: "PatternMatcher{PREFIX: /newmusic}"
+          Path: "PatternMatcher{PREFIX: /browse}"
+          Path: "PatternMatcher{PREFIX: /browse/*}"
+          Path: "PatternMatcher{PREFIX: /connect}"
+          Path: "PatternMatcher{PREFIX: /mymusic}"
+          Path: "PatternMatcher{PREFIX: /library}"
+          Path: "PatternMatcher{PREFIX: /radio}"
+          Path: "PatternMatcher{PREFIX: /radio/*}"
+          Path: "PatternMatcher{PREFIX: /beats1}"
+          Path: "PatternMatcher{PREFIX: /subscribe}"
+          Path: "PatternMatcher{PREFIX: /individual}"
+          Path: "PatternMatcher{PREFIX: /family}"
+          Path: "PatternMatcher{PREFIX: /musicrenew}"
+          Path: "PatternMatcher{PREFIX: /studentSubscriptionOffers}"
+          Path: "PatternMatcher{PREFIX: /student}"
+          Path: "PatternMatcher{PREFIX: /viewGrouping/.*}"
+          Path: "PatternMatcher{PREFIX: /viewArtist/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/artist/.*}"
+          Path: "PatternMatcher{GLOB: /album/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/playlist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/post/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/curator/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/radio/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/music-video/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/station/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/activity/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/charts/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGrouping/.*}"
+          Path: "PatternMatcher{GLOB: /WebObjects/MZStore.woa/wa/viewMultiRoom}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGenre/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewArtist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/socialProfile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/socialProfile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/profile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/profile/.*}"
+          Path: "PatternMatcher{PREFIX: /foryou}"
+          Path: "PatternMatcher{PREFIX: /for-you}"
+          Path: "PatternMatcher{PREFIX: /new}"
+          Path: "PatternMatcher{PREFIX: /video}"
+          Path: "PatternMatcher{PREFIX: /playlists}"
+          Path: "PatternMatcher{PREFIX: /charts}"
+          Path: "PatternMatcher{PREFIX: /applemusicradio}"
+          Path: "PatternMatcher{PREFIX: /newmusic}"
+          Path: "PatternMatcher{PREFIX: /browse}"
+          Path: "PatternMatcher{PREFIX: /browse/*}"
+          Path: "PatternMatcher{PREFIX: /library}"
+          Path: "PatternMatcher{PREFIX: /connect}"
+          Path: "PatternMatcher{PREFIX: /mymusic}"
+          Path: "PatternMatcher{PREFIX: /radio}"
+          Path: "PatternMatcher{PREFIX: /radio/*}"
+          Path: "PatternMatcher{PREFIX: /beats1}"
+          Path: "PatternMatcher{PREFIX: /subscribe}"
+          Path: "PatternMatcher{PREFIX: /individual}"
+          Path: "PatternMatcher{PREFIX: /family}"
+          Path: "PatternMatcher{PREFIX: /musicrenew}"
+          Path: "PatternMatcher{PREFIX: /studentSubscriptionOffers}"
+          Path: "PatternMatcher{PREFIX: /viewMultiRoom/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGrouping/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /viewBrand/.*}"
+          Path: "PatternMatcher{PREFIX: /viewArtist/.*}"
+          Path: "PatternMatcher{PREFIX: /collection/.*}"
+          Path: "PatternMatcher{PREFIX: /socialProfile/.*}"
+          Path: "PatternMatcher{PREFIX: /socialProfile/.*}"
+          Path: "PatternMatcher{PREFIX: /carrier}"
+          Path: "PatternMatcher{PREFIX: /WebObjects/MZContentLink.woa/wa/link?app=music*}"
+          AutoVerify=true
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter b33c837
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "setup.icloud.com": -1
+          Authority: "setup.icloud.com": -1
+          Path: "PatternMatcher{GLOB: /email/prefs/family}"
+          Path: "PatternMatcher{GLOB: /family/messages}"
+          AutoVerify=true
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter d9731a4
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "buy.itunes.apple.com": -1
+          Authority: "buy.itunes.apple.com": -1
+          Authority: "buy.itunes.apple.com": -1
+          Authority: "buy.itunes.apple.com": -1
+          Path: "PatternMatcher{LITERAL: /WebObjects/MZFinance.woa/wa/returnFromEmailVerify}"
+          Path: "PatternMatcher{LITERAL: /WebObjects/MZFinance.woa/wa/DirectAction/manageSubscriptions}"
+          Path: "PatternMatcher{LITERAL: /WebObjects/MZFinance.woa/wa/com.apple.jingle.app.finance.DirectAction/freeProductCodeWizard}"
+          Path: "PatternMatcher{LITERAL: /WebObjects/MZFinance.woa/wa/freeProductCodeWizard}"
+          AutoVerify=true
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter 3584b0d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "music.apple.com": -1
+          Authority: "itun.es": -1
+          Path: "PatternMatcher{GLOB: /.*}"
+          AutoVerify=true
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter c841ac2
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Scheme: "http"
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Path: "PatternMatcher{GLOB: /.*\/deeplink}"
+          AutoVerify=true
+        a986c2e com.apple.android.music/.deeplink filter 872b0d3
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Scheme: "http"
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Path: "PatternMatcher{PREFIX: /deeplink}"
+          Path: "PatternMatcher{PREFIX: /deeplink}"
+          AutoVerify=true
+        a986c2e com.apple.android.music/.deeplink filter e7c410
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "buy.itunes.apple.com": -1
+          Path: "PatternMatcher{LITERAL: /WebObjects/MZFinance.woa/wa/redeemLandingPage}"
+          AutoVerify=true
+        9c41230 com.apple.android.music/.commerce.activities.ChromeTabsActivity filter 86d113c
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Scheme: "musics"
+          Authority: "buy.itunes.apple.com": -1
+          Path: "PatternMatcher{LITERAL: /WebObjects/MZFinance.woa/wa/userSignedPayPalBA*?.*}"
+      music:
+        d7043cf com.apple.android.music/.commerce.activities.SonosAppleActivity filter 4cb8b09
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "music"
+          Authority: "itunes.apple.com": -1
+          Path: "PatternMatcher{GLOB: /sonosAuth}"
+          AutoVerify=true
+      apple-music:
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter 9d252d1
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "musicsdk"
+          Scheme: "http"
+          Scheme: "https"
+          Scheme: "apple-music"
+          Scheme: "apple-musics"
+          Authority: "applemusic": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "search.itunes.apple.com": -1
+          Authority: "finance-app.itunes.apple.com": -1
+          Authority: "finance-app.itunes.apple.com": -1
+          Path: "PatternMatcher{GLOB: /authenticate-v.*}"
+          Path: "PatternMatcher{GLOB: /.*\/artist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/album/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/playlist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/lyrics/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/post/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/curator/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/radio/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/music-video/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/station/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/activity/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/charts/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGrouping/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /foryou}"
+          Path: "PatternMatcher{PREFIX: /for-you}"
+          Path: "PatternMatcher{PREFIX: /new}"
+          Path: "PatternMatcher{PREFIX: /video}"
+          Path: "PatternMatcher{PREFIX: /playlists}"
+          Path: "PatternMatcher{PREFIX: /charts}"
+          Path: "PatternMatcher{PREFIX: /applemusicradio}"
+          Path: "PatternMatcher{PREFIX: /newmusic}"
+          Path: "PatternMatcher{PREFIX: /browse}"
+          Path: "PatternMatcher{PREFIX: /browse/*}"
+          Path: "PatternMatcher{PREFIX: /connect}"
+          Path: "PatternMatcher{PREFIX: /mymusic}"
+          Path: "PatternMatcher{PREFIX: /library}"
+          Path: "PatternMatcher{PREFIX: /radio}"
+          Path: "PatternMatcher{PREFIX: /radio/*}"
+          Path: "PatternMatcher{PREFIX: /beats1}"
+          Path: "PatternMatcher{PREFIX: /subscribe}"
+          Path: "PatternMatcher{PREFIX: /individual}"
+          Path: "PatternMatcher{PREFIX: /family}"
+          Path: "PatternMatcher{PREFIX: /musicrenew}"
+          Path: "PatternMatcher{PREFIX: /studentSubscriptionOffers}"
+          Path: "PatternMatcher{PREFIX: /student}"
+          Path: "PatternMatcher{PREFIX: /viewGrouping/.*}"
+          Path: "PatternMatcher{PREFIX: /viewArtist/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/artist/.*}"
+          Path: "PatternMatcher{GLOB: /album/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/playlist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/post/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/curator/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/radio/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/music-video/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/station/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/activity/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/charts/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGrouping/.*}"
+          Path: "PatternMatcher{GLOB: /WebObjects/MZStore.woa/wa/viewMultiRoom}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGenre/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewArtist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/socialProfile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/socialProfile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/profile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/profile/.*}"
+          Path: "PatternMatcher{PREFIX: /foryou}"
+          Path: "PatternMatcher{PREFIX: /for-you}"
+          Path: "PatternMatcher{PREFIX: /new}"
+          Path: "PatternMatcher{PREFIX: /video}"
+          Path: "PatternMatcher{PREFIX: /playlists}"
+          Path: "PatternMatcher{PREFIX: /charts}"
+          Path: "PatternMatcher{PREFIX: /applemusicradio}"
+          Path: "PatternMatcher{PREFIX: /newmusic}"
+          Path: "PatternMatcher{PREFIX: /browse}"
+          Path: "PatternMatcher{PREFIX: /browse/*}"
+          Path: "PatternMatcher{PREFIX: /library}"
+          Path: "PatternMatcher{PREFIX: /connect}"
+          Path: "PatternMatcher{PREFIX: /mymusic}"
+          Path: "PatternMatcher{PREFIX: /radio}"
+          Path: "PatternMatcher{PREFIX: /radio/*}"
+          Path: "PatternMatcher{PREFIX: /beats1}"
+          Path: "PatternMatcher{PREFIX: /subscribe}"
+          Path: "PatternMatcher{PREFIX: /individual}"
+          Path: "PatternMatcher{PREFIX: /family}"
+          Path: "PatternMatcher{PREFIX: /musicrenew}"
+          Path: "PatternMatcher{PREFIX: /studentSubscriptionOffers}"
+          Path: "PatternMatcher{PREFIX: /viewMultiRoom/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGrouping/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /viewBrand/.*}"
+          Path: "PatternMatcher{PREFIX: /viewArtist/.*}"
+          Path: "PatternMatcher{PREFIX: /collection/.*}"
+          Path: "PatternMatcher{PREFIX: /socialProfile/.*}"
+          Path: "PatternMatcher{PREFIX: /socialProfile/.*}"
+          Path: "PatternMatcher{PREFIX: /carrier}"
+          Path: "PatternMatcher{PREFIX: /WebObjects/MZContentLink.woa/wa/link?app=music*}"
+          AutoVerify=true
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter 26f2136
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "apple-music"
+          Scheme: "apple-musics"
+          Authority: "": -1 WILD
+          Authority: "": -1 WILD
+          AutoVerify=true
+      musicsdk:
+        834e373 com.apple.android.music/.common.activity.UriHandlerActivity filter 9d252d1
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "musicsdk"
+          Scheme: "http"
+          Scheme: "https"
+          Scheme: "apple-music"
+          Scheme: "apple-musics"
+          Authority: "applemusic": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "se2.itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "itunes.apple.com": -1
+          Authority: "search.itunes.apple.com": -1
+          Authority: "finance-app.itunes.apple.com": -1
+          Authority: "finance-app.itunes.apple.com": -1
+          Path: "PatternMatcher{GLOB: /authenticate-v.*}"
+          Path: "PatternMatcher{GLOB: /.*\/artist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/album/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/playlist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/lyrics/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/post/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/curator/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/radio/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/music-video/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/station/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/activity/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/charts/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGrouping/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /foryou}"
+          Path: "PatternMatcher{PREFIX: /for-you}"
+          Path: "PatternMatcher{PREFIX: /new}"
+          Path: "PatternMatcher{PREFIX: /video}"
+          Path: "PatternMatcher{PREFIX: /playlists}"
+          Path: "PatternMatcher{PREFIX: /charts}"
+          Path: "PatternMatcher{PREFIX: /applemusicradio}"
+          Path: "PatternMatcher{PREFIX: /newmusic}"
+          Path: "PatternMatcher{PREFIX: /browse}"
+          Path: "PatternMatcher{PREFIX: /browse/*}"
+          Path: "PatternMatcher{PREFIX: /connect}"
+          Path: "PatternMatcher{PREFIX: /mymusic}"
+          Path: "PatternMatcher{PREFIX: /library}"
+          Path: "PatternMatcher{PREFIX: /radio}"
+          Path: "PatternMatcher{PREFIX: /radio/*}"
+          Path: "PatternMatcher{PREFIX: /beats1}"
+          Path: "PatternMatcher{PREFIX: /subscribe}"
+          Path: "PatternMatcher{PREFIX: /individual}"
+          Path: "PatternMatcher{PREFIX: /family}"
+          Path: "PatternMatcher{PREFIX: /musicrenew}"
+          Path: "PatternMatcher{PREFIX: /studentSubscriptionOffers}"
+          Path: "PatternMatcher{PREFIX: /student}"
+          Path: "PatternMatcher{PREFIX: /viewGrouping/.*}"
+          Path: "PatternMatcher{PREFIX: /viewArtist/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/artist/.*}"
+          Path: "PatternMatcher{GLOB: /album/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/playlist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/post/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/curator/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/radio/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/collection/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/music-video/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/station/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/activity/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/charts/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGrouping/.*}"
+          Path: "PatternMatcher{GLOB: /WebObjects/MZStore.woa/wa/viewMultiRoom}"
+          Path: "PatternMatcher{GLOB: /.*\/viewGenre/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/viewArtist/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/socialProfile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/socialProfile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/profile/.*}"
+          Path: "PatternMatcher{GLOB: /.*\/profile/.*}"
+          Path: "PatternMatcher{PREFIX: /foryou}"
+          Path: "PatternMatcher{PREFIX: /for-you}"
+          Path: "PatternMatcher{PREFIX: /new}"
+          Path: "PatternMatcher{PREFIX: /video}"
+          Path: "PatternMatcher{PREFIX: /playlists}"
+          Path: "PatternMatcher{PREFIX: /charts}"
+          Path: "PatternMatcher{PREFIX: /applemusicradio}"
+          Path: "PatternMatcher{PREFIX: /newmusic}"
+          Path: "PatternMatcher{PREFIX: /browse}"
+          Path: "PatternMatcher{PREFIX: /browse/*}"
+          Path: "PatternMatcher{PREFIX: /library}"
+          Path: "PatternMatcher{PREFIX: /connect}"
+          Path: "PatternMatcher{PREFIX: /mymusic}"
+          Path: "PatternMatcher{PREFIX: /radio}"
+          Path: "PatternMatcher{PREFIX: /radio/*}"
+          Path: "PatternMatcher{PREFIX: /beats1}"
+          Path: "PatternMatcher{PREFIX: /subscribe}"
+          Path: "PatternMatcher{PREFIX: /individual}"
+          Path: "PatternMatcher{PREFIX: /family}"
+          Path: "PatternMatcher{PREFIX: /musicrenew}"
+          Path: "PatternMatcher{PREFIX: /studentSubscriptionOffers}"
+          Path: "PatternMatcher{PREFIX: /viewMultiRoom/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGrouping/.*}"
+          Path: "PatternMatcher{PREFIX: /viewGenre/.*}"
+          Path: "PatternMatcher{PREFIX: /viewBrand/.*}"
+          Path: "PatternMatcher{PREFIX: /viewArtist/.*}"
+          Path: "PatternMatcher{PREFIX: /collection/.*}"
+          Path: "PatternMatcher{PREFIX: /socialProfile/.*}"
+          Path: "PatternMatcher{PREFIX: /socialProfile/.*}"
+          Path: "PatternMatcher{PREFIX: /carrier}"
+          Path: "PatternMatcher{PREFIX: /WebObjects/MZContentLink.woa/wa/link?app=music*}"
+          AutoVerify=true
+
+  Non-Data Actions:
+      android.intent.action.MEDIA_SEARCH:
+        e90215c com.apple.android.music/.search.google.VoiceSearchHandlerActivity filter aad872f
+          Action: "android.intent.action.MEDIA_SEARCH"
+          Category: "android.intent.category.DEFAULT"
+      android.intent.action.MAIN:
+        6b06c65 com.apple.android.music/.onboarding.activities.SplashActivity filter 5812df8
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+      android.media.action.MEDIA_PLAY_FROM_SEARCH:
+        e90215c com.apple.android.music/.search.google.VoiceSearchHandlerActivity filter fd210e
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Category: "android.intent.category.DEFAULT"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      com.apple.android.music.widget.RecentlyPlayedWidgetProvider.Launch:
+        5431d3a com.apple.android.music/.widget.RecentlyPlayedWidgetProvider filter f29dcba
+          Action: "com.apple.android.music.widget.RecentlyPlayedWidgetProvider.Launch"
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+      android.intent.action.BATTERY_OKAY:
+        5574deb com.apple.android.music/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter b5b4912
+          Action: "android.intent.action.BATTERY_OKAY"
+          Action: "android.intent.action.BATTERY_LOW"
+      android.intent.action.ACTION_POWER_DISCONNECTED:
+        eabf748 com.apple.android.music/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter d91009d
+          Action: "android.intent.action.ACTION_POWER_CONNECTED"
+          Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        e4069e1 com.apple.android.music/androidx.profileinstaller.ProfileInstallReceiver filter b12e86a
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      com.dti.intent.action.PACKAGE_INSTALLED:
+        6b5d306 com.apple.android.music/.common.controllers.PartnerInstallReceiver filter 5090a86
+          Action: "com.dti.intent.action.PACKAGE_INSTALLED"
+      android.intent.action.DEVICE_STORAGE_LOW:
+        e5addc7 com.apple.android.music/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter c0dc8e3
+          Action: "android.intent.action.DEVICE_STORAGE_LOW"
+          Action: "android.intent.action.DEVICE_STORAGE_OK"
+      android.net.conn.CONNECTIVITY_CHANGE:
+        b2d3ff4 com.apple.android.music/androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy filter 7a5e2e0
+          Action: "android.net.conn.CONNECTIVITY_CHANGE"
+      android.intent.action.DEVICE_STORAGE_OK:
+        e5addc7 com.apple.android.music/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter c0dc8e3
+          Action: "android.intent.action.DEVICE_STORAGE_LOW"
+          Action: "android.intent.action.DEVICE_STORAGE_OK"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        e4069e1 com.apple.android.music/androidx.profileinstaller.ProfileInstallReceiver filter 5364d0c
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      com.google.android.c2dm.intent.RECEIVE:
+        678c31d com.apple.android.music/com.google.firebase.iid.FirebaseInstanceIdReceiver filter 9b20374
+          Action: "com.google.android.c2dm.intent.RECEIVE"
+      android.intent.action.BATTERY_LOW:
+        5574deb com.apple.android.music/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter b5b4912
+          Action: "android.intent.action.BATTERY_OKAY"
+          Action: "android.intent.action.BATTERY_LOW"
+      android.intent.action.TIMEZONE_CHANGED:
+        24c1992 com.apple.android.music/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 6020999
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+      android.intent.action.TIME_SET:
+        24c1992 com.apple.android.music/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 6020999
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+      androidx.profileinstaller.action.SKIP_FILE:
+        e4069e1 com.apple.android.music/androidx.profileinstaller.ProfileInstallReceiver filter 6e0a655
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      com.apple.android.music.widget.RecommendationsWidget.Launch:
+        31d8f63 com.apple.android.music/.widget.RecommendationsWidgetProvider filter 7efd76b
+          Action: "com.apple.android.music.widget.RecommendationsWidget.Launch"
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        e4069e1 com.apple.android.music/androidx.profileinstaller.ProfileInstallReceiver filter 5d9715b
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      android.intent.action.BOOT_COMPLETED:
+        24c1992 com.apple.android.music/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 6020999
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+      android.intent.action.ACTION_POWER_CONNECTED:
+        eabf748 com.apple.android.music/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter d91009d
+          Action: "android.intent.action.ACTION_POWER_CONNECTED"
+          Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
+      android.appwidget.action.APPWIDGET_UPDATE:
+        ed86760 com.apple.android.music/.widget.AppleMusicWidget filter 40479e5
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+          Action: "com.apple.android.music.widget.AppleMusicWidget.PLAYBACK_UPDATE"
+        5431d3a com.apple.android.music/.widget.RecentlyPlayedWidgetProvider filter f29dcba
+          Action: "com.apple.android.music.widget.RecentlyPlayedWidgetProvider.Launch"
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        31d8f63 com.apple.android.music/.widget.RecommendationsWidgetProvider filter 7efd76b
+          Action: "com.apple.android.music.widget.RecommendationsWidget.Launch"
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        5e37419 com.apple.android.music/.widget.ChartsWidgetProvider filter c8382c8
+          Action: "com.apple.android.music.widget.ChartsWidget.Launch"
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+      androidx.work.diagnostics.REQUEST_DIAGNOSTICS:
+        38e3cde com.apple.android.music/androidx.work.impl.diagnostics.DiagnosticsReceiver filter 94a103f
+          Action: "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+      android.intent.action.MY_PACKAGE_REPLACED:
+        bcfbebf com.apple.android.music/.common.controllers.UpgradeReceiver filter 487cf61
+          Action: "android.intent.action.MY_PACKAGE_REPLACED"
+          mPriority=1000, mHasPartialTypes=false
+      com.apple.android.music.widget.ChartsWidget.Launch:
+        5e37419 com.apple.android.music/.widget.ChartsWidgetProvider filter c8382c8
+          Action: "com.apple.android.music.widget.ChartsWidget.Launch"
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+      androidx.work.impl.background.systemalarm.UpdateProxies:
+        a4c998c com.apple.android.music/androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver filter 320e45e
+          Action: "androidx.work.impl.background.systemalarm.UpdateProxies"
+      com.apple.android.music.widget.AppleMusicWidget.PLAYBACK_UPDATE:
+        ed86760 com.apple.android.music/.widget.AppleMusicWidget filter 40479e5
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+          Action: "com.apple.android.music.widget.AppleMusicWidget.PLAYBACK_UPDATE"
+      android.intent.action.MEDIA_BUTTON:
+        7ae38d5 com.apple.android.music/androidx.media.session.MediaButtonReceiver filter a9df4dc
+          Action: "android.intent.action.MEDIA_BUTTON"
+
+Service Resolver Table:
+  Non-Data Actions:
+      com.google.firebase.MESSAGING_EVENT:
+        43d48ea com.apple.android.music/.pushnotifications.controllers.PushNotificationsService filter 88cc429
+          Action: "com.google.firebase.MESSAGING_EVENT"
+        94b87db com.apple.android.music/com.google.firebase.messaging.FirebaseMessagingService filter 78b354f
+          Action: "com.google.firebase.MESSAGING_EVENT"
+          mPriority=-500, mHasPartialTypes=false
+      android.media.browse.MediaBrowserService:
+        6efc278 com.apple.android.music/.player.MediaPlaybackService filter 3b3adb0
+          Action: "android.media.browse.MediaBrowserService"
+          Action: "android.intent.action.MEDIA_BUTTON"
+      android.intent.action.MEDIA_BUTTON:
+        6efc278 com.apple.android.music/.player.MediaPlaybackService filter 3b3adb0
+          Action: "android.media.browse.MediaBrowserService"
+          Action: "android.intent.action.MEDIA_BUTTON"
+
+Permissions:
+  Permission [com.apple.android.music.UserInfoContentProvider.permission] (2268d51):
+    sourcePackage=com.apple.android.music
+    uid=10076 gids=null type=0 prot=signature
+    perm=Permission{71f09b6 com.apple.android.music.UserInfoContentProvider.permission}
+    packageSetting=PackageSetting{dba4405 com.apple.android.music/10076}
+  Permission [com.apple.android.music.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (5f0c6b7):
+    sourcePackage=com.apple.android.music
+    uid=10076 gids=null type=0 prot=signature
+    perm=Permission{c9a8e24 com.apple.android.music.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    packageSetting=PackageSetting{dba4405 com.apple.android.music/10076}
+
+Registered ContentProviders:
+  com.apple.android.music/androidx.startup.InitializationProvider:
+    Provider{8f5ad8d com.apple.android.music/androidx.startup.InitializationProvider}
+  com.apple.android.music/.provider.ArtworkContentProvider:
+    Provider{38a0b42 com.apple.android.music/.provider.ArtworkContentProvider}
+  com.apple.android.music/androidx.core.content.FileProvider:
+    Provider{8411753 com.apple.android.music/androidx.core.content.FileProvider}
+  com.apple.android.music/com.apple.android.storeservices.UserInfoContentProvider:
+    Provider{6046890 com.apple.android.music/com.apple.android.storeservices.UserInfoContentProvider}
+  com.apple.android.music/com.google.firebase.provider.FirebaseInitProvider:
+    Provider{71c9589 com.apple.android.music/com.google.firebase.provider.FirebaseInitProvider}
+
+ContentProvider Authorities:
+  [com.apple.android.music.provider]:
+    Provider{8411753 com.apple.android.music/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{db1998e com.apple.android.music}
+  [com.apple.android.music.firebaseinitprovider]:
+    Provider{71c9589 com.apple.android.music/com.google.firebase.provider.FirebaseInitProvider}
+      applicationInfo=ApplicationInfo{db1998e com.apple.android.music}
+  [com.apple.android.music.provider.ArtworkProvider]:
+    Provider{38a0b42 com.apple.android.music/.provider.ArtworkContentProvider}
+      applicationInfo=ApplicationInfo{db1998e com.apple.android.music}
+  [com.apple.android.music.androidx-startup]:
+    Provider{8f5ad8d com.apple.android.music/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{db1998e com.apple.android.music}
+  [com.apple.android.music.UserInfoContentProvider]:
+    Provider{6046890 com.apple.android.music/com.apple.android.storeservices.UserInfoContentProvider}
+      applicationInfo=ApplicationInfo{db1998e com.apple.android.music}
+
+Key Set Manager:
+  [com.apple.android.music]
+      Signing KeySets: 16
+
+Packages:
+  Package [com.apple.android.music] (dba4405):
+    userId=10076
+    sharedUser=SharedUserSetting{6fbbcf3 com.apple.android/10076}
+    pkg=Package{9d74362 com.apple.android.music}
+    codePath=/data/app/com.apple.android.music-zKQlPvhy7j3JsCbnXVCQ7g==
+    resourcePath=/data/app/com.apple.android.music-zKQlPvhy7j3JsCbnXVCQ7g==
+    legacyNativeLibraryDir=/data/app/com.apple.android.music-zKQlPvhy7j3JsCbnXVCQ7g==/lib
+    primaryCpuAbi=armeabi-v7a
+    secondaryCpuAbi=null
+    versionCode=1472 minSdk=24 targetSdk=35
+    versionName=4.9.7.2
+    splits=[base, config.armeabi_v7a, config.mdpi]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{db1998e com.apple.android.music}
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA LARGE_HEAP ]
+    privateFlags=[ HAS_DOMAIN_URLS PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE ]
+    dataDir=/data/user/0/com.apple.android.music
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    usesOptionalLibraries:
+      androidx.window.extensions
+      androidx.window.sidecar
+      android.ext.adservices
+    timeStamp=2025-08-04 11:34:08
+    firstInstallTime=2024-10-05 15:35:47
+    lastUpdateTime=2025-08-04 11:34:35
+    installerPackageName=com.android.vending
+    signatures=PackageSignatures{33bd5af [2528830b]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA LARGE_HEAP ]
+    declared permissions:
+      com.apple.android.music.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature, INSTALLED
+      com.apple.android.music.UserInfoContentProvider.permission: prot=signature, INSTALLED
+    requested permissions:
+      android.permission.INTERNET
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.WAKE_LOCK
+      android.permission.MODIFY_AUDIO_SETTINGS
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.CHANGE_WIFI_STATE
+      android.permission.CHANGE_NETWORK_STATE
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.BLUETOOTH
+      com.google.android.apps.photos.permission.GOOGLE_PHOTOS
+      android.permission.READ_CONTACTS
+      android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+      android.permission.FOREGROUND_SERVICE
+      android.permission.FOREGROUND_SERVICE_DATA_SYNC
+      android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+      android.permission.POST_NOTIFICATIONS
+      android.permission.CAMERA
+      com.android.vending.BILLING
+      com.google.android.c2dm.permission.RECEIVE
+      com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+      com.google.android.gms.permission.AD_ID
+      android.permission.ACCESS_ADSERVICES_ATTRIBUTION
+      android.permission.ACCESS_ADSERVICES_AD_ID
+      android.permission.RECEIVE_BOOT_COMPLETED
+      com.apple.android.music.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+    install permissions:
+      android.permission.DOWNLOAD_WITHOUT_NOTIFICATION: granted=true
+      com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE: granted=true
+      com.google.android.c2dm.permission.RECEIVE: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.INTERNET: granted=true
+      com.android.vending.BILLING: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.CAMERA: granted=true
+      com.apple.android.music.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      com.google.android.gms.permission.AD_ID: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.READ_CONTACTS: granted=true
+    User 0: ceDataInode=-4294426932 installed=true hidden=false suspended=false stopped=true notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      enabledComponents:
+        androidx.work.impl.background.systemalarm.RescheduleReceiver
+        androidx.work.impl.background.systemjob.SystemJobService
+
+Shared users:
+  SharedUser [com.apple.android] (6fbbcf3):
+    userId=10076
+    install permissions:
+      android.permission.DOWNLOAD_WITHOUT_NOTIFICATION: granted=true
+      com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE: granted=true
+      com.google.android.c2dm.permission.RECEIVE: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.INTERNET: granted=true
+      com.android.vending.BILLING: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.CAMERA: granted=true
+      com.apple.android.music.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      com.google.android.gms.permission.AD_ID: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.READ_CONTACTS: granted=true
+    User 0: 
+      gids=[3002, 3003]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.apple.android.music]
+    path: /data/app/com.apple.android.music-zKQlPvhy7j3JsCbnXVCQ7g==/base.apk
+      arm: /data/app/com.apple.android.music-zKQlPvhy7j3JsCbnXVCQ7g==/oat/arm/base.odex[status=kOatUpToDate, compilation
+      _filter=quicken]
+
+
+Compiler stats:
+  [com.apple.android.music]
+     base.apk - 60261

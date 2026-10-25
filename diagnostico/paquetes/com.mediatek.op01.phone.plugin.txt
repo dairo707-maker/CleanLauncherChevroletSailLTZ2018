@@ -1,0 +1,323 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        c28781a com.mediatek.op01.phone.plugin/com.mediatek.phone.callforward.CallForwardTimeActivity filter 837ac85
+          Action: "android.intent.action.MAIN"
+      com.mediatek.op01.plugin.action.roamingtips:
+        fef3f4b com.mediatek.op01.phone.plugin/.CallForwardTipsActivity filter a232ada
+          Action: "com.mediatek.op01.plugin.action.roamingtips"
+          Category: "android.intent.category.DEFAULT"
+
+Permissions:
+  Permission [android.permission.READ_SPEED_DIAL] (d28fd28):
+    sourcePackage=com.mediatek.op01.phone.plugin
+    uid=1001 gids=null type=0 prot=normal
+    perm=Permission{c862a41 android.permission.READ_SPEED_DIAL}
+    packageSetting=PackageSetting{d426823 com.mediatek.op01.phone.plugin/1001}
+  Permission [android.permission.READ_REJECT] (545fbe6):
+    sourcePackage=com.mediatek.op01.phone.plugin
+    uid=1001 gids=null type=0 prot=normal
+    perm=Permission{b708527 android.permission.READ_REJECT}
+    packageSetting=PackageSetting{d426823 com.mediatek.op01.phone.plugin/1001}
+  Permission [android.permission.WRITE_REJECT] (aa4c3d4):
+    sourcePackage=com.mediatek.op01.phone.plugin
+    uid=1001 gids=null type=0 prot=normal
+    perm=Permission{5ca297d android.permission.WRITE_REJECT}
+    packageSetting=PackageSetting{d426823 com.mediatek.op01.phone.plugin/1001}
+  Permission [android.permission.WRITE_SPEED_DIAL] (365f072):
+    sourcePackage=com.mediatek.op01.phone.plugin
+    uid=1001 gids=null type=0 prot=normal
+    perm=Permission{bd64cc3 android.permission.WRITE_SPEED_DIAL}
+    packageSetting=PackageSetting{d426823 com.mediatek.op01.phone.plugin/1001}
+
+Key Set Manager:
+  [com.mediatek.op01.phone.plugin]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.mediatek.op01.phone.plugin] (d426823):
+    userId=1001
+    sharedUser=SharedUserSetting{6f4082d android.uid.phone/1001}
+    pkg=Package{7e9cdfc com.mediatek.op01.phone.plugin}
+    codePath=/system/app/OP01TeleService
+    resourcePath=/system/app/OP01TeleService
+    legacyNativeLibraryDir=/system/app/OP01TeleService/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=1 minSdk=5 targetSdk=27
+    versionName=1.0
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{7744940 com.mediatek.op01.phone.plugin}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ]
+    dataDir=/data/user/0/com.mediatek.op01.phone.plugin
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{254e079 [b4addb29]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    declared permissions:
+      android.permission.READ_REJECT: prot=normal, INSTALLED
+      android.permission.WRITE_REJECT: prot=normal, INSTALLED
+      android.permission.READ_SPEED_DIAL: prot=normal, INSTALLED
+      android.permission.WRITE_SPEED_DIAL: prot=normal, INSTALLED
+    requested permissions:
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.CHANGE_WIFI_STATE
+      android.permission.READ_SMS
+      android.permission.READ_PRECISE_PHONE_STATE
+      android.permission.WRITE_SMS
+      android.permission.GET_TASKS
+      android.permission.INJECT_EVENTS
+      android.permission.READ_PHONE_STATE
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.CHANGE_NETWORK_STATE
+      android.permission.MODIFY_PHONE_STATE
+      android.permission.INTERACT_ACROSS_USERS
+      android.permission.INTERACT_ACROSS_USERS_FULL
+      android.permission.READ_CONTACTS
+      android.permission.READ_CALL_LOG
+      android.permission.READ_SETTINGS
+      android.permission.WRITE_SETTINGS
+      android.permission.WRITE_APN_SETTINGS
+      android.permission.WRITE_SECURE_SETTINGS
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.WRITE_CALL_LOG
+      android.permission.REAL_GET_TASKS
+    install permissions:
+      android.permission.REAL_GET_TASKS: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.READ_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.READ_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_FINE_LOCATION: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.MANAGE_ACCOUNTS: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.BIND_CARRIER_SERVICES: granted=true
+      android.permission.SEND_RESPOND_VIA_MESSAGE: granted=true
+      android.permission.SHUTDOWN: granted=true
+      android.permission.CHANGE_COMPONENT_ENABLED_STATE: granted=true
+      android.permission.NFC: granted=true
+      android.permission.INTERNAL_SYSTEM_WINDOW: granted=true
+      android.permission.NETWORK_SETTINGS: granted=true
+      android.permission.BROADCAST_SMS: granted=true
+      android.permission.CALL_PRIVILEGED: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.WRITE_SYNC_SETTINGS: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      com.google.android.googleapps.permission.GOOGLE_AUTH: granted=true
+      android.permission.DEVICE_POWER: granted=true
+      android.permission.RECEIVE_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.SET_TIME_ZONE: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.BROADCAST_WAP_PUSH: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      com.android.voicemail.permission.READ_VOICEMAIL: granted=true
+      android.permission.WRITE_BLOCKED_NUMBERS: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.AUTHENTICATE_ACCOUNTS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.REORDER_TASKS: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.UPDATE_DEVICE_STATS: granted=true
+      android.permission.BLUETOOTH_STACK: granted=true
+      android.permission.READ_PRECISE_PHONE_STATE: granted=true
+      android.permission.PERFORM_CDMA_PROVISIONING: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.REGISTER_CALL_PROVIDER: granted=true
+      android.permission.MANAGE_USB: granted=true
+      android.permission.INTERACT_ACROSS_USERS_FULL: granted=true
+      android.permission.STOP_APP_SWITCHES: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      com.android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS: granted=true
+      android.permission.READ_BLOCKED_NUMBERS: granted=true
+      android.permission.READ_SEARCH_INDEXABLES: granted=true
+      android.permission.READ_PHONE_STATE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_LOCATION_EXTRA_COMMANDS: granted=true
+      android.permission.READ_PRIVILEGED_PHONE_STATE: granted=true
+      android.permission.ACCESS_IMS_CALL_SERVICE: granted=true
+      android.permission.SEND_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_DOWNLOAD_MANAGER: granted=true
+      android.permission.BROADCAST_STICKY: granted=true
+      android.permission.CALL_PHONE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.WRITE_SMS: granted=true
+      android.permission.WRITE_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.SET_TIME: granted=true
+      android.permission.WRITE_APN_SETTINGS: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.BIND_CARRIER_MESSAGING_SERVICE: granted=true
+      android.permission.ACCESS_BLUETOOTH_SHARE: granted=true
+      android.permission.BIND_VISUAL_VOICEMAIL_SERVICE: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.SET_PREFERRED_APPLICATIONS: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.DISABLE_KEYGUARD: granted=true
+      android.permission.CAMERA: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.CHANGE_CONFIGURATION: granted=true
+      android.permission.LOCAL_MAC_ADDRESS: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.SET_WALLPAPER: granted=true
+      android.permission.WRITE_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.UPDATE_LOCK: granted=true
+      android.permission.READ_NETWORK_USAGE_HISTORY: granted=true
+      android.permission.USE_SIP: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.REGISTER_SIM_SUBSCRIPTION: granted=true
+      android.permission.REBOOT: granted=true
+      android.permission.PROCESS_OUTGOING_CALLS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MANAGE_NETWORK_POLICY: granted=true
+      android.permission.CONNECTIVITY_INTERNAL: granted=true
+      android.permission.READ_SYNC_SETTINGS: granted=true
+      android.permission.GET_ACCOUNTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      com.android.permission.BIND_EUICC_SERVICE: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.VIBRATE: granted=true
+      android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST: granted=true
+      com.android.voicemail.permission.WRITE_VOICEMAIL: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.BIND_IMS_SERVICE: granted=true
+      android.permission.CONTROL_INCALL_EXPERIENCE: granted=true
+      android.permission.MODIFY_PHONE_STATE: granted=true
+      com.android.smspush.WAPPUSH_MANAGER_BIND: granted=true
+      android.permission.STATUS_BAR: granted=true
+      android.permission.RECORD_AUDIO: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.DUMP: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.READ_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.INJECT_EVENTS: granted=true
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+      com.android.voicemail.permission.ADD_VOICEMAIL: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+    User 0: ceDataInode=-4294484910 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+
+Shared users:
+  SharedUser [android.uid.phone] (6f4082d):
+    userId=1001
+    install permissions:
+      android.permission.REAL_GET_TASKS: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.READ_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.READ_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_FINE_LOCATION: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.MANAGE_ACCOUNTS: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.BIND_CARRIER_SERVICES: granted=true
+      android.permission.SEND_RESPOND_VIA_MESSAGE: granted=true
+      android.permission.SHUTDOWN: granted=true
+      android.permission.CHANGE_COMPONENT_ENABLED_STATE: granted=true
+      android.permission.NFC: granted=true
+      android.permission.INTERNAL_SYSTEM_WINDOW: granted=true
+      android.permission.NETWORK_SETTINGS: granted=true
+      android.permission.BROADCAST_SMS: granted=true
+      android.permission.CALL_PRIVILEGED: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.WRITE_SYNC_SETTINGS: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      com.google.android.googleapps.permission.GOOGLE_AUTH: granted=true
+      android.permission.DEVICE_POWER: granted=true
+      android.permission.RECEIVE_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.SET_TIME_ZONE: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.BROADCAST_WAP_PUSH: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      com.android.voicemail.permission.READ_VOICEMAIL: granted=true
+      android.permission.WRITE_BLOCKED_NUMBERS: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.AUTHENTICATE_ACCOUNTS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.REORDER_TASKS: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.UPDATE_DEVICE_STATS: granted=true
+      android.permission.BLUETOOTH_STACK: granted=true
+      android.permission.READ_PRECISE_PHONE_STATE: granted=true
+      android.permission.PERFORM_CDMA_PROVISIONING: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.REGISTER_CALL_PROVIDER: granted=true
+      android.permission.MANAGE_USB: granted=true
+      android.permission.INTERACT_ACROSS_USERS_FULL: granted=true
+      android.permission.STOP_APP_SWITCHES: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      com.android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS: granted=true
+      android.permission.READ_BLOCKED_NUMBERS: granted=true
+      android.permission.READ_SEARCH_INDEXABLES: granted=true
+      android.permission.READ_PHONE_STATE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_LOCATION_EXTRA_COMMANDS: granted=true
+      android.permission.READ_PRIVILEGED_PHONE_STATE: granted=true
+      android.permission.ACCESS_IMS_CALL_SERVICE: granted=true
+      android.permission.SEND_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.ACCESS_DOWNLOAD_MANAGER: granted=true
+      android.permission.BROADCAST_STICKY: granted=true
+      android.permission.CALL_PHONE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.WRITE_SMS: granted=true
+      android.permission.WRITE_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.SET_TIME: granted=true
+      android.permission.WRITE_APN_SETTINGS: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.BIND_CARRIER_MESSAGING_SERVICE: granted=true
+      android.permission.ACCESS_BLUETOOTH_SHARE: granted=true
+      android.permission.BIND_VISUAL_VOICEMAIL_SERVICE: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.SET_PREFERRED_APPLICATIONS: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.DISABLE_KEYGUARD: granted=true
+      android.permission.CAMERA: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.CHANGE_CONFIGURATION: granted=true
+      android.permission.LOCAL_MAC_ADDRESS: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.SET_WALLPAPER: granted=true
+      android.permission.WRITE_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.UPDATE_LOCK: granted=true
+      android.permission.READ_NETWORK_USAGE_HISTORY: granted=true
+      android.permission.USE_SIP: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.REGISTER_SIM_SUBSCRIPTION: granted=true
+      android.permission.REBOOT: granted=true
+      android.permission.PROCESS_OUTGOING_CALLS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MANAGE_NETWORK_POLICY: granted=true
+      android.permission.CONNECTIVITY_INTERNAL: granted=true
+      android.permission.READ_SYNC_SETTINGS: granted=true
+      android.permission.GET_ACCOUNTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      com.android.permission.BIND_EUICC_SERVICE: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.VIBRATE: granted=true
+      android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST: granted=true
+      com.android.voicemail.permission.WRITE_VOICEMAIL: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.BIND_IMS_SERVICE: granted=true
+      android.permission.CONTROL_INCALL_EXPERIENCE: granted=true
+      android.permission.MODIFY_PHONE_STATE: granted=true
+      com.android.smspush.WAPPUSH_MANAGER_BIND: granted=true
+      android.permission.STATUS_BAR: granted=true
+      android.permission.RECORD_AUDIO: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.DUMP: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.READ_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.INJECT_EVENTS: granted=true
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+      com.android.voicemail.permission.ADD_VOICEMAIL: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+    User 0: 
+      gids=[3002, 1023, 1015, 3003, 3001, 3007, 1002, 3010, 3011, 3006]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.mediatek.op01.phone.plugin]
+    path: /system/app/OP01TeleService/OP01TeleService.apk
+      arm: /system/app/OP01TeleService/oat/arm/OP01TeleService.odex[status=kOatUpToDate, compilation_filter=quicken]
+
+
+Compiler stats:
+  [com.mediatek.op01.phone.plugin]
+    (No recorded stats)

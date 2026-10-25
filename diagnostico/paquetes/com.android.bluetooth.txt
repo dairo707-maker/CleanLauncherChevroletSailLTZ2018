@@ -1,0 +1,1337 @@
+Activity Resolver Table:
+  Full MIME Types:
+      x-mixmedia/*:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter 361b10a
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "x-mixmedia"
+          Type: "text/x-vcard"
+          mPriority=0, mHasPartialTypes=true
+      application/x-hwp:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      application/pdf:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      application/zip:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      text/html:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      application/vnd.openxmlformats-officedocument.presentationml.presentation:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      application/vnd.ms-powerpoint:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      text/xml:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      text/calendar:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      audio/*:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      application/vnd.ms-excel:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      text/x-vcalendar:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      video/*:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter 361b10a
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "x-mixmedia"
+          Type: "text/x-vcard"
+          mPriority=0, mHasPartialTypes=true
+      text/x-vcard:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter 361b10a
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "x-mixmedia"
+          Type: "text/x-vcard"
+          mPriority=0, mHasPartialTypes=true
+      text/plain:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      application/msword:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      vnd.android.cursor.item/vnd.android.btopp:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter c459d7b
+          Action: "android.btopp.intent.action.OPEN"
+          Category: "android.intent.category.DEFAULT"
+          Type: "vnd.android.cursor.item/vnd.android.btopp"
+      image/*:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter 361b10a
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "x-mixmedia"
+          Type: "text/x-vcard"
+          mPriority=0, mHasPartialTypes=true
+      application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+
+  Base MIME Types:
+      vnd.android.cursor.item:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter c459d7b
+          Action: "android.btopp.intent.action.OPEN"
+          Category: "android.intent.category.DEFAULT"
+          Type: "vnd.android.cursor.item/vnd.android.btopp"
+      text:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter 361b10a
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "x-mixmedia"
+          Type: "text/x-vcard"
+          mPriority=0, mHasPartialTypes=true
+      application:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+
+  Wild MIME Types:
+      audio:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      image:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter 361b10a
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "x-mixmedia"
+          Type: "text/x-vcard"
+          mPriority=0, mHasPartialTypes=true
+      video:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter 361b10a
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "x-mixmedia"
+          Type: "text/x-vcard"
+          mPriority=0, mHasPartialTypes=true
+      x-mixmedia:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter 361b10a
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "x-mixmedia"
+          Type: "text/x-vcard"
+          mPriority=0, mHasPartialTypes=true
+
+  Non-Data Actions:
+      com.android.bluetooth.action.TransferHistory:
+        69231f3 com.android.bluetooth/.opp.BluetoothOppTransferHistory filter 7c1b798
+          Action: "com.android.bluetooth.action.TransferHistory"
+          Category: "android.intent.category.DEFAULT"
+
+  MIME Typed Actions:
+      android.btopp.intent.action.OPEN:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter c459d7b
+          Action: "android.btopp.intent.action.OPEN"
+          Category: "android.intent.category.DEFAULT"
+          Type: "vnd.android.cursor.item/vnd.android.btopp"
+      android.intent.action.SEND:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter bc0ad75
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "audio"
+          Type: "text/x-vcard"
+          Type: "text/x-vcalendar"
+          Type: "text/calendar"
+          Type: "text/plain"
+          Type: "text/html"
+          Type: "text/xml"
+          Type: "application/zip"
+          Type: "application/vnd.ms-excel"
+          Type: "application/msword"
+          Type: "application/vnd.ms-powerpoint"
+          Type: "application/pdf"
+          Type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          Type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          Type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+          Type: "application/x-hwp"
+          mPriority=0, mHasPartialTypes=true
+      android.intent.action.SEND_MULTIPLE:
+        a9a6c62 com.android.bluetooth/.opp.BluetoothOppLauncherActivity filter 361b10a
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "image"
+          Type: "video"
+          Type: "x-mixmedia"
+          Type: "text/x-vcard"
+          mPriority=0, mHasPartialTypes=true
+
+Receiver Resolver Table:
+  Full MIME Types:
+      */*:
+        c697eb0 com.android.bluetooth/.opp.BluetoothOppHandoverReceiver filter d5ba5f
+          Action: "android.nfc.handover.intent.action.HANDOVER_SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        c697eb0 com.android.bluetooth/.opp.BluetoothOppHandoverReceiver filter e437cac
+          Action: "android.nfc.handover.intent.action.HANDOVER_SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+
+  Wild MIME Types:
+      *:
+        c697eb0 com.android.bluetooth/.opp.BluetoothOppHandoverReceiver filter d5ba5f
+          Action: "android.nfc.handover.intent.action.HANDOVER_SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        c697eb0 com.android.bluetooth/.opp.BluetoothOppHandoverReceiver filter e437cac
+          Action: "android.nfc.handover.intent.action.HANDOVER_SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+
+  Non-Data Actions:
+      android.btopp.intent.action.WHITELIST_DEVICE:
+        c697eb0 com.android.bluetooth/.opp.BluetoothOppHandoverReceiver filter 38662fe
+          Action: "android.btopp.intent.action.WHITELIST_DEVICE"
+          Action: "android.btopp.intent.action.STOP_HANDOVER_TRANSFER"
+      android.btopp.intent.action.OPEN_RECEIVED_FILES:
+        9a4c129 com.android.bluetooth/.opp.BluetoothOppReceiver filter ae9deb9
+          Action: "android.btopp.intent.action.OPEN_RECEIVED_FILES"
+      android.btopp.intent.action.STOP_HANDOVER_TRANSFER:
+        c697eb0 com.android.bluetooth/.opp.BluetoothOppHandoverReceiver filter 38662fe
+          Action: "android.btopp.intent.action.WHITELIST_DEVICE"
+          Action: "android.btopp.intent.action.STOP_HANDOVER_TRANSFER"
+
+  MIME Typed Actions:
+      android.nfc.handover.intent.action.HANDOVER_SEND_MULTIPLE:
+        c697eb0 com.android.bluetooth/.opp.BluetoothOppHandoverReceiver filter e437cac
+          Action: "android.nfc.handover.intent.action.HANDOVER_SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+      android.nfc.handover.intent.action.HANDOVER_SEND:
+        c697eb0 com.android.bluetooth/.opp.BluetoothOppHandoverReceiver filter d5ba5f
+          Action: "android.nfc.handover.intent.action.HANDOVER_SEND"
+          Category: "android.intent.category.DEFAULT"
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+
+Service Resolver Table:
+  Non-Data Actions:
+      android.bluetooth.IBluetoothHeadsetClient:
+        cb6ecae com.android.bluetooth/.hfpclient.HeadsetClientService filter 5ffc3bd
+          Action: "android.bluetooth.IBluetoothHeadsetClient"
+          Action: "com.autochips.bluetooth.IBluetoothHfClient"
+      android.bluetooth.IBluetooth:
+        293fa4f com.android.bluetooth/.btservice.AdapterService filter bbabd13
+          Action: "android.bluetooth.IBluetooth"
+      android.bluetooth.IBluetoothInputDevice:
+        75fd5dc com.android.bluetooth/.hid.HidService filter 573d526
+          Action: "android.bluetooth.IBluetoothInputDevice"
+      android.bluetooth.IBluetoothA2dpSink:
+        b1f46e5 com.android.bluetooth/.a2dpsink.A2dpSinkService filter 14abb8b
+          Action: "android.bluetooth.IBluetoothA2dpSink"
+      com.autochips.bluetooth.IBluetoothPbapClient:
+        e0925ba com.android.bluetooth/.pbapclient.PbapClientService filter d1d1103
+          Action: "com.autochips.bluetooth.IBluetoothPbapClient"
+      android.btmap.intent.action.SHOW_MAPS_SETTINGS:
+        b3fec6b com.android.bluetooth/.map.BluetoothMapService filter 5371149
+          Action: "android.bluetooth.IBluetoothMap"
+          Action: "android.btmap.intent.action.SHOW_MAPS_SETTINGS"
+          Action: "com.android.bluetooth.map.USER_CONFIRM_TIMEOUT"
+      android.bluetooth.IBluetoothMap:
+        b3fec6b com.android.bluetooth/.map.BluetoothMapService filter 5371149
+          Action: "android.bluetooth.IBluetoothMap"
+          Action: "android.btmap.intent.action.SHOW_MAPS_SETTINGS"
+          Action: "com.android.bluetooth.map.USER_CONFIRM_TIMEOUT"
+      android.bluetooth.IBluetoothPan:
+        a0273c8 com.android.bluetooth/.pan.PanService filter ca35f14
+          Action: "android.bluetooth.IBluetoothPan"
+      android.bluetooth.IBluetoothSap:
+        7026c61 com.android.bluetooth/.sap.SapService filter a0a176f
+          Action: "android.bluetooth.IBluetoothSap"
+      android.bluetooth.IBluetoothHeadset:
+        d13e386 com.android.bluetooth/.hfp.HeadsetService filter 6567905
+          Action: "android.bluetooth.IBluetoothHeadset"
+      android.telecom.ConnectionService:
+        6ee447 com.android.bluetooth/.hfpclient.connserv.HfpClientConnectionService filter cb81db2
+          Action: "android.telecom.ConnectionService"
+      android.bluetooth.IBluetoothAvrcpController:
+        eaf0474 com.android.bluetooth/.avrcpcontroller.AvrcpControllerService filter 44aa081
+          Action: "android.bluetooth.IBluetoothAvrcpController"
+          Action: "com.autochips.bluetooth.IBluetoothAvrcpCt"
+      android.bluetooth.IBluetoothA2dp:
+        9986d9d com.android.bluetooth/.a2dp.A2dpService filter a8f3d5a
+          Action: "android.bluetooth.IBluetoothA2dp"
+      android.bluetooth.IBluetoothGatt:
+        bbab212 com.android.bluetooth/.gatt.GattService filter 849fc7c
+          Action: "android.bluetooth.IBluetoothGatt"
+      android.bluetooth.IBluetoothPbap:
+        cab7de3 com.android.bluetooth/.pbap.BluetoothPbapService filter 3d07b50
+          Action: "android.bluetooth.IBluetoothPbap"
+      android.bluetooth.IBluetoothMapClient:
+        5f1f3e0 com.android.bluetooth/.mapclient.MapClientService filter 72cca4e
+          Action: "android.bluetooth.IBluetoothMapClient"
+      android.bluetooth.IBluetoothHealth:
+        f934699 com.android.bluetooth/.hdp.HealthService filter ea78567
+          Action: "android.bluetooth.IBluetoothHealth"
+      com.android.bluetooth.map.USER_CONFIRM_TIMEOUT:
+        b3fec6b com.android.bluetooth/.map.BluetoothMapService filter 5371149
+          Action: "android.bluetooth.IBluetoothMap"
+          Action: "android.btmap.intent.action.SHOW_MAPS_SETTINGS"
+          Action: "com.android.bluetooth.map.USER_CONFIRM_TIMEOUT"
+      com.autochips.bluetooth.IBluetoothHfClient:
+        cb6ecae com.android.bluetooth/.hfpclient.HeadsetClientService filter 5ffc3bd
+          Action: "android.bluetooth.IBluetoothHeadsetClient"
+          Action: "com.autochips.bluetooth.IBluetoothHfClient"
+      android.media.browse.MediaBrowserService:
+        48ddd5e com.android.bluetooth/.a2dpsink.mbs.A2dpMediaBrowserService filter a786468
+          Action: "android.media.browse.MediaBrowserService"
+      com.autochips.bluetooth.IBluetoothAvrcpCt:
+        eaf0474 com.android.bluetooth/.avrcpcontroller.AvrcpControllerService filter 44aa081
+          Action: "android.bluetooth.IBluetoothAvrcpController"
+          Action: "com.autochips.bluetooth.IBluetoothAvrcpCt"
+      android.bluetooth.IBluetoothInputHost:
+        e8e153f com.android.bluetooth/.hid.HidDevService filter be15880
+          Action: "android.bluetooth.IBluetoothInputHost"
+
+Permissions:
+  Permission [com.android.permission.WHITELIST_BLUETOOTH_DEVICE] (ab26e0c):
+    sourcePackage=com.android.bluetooth
+    uid=1002 gids=null type=0 prot=signature
+    perm=Permission{4c8b355 com.android.permission.WHITELIST_BLUETOOTH_DEVICE}
+    packageSetting=PackageSetting{9166c44 com.android.bluetooth/1002}
+  Permission [android.permission.ACCESS_BLUETOOTH_SHARE] (8d6716a):
+    sourcePackage=com.android.bluetooth
+    uid=1002 gids=null type=0 prot=signature
+    perm=Permission{bd8c65b android.permission.ACCESS_BLUETOOTH_SHARE}
+    packageSetting=PackageSetting{9166c44 com.android.bluetooth/1002}
+
+Registered ContentProviders:
+  com.android.bluetooth/.util.BluetoothCallLogProvider:
+    Provider{d1e5ef8 com.android.bluetooth/.util.BluetoothCallLogProvider}
+  com.android.bluetooth/.opp.BluetoothOppFileProvider:
+    Provider{2ae2fd1 com.android.bluetooth/.opp.BluetoothOppFileProvider}
+  com.android.bluetooth/.util.BluetoothContactsDataProvider:
+    Provider{3623a36 com.android.bluetooth/.util.BluetoothContactsDataProvider}
+  com.android.bluetooth/.opp.BluetoothOppProvider:
+    Provider{a536d37 com.android.bluetooth/.opp.BluetoothOppProvider}
+  com.android.bluetooth/.map.MmsFileProvider:
+    Provider{5672a4 com.android.bluetooth/.map.MmsFileProvider}
+  com.android.bluetooth/.util.BluetoothContactsProvider:
+    Provider{a94f80d com.android.bluetooth/.util.BluetoothContactsProvider}
+
+ContentProvider Authorities:
+  [com.android.bluetooth.map.MmsFileProvider]:
+    Provider{5672a4 com.android.bluetooth/.map.MmsFileProvider}
+      applicationInfo=ApplicationInfo{c0fc3c2 com.android.bluetooth}
+  [com.android.bluetooth.opp.fileprovider]:
+    Provider{2ae2fd1 com.android.bluetooth/.opp.BluetoothOppFileProvider}
+      applicationInfo=ApplicationInfo{c0fc3c2 com.android.bluetooth}
+  [com.autochips.bluetooth.contactsData]:
+    Provider{3623a36 com.android.bluetooth/.util.BluetoothContactsDataProvider}
+      applicationInfo=ApplicationInfo{c0fc3c2 com.android.bluetooth}
+  [com.autochips.bluetooth.calllog]:
+    Provider{d1e5ef8 com.android.bluetooth/.util.BluetoothCallLogProvider}
+      applicationInfo=ApplicationInfo{c0fc3c2 com.android.bluetooth}
+  [com.android.bluetooth.opp]:
+    Provider{a536d37 com.android.bluetooth/.opp.BluetoothOppProvider}
+      applicationInfo=ApplicationInfo{c0fc3c2 com.android.bluetooth}
+  [com.autochips.bluetooth.contacts]:
+    Provider{a94f80d com.android.bluetooth/.util.BluetoothContactsProvider}
+      applicationInfo=ApplicationInfo{c0fc3c2 com.android.bluetooth}
+
+Key Set Manager:
+  [com.android.bluetooth]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.android.bluetooth] (9166c44):
+    userId=1002
+    sharedUser=SharedUserSetting{56fb002 android.uid.bluetooth/1002}
+    pkg=Package{58bed4d com.android.bluetooth}
+    codePath=/system/app/MtkBluetooth
+    resourcePath=/system/app/MtkBluetooth
+    legacyNativeLibraryDir=/system/app/MtkBluetooth/lib
+    primaryCpuAbi=armeabi-v7a
+    secondaryCpuAbi=null
+    versionCode=27 minSdk=27 targetSdk=27
+    versionName=8.1.0
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{c0fc3c2 com.android.bluetooth}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ DEFAULT_TO_DEVICE_PROTECTED_STORAGE DIRECT_BOOT_AWARE PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ]
+    dataDir=/data/user_de/0/com.android.bluetooth
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    usesLibraries:
+      javax.obex
+    usesLibraryFiles:
+      /system/framework/javax.obex.jar
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{a67a5d3 [b4addb29]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    declared permissions:
+      android.permission.ACCESS_BLUETOOTH_SHARE: prot=signature, INSTALLED
+      com.android.permission.WHITELIST_BLUETOOTH_DEVICE: prot=signature, INSTALLED
+    requested permissions:
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.ACCESS_BLUETOOTH_SHARE
+      android.permission.ACCESS_COARSE_LOCATION
+      android.permission.INTERNET
+      android.permission.BLUETOOTH
+      android.permission.BLUETOOTH_ADMIN
+      android.permission.BLUETOOTH_PRIVILEGED
+      android.permission.BLUETOOTH_MAP
+      android.permission.DUMP
+      android.permission.WAKE_LOCK
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.READ_CONTACTS
+      android.permission.WRITE_CONTACTS
+      android.permission.READ_CALL_LOG
+      android.permission.WRITE_CALL_LOG
+      android.permission.READ_PRIVILEGED_PHONE_STATE
+      android.permission.WRITE_SETTINGS
+      android.permission.NFC_HANDOVER_STATUS
+      android.permission.WRITE_SECURE_SETTINGS
+      android.permission.WRITE_APN_SETTINGS
+      android.permission.NET_ADMIN
+      android.permission.CALL_PRIVILEGED
+      android.permission.MODIFY_AUDIO_SETTINGS
+      android.permission.NET_TUNNELING
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.CHANGE_NETWORK_STATE
+      android.permission.CONNECTIVITY_INTERNAL
+      android.permission.TETHER_PRIVILEGED
+      android.permission.MODIFY_PHONE_STATE
+      android.permission.INTERACT_ACROSS_USERS_FULL
+      android.permission.BLUETOOTH_STACK
+      android.permission.INTERACT_ACROSS_USERS
+      android.permission.MANAGE_USERS
+      android.permission.GET_ACCOUNTS
+      com.google.android.gallery3d.permission.GALLERY_PROVIDER
+      com.android.gallery3d.permission.GALLERY_PROVIDER
+      android.permission.RECEIVE_SMS
+      android.permission.SEND_SMS
+      android.permission.READ_SMS
+      android.permission.WRITE_SMS
+      android.permission.MEDIA_CONTENT_CONTROL
+      android.permission.UPDATE_APP_OPS_STATS
+      android.permission.VIBRATE
+      android.permission.DEVICE_POWER
+      android.permission.REAL_GET_TASKS
+      android.permission.MODIFY_AUDIO_ROUTING
+      android.permission.UPDATE_DEVICE_STATS
+      android.permission.SYSTEM_ALERT_WINDOW
+      android.permission.READ_PROFILE
+    install permissions:
+      android.permission.REAL_GET_TASKS: granted=true
+      com.android.gallery3d.permission.GALLERY_PROVIDER: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.READ_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.READ_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.MODIFY_AUDIO_ROUTING: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.CALL_PRIVILEGED: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.DEVICE_POWER: granted=true
+      android.permission.RECEIVE_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.READ_PROFILE: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.UPDATE_DEVICE_STATS: granted=true
+      android.permission.BLUETOOTH_STACK: granted=true
+      android.permission.BLUETOOTH_MAP: granted=true
+      android.permission.NET_ADMIN: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.INTERACT_ACROSS_USERS_FULL: granted=true
+      android.permission.TETHER_PRIVILEGED: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.NFC_HANDOVER_STATUS: granted=true
+      android.permission.READ_PRIVILEGED_PHONE_STATE: granted=true
+      android.permission.SEND_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.BLUETOOTH_PRIVILEGED: granted=true
+      android.permission.WRITE_SMS: granted=true
+      android.permission.WRITE_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.WRITE_APN_SETTINGS: granted=true
+      android.permission.ACCESS_BLUETOOTH_SHARE: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.WRITE_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.NET_TUNNELING: granted=true
+      android.permission.CONNECTIVITY_INTERNAL: granted=true
+      android.permission.GET_ACCOUNTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.VIBRATE: granted=true
+      android.permission.MODIFY_PHONE_STATE: granted=true
+      android.permission.DUMP: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.READ_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+      android.permission.MEDIA_CONTENT_CONTROL: granted=true
+    User 0: ceDataInode=-4294484493 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+
+Shared users:
+  SharedUser [android.uid.bluetooth] (56fb002):
+    userId=1002
+    install permissions:
+      android.permission.REAL_GET_TASKS: granted=true
+      com.android.gallery3d.permission.GALLERY_PROVIDER: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.READ_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.READ_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.MODIFY_AUDIO_ROUTING: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.CALL_PRIVILEGED: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.DEVICE_POWER: granted=true
+      android.permission.RECEIVE_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.READ_PROFILE: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.UPDATE_DEVICE_STATS: granted=true
+      android.permission.BLUETOOTH_STACK: granted=true
+      android.permission.BLUETOOTH_MAP: granted=true
+      android.permission.NET_ADMIN: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.INTERACT_ACROSS_USERS_FULL: granted=true
+      android.permission.TETHER_PRIVILEGED: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.NFC_HANDOVER_STATUS: granted=true
+      android.permission.READ_PRIVILEGED_PHONE_STATE: granted=true
+      android.permission.SEND_SMS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.BLUETOOTH_PRIVILEGED: granted=true
+      android.permission.WRITE_SMS: granted=true
+      android.permission.WRITE_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.WRITE_APN_SETTINGS: granted=true
+      android.permission.ACCESS_BLUETOOTH_SHARE: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.WRITE_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.NET_TUNNELING: granted=true
+      android.permission.CONNECTIVITY_INTERNAL: granted=true
+      android.permission.GET_ACCOUNTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.VIBRATE: granted=true
+      android.permission.MODIFY_PHONE_STATE: granted=true
+      android.permission.DUMP: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.READ_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+      android.permission.MEDIA_CONTENT_CONTROL: granted=true
+    User 0: 
+      gids=[3002, 3003, 3001, 3007, 1002, 3010, 3011, 3005, 1016]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.android.bluetooth]
+    path: /system/app/MtkBluetooth/MtkBluetooth.apk
+      arm: /system/app/MtkBluetooth/oat/arm/MtkBluetooth.odex[status=kOatUpToDate, compilation_filter=quicken]
+
+
+Compiler stats:
+  [com.android.bluetooth]
+    (No recorded stats)

@@ -1,0 +1,51 @@
+Key Set Manager:
+  [com.mediatek.providers.settings.op01]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.mediatek.providers.settings.op01] (b7f8146):
+    userId=10055
+    pkg=Package{106e921 com.mediatek.providers.settings.op01}
+    codePath=/system/app/OP01SettingsProvider
+    resourcePath=/system/app/OP01SettingsProvider
+    legacyNativeLibraryDir=/system/app/OP01SettingsProvider/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=1 minSdk=5 targetSdk=27
+    versionName=1.0
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{2446900 com.mediatek.providers.settings.op01}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ]
+    dataDir=/data/user/0/com.mediatek.providers.settings.op01
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{51ee539 [b4addb29]}
+    installPermissionsFixed=false installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    User 0: ceDataInode=-4294484863 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.mediatek.providers.settings.op01]
+    path: /system/app/OP01SettingsProvider/OP01SettingsProvider.apk
+      arm: /system/app/OP01SettingsProvider/oat/arm/OP01SettingsProvider.odex[status=kOatUpToDate, compilation_filter=qu
+      icken]
+
+
+Compiler stats:
+  [com.mediatek.providers.settings.op01]
+    (No recorded stats)

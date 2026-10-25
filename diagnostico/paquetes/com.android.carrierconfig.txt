@@ -1,0 +1,56 @@
+Service Resolver Table:
+  Non-Data Actions:
+      android.service.carrier.CarrierService:
+        5637570 com.android.carrierconfig/.DefaultCarrierConfigService filter ad5fdc5
+          Action: "android.service.carrier.CarrierService"
+
+Key Set Manager:
+  [com.android.carrierconfig]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.android.carrierconfig] (c359c3c):
+    userId=10002
+    pkg=Package{3655e2f com.android.carrierconfig}
+    codePath=/system/priv-app/CarrierConfig
+    resourcePath=/system/priv-app/CarrierConfig
+    legacyNativeLibraryDir=/system/priv-app/CarrierConfig/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=1 minSdk=27 targetSdk=27
+    versionName=1.0.0
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{dc150e9 com.android.carrierconfig}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    privateFlags=[ PRIVILEGED DIRECT_BOOT_AWARE PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ]
+    dataDir=/data/user/0/com.android.carrierconfig
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{f2ca16e [b4addb29]}
+    installPermissionsFixed=false installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    User 0: ceDataInode=-4294484683 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.android.carrierconfig]
+    path: /system/priv-app/CarrierConfig/CarrierConfig.apk
+      arm: /system/priv-app/CarrierConfig/oat/arm/CarrierConfig.odex[status=kOatUpToDate, compilation_filter=quicken]
+
+
+Compiler stats:
+  [com.android.carrierconfig]
+    (No recorded stats)

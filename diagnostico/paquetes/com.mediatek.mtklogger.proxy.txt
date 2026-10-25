@@ -1,0 +1,71 @@
+Receiver Resolver Table:
+  Non-Data Actions:
+      com.mediatek.mtklogger.proxy.COMMAND:
+        6da1510 com.mediatek.mtklogger.proxy/.ProxyReceiver filter bec419a
+          Action: "com.mediatek.mtklogger.proxy.COMMAND"
+          Category: "android.intent.category.DEFAULT"
+
+Service Resolver Table:
+  Non-Data Actions:
+      com.mediatek.mtklogger.proxy.ProxyService:
+        7a60809 com.mediatek.mtklogger.proxy/.ProxyService filter 52fe645
+          Action: "com.mediatek.mtklogger.proxy.ProxyService"
+
+Key Set Manager:
+  [com.mediatek.mtklogger.proxy]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.mediatek.mtklogger.proxy] (e9bd6bc):
+    userId=10068
+    pkg=Package{3edf2af com.mediatek.mtklogger.proxy}
+    codePath=/vendor/app/MTKLoggerProxy
+    resourcePath=/vendor/app/MTKLoggerProxy
+    legacyNativeLibraryDir=/vendor/app/MTKLoggerProxy/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=1 minSdk=14 targetSdk=23
+    versionName=1.0
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{81a5a0e com.mediatek.mtklogger.proxy}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    dataDir=/data/user/0/com.mediatek.mtklogger.proxy
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{f7ccc2f [b4addb29]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    requested permissions:
+      android.permission.RAISED_THREAD_PRIORITY
+      android.permission.WRITE_MEDIA_STORAGE
+      android.permission.DUMP
+    install permissions:
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      android.permission.DUMP: granted=true
+    User 0: ceDataInode=-4294484477 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      gids=[1023, 1015]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.mediatek.mtklogger.proxy]
+    path: /vendor/app/MTKLoggerProxy/MTKLoggerProxy.apk
+      arm: /data/dalvik-cache/arm/vendor@app@MTKLoggerProxy@MTKLoggerProxy.apk@classes.dex[status=kOatUpToDate, compilat
+      ion_filter=quicken]
+
+
+Compiler stats:
+  [com.mediatek.mtklogger.proxy]
+     MTKLoggerProxy.apk - 223

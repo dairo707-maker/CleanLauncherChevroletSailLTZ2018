@@ -1,0 +1,181 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        21cfee4 com.xygala.launcherall/com.xygala.launcherall2.Launcher filter 85e4589
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.HOME"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.MONKEY"
+      android.intent.action.SET_WALLPAPER:
+        45a2f4d com.xygala.launcherall/com.xygala.launcherall2.WallpaperChooser filter a49898e
+          Action: "android.intent.action.SET_WALLPAPER"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      com.xygala.launcherall.action.INSTALL_SHORTCUT:
+        75dca02 com.xygala.launcherall/com.xygala.launcherall2.InstallShortcutReceiver filter 182fb42
+          Action: "com.xygala.launcherall.action.INSTALL_SHORTCUT"
+      android.intent.action.USER_INITIALIZE:
+        607cf13 com.xygala.launcherall/com.xygala.launcherall2.UserInitializeReceiver filter 17ed890
+          Action: "android.intent.action.USER_INITIALIZE"
+      com.xygala.launcherall.action.PRELOAD_WORKSPACE:
+        e1d2550 com.xygala.launcherall/com.xygala.launcherall2.PreloadReceiver filter 7c5d8d
+          Action: "com.xygala.launcherall.action.PRELOAD_WORKSPACE"
+      com.xygala.launcherall.action.UNINSTALL_SHORTCUT:
+        fa77349 com.xygala.launcherall/com.xygala.launcherall2.UninstallShortcutReceiver filter 45f4753
+          Action: "com.xygala.launcherall.action.UNINSTALL_SHORTCUT"
+
+Preferred Activities User 0:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        6376662 com.xygala.launcherall/com.xygala.launcherall2.Launcher
+         mMatch=0x100000 mAlways=true
+          Selected from:
+            com.xygala.launcherall/com.xygala.launcherall2.Launcher
+            com.android.settings/.FallbackHome
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.HOME"
+          Category: "android.intent.category.DEFAULT"
+
+Permissions:
+  Permission [com.xygala.launcherall.permission.READ_SETTINGS] (2e2844e):
+    sourcePackage=com.xygala.launcherall
+    uid=10013 gids=null type=0 prot=normal
+    perm=Permission{116496f com.xygala.launcherall.permission.READ_SETTINGS}
+    packageSetting=PackageSetting{84dfe24 com.xygala.launcherall/10013}
+  Permission [com.xygala.launcherall.permission.WRITE_SETTINGS] (bb7467c):
+    sourcePackage=com.xygala.launcherall
+    uid=10013 gids=null type=0 prot=normal
+    perm=Permission{46afb05 com.xygala.launcherall.permission.WRITE_SETTINGS}
+    packageSetting=PackageSetting{84dfe24 com.xygala.launcherall/10013}
+  Permission [com.xygala.launcherall.permission.UNINSTALL_SHORTCUT] (4e6975a):
+    sourcePackage=com.xygala.launcherall
+    uid=10013 gids=null type=0 prot=dangerous
+    perm=Permission{1e80d8b com.xygala.launcherall.permission.UNINSTALL_SHORTCUT}
+    packageSetting=PackageSetting{84dfe24 com.xygala.launcherall/10013}
+  Permission [com.xygala.launcherall.permission.INSTALL_SHORTCUT] (8704e68):
+    sourcePackage=com.xygala.launcherall
+    uid=10013 gids=null type=0 prot=dangerous
+    perm=Permission{c254281 com.xygala.launcherall.permission.INSTALL_SHORTCUT}
+    packageSetting=PackageSetting{84dfe24 com.xygala.launcherall/10013}
+  Permission [com.xygala.launcherall.permission.PRELOAD_WORKSPACE] (6e6cf26):
+    sourcePackage=com.xygala.launcherall
+    uid=10013 gids=null type=0 prot=signature|privileged
+    perm=Permission{c7f767 com.xygala.launcherall.permission.PRELOAD_WORKSPACE}
+    packageSetting=PackageSetting{84dfe24 com.xygala.launcherall/10013}
+
+Registered ContentProviders:
+  com.xygala.launcherall/com.xygala.launcherall2.LauncherProvider:
+    Provider{32fe914 com.xygala.launcherall/com.xygala.launcherall2.LauncherProvider}
+
+ContentProvider Authorities:
+  [com.xygala.launcherall2.settings]:
+    Provider{32fe914 com.xygala.launcherall/com.xygala.launcherall2.LauncherProvider}
+      applicationInfo=ApplicationInfo{de285bd com.xygala.launcherall}
+
+Key Set Manager:
+  [com.xygala.launcherall]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.xygala.launcherall] (84dfe24):
+    userId=10013
+    pkg=Package{b8bf6b7 com.xygala.launcherall}
+    codePath=/system/priv-app/LauncherXYAll
+    resourcePath=/system/priv-app/LauncherXYAll
+    legacyNativeLibraryDir=/system/priv-app/LauncherXYAll/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=1012 minSdk=19 targetSdk=19
+    versionName=1.0.1.2
+    splits=[base]
+    apkSigningVersion=1
+    applicationInfo=ApplicationInfo{de285bd com.xygala.launcherall}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVILEGED PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_UNRESIZEABLE ]
+    dataDir=/data/user/0/com.xygala.launcherall
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 12:00:00
+    firstInstallTime=2008-12-31 12:00:00
+    lastUpdateTime=2008-12-31 12:00:00
+    signatures=PackageSignatures{b60b7b2 [b4addb29]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    declared permissions:
+      com.xygala.launcherall.permission.PRELOAD_WORKSPACE: prot=signature|privileged, INSTALLED
+      com.xygala.launcherall.permission.INSTALL_SHORTCUT: prot=dangerous, INSTALLED
+      com.xygala.launcherall.permission.UNINSTALL_SHORTCUT: prot=dangerous, INSTALLED
+      com.xygala.launcherall.permission.READ_SETTINGS: prot=normal, INSTALLED
+      com.xygala.launcherall.permission.WRITE_SETTINGS: prot=normal, INSTALLED
+    requested permissions:
+      android.permission.ACCESS_COARSE_LOCATION
+      android.permission.ACCESS_FINE_LOCATION
+      android.permission.SYSTEM_ALERT_WINDOW
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.CALL_PHONE
+      android.permission.SET_WALLPAPER
+      android.permission.SET_WALLPAPER_HINTS
+      android.permission.VIBRATE
+      android.permission.BIND_APPWIDGET
+      android.permission.GET_ACCOUNTS
+      com.xygala.launcherall.permission.READ_SETTINGS
+      com.xygala.launcherall.permission.WRITE_SETTINGS
+      android.permission.WRITE_SETTINGS
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.REORDER_TASKS
+      android.permission.MANAGE_ACTIVITY_STACKS
+      android.permission.CHANGE_WIFI_STATE
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.INTERNET
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.GET_TASKS
+      android.permission.REAL_GET_TASKS
+    install permissions:
+      android.permission.REAL_GET_TASKS: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      com.xygala.launcherall.permission.READ_SETTINGS: granted=true
+      android.permission.ACCESS_FINE_LOCATION: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      com.xygala.launcherall.permission.WRITE_SETTINGS: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.REORDER_TASKS: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true
+      android.permission.BIND_APPWIDGET: granted=true
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true
+      android.permission.CALL_PHONE: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.SET_WALLPAPER: granted=true
+      android.permission.SET_WALLPAPER_HINTS: granted=true
+      android.permission.GET_ACCOUNTS: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.MANAGE_ACTIVITY_STACKS: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+    User 0: ceDataInode=-4294484580 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+      gids=[3003]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=6
+  User 0:
+    seq=1, package=com.android.inputmethod.latin
+    seq=3, package=com.google.android.gms
+    seq=5, package=com.android.vending
+
+
+Dexopt state:
+  [com.xygala.launcherall]
+    path: /system/priv-app/LauncherXYAll/LauncherXYAll.apk
+      arm: /data/dalvik-cache/arm/system@priv-app@LauncherXYAll@LauncherXYAll.apk@classes.dex[status=kOatUpToDate, compi
+      lation_filter=quicken]
+
+
+Compiler stats:
+  [com.xygala.launcherall]
+     LauncherXYAll.apk - 2409
