@@ -72,6 +72,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        nowPlaying = NowPlaying.get(this); // the music card reads it while being built
 
         LinearLayout root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
@@ -94,7 +95,6 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         setContentView(root);
 
         radio.bind(this);
-        nowPlaying = NowPlaying.get(this);
         createdDark = Ui.isDark(this);
         createdProfile = profileStamp();
         // Shared installs: ask for name, car photo and permissions on first start.
@@ -490,6 +490,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
 
     /** Lit when on; repeat-one is shown brighter than repeat-all. Hidden for sources without a session. */
     private void updateModes() {
+        if (nowPlaying == null || shuffleBtn == null || repeatBtn == null) return;
         int vis = nowPlaying.hasModes() ? View.VISIBLE : View.INVISIBLE;
         shuffleBtn.setVisibility(vis);
         repeatBtn.setVisibility(vis);
