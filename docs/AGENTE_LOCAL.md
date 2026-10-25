@@ -150,3 +150,16 @@ El humano hace las pruebas físicas. Tú anotas los resultados.
 4. Después: pide al humano reiniciar el radio (apagar 30 s y encender). Luego ejecuta T6, fila 1 y fila 2, para confirmar que el launcher sigue funcionando.
 5. Para revertir: `tools\windows\revertir_optimizacion.bat` (también pide confirmación). Éxito: `LISTO. Revertida la optimizacion.`
 6. Reporta: las líneas de `cambios_aplicados.txt` generadas por la optimización. Si una prueba de T6 falla después de optimizar, **no** hagas nada más: revierte con el paso 5 y avisa al humano.
+
+### T9. Experimento (radio FM, Bluetooth, ecualizador)
+
+Qué hace: descarga 4 APK de fábrica para análisis de strings y prueba comandos `am broadcast` / `am start` / `input keyevent` para sintonizar la radio, marcar por Bluetooth y listar efectos de audio. No cambia configuración persistente del sistema.
+
+Requiere al humano en el carro: radio encendido con la app de radio de fábrica abierta. Para la sección Bluetooth, el teléfono debe estar conectado y el humano debe elegir el número de prueba (no su buzón de voz) y colgar desde el teléfono.
+
+1. Comando: `tools\windows\experimento.bat`
+2. El script pide `[S,N]` antes de cada prueba y el número a marcar. **Pide al humano** que responda cada pregunta. Tú no respondes por él.
+3. Éxito: la salida termina con `Experimento terminado.`
+4. Resultados: `diagnostico\experimento.txt` y `diagnostico\apk\`.
+5. Subir solo esos dos: `git add diagnostico\experimento.txt diagnostico\apk`, luego commit y push.
+6. Reporta: cada respuesta del humano (cambió la emisora, marcó) y las líneas de ecualizador encontradas.
