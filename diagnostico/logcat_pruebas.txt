@@ -1,0 +1,54 @@
+﻿10-25 13:37:52.883 14426 14426 E AndroidRuntime: Process: com.simple.carlauncher, PID: 14426
+10-25 13:37:52.883 14426 14426 E AndroidRuntime: java.lang.RuntimeException: Unable to pause activity {com.simple.carlauncher/com.simple.carlauncher.MainActivity}: java.lang.IllegalArgumentException: Receiver not registered: com.simple.carlauncher.MainActivity$2@eef2be4
+10-25 13:37:52.883 14426 14426 E AndroidRuntime: Caused by: java.lang.IllegalArgumentException: Receiver not registered: com.simple.carlauncher.MainActivity$2@eef2be4
+10-25 13:37:52.883 14426 14426 E AndroidRuntime: 	at com.simple.carlauncher.MainActivity.onPause(MainActivity.java:678)
+10-25 13:41:25.503   475  1269 I ActivityManager: START u0 {cmp=com.simple.carlauncher/.CostsActivity} from uid 10079
+10-25 13:41:25.675   475  1449 D InputMethodManagerService: --- calledFromForegroundUserOrSystemProcess ? calling uid = 10079 system uid = 1000 calling userId = 0, foreground user id = 0, calling pid = 15251com.android.server.InputMethodManagerService.startInputOrWindowGainedFocus(InputMethodManagerService.java:2657)
+10-25 13:41:34.053   475  1269 I ActivityManager: START u0 {cmp=com.simple.carlauncher/.MaintenanceActivity} from uid 10079
+10-25 13:42:00.025  6070  6070 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:967 android.content.ContextWrapper.sendBroadcast:437 com.xyauto.weather.XYGetWeatherInfoService$2.onReceive:340 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52497:1313 android.app.-$Lambda$aS31cHIhRx41653CMnd4gZqshIQ.$m$7:4 
+10-25 13:43:00.028  6070  6070 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:967 android.content.ContextWrapper.sendBroadcast:437 com.xyauto.weather.XYGetWeatherInfoService$2.onReceive:340 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52497:1313 android.app.-$Lambda$aS31cHIhRx41653CMnd4gZqshIQ.$m$7:4 
+10-25 13:43:11.330   475  5792 I ActivityManager: START u0 {cmp=com.simple.carlauncher/.AppsActivity} from uid 10079
+10-25 13:43:20.680   475   543 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.simple.carlauncher/.MainActivity (has extras)} from uid 1000
+10-25 13:43:20.725   475   534 W WindowManager: Attempted to add application window with unknown token Token{3410285 ActivityRecord{a8abbfc u0 com.simple.carlauncher/.AppsActivity t-1 f}}.  Aborting.
+10-25 13:43:22.662   475  1057 I ActivityManager: START u0 {cmp=com.simple.carlauncher/.AppsActivity} from uid 10079
+10-25 13:43:36.555   475   543 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.simple.carlauncher/.MainActivity (has extras)} from uid 1000
+10-25 13:43:36.600   475   534 W WindowManager: Attempted to add application window with unknown token Token{c19583f ActivityRecord{e004c5e u0 com.simple.carlauncher/.AppsActivity t-1 f}}.  Aborting.
+10-25 13:43:45.902   475   543 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.simple.carlauncher/.MainActivity (has extras)} from uid 1000
+10-25 13:43:59.715   475  5850 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.xyauto.Settings/.MainActivity} from uid 10079
+10-25 13:44:00.129  6070  6070 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:967 android.content.ContextWrapper.sendBroadcast:437 com.xyauto.weather.XYGetWeatherInfoService$2.onReceive:340 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52497:1313 android.app.-$Lambda$aS31cHIhRx41653CMnd4gZqshIQ.$m$7:4 
+10-25 13:44:03.308   475   543 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.simple.carlauncher/.MainActivity (has extras)} from uid 1000
+10-25 13:44:20.488   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:22.498   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:24.506   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:26.515   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:28.524   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:30.534   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:32.543   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:34.551   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:36.560   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:38.581   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:40.588   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:42.598   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:44.606   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:46.615   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:48.625   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:50.633   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:52.641   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:54.649   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:56.660   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:44:58.669   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:45:00.037  6070  6070 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:967 android.content.ContextWrapper.sendBroadcast:437 com.xyauto.weather.XYGetWeatherInfoService$2.onReceive:340 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52497:1313 android.app.-$Lambda$aS31cHIhRx41653CMnd4gZqshIQ.$m$7:4 
+10-25 13:45:00.068   237   876 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xaa1c5000,id:230,api:1,p:15251,c:237) queueBuffer: fps=0.04 dur=46445.88 max=46394.32 min=51.55
+10-25 13:45:00.681   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:45:02.688   234   260 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:15251
+10-25 13:45:03.452   237   457 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xaa1c5000,id:230,api:1,p:15251,c:237) queueBuffer: fps=0.59 dur=3383.44 max=3372.24 min=11.20
+10-25 13:45:03.939 15251 15329 E [EGL-ERROR]: __egl_platform_cancel_buffers:644: surface->num_buffers(4)
+10-25 13:45:03.941   237   282 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xaa1c5000,id:230,api:1,p:15251,c:237) disconnect(P): api 1
+10-25 13:45:28.186   475   491 I AnrManager:   2.9% 15251/com.simple.carlauncher: 2.2% user + 0.7% kernel / faults: 7443 minor
+10-25 13:45:28.186   475   491 I AnrManager:   0.1% 1128/com.xyauto.Settings: 0% user + 0% kernel / faults: 3460 minor 4 major
+10-25 13:45:28.527   234   261 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.MainActivity, pid:15251, state:1
+10-25 13:45:28.527   234   260 I libPerfService: [perfNotifyAppState] foreground:com.simple.carlauncher, pid:15251
+10-25 13:45:28.595   237   457 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xaa1c5000,id:237,api:1,p:15251,c:237) connect(P): api=1 producer=(15251:com.simple.carlauncher) producerControlledByApp=true
+10-25 13:45:32.721 15251 15329 E [EGL-ERROR]: __egl_platform_cancel_buffers:644: surface->num_buffers(4)
+10-25 13:45:32.723   237   457 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xaa1c5000,id:237,api:1,p:15251,c:237) disconnect(P): api 1
+10-25 13:45:34.533   619   619 V QSXyautoHost: onReceive action: android.intent.action.CLOSE_SYSTEM_DIALOGS
