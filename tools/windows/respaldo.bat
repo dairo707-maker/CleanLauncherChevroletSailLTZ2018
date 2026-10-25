@@ -90,7 +90,7 @@ exit /b 0
 set "RUTA=%~1"
 set "RUTA=!RUTA:package:=!"
 set "PKG=%~2"
-echo !PKG! | findstr /i /r "launcher radio bt bluetooth car xyauto can mcu camera setting music video media avm" >nul
+echo !PKG! | findstr /i /r "launcher radio bt bluetooth car xyauto autochips atc mediatek mtk can mcu camera setting music video media avm" >nul
 if errorlevel 1 goto :eof
 echo   APK: !PKG!
 adb -s %RADIO% pull "!RUTA!" "%DEST%\apk\!PKG!.apk" >nul

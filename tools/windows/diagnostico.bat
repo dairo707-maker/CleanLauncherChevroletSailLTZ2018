@@ -100,7 +100,7 @@ exit /b 0
 
 :pkg
 set "PKG=%~1"
-echo !PKG! | findstr /i /r "launcher radio bt bluetooth car xyauto can mcu camera setting music video media avm" >nul
+echo !PKG! | findstr /i /r "launcher radio bt bluetooth car xyauto autochips atc mediatek mtk can mcu camera setting music video media avm" >nul
 if errorlevel 1 goto :eof
 echo   dumpsys package !PKG!
 adb -s %RADIO% shell dumpsys package !PKG! > "%OUT%\paquetes\!PKG!.txt"

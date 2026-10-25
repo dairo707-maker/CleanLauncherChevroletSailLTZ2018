@@ -78,12 +78,14 @@ final class Profile {
 
     private static Boolean xyauto;
 
-    /** XY AUTO head unit (the Sail's radio): factory packages carry "xyauto" in their name. */
+    /** XY AUTO head unit (the Sail's radio): MediaTek AC8227L board, or factory packages named xyauto/autochips. */
     static boolean isXyAuto(Context c) {
         if (xyauto == null) {
-            xyauto = false;
+            xyauto = "ac8227l".equalsIgnoreCase(android.os.Build.HARDWARE)
+                    || "ac8227l".equalsIgnoreCase(android.os.Build.BOARD);
             for (android.content.pm.ApplicationInfo ai : c.getPackageManager().getInstalledApplications(0)) {
-                if (ai.packageName.contains("xyauto")) {
+                if (xyauto) break;
+                if (ai.packageName.contains("xyauto") || ai.packageName.contains("autochips")) {
                     xyauto = true;
                     break;
                 }

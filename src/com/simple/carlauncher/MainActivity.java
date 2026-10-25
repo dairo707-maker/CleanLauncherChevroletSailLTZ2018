@@ -86,8 +86,8 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
             startActivity(new Intent(this, SetupActivity.class));
         }
         if (Profile.isNwd(this)) startService(new Intent(this, VolumeOverlay.class));
-        startService(new Intent(this, GreeterService.class));
-        startService(new Intent(this, Odometer.class));
+        Ui.startService(this, GreeterService.class);
+        Ui.startService(this, Odometer.class);
         SpeedVolume.sync(this);
         ObdClient.get(this).start(); // no-op until an adapter is paired or simulation is on
     }

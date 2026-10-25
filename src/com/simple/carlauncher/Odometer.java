@@ -44,6 +44,7 @@ public class Odometer extends Service implements LocationListener {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        Ui.keepRunning(this); // required after every startForegroundService()
         return START_STICKY;
     }
 

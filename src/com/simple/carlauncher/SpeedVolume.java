@@ -54,6 +54,7 @@ public class SpeedVolume extends Service implements LocationListener {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        Ui.keepRunning(this); // required after every startForegroundService()
         return START_STICKY;
     }
 
@@ -133,7 +134,7 @@ public class SpeedVolume extends Service implements LocationListener {
     static void sync(Context c) {
         try {
             Intent i = new Intent(c, SpeedVolume.class);
-            if (enabled(c)) c.startService(i);
+            if (enabled(c)) Ui.startService(c, SpeedVolume.class);
             else c.stopService(i);
         } catch (Exception e) {
             Log.w(TAG, "sync", e);

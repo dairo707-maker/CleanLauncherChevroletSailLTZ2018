@@ -49,7 +49,7 @@ public class DiagnosticsActivity extends Activity {
 
     private static final String FILE = "diagnostico_radio.txt";
     private static final String NAME_FILTER =
-            "xyauto|car|radio|bt|bluetooth|can|mcu|camera|launcher|setting|media|music|video|avm|dvr|tpms";
+            "xyauto|autochips|atc|mediatek|mtk|car|radio|bt|bluetooth|can|mcu|camera|launcher|setting|media|music|video|avm|dvr|tpms";
 
     /** Head-unit actions seen on NWD, SYU, Microntek and generic Chinese Android units (guesses). */
     private static final String[] ACTIONS = {

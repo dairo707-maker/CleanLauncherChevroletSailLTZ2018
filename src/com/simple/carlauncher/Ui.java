@@ -135,6 +135,34 @@ final class Ui {
         });
     }
 
+    // ---------- Background services ----------
+
+    private static final int RUNNING_ID = 4711;
+
+    /**
+     * Android 8+ stops background services about a minute after the launcher leaves the screen
+     * (e.g. with Waze in front), which would pause the odometer and speed volume while driving.
+     */
+    static void startService(Context c, Class<?> cls) {
+        Intent i = new Intent(c, cls);
+        if (android.os.Build.VERSION.SDK_INT >= 26) c.startForegroundService(i);
+        else c.startService(i);
+    }
+
+    /** Called from each service's onStartCommand: one silent, shared notification keeps them all alive. */
+    static void keepRunning(android.app.Service s) {
+        if (android.os.Build.VERSION.SDK_INT < 26) return;
+        android.app.NotificationManager nm = s.getSystemService(android.app.NotificationManager.class);
+        nm.createNotificationChannel(new android.app.NotificationChannel("running", "Servicios activos",
+                android.app.NotificationManager.IMPORTANCE_MIN));
+        s.startForeground(RUNNING_ID, new android.app.Notification.Builder(s, "running")
+                .setSmallIcon(R.drawable.ic_car)
+                .setContentTitle("Clean Launcher activo")
+                .setContentText("Kilometraje, avisos y volumen")
+                .setOngoing(true)
+                .build());
+    }
+
     static void launch(Context c, String component) {
         try {
             Intent i = new Intent(Intent.ACTION_MAIN);

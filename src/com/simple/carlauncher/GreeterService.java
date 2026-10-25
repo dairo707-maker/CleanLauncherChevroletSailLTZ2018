@@ -67,6 +67,7 @@ public class GreeterService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        Ui.keepRunning(this); // required after every startForegroundService()
         return START_STICKY;
     }
 
@@ -169,8 +170,13 @@ public class GreeterService extends Service {
         if (!Profile.voiceEnabled(this)) return;
         prefs().edit().putLong("last_greet", System.currentTimeMillis()).apply();
         List<String> clips = buildMessage();
-        // Owner's build ships recorded clips; shared builds speak with the device's TTS engine.
-        if (getResources().getIdentifier("v_careful", "raw", getPackageName()) != 0) speak(clips);
+        // Owner's build ships recorded clips; shared builds, and messages with a phrase that has no
+        // recording (pico y placa, maintenance), speak with the device's TTS engine.
+        boolean recorded = true;
+        for (String c : clips) {
+            if (getResources().getIdentifier(c, "raw", getPackageName()) == 0) recorded = false;
+        }
+        if (recorded) speak(clips);
         else speakTts(Speech.text(this, clips));
     };
 
@@ -298,9 +304,10 @@ public class GreeterService extends Service {
     public static class BootReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context c, Intent i) {
-            c.startService(new Intent(c, GreeterService.class));
-            c.startService(new Intent(c, VolumeOverlay.class));
-            c.startService(new Intent(c, Odometer.class));
+            Ui.startService(c, GreeterService.class);
+            if (Profile.isNwd(c)) c.startService(new Intent(c, VolumeOverlay.class));
+            Ui.startService(c, Odometer.class);
+            SpeedVolume.sync(c);
         }
     }
 }
