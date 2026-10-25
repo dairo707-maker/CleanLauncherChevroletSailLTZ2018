@@ -1,0 +1,498 @@
+﻿===== EXPERIMENTO DEL RADIO 192.168.1.7:5555 =====
+Fecha: 2026-10-25 15:05:54
+
+===== PASO 0: Descargar APKs de fabrica para analisis offline de strings =====
+APK com.acloud.stub.localradio.apk - tamaÃ±o 21054 bytes
+APK com.android.fmradio.apk - tamaÃ±o 2088180 bytes
+APK com.autochips.bluetooth.apk - tamaÃ±o 2811546 bytes
+APK com.xyauto.Settings.apk - tamaÃ±o 13475058 bytes
+
+
+===== PASO 1: Estado actual de la radio =====
+--- settings get system fmradio_text
+FM   88.50
+--- logcat -d -t 40
+--------- beginning of main
+10-25 15:05:54.441   234   234 I DisplayDevice: [HDMI Screen (type:1)] fps:0.998956,dur:1001.05,max:1001.05,min:1001.05
+--------- beginning of system
+10-25 15:05:54.486  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:05:54.487   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:05:54.601  1210  1322 W BusClient : comautochipsbluetoothsdk	create failed: Connection refused
+10-25 15:05:54.632   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:05:54.834  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:05:54.957   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=1.600000
+10-25 15:05:54.988  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:05:54.989   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:05:54.993  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=15
+10-25 15:05:55.441   234   234 I DisplayDevice: [Built-in Screen (type:0)] fps:0.998895,dur:1001.11,max:1001.11,min:1001.11
+10-25 15:05:55.442   234   234 I BufferQueueProducer: [FrameBufferSurface_1](this:0xa75c2000,id:11,api:1,p:234,c:234) queueBuffer: fps=1.00 dur=1001.05 max=1001.05 min=1001.05
+10-25 15:05:55.442   234   234 I DisplayDevice: [HDMI Screen (type:1)] fps:0.998933,dur:1001.07,max:1001.07,min:1001.07
+10-25 15:05:55.490  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:05:55.491   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:05:55.494  6613  6642 I FMLIB_COM: event_status = 0x886
+10-25 15:05:55.636   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:05:55.653  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=14
+10-25 15:05:55.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=1.800000
+10-25 15:05:55.960  1166  1166 E TAG     : Bearing11===12
+10-25 15:05:55.992  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:05:55.993   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:05:56.154  6613  6642 I FMLIB_COM: event_status = 0x886
+10-25 15:05:56.198   839   839 I com.android.phone: Looking for service android.hardware.radio@1.0::IRadio/slot1
+10-25 15:05:56.200   839   839 I com.android.phone: Looking for service android.hardware.radio.deprecated@1.0::IOemHook/slot1
+10-25 15:05:56.313  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=17
+10-25 15:05:56.402   231   259 I vendor.mediatek.hardware.power@1.1-impl: querySysInfo cmd:6, param:0
+10-25 15:05:56.403   231   258 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:6613
+10-25 15:05:56.494  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:05:56.494   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:05:56.640   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:05:56.738   234   517 I BufferQueueProducer: [StatusBar#0](this:0xa7398000,id:3,api:1,p:615,c:234) queueBuffer: fps=0.86 dur=2314.59 max=1314.67 min=999.92
+10-25 15:05:56.754   234   234 I DisplayDevice: [Built-in Screen (type:0)] fps:0.761446,dur:1313.29,max:1313.29,min:1313.29
+10-25 15:05:56.755   234   234 I BufferQueueProducer: [FrameBufferSurface_1](this:0xa75c2000,id:11,api:1,p:234,c:234) queueBuffer: fps=0.76 dur=1313.37 max=1313.37 min=1313.37
+10-25 15:05:56.755   234   234 I DisplayDevice: [HDMI Screen (type:1)] fps:0.761411,dur:1313.35,max:1313.35,min:1313.35
+10-25 15:05:56.814  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:05:56.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.000000
+10-25 15:05:56.973  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=12
+10-25 15:05:56.995  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:05:56.996   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+
+
+===== PASO 2a: Sintonizar 94.5 con xy.setfm.freq (extra freq int) =====
+comando: am broadcast -a xy.setfm.freq -p com.android.fmradio --ei freq 9450
+Broadcasting: Intent { act=xy.setfm.freq flg=0x400000 pkg=com.android.fmradio (has extras) }
+Broadcast completed: result=0
+--- settings get system fmradio_text
+FM   88.50
+--- logcat -d -t 40
+--------- beginning of system
+10-25 15:05:57.498   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+--------- beginning of main
+10-25 15:05:57.604  1210  1322 W BusClient : comautochipsbluetoothsdk	create failed: Connection refused
+10-25 15:05:57.633  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=15
+10-25 15:05:57.644   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:05:57.681  6613  6613 I FmMainActivity: mBroadcastReceiver actionxy.setfm.freq
+10-25 15:05:57.685   474  1265 I ActivityManager: START u0 {flg=0x10000000 cmp=com.android.fmradio/.FmMainActivity} from uid 10006
+10-25 15:05:57.690  6613  6613 I System.out: ======lg===lg==onNewIntent 
+10-25 15:05:57.690  6613  6613 I FmMainActivity: setFmControlIntent = Intent { flg=0x10000000 cmp=com.android.fmradio/.FmMainActivity }
+10-25 15:05:57.691  6613  6613 I FmMainActivity: setFmControlIntent = Intent { flg=0x10000000 cmp=com.android.fmradio/.FmMainActivity }
+10-25 15:05:57.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.200000
+10-25 15:05:57.999  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:05:58.000   474  3120 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:05:58.134  6613  6642 I FMLIB_COM: event_status = 0x886
+10-25 15:05:58.293  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=11
+10-25 15:05:58.403   231   259 I vendor.mediatek.hardware.power@1.1-impl: querySysInfo cmd:6, param:0
+10-25 15:05:58.404   231   258 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:6613
+10-25 15:05:58.501  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:05:58.502   474  3120 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:05:58.648   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:05:58.794  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:05:58.953  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=16
+10-25 15:05:58.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.300000
+10-25 15:05:58.960  1166  1166 E TAG     : Bearing11===12
+10-25 15:05:59.003  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:05:59.004   474  3120 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:05:59.454  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:05:59.505  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:05:59.505   474  3120 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:05:59.613  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=16
+10-25 15:05:59.652   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:05:59.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.400000
+10-25 15:06:00.007  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:00.007   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:00.015  4522  4522 I XYGetWeatherInfoService: mainReceiver:android.intent.action.TIME_TICK
+10-25 15:06:00.015  4522  4522 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:967 android.content.ContextWrapper.sendBroadcast:437 com.xyauto.weather.XYGetWeatherInfoService$2.onReceive:340 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52497:1313 android.app.-$Lambda$aS31cHIhRx41653CMnd4gZqshIQ.$m$7:4 
+10-25 15:06:00.022   234   517 I BufferQueueProducer: [StatusBar#0](this:0xa7398000,id:3,api:1,p:615,c:234) queueBuffer: fps=0.30 dur=3283.99 max=3283.99 min=3283.99
+10-25 15:06:00.037   234   234 I DisplayDevice: [Built-in Screen (type:0)] fps:0.913889,dur:3282.67,max:2314.37,min:15.88
+10-25 15:06:00.038   234   234 I BufferQueueProducer: [FrameBufferSurface_1](this:0xa75c2000,id:11,api:1,p:234,c:234) queueBuffer: fps=0.91 dur=3282.81 max=2314.59 min=15.92
+10-25 15:06:00.038   234   234 I DisplayDevice: [HDMI Screen (type:1)] fps:0.913830,dur:3282.89,max:2314.83,min:15.92
+10-25 15:06:00.114  6613  6642 I FMLIB_COM: event_status = 0x882
+
+
+===== PASO 2b: Sintonizar 94.5 con xy.setfm.freq (extra frequency int) =====
+comando: am broadcast -a xy.setfm.freq -p com.android.fmradio --ei frequency 9450
+Broadcasting: Intent { act=xy.setfm.freq flg=0x400000 pkg=com.android.fmradio (has extras) }
+Broadcast completed: result=0
+--- settings get system fmradio_text
+FM   88.50
+--- logcat -d -t 40
+--------- beginning of main
+10-25 15:06:00.957   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.500000
+10-25 15:06:00.961   474   484 I zygote  : Background concurrent copying GC freed 154634(5MB) AllocSpace objects, 36(720KB) LOS objects, 29% free, 14MB/20MB, paused 294us total 256.262ms
+--------- beginning of system
+10-25 15:06:01.010  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:01.011   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:01.434  6613  6642 I FMLIB_COM: event_status = 0x887
+10-25 15:06:01.512  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:01.513   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:01.593  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=15
+10-25 15:06:01.659   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:01.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.600000
+10-25 15:06:01.961  1166  1166 E TAG     : Bearing11===12
+10-25 15:06:02.014  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:02.015   474  3120 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:02.094  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:06:02.253  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=14
+10-25 15:06:02.405   231   259 I vendor.mediatek.hardware.power@1.1-impl: querySysInfo cmd:6, param:0
+10-25 15:06:02.406   231   258 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:6613
+10-25 15:06:02.406  5128  5239 I PlayCommon: [387] Preparing logs for uploading
+10-25 15:06:02.495  5128  5239 I PlayCommon: [387] Connecting to server: https://play.googleapis.com/play/log?format=raw&proto_v2=true
+10-25 15:06:02.496  5128  5239 W System  : ClassLoader referenced unknown path: system/framework/mediatek-cta.jar
+10-25 15:06:02.497  5128  5239 I System.out: e:java.lang.ClassNotFoundException: com.mediatek.cta.CtaHttp
+10-25 15:06:02.516  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:02.516   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:02.540  5128  5239 W System  : ClassLoader referenced unknown path: system/framework/mediatek-cta.jar
+10-25 15:06:02.542  5128  5239 I System.out: e:java.lang.ClassNotFoundException: com.mediatek.cta.CtaHttp
+10-25 15:06:02.663   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:02.744   234  1020 I BufferQueueProducer: [StatusBar#0](this:0xa7398000,id:3,api:1,p:615,c:234) queueBuffer: fps=1.10 dur=2722.06 max=2689.35 min=11.95
+10-25 15:06:02.754  6613  6642 I FMLIB_COM: event_status = 0xc87
+10-25 15:06:02.760  5128  5239 I System.out: Check isMmsSendPdu
+10-25 15:06:02.760  5128  5239 W System  : ClassLoader referenced unknown path: system/framework/mediatek-cta.jar
+10-25 15:06:02.761   234   234 I DisplayDevice: [Built-in Screen (type:0)] fps:1.468171,dur:2724.48,max:2217.49,min:16.56
+10-25 15:06:02.762   234   234 I BufferQueueProducer: [FrameBufferSurface_1](this:0xa75c2000,id:11,api:1,p:234,c:234) queueBuffer: fps=1.47 dur=2724.57 max=2217.65 min=16.47
+10-25 15:06:02.763   234   234 I DisplayDevice: [HDMI Screen (type:1)] fps:1.468125,dur:2724.56,max:2217.87,min:16.30
+10-25 15:06:02.765  5128  5239 I System.out: [OkHttp] sendRequest>>
+10-25 15:06:02.765  5128  5239 I System.out: [OkHttp] sendRequest<<
+10-25 15:06:02.913  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=15
+10-25 15:06:02.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.600000
+10-25 15:06:03.018  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:03.018   474  3120 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:03.074  5128  5239 I PlayCommon: [387] Successfully uploaded logs.
+
+
+===== PASO 2c: Sintonizar 94.5 con xy.setfm.freq (extra freq string) =====
+comando: am broadcast -a xy.setfm.freq -p com.android.fmradio --es freq 94.5
+Broadcasting: Intent { act=xy.setfm.freq flg=0x400000 pkg=com.android.fmradio (has extras) }
+Broadcast completed: result=0
+--- settings get system fmradio_text
+FM   88.50
+--- logcat -d -t 40
+--------- beginning of system
+10-25 15:06:03.519  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:03.520   474  3120 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+--------- beginning of main
+10-25 15:06:03.530  6613  6613 I FmMainActivity: mBroadcastReceiver actionxy.setfm.freq
+10-25 15:06:03.533   474  4367 I ActivityManager: START u0 {flg=0x10000000 cmp=com.android.fmradio/.FmMainActivity} from uid 10006
+10-25 15:06:03.538  6613  6613 I System.out: ======lg===lg==onNewIntent 
+10-25 15:06:03.538  6613  6613 I FmMainActivity: setFmControlIntent = Intent { flg=0x10000000 cmp=com.android.fmradio/.FmMainActivity }
+10-25 15:06:03.539  6613  6613 I FmMainActivity: setFmControlIntent = Intent { flg=0x10000000 cmp=com.android.fmradio/.FmMainActivity }
+10-25 15:06:03.573  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=15
+10-25 15:06:03.609  1210  1322 W BusClient : comautochipsbluetoothsdk	create failed: Connection refused
+10-25 15:06:03.665   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:03.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.700000
+10-25 15:06:04.021  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:04.022   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:04.074  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:06:04.209   839   839 I com.android.phone: Looking for service android.hardware.radio@1.0::IRadio/slot1
+10-25 15:06:04.211   839   839 I com.android.phone: Looking for service android.hardware.radio.deprecated@1.0::IOemHook/slot1
+10-25 15:06:04.233  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=15
+10-25 15:06:04.407   231   259 I vendor.mediatek.hardware.power@1.1-impl: querySysInfo cmd:6, param:0
+10-25 15:06:04.407   231   258 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:6613
+10-25 15:06:04.523  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:04.524   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:04.669   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:04.734  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:06:04.893  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=14
+10-25 15:06:04.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.800000
+10-25 15:06:04.960  1166  1166 E TAG     : Bearing11===12
+10-25 15:06:05.025  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:05.025   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:05.394  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:06:05.527  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:05.527   474  4367 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:05.553  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=18
+10-25 15:06:05.673   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:05.765   234   517 I BufferQueueProducer: [StatusBar#0](this:0xa7398000,id:3,api:1,p:615,c:234) queueBuffer: fps=0.33 dur=3021.10 max=3021.10 min=3021.10
+10-25 15:06:05.781   234   234 I DisplayDevice: [Built-in Screen (type:0)] fps:0.662279,dur:3019.88,max:2199.38,min:820.50
+10-25 15:06:05.782   234   234 I BufferQueueProducer: [FrameBufferSurface_1](this:0xa75c2000,id:11,api:1,p:234,c:234) queueBuffer: fps=0.66 dur=3019.68 max=2199.38 min=820.30
+10-25 15:06:05.782   234   234 I DisplayDevice: [HDMI Screen (type:1)] fps:0.662325,dur:3019.66,max:2199.61,min:820.06
+10-25 15:06:05.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.900000
+10-25 15:06:06.028  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:06.029   474  3120 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+
+
+===== PASO 2d: Sintonizar 94.5 con xy.setfm.freq (extra freq float) =====
+comando: am broadcast -a xy.setfm.freq -p com.android.fmradio --ef freq 94.5
+Broadcasting: Intent { act=xy.setfm.freq flg=0x400000 pkg=com.android.fmradio (has extras) }
+Broadcast completed: result=0
+--- settings get system fmradio_text
+FM   88.50
+--- logcat -d -t 40
+--------- beginning of main
+10-25 15:06:06.401  6613  6613 I FmMainActivity: setFmControlIntent = Intent { flg=0x10000000 cmp=com.android.fmradio/.FmMainActivity }
+10-25 15:06:06.408   231   259 I vendor.mediatek.hardware.power@1.1-impl: querySysInfo cmd:6, param:0
+10-25 15:06:06.408   231   258 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:6613
+--------- beginning of system
+10-25 15:06:06.531  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:06.531   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:06.612  1210  1322 W BusClient : comautochipsbluetoothsdk	create failed: Connection refused
+10-25 15:06:06.675   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:06.714  6613  6642 I FMLIB_COM: event_status = 0x886
+10-25 15:06:06.873  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=15
+10-25 15:06:06.957   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.900000
+10-25 15:06:07.032  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:07.033   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:07.374  6613  6642 I FMLIB_COM: event_status = 0x884
+10-25 15:06:07.440   234  1020 I BufferQueueProducer: [StatusBar#0](this:0xa7398000,id:3,api:1,p:615,c:234) queueBuffer: fps=0.60 dur=1674.91 max=1674.91 min=1674.91
+10-25 15:06:07.455   234   234 I DisplayDevice: [Built-in Screen (type:0)] fps:1.195085,dur:1673.52,max:1033.91,min:639.61
+10-25 15:06:07.456   234   234 I BufferQueueProducer: [FrameBufferSurface_1](this:0xa75c2000,id:11,api:1,p:234,c:234) queueBuffer: fps=1.20 dur=1673.52 max=1033.91 min=639.61
+10-25 15:06:07.456   234   234 I DisplayDevice: [HDMI Screen (type:1)] fps:1.195124,dur:1673.47,max:1034.08,min:639.39
+10-25 15:06:07.534  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=15
+10-25 15:06:07.534  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:07.535   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:07.680   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:07.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=3.000000
+10-25 15:06:07.960  1166  1166 E TAG     : Bearing11===12
+10-25 15:06:08.034  6613  6642 I FMLIB_COM: event_status = 0x883
+10-25 15:06:08.036  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:08.037   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:08.193  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=14
+10-25 15:06:08.214   839   839 I com.android.phone: Looking for service android.hardware.radio@1.0::IRadio/slot1
+10-25 15:06:08.215   839   839 I com.android.phone: Looking for service android.hardware.radio.deprecated@1.0::IOemHook/slot1
+10-25 15:06:08.409   231   259 I vendor.mediatek.hardware.power@1.1-impl: querySysInfo cmd:6, param:0
+10-25 15:06:08.409   231   258 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:6613
+10-25 15:06:08.456   234   234 I DisplayDevice: [Built-in Screen (type:0)] fps:0.998860,dur:1001.14,max:1001.14,min:1001.14
+10-25 15:06:08.457   234   234 I BufferQueueProducer: [FrameBufferSurface_1](this:0xa75c2000,id:11,api:1,p:234,c:234) queueBuffer: fps=1.00 dur=1001.08 max=1001.08 min=1001.08
+10-25 15:06:08.457   234   234 I DisplayDevice: [HDMI Screen (type:1)] fps:0.998913,dur:1001.09,max:1001.09,min:1001.09
+10-25 15:06:08.538  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:08.539   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:08.684   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:08.694  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:06:08.853  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=14
+10-25 15:06:08.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=3.000000
+
+
+===== PASO 2e: Sintonizar 103.3 con xy.open.freq (extra freq int) =====
+comando: am broadcast -a xy.open.freq -p com.android.fmradio --ei freq 10330
+Broadcasting: Intent { act=xy.open.freq flg=0x400000 pkg=com.android.fmradio (has extras) }
+Broadcast completed: result=0
+--- settings get system fmradio_text
+FM   88.50
+--- logcat -d -t 40
+--------- beginning of system
+10-25 15:06:10.703  4442  4461 I CarplayUSBNCMAdapter: iface=wlan0is not usb net dev
+--------- beginning of main
+10-25 15:06:10.704  4590  4590 W mDNSResponder: [ProcessRoutingNotification] result = 0x8; nlmsg_type = 0x10; RTM_GETLINK = 0x12; RTM_NEWLINK = 0x10; RTM_DELADDR = 0x15; RTM_NEWADDR = 0x14
+10-25 15:06:10.704  4590  4590 W mDNSResponder: [ProcessRoutingNotification] changedInterfaces = 0x8
+10-25 15:06:10.704  4590  4590 I mdnsresponder: mDNS_DeregisterInterface: Another representative of InterfaceID -1302824960 wlan0 (192.168.1.7) exists; making it active
+10-25 15:06:10.704  4590  4590 I mdnsresponder: DeadvertiseInterface: Returning due to AutoTargetServices zero for wlan0
+10-25 15:06:10.704  4590  4590 I mdnsresponder: mDNS_DeregisterInterface: Last representative of InterfaceID -1302824960 wlan0 (FE80:0000:0000:0000:DCB1:FF0B:3A9A:C2E7) deregistered; marking questions etc. dormant
+10-25 15:06:10.705  4590  4590 I mdnsresponder: DeadvertiseInterface: Returning due to AutoTargetServices zero for wlan0
+10-25 15:06:10.705  4590  4590 I mdnsresponder: mDNS_DeregisterInterface: Last representative of InterfaceID -1302812672 p2p0 (FE80:0000:0000:0000:0008:22FF:FE02:E9FB) deregistered; marking questions etc. dormant
+10-25 15:06:10.705  4590  4590 I mdnsresponder: DeadvertiseInterface: Returning due to AutoTargetServices zero for p2p0
+10-25 15:06:10.705  4590  4590 I mdnsresponder: AdvertiseInterface: Returning due to AutoTargetServices zero for wlan0
+10-25 15:06:10.706  4590  4590 I mdnsresponder: mDNS_RegisterInterface: InterfaceID -1302788096 wlan0 (192.168.1.7) not represented in list; marking active and retriggering queries
+10-25 15:06:10.706  4590  4590 I mdnsresponder: mDNS_RegisterInterface: wlan0 (192.168.1.7) probedelay 512
+10-25 15:06:10.706  4590  4590 I mdnsresponder: mDNS_RegisterInterface: Setting AnnounceOwner
+10-25 15:06:10.706  4590  4590 I mdnsresponder: RestartRecordGetZoneData: ResourceRecords
+10-25 15:06:10.706  4590  4590 I mdnsresponder: AdvertiseInterface: Returning due to AutoTargetServices zero for wlan0
+10-25 15:06:10.706  4590  4590 I mdnsresponder: mDNS_RegisterInterface: InterfaceID -1302788096 wlan0 (FE80:0000:0000:0000:DCB1:FF0B:3A9A:C2E7) already represented in list; marking inactive for now
+10-25 15:06:10.706  4590  4590 I mdnsresponder: mDNS_RegisterInterface: wlan0 (FE80:0000:0000:0000:DCB1:FF0B:3A9A:C2E7) probedelay 512
+10-25 15:06:10.706  4590  4590 I mdnsresponder: mDNS_RegisterInterface: Setting AnnounceOwner
+10-25 15:06:10.706  4590  4590 I mdnsresponder: RestartRecordGetZoneData: ResourceRecords
+10-25 15:06:10.706  4590  4590 I mdnsresponder: AdvertiseInterface: Returning due to AutoTargetServices zero for p2p0
+10-25 15:06:10.706  4590  4590 I mdnsresponder: mDNS_RegisterInterface: InterfaceID -1302775808 p2p0 (FE80:0000:0000:0000:0008:22FF:FE02:E9FB) not represented in list; marking active and retriggering queries
+10-25 15:06:10.706  4590  4590 I mdnsresponder: mDNS_RegisterInterface: p2p0 (FE80:0000:0000:0000:0008:22FF:FE02:E9FB) probedelay 512
+10-25 15:06:10.706   296   296 E wificond: Failed to get BSSID from scan result packet
+10-25 15:06:10.706  4590  4590 I mdnsresponder: mDNS_RegisterInterface: Setting AnnounceOwner
+10-25 15:06:10.706  4590  4590 I mdnsresponder: RestartRecordGetZoneData: ResourceRecords
+10-25 15:06:10.707   296   296 E wificond: Failed to get BSSID from scan result packet
+10-25 15:06:10.833  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=13
+10-25 15:06:10.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=1.000000
+10-25 15:06:10.960  1166  1166 E TAG     : Bearing11===12
+10-25 15:06:11.047  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:11.048   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:11.334  6613  6642 I FMLIB_COM: event_status = 0x886
+10-25 15:06:11.493  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=15
+10-25 15:06:11.549  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:11.550   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:11.696   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:11.774   234  1020 I BufferQueueProducer: [StatusBar#0](this:0xa7398000,id:3,api:1,p:615,c:234) queueBuffer: fps=0.46 dur=4333.58 max=3333.60 min=999.98
+10-25 15:06:11.788   234   234 I DisplayDevice: [Built-in Screen (type:0)] fps:0.300100,dur:3332.22,max:3332.22,min:3332.22
+10-25 15:06:11.789   234   234 I BufferQueueProducer: [FrameBufferSurface_1](this:0xa75c2000,id:11,api:1,p:234,c:234) queueBuffer: fps=0.30 dur=3332.32 max=3332.32 min=3332.32
+10-25 15:06:11.789   234   234 I DisplayDevice: [HDMI Screen (type:1)] fps:0.300090,dur:3332.34,max:3332.34,min:3332.34
+
+
+===== PASO 2f: Sintonizar 91.3 con FM_SET_CURRENT (extra frequency int) =====
+comando: am broadcast -a com.yunos.intent.FM_SET_CURRENT -p com.android.fmradio --ei frequency 9130
+Broadcasting: Intent { act=com.yunos.intent.FM_SET_CURRENT flg=0x400000 pkg=com.android.fmradio (has extras) }
+Broadcast completed: result=0
+--- settings get system fmradio_text
+FM   88.50
+--- logcat -d -t 40
+--------- beginning of main
+10-25 15:06:11.696   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:11.774   234  1020 I BufferQueueProducer: [StatusBar#0](this:0xa7398000,id:3,api:1,p:615,c:234) queueBuffer: fps=0.46 dur=4333.58 max=3333.60 min=999.98
+10-25 15:06:11.788   234   234 I DisplayDevice: [Built-in Screen (type:0)] fps:0.300100,dur:3332.22,max:3332.22,min:3332.22
+10-25 15:06:11.789   234   234 I BufferQueueProducer: [FrameBufferSurface_1](this:0xa75c2000,id:11,api:1,p:234,c:234) queueBuffer: fps=0.30 dur=3332.32 max=3332.32 min=3332.32
+10-25 15:06:11.789   234   234 I DisplayDevice: [HDMI Screen (type:1)] fps:0.300090,dur:3332.34,max:3332.34,min:3332.34
+10-25 15:06:11.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=1.000000
+10-25 15:06:11.994  6613  6642 I FMLIB_COM: event_status = 0x883
+--------- beginning of system
+10-25 15:06:12.051  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:12.051   474  1262 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:12.153  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=17
+10-25 15:06:12.220   839   839 I com.android.phone: Looking for service android.hardware.radio@1.0::IRadio/slot1
+10-25 15:06:12.222   839   839 I com.android.phone: Looking for service android.hardware.radio.deprecated@1.0::IOemHook/slot1
+10-25 15:06:12.411   231   259 I vendor.mediatek.hardware.power@1.1-impl: querySysInfo cmd:6, param:0
+10-25 15:06:12.411   231   258 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:6613
+10-25 15:06:12.553  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:12.553   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:12.617  1210  1322 W BusClient : comautochipsbluetoothsdk	create failed: Connection refused
+10-25 15:06:12.654  6613  6642 I FMLIB_COM: event_status = 0x885
+10-25 15:06:12.700   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:12.813  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=17
+10-25 15:06:12.957   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=1.500000
+10-25 15:06:13.054  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:13.055   474  1262 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:13.314  6613  6642 I FMLIB_COM: event_status = 0x886
+10-25 15:06:13.473  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=15
+10-25 15:06:13.556  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:13.556   474  1262 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:13.703   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:13.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=1.700000
+10-25 15:06:13.961  1166  1166 E TAG     : Bearing11===12
+10-25 15:06:13.974  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:06:14.057  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:14.058   474  1262 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:14.133  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=14
+10-25 15:06:14.412   231   259 I vendor.mediatek.hardware.power@1.1-impl: querySysInfo cmd:6, param:0
+10-25 15:06:14.412   231   258 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:6613
+10-25 15:06:14.559  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:14.560   474  1262 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:14.634  6613  6642 I FMLIB_COM: event_status = 0x886
+10-25 15:06:14.707   474   474 E NewkeypadMonitor: line_string = 28:001011100
+
+
+===== PASO 2g: Siguiente emisora (MEDIA_NEXT, keyevent 87) =====
+comando: input keyevent 87
+--- settings get system fmradio_text
+FM   88.50
+--- logcat -d -t 40
+--------- beginning of system
+10-25 15:06:16.066   474  1262 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+--------- beginning of main
+10-25 15:06:16.113  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=16
+10-25 15:06:16.162  6759  6759 I app_process: The ClassLoaderContext is a special shared library.
+10-25 15:06:16.224   839   839 I com.android.phone: Looking for service android.hardware.radio@1.0::IRadio/slot1
+10-25 15:06:16.226   839   839 I com.android.phone: Looking for service android.hardware.radio.deprecated@1.0::IOemHook/slot1
+10-25 15:06:16.243  6759  6759 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_MEDIA_NEXT, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=2332699, downTime=2332699, deviceId=-1, source=0x101 }
+10-25 15:06:16.248  6759  6759 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_MEDIA_NEXT, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=2332699, downTime=2332699, deviceId=-1, source=0x101 }
+10-25 15:06:16.413   231   259 I vendor.mediatek.hardware.power@1.1-impl: querySysInfo cmd:6, param:0
+10-25 15:06:16.413   231   258 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:6613
+10-25 15:06:16.567  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:16.568   474  1262 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:16.614  6613  6642 I FMLIB_COM: event_status = 0x887
+10-25 15:06:16.715   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:16.773  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=17
+10-25 15:06:16.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=1.200000
+10-25 15:06:16.961  1166  1166 E TAG     : Bearing11===12
+10-25 15:06:17.069  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:17.070   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:17.274  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:06:17.433  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=13
+10-25 15:06:17.571  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:17.572   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:17.719   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:17.934  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:06:17.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=1.100000
+10-25 15:06:18.072  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:18.073   474  1262 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:18.093  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=14
+10-25 15:06:18.414   231   259 I vendor.mediatek.hardware.power@1.1-impl: querySysInfo cmd:6, param:0
+10-25 15:06:18.414   231   258 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:6613
+10-25 15:06:18.457   234  1020 I BufferQueueProducer: [StatusBar#0](this:0xa7398000,id:3,api:1,p:615,c:234) queueBuffer: fps=0.27 dur=3664.95 max=3664.95 min=3664.95
+10-25 15:06:18.467   234   234 I DisplayDevice: [Built-in Screen (type:0)] fps:0.273247,dur:3659.69,max:3659.69,min:3659.69
+10-25 15:06:18.468   234   234 I BufferQueueProducer: [FrameBufferSurface_1](this:0xa75c2000,id:11,api:1,p:234,c:234) queueBuffer: fps=0.27 dur=3659.72 max=3659.72 min=3659.72
+10-25 15:06:18.469   234   234 I DisplayDevice: [HDMI Screen (type:1)] fps:0.273244,dur:3659.73,max:3659.73,min:3659.73
+10-25 15:06:18.574  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:18.575   474  1262 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:18.594  6613  6642 I FMLIB_COM: event_status = 0x882
+10-25 15:06:18.623  1210  1322 W BusClient : comautochipsbluetoothsdk	create failed: Connection refused
+10-25 15:06:18.722   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:18.753  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=14
+
+
+===== PASO 2h: Emisora anterior (MEDIA_PREVIOUS, keyevent 88) =====
+comando: input keyevent 88
+--- settings get system fmradio_text
+FM   88.50
+--- logcat -d -t 40
+--------- beginning of main
+10-25 15:06:20.707  4590  4590 I mdnsresponder: mDNS_RegisterInterface: wlan0 (192.168.1.7) probedelay 512
+10-25 15:06:20.707  4590  4590 I mdnsresponder: mDNS_RegisterInterface: Setting AnnounceOwner
+10-25 15:06:20.707  4590  4590 I mdnsresponder: RestartRecordGetZoneData: ResourceRecords
+10-25 15:06:20.708  4590  4590 I mdnsresponder: AdvertiseInterface: Returning due to AutoTargetServices zero for wlan0
+10-25 15:06:20.708  4590  4590 I mdnsresponder: mDNS_RegisterInterface: InterfaceID -1302806528 wlan0 (FE80:0000:0000:0000:DCB1:FF0B:3A9A:C2E7) already represented in list; marking inactive for now
+10-25 15:06:20.708  4590  4590 I mdnsresponder: mDNS_RegisterInterface: wlan0 (FE80:0000:0000:0000:DCB1:FF0B:3A9A:C2E7) probedelay 512
+10-25 15:06:20.708  4590  4590 I mdnsresponder: mDNS_RegisterInterface: Setting AnnounceOwner
+10-25 15:06:20.708  4590  4590 I mdnsresponder: RestartRecordGetZoneData: ResourceRecords
+10-25 15:06:20.708  4590  4590 I mdnsresponder: AdvertiseInterface: Returning due to AutoTargetServices zero for p2p0
+10-25 15:06:20.708  4590  4590 I mdnsresponder: mDNS_RegisterInterface: InterfaceID -1302794240 p2p0 (FE80:0000:0000:0000:0008:22FF:FE02:E9FB) not represented in list; marking active and retriggering queries
+10-25 15:06:20.708  4590  4590 I mdnsresponder: mDNS_RegisterInterface: p2p0 (FE80:0000:0000:0000:0008:22FF:FE02:E9FB) probedelay 512
+10-25 15:06:20.708  4590  4590 I mdnsresponder: mDNS_RegisterInterface: Setting AnnounceOwner
+10-25 15:06:20.708  4590  4590 I mdnsresponder: RestartRecordGetZoneData: ResourceRecords
+--------- beginning of system
+10-25 15:06:20.709  4442  4461 I CarplayUSBNCMAdapter: iface=wlan0is not usb net dev
+10-25 15:06:20.710   296   296 E wificond: Failed to get BSSID from scan result packet
+10-25 15:06:20.712   296   296 E wificond: Failed to get BSSID from scan result packet
+10-25 15:06:20.729   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:20.733  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=14
+10-25 15:06:20.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.000000
+10-25 15:06:21.083  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:21.083   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:21.234  6613  6642 I FMLIB_COM: event_status = 0xcc7
+10-25 15:06:21.234  6613  6642 I FMLIB_COM: RT=Radio Tiempo, todo el tiempo    Radij qz    do e    o Ti        
+10-25 15:06:21.433  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=12
+10-25 15:06:21.585  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:21.585   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:21.626  1210  1322 W BusClient : comautochipsbluetoothsdk	create failed: Connection refused
+10-25 15:06:21.733   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:21.934  6613  6642 I FMLIB_COM: event_status = 0x887
+10-25 15:06:21.956   274   374 W MNLD    : main_event_hdlr: GPS2MAIN_EVENT_UPDATE_LOCATION  lat=10.388442 lng=-75.507970 acc=2.200000
+10-25 15:06:22.086  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:22.087   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:22.093  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=14
+10-25 15:06:22.416   231   259 I vendor.mediatek.hardware.power@1.1-impl: querySysInfo cmd:6, param:0
+10-25 15:06:22.416   231   258 I libPerfService: perfUserGetCapability - cmd:6, id:0, value:6613
+10-25 15:06:22.588  4442  4546 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1557 android.content.ContextWrapper.bindService:684 com.autochips.carplay.resourcemanagerment.y.handleMessage:106 android.os.Handler.dispatchMessage:106 android.os.Looper.loop:164 
+10-25 15:06:22.589   474  1265 W ActivityManager: Unable to start service Intent { act=autochips.intent.action.BACKCAR_SERVICE pkg=com.autochips.backcarapp } U=0: not found
+10-25 15:06:22.594  6613  6642 I FMLIB_COM: event_status = 0x887
+10-25 15:06:22.737   474   474 E NewkeypadMonitor: line_string = 28:001011100
+10-25 15:06:22.753  6613  6642 I FMLIB_COM: current_freq=885,PAMD_Value=14
+
+===== PASO 3: Bluetooth =====
+Seccion Bluetooth: intent de marcador preparado
+
+===== PASO 4: Ecualizador: buscar efectos en audio_flinger y en audio =====
+##### dumpsys media.audio_flinger (Effect, Equalizer)
+
+  Equalizer / NXP Software Ltd.
+XML effect configuration failed to load.
+  Effect buffer: 0xa908a000
+  2 Effect Chains
+    3 effects for session 33
+	Effect ID 19:
+	Effect ID 27:
+		- name: Equalizer
+	Effect ID 11:
+    1 effects for session 0
+	Effect ID 35:
+
+
+##### dumpsys audio (effect, eq)
+
+10-25 14:13:19:734 requestAudioFocus() from uid/pid 10006/3142 
+clientId=android.media.AudioManager@d57917com.android.fmradio.FmMainActivity$5@493c104 callingPack=com.android.fmradio 
+req=1 flags=0x0 sdk=23
+10-25 14:13:20:236 requestAudioFocus() from uid/pid 10006/3142 
+clientId=android.media.AudioManager@61a9da6com.android.fmradio.FmService$2@9c1e3e7 callingPack=com.android.fmradio 
+req=1 flags=0x0 sdk=23
+10-25 14:16:53:509 requestAudioFocus() from uid/pid 10075/2591 clientId=android.media.AudioManager@9265592aaqz@62485b6 
+callingPack=com.google.android.apps.youtube.music req=1 flags=0x0 sdk=36
+10-25 15:04:35:086 requestAudioFocus() from uid/pid 10006/6613 
+clientId=android.media.AudioManager@d57917com.android.fmradio.FmMainActivity$5@493c104 callingPack=com.android.fmradio 
+req=1 flags=0x0 sdk=23
+10-25 15:04:35:527 requestAudioFocus() from uid/pid 10006/6613 
+clientId=android.media.AudioManager@61a9da6com.android.fmradio.FmService$2@9c1e3e7 callingPack=com.android.fmradio 
+req=1 flags=0x0 sdk=23
+
+
