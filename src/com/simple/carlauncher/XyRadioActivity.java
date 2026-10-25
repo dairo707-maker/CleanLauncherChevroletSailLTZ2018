@@ -21,7 +21,7 @@ import android.widget.Toast;
 public class XyRadioActivity extends Activity {
 
     private static final int SLOTS = 6;
-    private static final int MIN = 8750, MAX = 10800, STEP = 10; // 10 kHz units
+    private static final int MIN = 8750, MAX = 10800; // 10 kHz units
 
     private final Handler handler = new Handler();
     private TextView band, station, freq;
@@ -120,10 +120,10 @@ public class XyRadioActivity extends Activity {
         LinearLayout controls = new LinearLayout(this);
         controls.setGravity(Gravity.CENTER);
         controls.setPadding(0, dp(14), 0, 0);
-        controls.addView(control(R.drawable.ic_rewind, "Buscar", false, () -> nudge(-STEP)));
+        controls.addView(control(R.drawable.ic_rewind, "Buscar", false, () -> XyAuto.radioSeek(this, false)));
         controls.addView(control(R.drawable.ic_prev, "Anterior", true, () -> XyAuto.radioStep(this, false)));
         controls.addView(control(R.drawable.ic_next, "Siguiente", true, () -> XyAuto.radioStep(this, true)));
-        controls.addView(control(R.drawable.ic_forward, "Buscar", false, () -> nudge(STEP)));
+        controls.addView(control(R.drawable.ic_forward, "Buscar", false, () -> XyAuto.radioSeek(this, true)));
         card.addView(controls);
         return card;
     }
@@ -214,14 +214,6 @@ public class XyRadioActivity extends Activity {
         prefs().edit().putInt("p" + i, current).apply();
         Toast.makeText(this, "P" + (i + 1) + " = " + label(current), Toast.LENGTH_SHORT).show();
         refresh();
-    }
-
-    /** Manual step (no hardware seek available): move one step and wrap around the band. */
-    private void nudge(int delta) {
-        int base = current < 0 ? MIN : current + delta;
-        if (base > MAX) base = MIN;
-        if (base < MIN) base = MAX;
-        tuneOrOpen(base);
     }
 
     private void tuneOrOpen(int f) {
