@@ -60,6 +60,8 @@ final class ObdClient {
 
     private static ObdClient instance;
     private static volatile Snapshot last;
+    /** Fuel tank level 0-100 % (PID 012F); NaN when the car does not report it. */
+    static volatile float fuelPct = Float.NaN;
 
     /** Latest reading, or null if none yet. Check connected and age (see alert()). */
     static Snapshot lastSnapshot() {
@@ -340,6 +342,8 @@ final class ObdClient {
                 d = query("0142");
                 volts = val(d, 2, d == null || d.length < 2 ? 0 : (d[0] * 256 + d[1]) / 1000f);
                 if (Float.isNaN(volts)) volts = readAtrv();
+                d = query("012F"); // not every car reports it; stays NaN then
+                fuelPct = d == null || d.length < 1 ? Float.NaN : d[0] * 100f / 255f;
                 break;
             default:
                 d = query("0104");
@@ -446,6 +450,7 @@ final class ObdClient {
         iat = 32 + (float) (2 * Math.sin(t / 40));
         volts = 14.1f + (float) (0.2 * Math.sin(t / 7));
         load = (float) (30 + 25 * Math.sin(t / 15));
+        fuelPct = (float) (55 + 40 * Math.sin(t / 120));
         milOn = false;
         dtcs = Collections.emptyList();
         estimateFuel(true);

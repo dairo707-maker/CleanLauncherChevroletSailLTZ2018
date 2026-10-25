@@ -37,7 +37,9 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     private ImageView weatherIcon;
     private GradientDrawable weatherBg;
     private ImageView car, carLights;
-    private TextView carAlerts, acInfo;
+    private TextView carAlerts, acInfo, fuelInfo;
+    private GradientDrawable fuelBg;
+    private long fuelWarnedAt;
     private ImageView shuffleBtn, repeatBtn;
     private GradientDrawable acBg, shiftBg;
     private TextView shiftInfo, speedNum;
@@ -161,6 +163,15 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         carAlerts.setOnClickListener(v -> startActivity(new Intent(this,
                 ObdClient.alert() != null ? ObdActivity.class : MaintenanceActivity.class)));
         carBox.addView(carAlerts, new FrameLayout.LayoutParams(-2, -2, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL));
+
+        // Fuel left (scanner, or estimated from the last full tank); opens fuel and costs.
+        fuelInfo = Ui.text(this, "", 13, Color.WHITE);
+        fuelInfo.setPadding(dp(12), dp(4), dp(12), dp(4));
+        fuelBg = new GradientDrawable();
+        fuelBg.setCornerRadius(dp(12));
+        fuelInfo.setBackground(fuelBg);
+        fuelInfo.setOnClickListener(v -> startActivity(new Intent(this, CostsActivity.class)));
+        carBox.addView(fuelInfo, new FrameLayout.LayoutParams(-2, -2, Gravity.BOTTOM | Gravity.START));
 
         // Work shift (Uber, DiDi, InDrive): time and income so far; opens the shift screen.
         shiftInfo = Ui.text(this, "", 13, Color.WHITE);
@@ -351,6 +362,20 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         shiftBg.setColor(chip.isEmpty() ? 0x26FFFFFF : 0xCC2E7D32);
     }
 
+    private void updateFuel() {
+        String chip = FuelTank.chip(this);
+        fuelInfo.setVisibility(chip.isEmpty() ? View.GONE : View.VISIBLE);
+        if (chip.isEmpty()) return;
+        boolean low = FuelTank.low(this);
+        fuelInfo.setText(chip);
+        fuelBg.setColor(low ? 0xDDE53935 : 0x80000000);
+        long now = System.currentTimeMillis();
+        if (low && now - fuelWarnedAt > 30 * 60_000L) {
+            fuelWarnedAt = now;
+            Tts.say(this, "Combustible bajo. Busca dónde tanquear.");
+        }
+    }
+
     private void updateAc() {
         boolean on = AcLog.isOn(this);
         acInfo.setText(on ? "❄ " + AcLog.minutesOn(this) + " min" : "❄ A/C");
@@ -360,6 +385,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     private void updateOil() {
         updateCarAlerts();
         if (acInfo != null) updateAc();
+        if (fuelInfo != null) updateFuel();
         if (shiftInfo != null) updateShift();
         // Scanner alerts (check engine, temperature, battery) and overdue maintenance outrank the oil countdown.
         String obd = ObdClient.alert();
