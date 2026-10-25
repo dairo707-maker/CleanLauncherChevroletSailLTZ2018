@@ -1,0 +1,493 @@
+﻿10-25 17:02:30.845   474   542 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.simple.carlauncher/.MainActivity (has extras)} from uid 1000
+10-25 17:02:35.149   474  4364 I ActivityManager: START u0 {cmp=com.simple.carlauncher/.AppsActivity} from uid 10083
+10-25 17:02:38.969   474  1198 I ActivityManager: START u0 {cmp=com.simple.carlauncher/.SetupActivity} from uid 10083
+10-25 17:02:59.440   474  4364 I ActivityManager: START u0 {flg=0x4000000 cmp=com.simple.carlauncher/.MainActivity} from uid 10083
+10-25 17:03:00.031  4522  4522 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:967 android.content.ContextWrapper.sendBroadcast:437 com.xyauto.weather.XYGetWeatherInfoService$2.onReceive:340 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52497:1313 android.app.-$Lambda$aS31cHIhRx41653CMnd4gZqshIQ.$m$7:4 
+10-25 17:03:19.834   474  4367 I ActivityManager: START u0 {cmp=com.simple.carlauncher/.MaintenanceActivity} from uid 10083
+10-25 17:04:00.022  4522  4522 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:967 android.content.ContextWrapper.sendBroadcast:437 com.xyauto.weather.XYGetWeatherInfoService$2.onReceive:340 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52497:1313 android.app.-$Lambda$aS31cHIhRx41653CMnd4gZqshIQ.$m$7:4 
+10-25 17:04:03.135   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:04:03.135   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:04:03.135   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:04:03.183   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:04:03.183   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:04:03.183   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:04:03.189   474   542 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.simple.carlauncher/.MainActivity (has extras)} from uid 1000
+10-25 17:04:03.208   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.MainActivity, pid:15486, state:1
+10-25 17:04:03.222   474   532 W WindowManager: Attempted to add application window with unknown token Token{e756d2d ActivityRecord{7890844 u0 com.simple.carlauncher/.AppsActivity t-1 f}}.  Aborting.
+10-25 17:04:03.222   474   532 W WindowManager: Token{e756d2d ActivityRecord{7890844 u0 com.simple.carlauncher/.AppsActivity t-1 f}} already running, starting window not displayed. Unable to add window -- token Token{e756d2d ActivityRecord{7890844 u0 com.simple.carlauncher/.AppsActivity t-1 f}} is not valid; is your activity running?
+10-25 17:04:03.258   234   320 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:368,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:04:03.358   234   234 I SurfaceFlinger: screenshot (com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#0)
+10-25 17:04:03.362   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#0](this:0xa35a0000,id:367,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:04:05.264   234   320 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:368,api:1,p:15486,c:234) queueBuffer: fps=7.15 dur=1959.29 max=974.87 min=4.98
+10-25 17:04:06.265   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:368,api:1,p:15486,c:234) queueBuffer: fps=2.00 dur=1001.31 max=976.97 min=24.34
+10-25 17:04:07.266   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:368,api:1,p:15486,c:234) queueBuffer: fps=2.00 dur=1001.17 max=977.10 min=24.07
+10-25 17:04:08.268   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:368,api:1,p:15486,c:234) queueBuffer: fps=2.00 dur=1001.33 max=976.20 min=25.13
+10-25 17:04:08.550   474  1198 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.xyauto.Settings/.MainActivity} from uid 10083
+10-25 17:04:08.574   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.xyauto.Settings, act:com.xyauto.Settings.MainActivity, pid:1196, state:1
+10-25 17:04:08.574   231   258 I libPerfService: [perfNotifyAppState] foreground:com.xyauto.Settings, pid:1196
+10-25 17:04:08.646  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.649  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.653  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.655  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.657  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.659  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.662  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.663  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.666  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.667  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.669  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.671  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.673  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.675  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.677  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.679  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.682  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.684  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.690  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.691  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.695  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.697  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.700  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.703  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.706  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.708  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.711  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.713  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.716  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.718  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.720  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.722  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.724  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.726  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.730  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.732  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.738  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.741  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.749  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.753  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.782  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.784  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.806  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.809  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.824  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.827  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.844  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.846  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.861  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.863  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.881  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.883  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.907  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.910  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.913  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.915  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.917  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.919  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.922  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.925  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.929  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.931  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.934  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.936  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.940  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.943  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.946  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.948  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.952  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.955  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.962  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.965  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:08.971  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:08.974  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.015  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.017  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.020  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.024  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.028  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.030  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.033  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.035  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.037  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.039  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.043  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.045  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.048  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.049  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.052  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.055  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.059  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.060  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.064  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.066  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.068  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.072  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.075  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.077  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.080  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.081  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.085  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.088  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.093  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.095  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.097  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.099  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.102  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.105  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.109  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.111  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.114  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.116  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.121  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.125  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.142  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.144  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.159  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.161  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.177  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.179  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.195  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.197  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.212  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.214  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.229  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.230  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.251  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.255  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.258  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.260  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.262  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.264  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.268  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.271  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.275  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.276  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.279  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.281  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.285  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.288  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.291  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.295  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.298  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.302  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.307  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.309  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.312  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:04:09.314  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:04:09.342   234   517 I BufferQueueProducer: [com.xyauto.Settings/com.xyauto.Settings.MainActivity#0](this:0xa35a0000,id:369,api:1,p:1196,c:234) connect(P): api=1 producer=(1196:com.xyauto.Settings) producerControlledByApp=true
+10-25 17:04:09.423   234   320 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:368,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:04:11.726   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:04:11.726   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:04:11.726   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:04:11.773   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:04:11.774   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:04:11.774   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:04:11.779   474   542 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.simple.carlauncher/.MainActivity (has extras)} from uid 1000
+10-25 17:04:11.795   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.MainActivity, pid:15486, state:1
+10-25 17:04:11.795   231   258 I libPerfService: [perfNotifyAppState] foreground:com.simple.carlauncher, pid:15486
+10-25 17:04:11.868   234   320 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:04:11.934   234   944 I BufferQueueProducer: [com.xyauto.Settings/com.xyauto.Settings.MainActivity#0](this:0xa35a0000,id:369,api:1,p:1196,c:234) disconnect(P): api 1
+10-25 17:04:11.972   234   234 I SurfaceFlinger: screenshot (com.xyauto.Settings/com.xyauto.Settings.MainActivity#0)
+10-25 17:04:13.867   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) queueBuffer: fps=5.13 dur=1947.91 max=967.75 min=11.88
+10-25 17:04:14.941   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) queueBuffer: fps=4.65 dur=1074.67 max=881.95 min=18.82
+10-25 17:04:15.960   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) queueBuffer: fps=3.93 dur=1018.37 max=683.42 min=8.48
+10-25 17:04:16.960   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) queueBuffer: fps=10.00 dur=1000.50 max=801.20 min=3.65
+10-25 17:04:17.973   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) queueBuffer: fps=1.97 dur=1012.92 max=919.06 min=93.86
+10-25 17:04:19.966   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) queueBuffer: fps=1.00 dur=1992.72 max=1003.06 min=989.66
+10-25 17:04:21.966   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) queueBuffer: fps=1.00 dur=2000.54 max=1001.09 min=999.45
+10-25 17:04:22.967   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) queueBuffer: fps=1.00 dur=1000.88 max=1000.88 min=1000.88
+10-25 17:04:23.968   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) queueBuffer: fps=1.00 dur=1000.66 max=1000.66 min=1000.66
+10-25 17:04:25.237   474  4367 I ActivityManager: START u0 {cmp=com.simple.carlauncher/.XyRadioActivity} from uid 10083
+10-25 17:04:25.241   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) queueBuffer: fps=4.71 dur=1273.24 max=682.42 min=3.59
+10-25 17:04:25.261   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.XyRadioActivity, pid:15486, state:1
+10-25 17:04:25.359   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.XyRadioActivity#0](this:0xa35a0000,id:371,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:04:25.445   474   496 I ActivityManager: Displayed com.simple.carlauncher/.XyRadioActivity: +182ms
+10-25 17:04:25.515   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:370,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:04:27.070   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.XyRadioActivity#0](this:0xa35a0000,id:371,api:1,p:15486,c:234) queueBuffer: fps=1.22 dur=1643.75 max=1597.32 min=46.43
+10-25 17:04:27.174   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.MaintenanceActivity, pid:15486, state:1
+10-25 17:04:27.289   234   320 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#0](this:0xa7398000,id:372,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:04:27.396   234   320 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.XyRadioActivity#0](this:0xa35a0000,id:371,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:04:27.487   234   944 E SurfaceFlinger: Failed to find layer (com.simple.carlauncher/com.simple.carlauncher.XyRadioActivity#0) in layer parent (no-parent).
+10-25 17:04:28.886   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#0](this:0xa7398000,id:372,api:1,p:15486,c:234) queueBuffer: fps=1.28 dur=1562.08 max=1523.02 min=39.06
+10-25 17:04:52.452   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#0](this:0xa7398000,id:372,api:1,p:15486,c:234) queueBuffer: fps=0.47 dur=23565.81 max=23273.72 min=5.58
+10-25 17:04:52.505   234   320 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#1](this:0xa73db000,id:373,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:04:54.078   234   320 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#1](this:0xa73db000,id:373,api:1,p:15486,c:234) queueBuffer: fps=1.30 dur=1543.42 max=1516.47 min=26.95
+10-25 17:04:54.296   234   234 I SurfaceFlinger: screenshot (com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#0)
+10-25 17:04:54.296   234   234 I SurfaceFlinger: screenshot (com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#1)
+10-25 17:05:00.015  4522  4522 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:967 android.content.ContextWrapper.sendBroadcast:437 com.xyauto.weather.XYGetWeatherInfoService$2.onReceive:340 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52497:1313 android.app.-$Lambda$aS31cHIhRx41653CMnd4gZqshIQ.$m$7:4 
+10-25 17:05:27.212   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#1](this:0xa73db000,id:373,api:1,p:15486,c:234) queueBuffer: fps=0.51 dur=33133.93 max=32873.32 min=9.69
+10-25 17:05:27.365   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#1](this:0xa73db000,id:373,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:05:27.484   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#2](this:0xa5641000,id:374,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:05:28.854   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#2](this:0xa5641000,id:374,api:1,p:15486,c:234) queueBuffer: fps=12.52 dur=1277.55 max=1034.48 min=9.15
+10-25 17:05:28.857   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#2](this:0xa5641000,id:374,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:05:29.990   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:05:29.990   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:05:29.990   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:05:30.053   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:05:30.053   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:05:30.053   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:05:30.068   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.MainActivity, pid:15486, state:1
+10-25 17:05:30.159   234   320 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:05:30.317   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MaintenanceActivity#0](this:0xa7398000,id:372,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:05:32.151   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) queueBuffer: fps=4.64 dur=1939.07 max=962.44 min=6.76
+10-25 17:05:33.152   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) queueBuffer: fps=2.00 dur=1001.39 max=962.49 min=38.90
+10-25 17:05:34.191   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) queueBuffer: fps=2.89 dur=1039.39 max=949.90 min=38.66
+10-25 17:05:35.193   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) queueBuffer: fps=2.00 dur=1001.93 max=949.39 min=52.55
+10-25 17:05:36.194   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) queueBuffer: fps=2.00 dur=1000.85 max=947.18 min=53.66
+10-25 17:05:37.197   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) queueBuffer: fps=1.99 dur=1003.42 max=946.32 min=57.09
+10-25 17:05:39.140   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) queueBuffer: fps=1.54 dur=1942.94 max=943.76 min=55.58
+10-25 17:05:40.148   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) queueBuffer: fps=1.99 dur=1007.41 max=948.24 min=59.17
+10-25 17:05:41.200   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) queueBuffer: fps=2.85 dur=1052.19 max=939.21 min=53.45
+10-25 17:05:42.201   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) queueBuffer: fps=2.00 dur=1001.14 max=963.40 min=37.75
+10-25 17:05:43.517   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) queueBuffer: fps=2.28 dur=1315.43 max=962.19 min=24.27
+10-25 17:05:43.576   474  1183 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.xyauto.Settings/.MainActivity} from uid 10083
+10-25 17:05:43.595   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.xyauto.Settings, act:com.xyauto.Settings.MainActivity, pid:1196, state:1
+10-25 17:05:43.595   231   258 I libPerfService: [perfNotifyAppState] foreground:com.xyauto.Settings, pid:1196
+10-25 17:05:43.646  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.650  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.655  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.658  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.663  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.666  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.668  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.672  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.677  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.679  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.682  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.684  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.688  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.690  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.693  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.696  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.698  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.700  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.705  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.709  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.713  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.716  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.721  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.724  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.727  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.729  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.732  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.734  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.738  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.741  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.744  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.745  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.748  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.750  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.754  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.757  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.761  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.763  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.767  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.769  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.793  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.794  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.810  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.812  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.830  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.832  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.848  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.850  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.867  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.870  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.905  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.907  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.930  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.932  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.935  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.938  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.941  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.943  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.947  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.951  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.958  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.960  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.963  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.972  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.977  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.979  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.983  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.987  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:43.991  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:43.993  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.000  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.004  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.008  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.010  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.046  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.049  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.053  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.055  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.058  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.060  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.062  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.065  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.069  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.071  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.074  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.076  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.079  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.084  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.087  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.089  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.092  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.094  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.100  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.102  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.105  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.107  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.110  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.112  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.117  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.119  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.123  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.125  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.128  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.131  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.134  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.136  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.139  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.141  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.145  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.147  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.152  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.154  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.158  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.160  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.178  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.182  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.201  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.203  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.219  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.221  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.238  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.240  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.273  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.275  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.292  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.294  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.317  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.320  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.323  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.325  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.329  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.332  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.336  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.338  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.342  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.348  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.351  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.354  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.357  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.360  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.364  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.366  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.369  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.371  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.375  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.378  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.383  1196  1196 I com.xyauto.Settings: Looking for service vendor.autochips.hardware.audio@1.0::IAudioEffect/default
+10-25 17:05:44.385  1196  1196 I com.xyauto.Settings: Starting thread pool.
+10-25 17:05:44.420   234   944 I BufferQueueProducer: [com.xyauto.Settings/com.xyauto.Settings.MainActivity#0](this:0xa7398000,id:376,api:1,p:1196,c:234) connect(P): api=1 producer=(1196:com.xyauto.Settings) producerControlledByApp=true
+10-25 17:05:44.477   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:375,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:05:44.504   234   234 I SurfaceFlinger: screenshot (com.simple.carlauncher/com.simple.carlauncher.MainActivity#0)
+10-25 17:05:46.116   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:05:46.116   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:05:46.116   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:05:46.196   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:05:46.196   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:05:46.196   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:05:46.202   474   542 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.simple.carlauncher/.MainActivity (has extras)} from uid 1000
+10-25 17:05:46.216   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.MainActivity, pid:15486, state:1
+10-25 17:05:46.216   231   258 I libPerfService: [perfNotifyAppState] foreground:com.simple.carlauncher, pid:15486
+10-25 17:05:46.282   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:377,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:05:46.348   234   944 I BufferQueueProducer: [com.xyauto.Settings/com.xyauto.Settings.MainActivity#0](this:0xa7398000,id:376,api:1,p:1196,c:234) disconnect(P): api 1
+10-25 17:05:46.382   234   234 I SurfaceFlinger: screenshot (com.xyauto.Settings/com.xyauto.Settings.MainActivity#0)
+10-25 17:05:48.284   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:377,api:1,p:15486,c:234) queueBuffer: fps=5.12 dur=1954.86 max=977.35 min=14.03
+10-25 17:05:49.285   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:377,api:1,p:15486,c:234) queueBuffer: fps=2.00 dur=1000.86 max=975.85 min=25.01
+10-25 17:05:50.308   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:377,api:1,p:15486,c:234) queueBuffer: fps=2.93 dur=1023.37 max=963.07 min=25.98
+10-25 17:05:51.309   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:377,api:1,p:15486,c:234) queueBuffer: fps=2.00 dur=1000.74 max=966.16 min=34.58
+10-25 17:05:51.584   474  1198 I ActivityManager: START u0 {cmp=com.simple.carlauncher/.XyEqActivity} from uid 10083
+10-25 17:05:51.606   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.XyEqActivity, pid:15486, state:1
+10-25 17:05:51.738   234   316 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.XyEqActivity#0](this:0xa7398000,id:378,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:05:51.813   474   496 I ActivityManager: Displayed com.simple.carlauncher/.XyEqActivity: +202ms
+10-25 17:05:51.873   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:377,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:05:53.996   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.XyEqActivity#0](this:0xa7398000,id:378,api:1,p:15486,c:234) queueBuffer: fps=0.91 dur=2203.71 max=2162.04 min=41.68
+10-25 17:05:55.143   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.XyEqActivity#0](this:0xa7398000,id:378,api:1,p:15486,c:234) queueBuffer: fps=6.97 dur=1147.02 max=1003.69 min=2.45
+10-25 17:05:56.607   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.XyEqActivity#0](this:0xa7398000,id:378,api:1,p:15486,c:234) queueBuffer: fps=10.93 dur=1464.52 max=713.80 min=2.19
+10-25 17:05:57.627   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.XyEqActivity#0](this:0xa7398000,id:378,api:1,p:15486,c:234) queueBuffer: fps=23.54 dur=1019.44 max=320.76 min=2.39
+10-25 17:05:59.216   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.XyEqActivity#0](this:0xa7398000,id:378,api:1,p:15486,c:234) queueBuffer: fps=11.95 dur=1589.31 max=818.26 min=3.28
+10-25 17:06:00.016  4522  4522 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:967 android.content.ContextWrapper.sendBroadcast:437 com.xyauto.weather.XYGetWeatherInfoService$2.onReceive:340 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52497:1313 android.app.-$Lambda$aS31cHIhRx41653CMnd4gZqshIQ.$m$7:4 
+10-25 17:06:03.027   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.XyEqActivity#0](this:0xa7398000,id:378,api:1,p:15486,c:234) queueBuffer: fps=4.46 dur=3811.04 max=3231.14 min=2.51
+10-25 17:06:03.130   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.MainActivity, pid:15486, state:1
+10-25 17:06:03.183   234   316 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:06:03.358   234   316 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.XyEqActivity#0](this:0xa7398000,id:378,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:06:05.177   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) queueBuffer: fps=5.12 dur=1952.23 max=968.35 min=6.81
+10-25 17:06:06.214   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) queueBuffer: fps=2.89 dur=1036.68 max=948.00 min=39.02
+10-25 17:06:08.174   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) queueBuffer: fps=1.53 dur=1960.28 max=961.57 min=38.43
+10-25 17:06:09.174   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) queueBuffer: fps=2.00 dur=1000.01 max=960.32 min=39.69
+10-25 17:06:10.183   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) queueBuffer: fps=1.98 dur=1008.52 max=967.33 min=41.19
+10-25 17:06:11.140   234   316 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) RunningBehind, queued size:2
+10-25 17:06:11.193   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) queueBuffer: fps=11.87 dur=1010.60 max=419.31 min=2.81
+10-25 17:06:11.203   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) RunningBehind, queued size:2
+10-25 17:06:11.221   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) RunningBehind, queued size:2
+10-25 17:06:12.213   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) queueBuffer: fps=3.92 dur=1020.13 max=992.61 min=4.76
+10-25 17:06:12.394   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa5641000,id:379,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:06:12.405   234   234 I SurfaceFlinger: screenshot (com.simple.carlauncher/com.simple.carlauncher.MainActivity#0)
+10-25 17:06:12.522   615   615 E Recents : XyautoTaskEvent 
+10-25 17:06:12.522   615   615 E Recents : XyautoTaskEvent  name=com.google.android.apps.youtube.music
+10-25 17:06:13.530   474  1265 I ActivityManager: START u0 {flg=0x20000 cmp=com.simple.carlauncher/.MainActivity} from uid 10083
+10-25 17:06:14.162   474  1231 I ActivityManager: START u0 {flg=0x20000 cmp=com.simple.carlauncher/.MainActivity} from uid 10083
+10-25 17:06:17.768   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:06:17.768   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:06:17.768   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:06:17.816   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:06:17.816   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:06:17.816   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:06:17.821   474   542 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.simple.carlauncher/.MainActivity (has extras)} from uid 1000
+10-25 17:06:17.835   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.MainActivity, pid:15486, state:1
+10-25 17:06:17.835   231   258 I libPerfService: [perfNotifyAppState] foreground:com.simple.carlauncher, pid:15486
+10-25 17:06:17.889   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:382,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:06:19.552   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:382,api:1,p:15486,c:234) queueBuffer: fps=6.17 dur=1621.87 max=646.89 min=9.07
+10-25 17:06:20.917   234  1020 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:382,api:1,p:15486,c:234) queueBuffer: fps=4.40 dur=1364.73 max=1001.58 min=17.96
+10-25 17:06:21.473   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:382,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:06:22.581   474   535 I ActivityManager: START u0 {flg=0x20000 cmp=com.simple.carlauncher/.MainActivity} from uid 10083
+10-25 17:06:22.593   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.MainActivity, pid:15486, state:1
+10-25 17:06:22.593   231   258 I libPerfService: [perfNotifyAppState] foreground:com.simple.carlauncher, pid:15486
+10-25 17:06:22.649   234   316 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:06:24.679   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) queueBuffer: fps=5.02 dur=1990.85 max=1005.72 min=10.08
+10-25 17:06:26.070   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) queueBuffer: fps=1.44 dur=1391.10 max=999.87 min=391.23
+10-25 17:06:26.124   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) RunningBehind, queued size:2
+10-25 17:06:26.135   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) RunningBehind, queued size:2
+10-25 17:06:26.178   234   316 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) RunningBehind, queued size:2
+10-25 17:06:26.186   234   316 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) RunningBehind, queued size:2
+10-25 17:06:26.200   234   316 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) RunningBehind, queued size:2
+10-25 17:06:27.578   234   316 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) queueBuffer: fps=6.63 dur=1508.15 max=900.92 min=4.32
+10-25 17:06:27.629 15486 15486 D XyAuto  : xy.android.previousmedia
+10-25 17:06:27.634   234   316 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) RunningBehind, queued size:2
+10-25 17:06:27.647   234   316 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) RunningBehind, queued size:2
+10-25 17:06:27.697   234   517 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) RunningBehind, queued size:2
+10-25 17:06:27.920 15486 15486 D XyAuto  : no change after xy.android.nextmedia: reviving FM screen
+10-25 17:06:28.039   234   320 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:384,api:1,p:15486,c:234) disconnect(P): api 1
+10-25 17:06:28.061   234   234 I SurfaceFlinger: screenshot (com.simple.carlauncher/com.simple.carlauncher.MainActivity#0)
+10-25 17:06:28.439 15486 15486 V PhoneWindow: DecorView setVisiblity: visibility = 4, Parent = ViewRoot{78c2cf8 com.simple.carlauncher/com.simple.carlauncher.MainActivity,ident = 0}, this = DecorView@d00f6a[]
+10-25 17:06:29.130   474  1231 I ActivityManager: START u0 {flg=0x20000 cmp=com.simple.carlauncher/.MainActivity} from uid 10083
+10-25 17:06:29.430 15486 15486 D XyAuto  : no change after xy.android.previousmedia: reviving FM screen
+10-25 17:06:29.779   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:06:29.779   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:06:29.779   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:06:29.827   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:06:29.827   474   542 I WindowManager: isLauncherActivity =com.simple.carlauncher
+10-25 17:06:29.827   474   542 I WindowManager: isLauncherActivity =com.xyauto.Settings
+10-25 17:06:29.831   615   615 V QSXyautoHost: onReceive action: android.intent.action.CLOSE_SYSTEM_DIALOGS
+10-25 17:06:29.833   474   542 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.simple.carlauncher/.MainActivity (has extras)} from uid 1000
+10-25 17:06:29.846   231   259 I vendor.mediatek.hardware.power@1.1-impl: notifyAppState pack:com.simple.carlauncher, act:com.simple.carlauncher.MainActivity, pid:15486, state:1
+10-25 17:06:29.846   231   258 I libPerfService: [perfNotifyAppState] foreground:com.simple.carlauncher, pid:15486
+10-25 17:06:29.877   474  1265 D MediaSessionService: Checking if enabled notification listener ComponentInfo{com.simple.carlauncher/com.simple.carlauncher.MediaListener}
+10-25 17:06:29.884 15486 15486 V PhoneWindow: DecorView setVisiblity: visibility = 0, Parent = ViewRoot{80d0de com.simple.carlauncher/com.simple.carlauncher.MainActivity,ident = 1}, this = DecorView@cb65363[]
+10-25 17:06:29.902   234   320 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:386,api:1,p:15486,c:234) connect(P): api=1 producer=(15486:com.simple.carlauncher) producerControlledByApp=true
+10-25 17:06:30.058   474  1231 D IdleScreen: activityIdleScreen: android.app.ContextImpl@c550a2c mNotifyNeeded: false idleIntent: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10a00000 cmp=com.simple.carlauncher/.MainActivity (has extras) }
+10-25 17:06:30.638   474  1231 I ActivityManager: START u0 {flg=0x20000 cmp=com.simple.carlauncher/.MainActivity} from uid 10083
+10-25 17:06:30.761   234   944 I BufferQueueProducer: [com.simple.carlauncher/com.simple.carlauncher.MainActivity#0](this:0xa7398000,id:386,api:1,p:15486,c:234) disconnect(P): api 1

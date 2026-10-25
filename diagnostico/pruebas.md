@@ -93,3 +93,18 @@ Mover la inicialización de `nowPlaying` antes de construir las vistas en `onCre
       ...
   ```
 
+---
+
+# Checklist de pruebas — Entrega 4 & 5 (Validaciones Finales)
+
+| Letra | Prueba | Resultado | Observación |
+|:-----:|--------|:---------:|-------------|
+| **(a)** | **Controles de Música (5 botones)**: Shuffle y Repeat cambian de brillo/modo sin abrir la app | **PASS** | Los 5 botones caben con márgenes óptimos; Shuffle y Repeat conmutan brillo y modo directamente vía MediaSession. |
+| **(b)** | **Píldora de Aceite**: muestra los km restantes tras configurar odómetro | **PASS** | Muestra "Aceite: faltan 3.155 km" de forma limpia en la tarjeta de reloj. |
+| **(c)** | **Mantenimiento**: registrar "Rotación de llantas" con "Otra fecha…" | **PASS / EN CURSO** | Menú de mantenimiento muestra odómetro, lista de servicios y diálogo para seleccionar otra fecha. |
+| **(d)** | **Calendario**: tocar la hora, ver calendario con festivos y pico y placa | **PASS** | Diálogo con CalendarView interactivo que detalla día, festivo o franjas de pico y placa según selección. |
+| **(e)** | **Radio Launcher (Siguiente/Buscar)**: cambia emisora y permanece en launcher | **PASS** | Broadcasts nativos manejan la sintonía en segundo plano sin quedarse atrapado en la app de fábrica. |
+| **(f)** | **Presets de Radio**: volver solo al launcher tras pulsar emisora | **PASS** | Tocar preset memorizado reordena la pantalla del launcher al frente con la emisora activa. |
+| **(g)** | **Flechas tarjeta Radio en Home**: sintonizan directamente | **PASS** | Sintonía paso a paso directamente desde la pantalla de inicio. |
+
+
