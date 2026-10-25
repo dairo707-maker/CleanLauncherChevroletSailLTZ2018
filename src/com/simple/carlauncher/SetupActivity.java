@@ -31,9 +31,9 @@ public class SetupActivity extends Activity {
 
     private static final int PICK_PHOTO = 1;
 
-    private EditText name, plate, rotation, validTo;
+    private EditText name, plate, rotation, validTo, speedLimit;
     private ImageView carPreview;
-    private Switch voice, picoPlaca, speedVol;
+    private Switch readMsgs, voice, picoPlaca, speedVol, fatigue, speedAlert;
     private TextView homeBtn, locationBtn, notifBtn, overlayBtn;
 
     @Override
@@ -111,6 +111,7 @@ public class SetupActivity extends Activity {
         voice = toggle(card, "Saludo por voz al encender el carro", Profile.voiceEnabled(this));
         picoPlaca = toggle(card, "Recordar pico y placa (Cartagena)", Profile.picoPlacaEnabled(this));
         speedVol = toggle(card, "Subir el volumen según la velocidad (GPS)", SpeedVolume.enabled(this));
+        readMsgs = toggle(card, "Leer mensajes en voz alta", Profile.prefs(this).getBoolean("read_messages", false));
         card.addView(label("Último dígito de la placa"));
         plate = new EditText(this);
         plate.setInputType(InputType.TYPE_CLASS_NUMBER);
@@ -166,6 +167,8 @@ public class SetupActivity extends Activity {
         card.addView(label("Herramientas del carro"));
         card.addView(spaced(button("Mantenimiento, combustible y costos", 0x334F7BFF,
                 () -> startActivity(new Intent(this, MaintenanceActivity.class)))));
+        card.addView(spaced(button("Turnos y viajes (Uber, DiDi, InDrive)", 0x334F7BFF,
+                () -> startActivity(new Intent(this, ShiftActivity.class)))));
         card.addView(spaced(button("Escáner OBD2 (ELM327)", 0x334F7BFF,
                 () -> startActivity(new Intent(this, ObdActivity.class)))));
         card.addView(spaced(button("Diagnóstico del radio", 0x334F7BFF,
@@ -311,11 +314,24 @@ public class SetupActivity extends Activity {
                 .putBoolean("voice", voice.isChecked())
                 .putBoolean("picoplaca", picoPlaca.isChecked())
                 .putBoolean("speed_volume", speedVol.isChecked())
+                .putBoolean("fatigue_alert", fatigue.isChecked())
+                .putBoolean("speed_alert", speedAlert.isChecked())
+                .putInt("speed_limit", limitKmh())
+                .putBoolean("read_messages", readMsgs.isChecked())
                 .putBoolean("setup_done", true)
                 .apply();
         SpeedVolume.sync(this);
+        DriverAssist.sync(this);
         startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         finish();
+    }
+
+    private int limitKmh() {
+        try {
+            return Math.max(30, Math.min(200, Integer.parseInt(speedLimit.getText().toString().trim())));
+        } catch (NumberFormatException e) {
+            return DriverAssist.DEFAULT_LIMIT_KMH;
+        }
     }
 
     private int dp(int v) {

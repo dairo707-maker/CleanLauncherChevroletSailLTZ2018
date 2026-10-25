@@ -105,6 +105,14 @@
 
         <service android:name=".SpeedVolume" />
 
+        <activity
+            android:name=".ShiftActivity"
+            android:label="Turnos"
+            android:windowSoftInputMode="adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden|locale" />
+
+        <service android:name=".DriverAssist" />
+
         <receiver android:name=".GreeterService$BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

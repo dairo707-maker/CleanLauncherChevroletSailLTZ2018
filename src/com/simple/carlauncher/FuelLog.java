@@ -231,6 +231,8 @@ final class FuelLog {
                 if (!out.exists() && !out.mkdirs()) continue;
                 copy(fuelFile(c), new File(out, FUEL_FILE));
                 copy(maintFile(c), new File(out, MAINT_FILE));
+                copy(new File(dir(c), ShiftLog.SHIFT_FILE), new File(out, ShiftLog.SHIFT_FILE));
+                copy(new File(dir(c), ShiftLog.TRIPS_FILE), new File(out, ShiftLog.TRIPS_FILE));
                 return out;
             } catch (Exception ignored) { }
         }

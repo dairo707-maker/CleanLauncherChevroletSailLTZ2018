@@ -39,6 +39,10 @@ final class NowPlaying {
         Bitmap art;
         boolean playing;
         long updated;
+        String pkg = "";             // app sessions only
+        long duration = -1;          // ms, -1 unknown
+        long posBase = -1, posTime;  // last reported position (ms) and when (elapsedRealtime)
+        float speed = 1f;
     }
 
     private static NowPlaying instance;
@@ -148,11 +152,13 @@ final class NowPlaying {
         try {
             list = sessions.getActiveSessions(notificationListener);
         } catch (SecurityException ignored) { }
+        // Playing wins (YouTube Music, Spotify, YouTube, the a2dpsink session of com.android.bluetooth...);
+        // otherwise keep the first session that has metadata, then the first one.
         MediaController pick = null;
         if (list != null) {
             for (MediaController c : list) {
                 if ("com.android.server.telecom".equals(c.getPackageName())) continue;
-                if (pick == null) pick = c;
+                if (pick == null || (pick.getMetadata() == null && c.getMetadata() != null)) pick = c;
                 PlaybackState s = c.getPlaybackState();
                 if (s != null && s.getState() == PlaybackState.STATE_PLAYING) { pick = c; break; }
             }
@@ -170,7 +176,11 @@ final class NowPlaying {
             app.art = null;
             app.playing = false;
             app.updated = 0;
+            app.pkg = "";
+            app.duration = -1;
+            app.posBase = -1;
         } else {
+            app.pkg = controller.getPackageName();
             MediaMetadata m = controller.getMetadata();
             PlaybackState s = controller.getPlaybackState();
             app.title = m == null ? "" : nz(m.getString(MediaMetadata.METADATA_KEY_TITLE));
@@ -181,6 +191,15 @@ final class NowPlaying {
             boolean playing = s != null && s.getState() == PlaybackState.STATE_PLAYING;
             if (playing || !app.title.isEmpty()) app.updated = SystemClock.elapsedRealtime();
             app.playing = playing;
+            app.duration = m == null ? -1 : m.getLong(MediaMetadata.METADATA_KEY_DURATION);
+            if (app.duration <= 0) app.duration = -1;
+            if (s != null && s.getPosition() >= 0) {
+                app.posBase = s.getPosition();
+                app.posTime = s.getLastPositionUpdateTime();
+                app.speed = playing ? s.getPlaybackSpeed() : 0f;
+            } else {
+                app.posBase = -1;
+            }
         }
         notifyListeners();
     }
@@ -210,6 +229,11 @@ final class NowPlaying {
     String label(Source s) {
         if (s == Source.BT) return "Bluetooth";
         if (s == Source.LOCAL) return "USB";
+        String p = app.pkg;
+        if (p.equals("com.google.android.apps.youtube.music")) return "YouTube Music";
+        if (p.equals("com.spotify.music")) return "Spotify";
+        if (p.equals("com.google.android.youtube")) return "YouTube";
+        if (p.equals("com.android.bluetooth")) return "Bluetooth";
         if (controller != null) {
             try {
                 PackageManager pm = ctx.getPackageManager();
@@ -217,6 +241,31 @@ final class NowPlaying {
             } catch (PackageManager.NameNotFoundException ignored) { }
         }
         return "Música";
+    }
+
+    /** Icon of the app behind the current source, null for BT/USB or a Bluetooth session. */
+    android.graphics.drawable.Drawable icon(Source s) {
+        if (s != Source.APP || app.pkg.isEmpty() || app.pkg.equals("com.android.bluetooth")) return null;
+        try {
+            return ctx.getPackageManager().getApplicationIcon(app.pkg);
+        } catch (PackageManager.NameNotFoundException e) {
+            return null;
+        }
+    }
+
+    /** Current position (ms) of the app session, extrapolated while playing; -1 if unknown. */
+    long position() {
+        if (current() != Source.APP || app.posBase < 0 || app.duration <= 0) return -1;
+        long p = app.posBase;
+        if (app.playing && app.speed > 0 && app.posTime > 0) {
+            p += (long) ((SystemClock.elapsedRealtime() - app.posTime) * app.speed);
+        }
+        return Math.max(0, Math.min(p, app.duration));
+    }
+
+    /** Duration (ms) of the app session's track; -1 if unknown. */
+    long duration() {
+        return current() == Source.APP ? app.duration : -1;
     }
 
     void playPause() {

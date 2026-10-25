@@ -38,7 +38,8 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     private GradientDrawable weatherBg;
     private ImageView car, carLights;
     private TextView carAlerts, acInfo;
-    private GradientDrawable acBg;
+    private GradientDrawable acBg, shiftBg;
+    private TextView shiftInfo;
     private boolean hasLightsImage;
     private boolean receiversOn; // onResume can bail out to recreate() before registering
     private TextView oilInfo;
@@ -91,6 +92,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         Ui.startService(this, GreeterService.class);
         Ui.startService(this, Odometer.class);
         SpeedVolume.sync(this);
+        DriverAssist.sync(this);
         ObdClient.get(this).start(); // no-op until an adapter is paired or simulation is on
     }
 
@@ -145,6 +147,18 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         carAlerts.setOnClickListener(v -> startActivity(new Intent(this,
                 ObdClient.alert() != null ? ObdActivity.class : MaintenanceActivity.class)));
         carBox.addView(carAlerts, new FrameLayout.LayoutParams(-2, -2, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL));
+
+        // Work shift (Uber, DiDi, InDrive): time and income so far; opens the shift screen.
+        shiftInfo = Ui.text(this, "", 13, Color.WHITE);
+        shiftInfo.setPadding(dp(14), dp(6), dp(14), dp(6));
+        shiftBg = new GradientDrawable();
+        shiftBg.setCornerRadius(dp(14));
+        shiftInfo.setBackground(shiftBg);
+        Ui.pressable(shiftInfo, 0.92f);
+        shiftInfo.setOnClickListener(v -> startActivity(new Intent(this, ShiftActivity.class)));
+        // Over the car (top-right): the clock card has no height left at 1024x600.
+        carBox.addView(shiftInfo, new FrameLayout.LayoutParams(-2, -2, Gravity.TOP | Gravity.END));
+
         carBox.setOnClickListener(v -> startActivity(new Intent(this, SetupActivity.class)));
         LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams(-1, 0, 1f);
         clp.setMargins(dp(30), dp(8), dp(30), dp(8));
@@ -296,6 +310,12 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         carAlerts.setVisibility(View.VISIBLE);
     }
 
+    private void updateShift() {
+        String chip = ShiftLog.chip(this);
+        shiftInfo.setText(chip.isEmpty() ? "▶ Turno" : chip);
+        shiftBg.setColor(chip.isEmpty() ? 0x26FFFFFF : 0xCC2E7D32);
+    }
+
     private void updateAc() {
         boolean on = AcLog.isOn(this);
         acInfo.setText(on ? "❄ " + AcLog.minutesOn(this) + " min" : "❄ A/C");
@@ -305,6 +325,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     private void updateOil() {
         updateCarAlerts();
         if (acInfo != null) updateAc();
+        if (shiftInfo != null) updateShift();
         // Scanner alerts (check engine, temperature, battery) and overdue maintenance outrank the oil countdown.
         String obd = ObdClient.alert();
         if (obd != null) {
@@ -385,6 +406,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         LinearLayout.LayoutParams alp = new LinearLayout.LayoutParams(-2, -2);
         alp.leftMargin = dp(6);
         pills.addView(acInfo, alp);
+
         updateAc();
 
         Ui.pressable(card, 0.97f);
@@ -476,7 +498,17 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         }
     };
 
-    // ---------- Music (any source) ----------
+    // ---------- Music (any source) + navigation strip ----------
+
+    private ImageView artBlur, navIcon;
+    private View progressBar, shade;
+    private float progressFrac;
+    private LinearLayout navStrip;
+    private TextView navInstr, navSub;
+    private android.graphics.Bitmap blurredFor;
+    private String sourceIconPkg = "";
+
+    private final NavInfo.Listener navListener = this::updateNav;
 
     private View buildMusicCard() {
         FrameLayout card = new FrameLayout(this);
@@ -487,48 +519,124 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         card.setBackground(bg);
         card.setClipToOutline(true);
 
-        art = new ImageView(this);
-        art.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        card.addView(art, new FrameLayout.LayoutParams(-1, -1));
-
-        View shade = new View(this);
+        // Blurred, darkened copy of the album art as background.
+        artBlur = new ImageView(this);
+        artBlur.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        artBlur.setVisibility(View.GONE);
+        card.addView(artBlur, new FrameLayout.LayoutParams(-1, -1));
+        shade = new View(this);
         shade.setBackground(new GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM,
-                new int[]{0x33000000, 0x00000000, 0xCC100A30}));
+                new int[]{0x66000000, 0x55000000, 0xDD100A30}));
         card.addView(shade, new FrameLayout.LayoutParams(-1, -1));
+
+        LinearLayout col = new LinearLayout(this);
+        col.setOrientation(LinearLayout.VERTICAL);
+        col.setPadding(dp(16), dp(12), dp(16), dp(14));
 
         songSource = Ui.text(this, "MÚSICA", 12, Color.WHITE);
         songSource.setLetterSpacing(0.1f);
-        songSource.setPadding(dp(12), dp(5), dp(12), dp(5));
+        songSource.setPadding(dp(10), dp(4), dp(12), dp(4));
+        songSource.setCompoundDrawablePadding(dp(6));
         GradientDrawable chip = new GradientDrawable();
         chip.setColor(0x40000000);
         chip.setCornerRadius(dp(14));
         songSource.setBackground(chip);
-        FrameLayout.LayoutParams slp = new FrameLayout.LayoutParams(-2, -2, Gravity.TOP | Gravity.START);
-        slp.setMargins(dp(14), dp(14), 0, 0);
-        card.addView(songSource, slp);
+        col.addView(songSource, new LinearLayout.LayoutParams(-2, -2));
 
-        LinearLayout bottom = new LinearLayout(this);
-        bottom.setOrientation(LinearLayout.VERTICAL);
-        bottom.setPadding(dp(16), 0, dp(16), dp(18));
-        songTitle = Ui.text(this, "", 21, Color.WHITE);
+        // Waze strip: only visible while NavInfo is active; replaces the source chip.
+        navStrip = new LinearLayout(this);
+        navStrip.setGravity(Gravity.CENTER_VERTICAL);
+        navStrip.setPadding(dp(10), dp(8), dp(12), dp(8));
+        GradientDrawable navBg = new GradientDrawable();
+        navBg.setColor(0xE6102040);
+        navBg.setCornerRadius(dp(14));
+        navBg.setStroke(dp(1), 0x6633CCFF);
+        navStrip.setBackground(navBg);
+        navStrip.setVisibility(View.GONE);
+        navIcon = new ImageView(this);
+        navIcon.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        navStrip.addView(navIcon, new LinearLayout.LayoutParams(dp(44), dp(44)));
+        LinearLayout navText = new LinearLayout(this);
+        navText.setOrientation(LinearLayout.VERTICAL);
+        navInstr = Ui.text(this, "", 18, Color.WHITE);
+        navInstr.setTypeface(Typeface.DEFAULT_BOLD);
+        navInstr.setSingleLine(true);
+        navInstr.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        navInstr.setGravity(Gravity.START);
+        navText.addView(navInstr);
+        navSub = Ui.text(this, "", 13, 0xCCFFFFFF);
+        navSub.setSingleLine(true);
+        navSub.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        navSub.setGravity(Gravity.START);
+        navText.addView(navSub);
+        LinearLayout.LayoutParams ntp = new LinearLayout.LayoutParams(0, -2, 1f);
+        ntp.leftMargin = dp(10);
+        navStrip.addView(navText, ntp);
+        Ui.pressable(navStrip, 0.97f);
+        navStrip.setOnClickListener(v -> openWaze());
+        col.addView(navStrip, new LinearLayout.LayoutParams(-1, -2));
+
+        // Square, rounded cover that takes whatever height is left.
+        FrameLayout artBox = new FrameLayout(this);
+        art = new ImageView(this) {
+            @Override
+            protected void onMeasure(int w, int h) {
+                int s = Math.min(MeasureSpec.getSize(w), MeasureSpec.getSize(h));
+                setMeasuredDimension(s, s);
+            }
+        };
+        art.setClipToOutline(true);
+        art.setOutlineProvider(new android.view.ViewOutlineProvider() {
+            @Override
+            public void getOutline(View v, android.graphics.Outline o) {
+                o.setRoundRect(0, 0, v.getWidth(), v.getHeight(), dp(12));
+            }
+        });
+        artBox.addView(art, new FrameLayout.LayoutParams(-1, -1, Gravity.CENTER));
+        LinearLayout.LayoutParams abp = new LinearLayout.LayoutParams(-1, 0, 1f);
+        abp.topMargin = dp(8);
+        abp.bottomMargin = dp(8);
+        col.addView(artBox, abp);
+
+        songTitle = Ui.text(this, "", 20, Color.WHITE);
         songTitle.setTypeface(Typeface.DEFAULT_BOLD);
-        bottom.addView(songTitle);
+        songTitle.setSingleLine(true);
+        songTitle.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        col.addView(songTitle);
         songArtist = Ui.text(this, "", 15, 0xCCFFFFFF);
-        songArtist.setPadding(0, dp(2), 0, dp(14));
-        bottom.addView(songArtist);
+        songArtist.setSingleLine(true);
+        songArtist.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        songArtist.setPadding(0, dp(2), 0, dp(8));
+        col.addView(songArtist);
+
+        progressBar = new View(this) {
+            private final android.graphics.Paint p = new android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG);
+            @Override
+            protected void onDraw(android.graphics.Canvas c) {
+                float r = getHeight() / 2f;
+                p.setColor(0x44FFFFFF);
+                c.drawRoundRect(0, 0, getWidth(), getHeight(), r, r, p);
+                p.setColor(Color.WHITE);
+                c.drawRoundRect(0, 0, getWidth() * progressFrac, getHeight(), r, r, p);
+            }
+        };
+        progressBar.setVisibility(View.GONE);
+        LinearLayout.LayoutParams pp = new LinearLayout.LayoutParams(-1, dp(4));
+        pp.bottomMargin = dp(8);
+        col.addView(progressBar, pp);
 
         LinearLayout controls = new LinearLayout(this);
         controls.setGravity(Gravity.CENTER);
-        controls.addView(Ui.iconButton(this, R.drawable.ic_prev, 50, false, () -> nowPlaying.skip(false)),
-                new LinearLayout.LayoutParams(dp(50), dp(50)));
+        controls.addView(Ui.iconButton(this, R.drawable.ic_prev, 54, false, () -> nowPlaying.skip(false)),
+                new LinearLayout.LayoutParams(dp(54), dp(54)));
         playBtn = Ui.iconButton(this, R.drawable.ic_play, 66, true, () -> nowPlaying.playPause());
         LinearLayout.LayoutParams plp = new LinearLayout.LayoutParams(dp(66), dp(66));
         plp.setMargins(dp(18), 0, dp(18), 0);
         controls.addView(playBtn, plp);
-        controls.addView(Ui.iconButton(this, R.drawable.ic_next, 50, false, () -> nowPlaying.skip(true)),
-                new LinearLayout.LayoutParams(dp(50), dp(50)));
-        bottom.addView(controls);
-        card.addView(bottom, new FrameLayout.LayoutParams(-1, -2, Gravity.BOTTOM));
+        controls.addView(Ui.iconButton(this, R.drawable.ic_next, 54, false, () -> nowPlaying.skip(true)),
+                new LinearLayout.LayoutParams(dp(54), dp(54)));
+        col.addView(controls);
+        card.addView(col, new FrameLayout.LayoutParams(-1, -1));
 
         Ui.pressable(card, 0.98f);
         card.setOnClickListener(v -> nowPlaying.open(this));
@@ -541,6 +649,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         NowPlaying.Track t = s == null ? null : nowPlaying.track(s);
         boolean empty = t == null || t.title.isEmpty();
         songSource.setText(s == null ? "MÚSICA" : nowPlaying.label(s).toUpperCase());
+        setSourceIcon(s);
         songTitle.setText(empty ? "Nada sonando" : t.title);
         songArtist.setText(empty ? "Toca para abrir la música" : t.artist);
         playBtn.setImageResource(t != null && t.playing ? R.drawable.ic_pause : R.drawable.ic_play);
@@ -549,15 +658,98 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
             art.setPadding(0, 0, 0, 0);
             art.setScaleType(ImageView.ScaleType.CENTER_CROP);
             art.clearColorFilter();
-            art.setAlpha(1f);
+            art.setBackground(null);
             art.setImageBitmap(t.art);
+            if (blurredFor != t.art) {
+                blurredFor = t.art;
+                artBlur.setImageBitmap(blur(t.art));
+            }
+            artBlur.setVisibility(View.VISIBLE);
         } else {
-            art.setPadding(dp(80), dp(56), dp(80), dp(170));
+            blurredFor = null;
+            artBlur.setVisibility(View.GONE);
+            GradientDrawable ph = new GradientDrawable();
+            ph.setColor(0x26FFFFFF);
+            ph.setCornerRadius(dp(12));
+            art.setBackground(ph);
+            art.setPadding(dp(28), dp(28), dp(28), dp(28));
             art.setScaleType(ImageView.ScaleType.FIT_CENTER);
             art.setImageResource(s == NowPlaying.Source.BT ? R.drawable.ic_bluetooth : R.drawable.ic_music);
-            art.setColorFilter(Color.WHITE);
-            art.setAlpha(0.25f);
+            art.setColorFilter(0x99FFFFFF);
         }
+        updateProgress();
+    }
+
+    /** Cheap blur: shrink to a few pixels in two steps; the ImageView scales it back up with filtering. */
+    private android.graphics.Bitmap blur(android.graphics.Bitmap src) {
+        int w = src.getWidth(), h = src.getHeight();
+        if (w <= 0 || h <= 0) return src;
+        android.graphics.Bitmap mid = android.graphics.Bitmap.createScaledBitmap(src, 96, Math.max(8, 96 * h / w), true);
+        return android.graphics.Bitmap.createScaledBitmap(mid, 24, Math.max(6, 24 * h / w), true);
+    }
+
+    private void setSourceIcon(NowPlaying.Source s) {
+        android.graphics.drawable.Drawable d = null;
+        String key = "";
+        if (s == NowPlaying.Source.BT) {
+            key = "bt";
+            if (!key.equals(sourceIconPkg)) {
+                d = getDrawable(R.drawable.ic_bluetooth).mutate();
+                d.setTint(Color.WHITE);
+            }
+        } else if (s != null) {
+            d = nowPlaying.icon(s);
+            key = d == null ? "" : nowPlaying.track(s).pkg;
+            if (key.equals(sourceIconPkg)) d = null;
+        }
+        if (key.equals(sourceIconPkg) && d == null) return; // unchanged
+        sourceIconPkg = key;
+        if (d != null) d.setBounds(0, 0, dp(16), dp(16));
+        songSource.setCompoundDrawables(d, null, null, null);
+    }
+
+    /** Position bar, refreshed once a second while the activity is visible. */
+    private void updateProgress() {
+        long dur = nowPlaying.duration(), pos = nowPlaying.position();
+        if (dur <= 0 || pos < 0) {
+            progressBar.setVisibility(View.GONE);
+            return;
+        }
+        progressFrac = (float) pos / dur;
+        progressBar.setVisibility(View.VISIBLE);
+        progressBar.invalidate();
+    }
+
+    private final Runnable progressTick = new Runnable() {
+        public void run() {
+            updateProgress();
+            handler.postDelayed(this, 1000);
+        }
+    };
+
+    // ---------- Waze strip ----------
+
+    private void updateNav() {
+        boolean on = NavInfo.active;
+        navStrip.setVisibility(on ? View.VISIBLE : View.GONE);
+        songSource.setVisibility(on ? View.GONE : View.VISIBLE);
+        if (!on) return;
+        navInstr.setText(NavInfo.instruction);
+        String sub = NavInfo.distance;
+        if (!NavInfo.eta.isEmpty()) sub += (sub.isEmpty() ? "" : "  ·  ") + NavInfo.eta;
+        navSub.setText(sub);
+        if (NavInfo.icon != null) {
+            navIcon.setImageBitmap(NavInfo.icon);
+        } else {
+            navIcon.setImageResource(R.drawable.ic_compass);
+            navIcon.setColorFilter(Color.WHITE);
+        }
+        if (NavInfo.icon != null) navIcon.clearColorFilter();
+    }
+
+    private void openWaze() {
+        Intent i = getPackageManager().getLaunchIntentForPackage(NavInfo.WAZE);
+        if (i == null || !safeStart(i)) toast("Waze no está instalado");
     }
 
     // ---------- Dock ----------
@@ -695,7 +887,10 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         handler.post(periodic);
         if (Profile.isNwd(this)) handler.post(radioPoll);
         nowPlaying.addListener(this);
+        NavInfo.addListener(navListener);
+        updateNav();
         onNowPlayingChanged();
+        handler.postDelayed(progressTick, 1000);
     }
 
     @Override
@@ -710,6 +905,8 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         handler.removeCallbacks(periodic);
         handler.removeCallbacks(radioPoll);
         nowPlaying.removeListener(this);
+        NavInfo.removeListener(navListener);
+        handler.removeCallbacks(progressTick);
     }
 
     @Override
