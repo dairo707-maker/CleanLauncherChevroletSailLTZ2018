@@ -40,6 +40,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     private TextView carAlerts, acInfo;
     private GradientDrawable acBg;
     private boolean hasLightsImage;
+    private boolean receiversOn; // onResume can bail out to recreate() before registering
     private TextView oilInfo;
     private boolean createdDark;
     private String createdProfile;
@@ -297,7 +298,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
 
     private void updateAc() {
         boolean on = AcLog.isOn(this);
-        acInfo.setText(on ? "❄ A/C encendido · " + AcLog.minutesOn(this) + " min" : "❄ A/C apagado");
+        acInfo.setText(on ? "❄ " + AcLog.minutesOn(this) + " min" : "❄ A/C");
         acBg.setColor(on ? 0xCC1E88E5 : 0x26FFFFFF);
     }
 
@@ -363,9 +364,12 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         Ui.pressable(oilInfo, 0.92f);
         oilInfo.setOnClickListener(v -> startActivity(new Intent(this,
                 ObdClient.alert() != null ? ObdActivity.class : MaintenanceActivity.class)));
+        LinearLayout pills = new LinearLayout(this);
+        pills.setGravity(Gravity.CENTER);
+        pills.addView(oilInfo);
         LinearLayout.LayoutParams olp = new LinearLayout.LayoutParams(-2, -2);
         olp.topMargin = dp(8);
-        card.addView(oilInfo, olp);
+        card.addView(pills, olp);
 
         // A/C: the climate panel is mechanical, so the driver marks it here (logged to aire.csv).
         acInfo = Ui.text(this, "", 13, Color.WHITE);
@@ -379,8 +383,8 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
             updateAc();
         });
         LinearLayout.LayoutParams alp = new LinearLayout.LayoutParams(-2, -2);
-        alp.topMargin = dp(6);
-        card.addView(acInfo, alp);
+        alp.leftMargin = dp(6);
+        pills.addView(acInfo, alp);
         updateAc();
 
         Ui.pressable(card, 0.97f);
@@ -447,6 +451,22 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         fmBand.setText(st.psName.isEmpty() ? "RADIO " + st.bandLabel() : st.bandLabel() + " · " + st.psName);
         fmFreq.setText(st.frequencyLabel());
         fmUnit.setText(st.isAm() ? "kHz" : "MHz");
+    }
+
+    /** XY AUTO: the factory FM app writes "FM   88.50" to a system setting on every tune. */
+    private final android.database.ContentObserver fmObserver = new android.database.ContentObserver(handler) {
+        @Override
+        public void onChange(boolean selfChange) {
+            updateXyRadio();
+        }
+    };
+
+    private void updateXyRadio() {
+        String[] f = XyAuto.fmStation(this);
+        if (f == null) return;
+        fmBand.setText("RADIO " + f[0]);
+        fmFreq.setText(f[1]);
+        fmUnit.setText("AM".equals(f[0]) ? "kHz" : "MHz");
     }
 
     private final Runnable radioPoll = new Runnable() {
@@ -659,6 +679,12 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         showWeather(Weather.cached(this));
         registerReceiver(illReceiver, new android.content.IntentFilter("com.nwd.ACTION_ILL_STATE_CHANGE"));
         registerReceiver(lampReceiver, new android.content.IntentFilter(XyAuto.LAMP));
+        receiversOn = true;
+        if (Profile.isXyAuto(this)) {
+            getContentResolver().registerContentObserver(
+                    android.provider.Settings.System.getUriFor(XyAuto.FM_TEXT), false, fmObserver);
+            updateXyRadio();
+        }
         boolean lights = hasLightsImage && carLightsOn();
         android.util.Log.d("CarLights", "onResume lights=" + lights);
         carLights.setAlpha(lights ? 1f : 0f);
@@ -675,8 +701,12 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     @Override
     protected void onPause() {
         super.onPause();
-        unregisterReceiver(illReceiver);
-        unregisterReceiver(lampReceiver);
+        if (receiversOn) {
+            unregisterReceiver(illReceiver);
+            unregisterReceiver(lampReceiver);
+            getContentResolver().unregisterContentObserver(fmObserver);
+            receiversOn = false;
+        }
         handler.removeCallbacks(periodic);
         handler.removeCallbacks(radioPoll);
         nowPlaying.removeListener(this);

@@ -20,6 +20,17 @@ final class XyAuto {
     static final String BLUETOOTH = "com.autochips.bluetooth/.MainBluetoothActivity";
     static final String SETTINGS = "com.xyauto.Settings/.MainActivity";
 
+    /** System setting the factory FM app updates, e.g. "FM   88.50". */
+    static final String FM_TEXT = "fmradio_text";
+
+    /** {band, frequency} from the factory FM app, or null if it has not run yet. */
+    static String[] fmStation(Context c) {
+        String s = android.provider.Settings.System.getString(c.getContentResolver(), FM_TEXT);
+        if (s == null) return null;
+        String[] p = s.trim().split("\\s+");
+        return p.length == 2 ? p : null;
+    }
+
     static final String ACC_ON = "xy.android.acc.on";
     static final String ACC_OFF = "xy.android.acc.off";
     /** Headlight switch; sent by system_server on every change. Its extras are not documented. */

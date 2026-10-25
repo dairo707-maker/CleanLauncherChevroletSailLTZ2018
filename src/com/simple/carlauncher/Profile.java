@@ -22,7 +22,7 @@ final class Profile {
     }
 
     static String name(Context c) {
-        return prefs(c).getString("name", "").trim();
+        return prefs(c).getString("name", "Dairo").trim();
     }
 
     static boolean voiceEnabled(Context c) {
