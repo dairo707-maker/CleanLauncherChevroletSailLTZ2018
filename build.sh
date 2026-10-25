@@ -87,7 +87,7 @@ RES=res
 if [ "$VARIANT" = share ]; then
     RES=build/res-share
     cp -r res "$RES"
-    rm -f "$RES"/drawable-nodpi/optra*.png "$RES"/raw/v_*.mp3
+    rm -f "$RES"/drawable-nodpi/optra*.png "$RES"/drawable-nodpi/sail*.png "$RES"/raw/v_*.mp3
     rmdir "$RES"/raw "$RES"/drawable-nodpi 2>/dev/null || true
     APK_NAME=CleanLauncher-compartir.apk
 fi

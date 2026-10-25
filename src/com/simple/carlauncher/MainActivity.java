@@ -209,6 +209,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         public void run() {
             if (Ui.isDark(MainActivity.this) != createdDark) recreate();
             updateGreeting();
+            if (!Profile.isNwd(MainActivity.this)) showCarLights(carLightsOn()); // no ILL broadcast: follow the clock
             fetchWeather(false);
             handler.postDelayed(this, 60 * 1000);
         }
@@ -226,10 +227,17 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         }
     };
 
-    /** The kernel keeps the light state as bit 2 of mcu_no_source_device_state. */
+    /**
+     * NWD: the kernel keeps the light state as bit 2 of mcu_no_source_device_state. Other radios
+     * (XY AUTO) until their ILL signal is known: lights on from dusk to dawn (Cartagena, ~18:00-06:00).
+     */
     private boolean carLightsOn() {
-        int state = android.provider.Settings.System.getInt(getContentResolver(), "mcu_no_source_device_state", 0);
-        return (state & 2) != 0;
+        if (Profile.isNwd(this)) {
+            int state = android.provider.Settings.System.getInt(getContentResolver(), "mcu_no_source_device_state", 0);
+            return (state & 2) != 0;
+        }
+        int h = java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY);
+        return h >= 18 || h < 6;
     }
 
     private void showCarLights(boolean on) {

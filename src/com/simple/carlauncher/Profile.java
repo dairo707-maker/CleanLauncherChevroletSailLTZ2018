@@ -55,8 +55,10 @@ final class Profile {
         return f.exists() ? BitmapFactory.decodeFile(f.getAbsolutePath()) : null;
     }
 
-    /** Car pictures bundled only in the owner's personal build (0 when absent). */
+    /** Car pictures bundled only in the owner's personal build (0 when absent): the Sail, else the old Optra. */
     static int bundledCar(Context c, boolean lights) {
+        int id = c.getResources().getIdentifier(lights ? "sail_lights" : "sail", "drawable", c.getPackageName());
+        if (id != 0) return id;
         return c.getResources().getIdentifier(lights ? "optra_lights" : "optra", "drawable", c.getPackageName());
     }
 
@@ -72,6 +74,22 @@ final class Profile {
                     && installed(pm, "com.nwd.setting.service");
         }
         return nwd;
+    }
+
+    private static Boolean xyauto;
+
+    /** XY AUTO head unit (the Sail's radio): factory packages carry "xyauto" in their name. */
+    static boolean isXyAuto(Context c) {
+        if (xyauto == null) {
+            xyauto = false;
+            for (android.content.pm.ApplicationInfo ai : c.getPackageManager().getInstalledApplications(0)) {
+                if (ai.packageName.contains("xyauto")) {
+                    xyauto = true;
+                    break;
+                }
+            }
+        }
+        return xyauto;
     }
 
     private static boolean installed(PackageManager pm, String pkg) {
