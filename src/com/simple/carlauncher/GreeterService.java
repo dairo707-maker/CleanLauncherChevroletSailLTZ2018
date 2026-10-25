@@ -145,6 +145,7 @@ public class GreeterService extends Service {
     }
 
     private void onCarOn() {
+        if (Profile.isXyAuto(this)) new Thread(() -> XyEq.apply(getApplicationContext())).start();
         handler.postDelayed(this::restoreAudio, 3000);
         schedule();
     }

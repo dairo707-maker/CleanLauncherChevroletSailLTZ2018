@@ -106,6 +106,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         Ui.startService(this, Odometer.class);
         SpeedVolume.sync(this);
         DriverAssist.sync(this);
+        if (Profile.isXyAuto(this)) new Thread(() -> XyEq.apply(getApplicationContext())).start();
         ObdClient.get(this).start(); // no-op until an adapter is paired or simulation is on
     }
 
@@ -842,13 +843,13 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
 
     private void openRadio() {
         if (Profile.isNwd(this)) startActivity(new Intent(this, RadioActivity.class));
-        else if (Profile.isXyAuto(this)) Ui.launch(this, XyAuto.RADIO);
+        else if (Profile.isXyAuto(this)) startActivity(new Intent(this, XyRadioActivity.class));
         else if (!launchByKeyword("radio", "fm", "tuner")) toast("No se encontró una app de radio");
     }
 
     private void openBluetooth() {
         if (Profile.isNwd(this)) startActivity(new Intent(this, BtActivity.class));
-        else if (Profile.isXyAuto(this)) Ui.launch(this, XyAuto.BLUETOOTH);
+        else if (Profile.isXyAuto(this)) startActivity(new Intent(this, XyBtActivity.class));
         else if (!launchByKeyword("bluetooth", "bt music", "btmusic", "phone link"))
             safeStart(new Intent(android.provider.Settings.ACTION_BLUETOOTH_SETTINGS));
     }
@@ -856,6 +857,10 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     private void openEqualizer() {
         if (Profile.isNwd(this)) {
             startActivity(new Intent(this, EqActivity.class));
+            return;
+        }
+        if (Profile.isXyAuto(this)) {
+            startActivity(new Intent(this, XyEqActivity.class));
             return;
         }
         Intent eq = new Intent(android.media.audiofx.AudioEffect.ACTION_DISPLAY_AUDIO_EFFECT_CONTROL_PANEL);
