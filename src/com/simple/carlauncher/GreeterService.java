@@ -196,18 +196,8 @@ public class GreeterService extends Service {
         else speakTts(Speech.text(this, clips));
     };
 
-    private android.speech.tts.TextToSpeech tts;
-
     private void speakTts(String text) {
-        if (tts != null) tts.shutdown();
-        tts = new android.speech.tts.TextToSpeech(this, status -> {
-            if (status != android.speech.tts.TextToSpeech.SUCCESS) return;
-            java.util.Locale es = new java.util.Locale("es", "US");
-            if (tts.isLanguageAvailable(es) < 0) es = new java.util.Locale("es");
-            tts.setLanguage(es);
-            Bundle params = new Bundle();
-            tts.speak(text, android.speech.tts.TextToSpeech.QUEUE_FLUSH, params, "greet");
-        });
+        Tts.say(this, text);
     }
 
     private List<String> buildMessage() {
@@ -302,7 +292,6 @@ public class GreeterService extends Service {
 
     @Override
     public void onDestroy() {
-        if (tts != null) tts.shutdown();
         super.onDestroy();
         unregisterReceiver(events);
         radio.unbind(this);
