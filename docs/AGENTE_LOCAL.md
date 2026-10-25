@@ -139,3 +139,14 @@ El humano hace las pruebas físicas. Tú anotas los resultados.
 3. Éxito: la salida termina con `LISTO. Revisa C:\RadioBackup\cambios_aplicados.txt`.
 4. Después: `tools\windows\conectar.bat` (T1) para confirmar que el radio responde.
 5. Reporta: las líneas de `cambios_aplicados.txt` generadas por la reversión. Si el radio no responde, **no** hagas nada más: pide al humano llevar el radio con un técnico.
+
+### T8. Optimizar (opcional, solo si el humano lo pide)
+
+Úsalo solo si el humano lo pide. No hace falta para el funcionamiento del launcher.
+
+1. Comando: `tools\windows\optimizar.bat`
+2. El script muestra el plan y pregunta `[S,N]?`. **Pide al humano** que responda. Tú no respondes por él.
+3. Éxito: la salida termina con `LISTO. Optimizacion aplicada.` y luego pide reiniciar el radio.
+4. Después: pide al humano reiniciar el radio (apagar 30 s y encender). Luego ejecuta T6, fila 1 y fila 2, para confirmar que el launcher sigue funcionando.
+5. Para revertir: `tools\windows\revertir_optimizacion.bat` (también pide confirmación). Éxito: `LISTO. Revertida la optimizacion.`
+6. Reporta: las líneas de `cambios_aplicados.txt` generadas por la optimización. Si una prueba de T6 falla después de optimizar, **no** hagas nada más: revierte con el paso 5 y avisa al humano.

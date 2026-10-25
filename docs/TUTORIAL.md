@@ -197,3 +197,13 @@ Pasos:
    ```
 
 4. `DIVIDE` evita errores cuando no hay datos. Si el número sale vacío, revisa que los nombres de columna coincidan.
+
+## 12. Optimización (opcional)
+
+Solo si el radio va lento (2 GB de RAM, `/system` al 93%). No es necesaria para usar Clean Launcher.
+
+1. Ejecuta `tools\windows\optimizar.bat`. Muestra el plan y pide confirmación (`S` o `N`).
+2. Reinicia el radio (apagar 30 s y encender).
+3. Para deshacer: `tools\windows\revertir_optimizacion.bat`, con confirmación, y reinicia el radio.
+
+Qué hace: deshabilita 5 apps de terceros no usadas (solo las instaladas), baja las animaciones a 0.5, deja el Wi-Fi activo y limpia caches. Los valores previos quedan en `C:\RadioBackup\optimizacion_*.txt`. Deshabilitar no libera espacio en `/system`.
