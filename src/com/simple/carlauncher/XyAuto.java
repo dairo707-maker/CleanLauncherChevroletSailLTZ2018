@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 
 /**
@@ -34,16 +35,42 @@ final class XyAuto {
     // ---------- Factory FM app (com.android.fmradio), from its disassembled receivers ----------
 
     private static final String FM_PKG = "com.android.fmradio";
+    private static final String FM_ACTIVITY = "com.android.fmradio/.FmMainActivity";
+    private static final android.os.Handler main = new android.os.Handler(android.os.Looper.getMainLooper());
 
-    /** Sends one of the FM app's control actions; it needs the radio running (else open it first). */
-    private static boolean fmAction(Context c, String action) {
-        if (fmStation(c) == null) {
-            Ui.launch(c, RADIO); // turns the tuner on
-            return false;
-        }
+    /*
+     * Disassembly of the factory FM app: next/previous/seek are handled by a receiver that lives
+     * inside FmMainActivity (registered in onCreate, removed in onDestroy), so they only work while
+     * that screen exists, even in the background. "xy.setfm.freq" also goes to a manifest receiver
+     * that always brings FmMainActivity to the front. So: keep FmMainActivity alive behind ours,
+     * and after anything that surfaces it, bring our screen back.
+     */
+
+    /** Sends a control action; if the station did not change, the FM screen was gone: revive and retry. */
+    private static void fmAction(Context c, String action) {
+        String before = Settings.System.getString(c.getContentResolver(), FM_TEXT);
         c.sendBroadcast(new Intent(action).setPackage(FM_PKG));
         Log.d(TAG, action);
-        return true;
+        main.postDelayed(() -> {
+            String after = Settings.System.getString(c.getContentResolver(), FM_TEXT);
+            if (after != null && !after.equals(before)) return;
+            Log.d(TAG, "no change after " + action + ": reviving FM screen");
+            wakeFm(c);
+            main.postDelayed(() -> c.sendBroadcast(new Intent(action).setPackage(FM_PKG)), 2500);
+        }, 1800);
+    }
+
+    /** Starts the factory FM screen (tuner on, its receiver registered) and returns to the caller's screen. */
+    static void wakeFm(Context c) {
+        Ui.launch(c, FM_ACTIVITY);
+        bringBack(c, 1200);
+    }
+
+    private static void bringBack(Context c, long delayMs) {
+        if (!(c instanceof android.app.Activity)) return;
+        android.app.Activity a = (android.app.Activity) c;
+        main.postDelayed(() -> a.startActivity(new Intent(a, a.getClass())
+                .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)), delayMs);
     }
 
     /** Next/previous saved station (the factory list). */
@@ -58,12 +85,13 @@ final class XyAuto {
 
     /**
      * Tunes to freq10kHz (9450 = 94.50 MHz). The FM app takes extra "fm" as digits in 100 kHz
-     * ("945"), range 875-1080; if it is not running, its manifest receiver opens it on that station.
+     * ("945"), range 875-1080. Its manifest receiver surfaces the FM screen, so come back after.
      */
     static boolean tune(Context c, int freq10kHz) {
         Intent i = new Intent("xy.setfm.freq").setPackage(FM_PKG);
         i.putExtra("fm", String.valueOf(freq10kHz / 10));
         c.sendBroadcast(i);
+        bringBack(c, 900);
         Log.d(TAG, "tune " + freq10kHz);
         return true;
     }
