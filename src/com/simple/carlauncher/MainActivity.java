@@ -37,7 +37,8 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     private ImageView weatherIcon;
     private GradientDrawable weatherBg;
     private ImageView car, carLights;
-    private TextView carAlerts;
+    private TextView carAlerts, acInfo;
+    private GradientDrawable acBg;
     private boolean hasLightsImage;
     private TextView oilInfo;
     private boolean createdDark;
@@ -239,6 +240,14 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         }
     };
 
+    /** XY AUTO headlights: GreeterService stores the state first, then the car picture follows it. */
+    private final android.content.BroadcastReceiver lampReceiver = new android.content.BroadcastReceiver() {
+        @Override
+        public void onReceive(android.content.Context c, Intent i) {
+            handler.postDelayed(() -> showCarLights(carLightsOn()), 600);
+        }
+    };
+
     /**
      * NWD: the kernel keeps the light state as bit 2 of mcu_no_source_device_state. Other radios
      * (XY AUTO) until their ILL signal is known: lights on from dusk to dawn (Cartagena, ~18:00-06:00).
@@ -248,6 +257,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
             int state = android.provider.Settings.System.getInt(getContentResolver(), "mcu_no_source_device_state", 0);
             return (state & 2) != 0;
         }
+        if (XyAuto.lampKnown(this)) return XyAuto.lampOn(this);
         int h = java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY);
         return h >= 18 || h < 6;
     }
@@ -285,8 +295,15 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         carAlerts.setVisibility(View.VISIBLE);
     }
 
+    private void updateAc() {
+        boolean on = AcLog.isOn(this);
+        acInfo.setText(on ? "❄ A/C encendido · " + AcLog.minutesOn(this) + " min" : "❄ A/C apagado");
+        acBg.setColor(on ? 0xCC1E88E5 : 0x26FFFFFF);
+    }
+
     private void updateOil() {
         updateCarAlerts();
+        if (acInfo != null) updateAc();
         // Scanner alerts (check engine, temperature, battery) and overdue maintenance outrank the oil countdown.
         String obd = ObdClient.alert();
         if (obd != null) {
@@ -349,6 +366,22 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         LinearLayout.LayoutParams olp = new LinearLayout.LayoutParams(-2, -2);
         olp.topMargin = dp(8);
         card.addView(oilInfo, olp);
+
+        // A/C: the climate panel is mechanical, so the driver marks it here (logged to aire.csv).
+        acInfo = Ui.text(this, "", 13, Color.WHITE);
+        acInfo.setPadding(dp(14), dp(6), dp(14), dp(6));
+        acBg = new GradientDrawable();
+        acBg.setCornerRadius(dp(14));
+        acInfo.setBackground(acBg);
+        Ui.pressable(acInfo, 0.92f);
+        acInfo.setOnClickListener(v -> {
+            AcLog.toggle(this);
+            updateAc();
+        });
+        LinearLayout.LayoutParams alp = new LinearLayout.LayoutParams(-2, -2);
+        alp.topMargin = dp(6);
+        card.addView(acInfo, alp);
+        updateAc();
 
         Ui.pressable(card, 0.97f);
         card.setOnClickListener(v -> openSettings());
@@ -534,11 +567,13 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
 
     private void openRadio() {
         if (Profile.isNwd(this)) startActivity(new Intent(this, RadioActivity.class));
+        else if (Profile.isXyAuto(this)) Ui.launch(this, XyAuto.RADIO);
         else if (!launchByKeyword("radio", "fm", "tuner")) toast("No se encontró una app de radio");
     }
 
     private void openBluetooth() {
         if (Profile.isNwd(this)) startActivity(new Intent(this, BtActivity.class));
+        else if (Profile.isXyAuto(this)) Ui.launch(this, XyAuto.BLUETOOTH);
         else if (!launchByKeyword("bluetooth", "bt music", "btmusic", "phone link"))
             safeStart(new Intent(android.provider.Settings.ACTION_BLUETOOTH_SETTINGS));
     }
@@ -555,6 +590,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
 
     private void openSettings() {
         if (Profile.isNwd(this)) Ui.launch(this, SETTINGS);
+        else if (Profile.isXyAuto(this)) Ui.launch(this, XyAuto.SETTINGS);
         else safeStart(new Intent(android.provider.Settings.ACTION_SETTINGS));
     }
 
@@ -622,6 +658,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         updateOil();
         showWeather(Weather.cached(this));
         registerReceiver(illReceiver, new android.content.IntentFilter("com.nwd.ACTION_ILL_STATE_CHANGE"));
+        registerReceiver(lampReceiver, new android.content.IntentFilter(XyAuto.LAMP));
         boolean lights = hasLightsImage && carLightsOn();
         android.util.Log.d("CarLights", "onResume lights=" + lights);
         carLights.setAlpha(lights ? 1f : 0f);
@@ -639,6 +676,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     protected void onPause() {
         super.onPause();
         unregisterReceiver(illReceiver);
+        unregisterReceiver(lampReceiver);
         handler.removeCallbacks(periodic);
         handler.removeCallbacks(radioPoll);
         nowPlaying.removeListener(this);

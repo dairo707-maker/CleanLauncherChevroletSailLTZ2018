@@ -56,6 +56,9 @@ public class GreeterService extends Service {
         f.addAction("com.bt.ACTION_BT_MUSIC_PLAY");
         f.addAction("com.bt.ACTION_BT_MUSIC_PAUSE");
         f.addAction("com.simple.carlauncher.TEST_CAR_ON"); // adb test hook
+        f.addAction(XyAuto.ACC_ON);
+        f.addAction(XyAuto.ACC_OFF);
+        f.addAction(XyAuto.LAMP); // headlights, sent by system_server; state kept for the home screen
         registerReceiver(events, f);
         // Right after boot, bring the last source back and greet. A plain restart of this app
         // (update, crash) must not touch the audio.
@@ -75,6 +78,18 @@ public class GreeterService extends Service {
         @Override
         public void onReceive(Context c, Intent i) {
             String a = i.getAction();
+            if (XyAuto.LAMP.equals(a)) {
+                XyAuto.onLamp(c, i);
+                return;
+            }
+            if (XyAuto.ACC_ON.equals(a)) {
+                onCarOn();
+                return;
+            }
+            if (XyAuto.ACC_OFF.equals(a)) {
+                onCarOff();
+                return;
+            }
             if ("com.nwd.action.ACTION_CHANGE_SOURCE".equals(a)) {
                 handler.postDelayed(() -> EqAuto.apply(GreeterService.this, sound), 1500);
                 return;
@@ -119,6 +134,7 @@ public class GreeterService extends Service {
      * "no source", so the radio/BT would stay silent. Remember the real source ourselves.
      */
     private void onCarOff() {
+        AcLog.stop(this); // A/C goes off with the engine
         int src = android.provider.Settings.System.getInt(getContentResolver(), "mcu_current_source", 0);
         NowPlaying np = NowPlaying.get(this);
         boolean btPlaying = np.track(NowPlaying.Source.BT).playing;
