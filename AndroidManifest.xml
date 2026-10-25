@@ -113,6 +113,11 @@
 
         <service android:name=".DriverAssist" />
 
+        <activity
+            android:name=".SpeedActivity"
+            android:label="Velocímetro"
+            android:configChanges="orientation|screenSize|keyboardHidden|locale" />
+
         <receiver android:name=".GreeterService$BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

@@ -40,7 +40,19 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     private TextView carAlerts, acInfo;
     private ImageView shuffleBtn, repeatBtn;
     private GradientDrawable acBg, shiftBg;
-    private TextView shiftInfo;
+    private TextView shiftInfo, speedNum;
+    private View speedChip;
+    // 1 s speed refresh, runs only while resumed
+    private final Runnable speedTick = new Runnable() {
+        @Override public void run() {
+            if (speedNum != null && speedChip.getVisibility() == View.VISIBLE) {
+                int v = DriverAssist.bestKmh();
+                speedNum.setText(v < 0 ? "--" : String.valueOf(v));
+                speedNum.setTextColor(v > DriverAssist.limit(MainActivity.this) ? 0xFFFF5252 : Color.WHITE);
+            }
+            handler.postDelayed(this, 1000);
+        }
+    };
     private boolean hasLightsImage;
     private boolean receiversOn; // onResume can bail out to recreate() before registering
     private TextView oilInfo;
@@ -159,6 +171,27 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         shiftInfo.setOnClickListener(v -> startActivity(new Intent(this, ShiftActivity.class)));
         // Over the car (top-right): the clock card has no height left at 1024x600.
         carBox.addView(shiftInfo, new FrameLayout.LayoutParams(-2, -2, Gravity.TOP | Gravity.END));
+
+        // Speedometer chip (top-left): OBD/GPS speed, red above the limit; opens the full speedometer.
+        LinearLayout speedChip = new LinearLayout(this);
+        speedChip.setOrientation(LinearLayout.HORIZONTAL);
+        speedChip.setGravity(Gravity.BOTTOM);
+        speedChip.setPadding(dp(12), dp(4), dp(12), dp(4));
+        GradientDrawable speedBg = new GradientDrawable();
+        speedBg.setCornerRadius(dp(16));
+        speedBg.setColor(0x80000000);
+        speedChip.setBackground(speedBg);
+        speedNum = Ui.text(this, "--", 34, Color.WHITE);
+        speedNum.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
+        TextView speedUnit = Ui.text(this, " km/h", 12, 0xCCFFFFFF);
+        speedUnit.setPadding(0, 0, 0, dp(6));
+        speedChip.addView(speedNum);
+        speedChip.addView(speedUnit);
+        Ui.pressable(speedChip, 0.92f);
+        speedChip.setOnClickListener(v -> startActivity(new Intent(this, SpeedActivity.class)));
+        carBox.addView(speedChip, new FrameLayout.LayoutParams(-2, -2, Gravity.TOP | Gravity.START));
+        speedChip.setVisibility(DriverAssist.speedometerEnabled(this) ? View.VISIBLE : View.GONE);
+        this.speedChip = speedChip;
 
         carBox.setOnClickListener(v -> startActivity(new Intent(this, SetupActivity.class)));
         LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams(-1, 0, 1f);
@@ -915,6 +948,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
             requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         }
         handler.post(periodic);
+        handler.post(speedTick);
         if (Profile.isNwd(this)) handler.post(radioPoll);
         nowPlaying.addListener(this);
         NavInfo.addListener(navListener);
@@ -933,6 +967,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
             receiversOn = false;
         }
         handler.removeCallbacks(periodic);
+        handler.removeCallbacks(speedTick);
         handler.removeCallbacks(radioPoll);
         nowPlaying.removeListener(this);
         NavInfo.removeListener(navListener);

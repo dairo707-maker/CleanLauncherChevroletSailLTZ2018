@@ -164,7 +164,26 @@ public class DriverAssist extends Service implements LocationListener {
         return SystemClock.elapsedRealtime() - lastFixAt > 5000 ? 0 : Math.round(kmh);
     }
 
+    /** Speed for display: OBD when fresh, else GPS; -1 when neither is available. */
+    static int bestKmh() {
+        if (ObdClient.isFresh()) {
+            ObdClient.Snapshot s = ObdClient.lastSnapshot();
+            if (s != null && !Float.isNaN(s.speed) && s.speed >= 0) return Math.round(s.speed);
+        }
+        return SystemClock.elapsedRealtime() - lastFixAt > 5000 ? -1 : Math.round(kmh);
+    }
+
+    /** True when bestKmh() comes from the OBD adapter. */
+    static boolean speedFromObd() {
+        ObdClient.Snapshot s = ObdClient.lastSnapshot();
+        return ObdClient.isFresh() && s != null && !Float.isNaN(s.speed) && s.speed >= 0;
+    }
+
     // ---------- Settings ----------
+
+    static boolean speedometerEnabled(Context c) {
+        return Profile.prefs(c).getBoolean("speedometer", true);
+    }
 
     static boolean fatigueEnabled(Context c) {
         return Profile.prefs(c).getBoolean("fatigue_alert", true);
@@ -182,7 +201,7 @@ public class DriverAssist extends Service implements LocationListener {
     static void sync(Context c) {
         try {
             Intent i = new Intent(c, DriverAssist.class);
-            if (fatigueEnabled(c) || speedEnabled(c)) Ui.startService(c, DriverAssist.class);
+            if (fatigueEnabled(c) || speedEnabled(c) || speedometerEnabled(c)) Ui.startService(c, DriverAssist.class);
             else c.stopService(i);
         } catch (Exception e) {
             Log.w(TAG, "sync", e);
