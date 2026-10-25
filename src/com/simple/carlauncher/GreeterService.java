@@ -157,6 +157,7 @@ public class GreeterService extends Service {
     // ---------- Greeting ----------
 
     private void schedule() {
+        Maintenance.notifyIfDue(this); // at most once per day
         long last = prefs().getLong("last_greet", 0);
         if (System.currentTimeMillis() - last < MIN_INTERVAL_MS) return;
         handler.removeCallbacks(greet);
@@ -210,9 +211,12 @@ public class GreeterService extends Service {
             else if (left <= Odometer.WARN_KM) clips.add("v_oil_soon");
         }
         clips.add("v_seatbelt");
-        if (day == Calendar.WEDNESDAY && Profile.picoPlacaEnabled(this)) {
-            clips.add("v_picoplaca"); // Quito: 6:00-9:30, 16:00-20:00
+        if (Profile.picoPlacaEnabled(this) && PicoPlaca.appliesToday(this, now)) {
+            clips.add("v_picoplaca"); // Cartagena: 7-9 and 18-20, by plate digit
         }
+        // Other overdue maintenance (oil has its own clips). Only the TTS path can say the names.
+        List<String> overdue = Maintenance.overdueNames(this, false);
+        if (!overdue.isEmpty()) clips.add("v_maint:" + android.text.TextUtils.join(",", overdue));
         clips.add("v_careful");
         return clips;
     }

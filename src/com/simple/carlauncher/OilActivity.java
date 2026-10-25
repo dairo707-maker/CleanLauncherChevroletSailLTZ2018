@@ -100,6 +100,7 @@ public class OilActivity extends Activity {
 
         card.addView(action("Hice el cambio de aceite hoy", 0xFF2ECC71, () -> {
             Odometer.setLastChangeKm(this, Odometer.currentKm(this));
+            Maintenance.logDone(this, "aceite");
             Toast.makeText(this, "¡Listo! Registrado el cambio de aceite", Toast.LENGTH_SHORT).show();
             refresh();
         }));

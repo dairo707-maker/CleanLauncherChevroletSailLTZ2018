@@ -37,6 +37,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     private ImageView weatherIcon;
     private GradientDrawable weatherBg;
     private ImageView car, carLights;
+    private TextView carAlerts;
     private boolean hasLightsImage;
     private TextView oilInfo;
     private boolean createdDark;
@@ -87,6 +88,8 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         if (Profile.isNwd(this)) startService(new Intent(this, VolumeOverlay.class));
         startService(new Intent(this, GreeterService.class));
         startService(new Intent(this, Odometer.class));
+        SpeedVolume.sync(this);
+        ObdClient.get(this).start(); // no-op until an adapter is paired or simulation is on
     }
 
     // ---------- Greeting + weather ----------
@@ -133,6 +136,13 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         }
         carBox.addView(car, new FrameLayout.LayoutParams(-1, -1));
         carBox.addView(carLights, new FrameLayout.LayoutParams(-1, -1));
+        // Warnings drawn over the car: engine (scanner/maintenance), tires and brakes.
+        carAlerts = Ui.text(this, "", 13, Color.WHITE);
+        carAlerts.setPadding(dp(12), dp(4), dp(12), dp(4));
+        carAlerts.setVisibility(View.GONE);
+        carAlerts.setOnClickListener(v -> startActivity(new Intent(this,
+                ObdClient.alert() != null ? ObdActivity.class : MaintenanceActivity.class)));
+        carBox.addView(carAlerts, new FrameLayout.LayoutParams(-2, -2, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL));
         carBox.setOnClickListener(v -> startActivity(new Intent(this, SetupActivity.class)));
         LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams(-1, 0, 1f);
         clp.setMargins(dp(30), dp(8), dp(30), dp(8));
@@ -180,8 +190,9 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
 
     private void updateGreeting() {
         int h = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-        greeting.setText((h < 12 ? "Buenos días" : h < 19 ? "Buenas tardes" : "Buenas noches")
-                + " · Bienvenido");
+        String day = h < 12 ? "Buenos días" : h < 19 ? "Buenas tardes" : "Buenas noches";
+        greeting.setText(Profile.picoPlacaEnabled(this)
+                ? day + " · " + PicoPlaca.status(this, Calendar.getInstance()) : day + " · Bienvenido");
     }
 
     private void showWeather(Weather w) {
@@ -210,6 +221,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
             if (Ui.isDark(MainActivity.this) != createdDark) recreate();
             updateGreeting();
             if (!Profile.isNwd(MainActivity.this)) showCarLights(carLightsOn()); // no ILL broadcast: follow the clock
+            updateOil(); // maintenance and scanner alerts change while driving
             fetchWeather(false);
             handler.postDelayed(this, 60 * 1000);
         }
@@ -247,7 +259,47 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         car.animate().alpha(on ? 0f : 1f).setDuration(600).start();
     }
 
+    /** Chip over the car listing the zones that need attention, red when anything is overdue. */
+    private void updateCarAlerts() {
+        StringBuilder sb = new StringBuilder();
+        int worst = 0;
+        String obd = ObdClient.alert();
+        int engine = Math.max(obd != null ? 2 : 0, Maintenance.worstFor(this, Maintenance.ENGINE));
+        int[] levels = {engine, Maintenance.worstFor(this, Maintenance.TIRES), Maintenance.worstFor(this, Maintenance.BRAKES)};
+        String[] names = {"Motor", "Llantas", "Frenos"};
+        for (int i = 0; i < levels.length; i++) {
+            if (levels[i] == 0) continue;
+            if (sb.length() > 0) sb.append("  ·  ");
+            sb.append(names[i]);
+            worst = Math.max(worst, levels[i]);
+        }
+        if (sb.length() == 0) {
+            carAlerts.setVisibility(View.GONE);
+            return;
+        }
+        carAlerts.setText("⚠ " + sb);
+        GradientDrawable bg = new GradientDrawable();
+        bg.setCornerRadius(dp(12));
+        bg.setColor(worst == 2 ? 0xDDE53935 : 0xDDFF9800);
+        carAlerts.setBackground(bg);
+        carAlerts.setVisibility(View.VISIBLE);
+    }
+
     private void updateOil() {
+        updateCarAlerts();
+        // Scanner alerts (check engine, temperature, battery) and overdue maintenance outrank the oil countdown.
+        String obd = ObdClient.alert();
+        if (obd != null) {
+            oilInfo.setText(obd);
+            oilBg.setColor(0xCCE53935);
+            return;
+        }
+        int worst = Maintenance.worst(this);
+        if (worst > 0 && (!Odometer.isConfigured(this) || Odometer.remainingKm(this) > Odometer.WARN_KM)) {
+            oilInfo.setText(Maintenance.summary(this));
+            oilBg.setColor(worst == 2 ? 0xCCE53935 : 0xCCFF9800);
+            return;
+        }
         if (!Odometer.isConfigured(this)) {
             oilInfo.setText("Aceite: configurar");
             oilBg.setColor(0x26FFFFFF);
@@ -292,7 +344,8 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         oilBg.setCornerRadius(dp(14));
         oilInfo.setBackground(oilBg);
         Ui.pressable(oilInfo, 0.92f);
-        oilInfo.setOnClickListener(v -> startActivity(new Intent(this, OilActivity.class)));
+        oilInfo.setOnClickListener(v -> startActivity(new Intent(this,
+                ObdClient.alert() != null ? ObdActivity.class : MaintenanceActivity.class)));
         LinearLayout.LayoutParams olp = new LinearLayout.LayoutParams(-2, -2);
         olp.topMargin = dp(8);
         card.addView(oilInfo, olp);

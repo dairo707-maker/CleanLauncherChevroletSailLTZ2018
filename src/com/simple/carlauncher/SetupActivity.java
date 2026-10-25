@@ -31,9 +31,9 @@ public class SetupActivity extends Activity {
 
     private static final int PICK_PHOTO = 1;
 
-    private EditText name;
+    private EditText name, plate, rotation, validTo;
     private ImageView carPreview;
-    private Switch voice, picoPlaca;
+    private Switch voice, picoPlaca, speedVol;
     private TextView homeBtn, locationBtn, notifBtn, overlayBtn;
 
     @Override
@@ -109,7 +109,36 @@ public class SetupActivity extends Activity {
         card.addView(tip);
 
         voice = toggle(card, "Saludo por voz al encender el carro", Profile.voiceEnabled(this));
-        picoPlaca = toggle(card, "Recordar pico y placa los miércoles (Quito)", Profile.picoPlacaEnabled(this));
+        picoPlaca = toggle(card, "Recordar pico y placa (Cartagena)", Profile.picoPlacaEnabled(this));
+        speedVol = toggle(card, "Subir el volumen según la velocidad (GPS)", SpeedVolume.enabled(this));
+        card.addView(label("Último dígito de la placa"));
+        plate = new EditText(this);
+        plate.setInputType(InputType.TYPE_CLASS_NUMBER);
+        plate.setFilters(new android.text.InputFilter[]{new android.text.InputFilter.LengthFilter(1)});
+        int digit = PicoPlaca.plateDigit(this);
+        plate.setText(digit >= 0 ? String.valueOf(digit) : "");
+        plate.setHint("Ej.: 7");
+        plate.setTextColor(Color.WHITE);
+        plate.setHintTextColor(0x66FFFFFF);
+        plate.setTextSize(20);
+        card.addView(plate);
+
+        card.addView(label("Rotación (lunes a viernes)"));
+        rotation = new EditText(this);
+        rotation.setText(PicoPlaca.rotation(this));
+        rotation.setTextColor(Color.WHITE);
+        rotation.setTextSize(18);
+        card.addView(rotation);
+        card.addView(label("Válida hasta (aaaa-mm-dd)"));
+        validTo = new EditText(this);
+        validTo.setText(PicoPlaca.validTo(this));
+        validTo.setTextColor(Color.WHITE);
+        validTo.setTextSize(18);
+        card.addView(validTo);
+        TextView ppTip = Ui.text(this, "Formato: 1,2;3,4;5,6;7,8;9,0 (dígitos de lunes a viernes).", 12, 0x99FFFFFF);
+        ppTip.setSingleLine(false);
+        ppTip.setGravity(Gravity.START);
+        card.addView(ppTip);
         showPhoto();
         return card;
     }
@@ -133,6 +162,14 @@ public class SetupActivity extends Activity {
                     Settings.ACTION_MANAGE_OVERLAY_PERMISSION, android.net.Uri.parse("package:" + getPackageName()))));
             card.addView(spaced(overlayBtn));
         }
+
+        card.addView(label("Herramientas del carro"));
+        card.addView(spaced(button("Mantenimiento, combustible y costos", 0x334F7BFF,
+                () -> startActivity(new Intent(this, MaintenanceActivity.class)))));
+        card.addView(spaced(button("Escáner OBD2 (ELM327)", 0x334F7BFF,
+                () -> startActivity(new Intent(this, ObdActivity.class)))));
+        card.addView(spaced(button("Diagnóstico del radio", 0x334F7BFF,
+                () -> startActivity(new Intent(this, DiagnosticsActivity.class)))));
 
         TextView info = Ui.text(this, Profile.isNwd(this)
                 ? "Radio NWD detectada: radio FM, Bluetooth, ecualizador y aviso de volumen activados."
@@ -257,12 +294,26 @@ public class SetupActivity extends Activity {
     }
 
     private void finishSetup() {
+        String rot = rotation.getText().toString().trim();
+        String to = validTo.getText().toString().trim();
+        if (PicoPlaca.parseRotation(rot) == null || PicoPlaca.parseIso(to) == null) {
+            Toast.makeText(this, "Revisa la rotación y la fecha del pico y placa", Toast.LENGTH_LONG).show();
+            return;
+        }
+        String d = plate.getText().toString().trim();
+        PicoPlaca.setPlateDigit(this, d.isEmpty() ? -1 : Integer.parseInt(d));
+        // Keep the stored start date unless the new range would exclude today.
+        String from = PicoPlaca.validFrom(this);
+        if (from.compareTo(to) > 0) from = PicoPlaca.DEFAULT_FROM;
+        PicoPlaca.setRotation(this, rot, from, to);
         Profile.prefs(this).edit()
                 .putString("name", name.getText().toString().trim())
                 .putBoolean("voice", voice.isChecked())
                 .putBoolean("picoplaca", picoPlaca.isChecked())
+                .putBoolean("speed_volume", speedVol.isChecked())
                 .putBoolean("setup_done", true)
                 .apply();
+        SpeedVolume.sync(this);
         startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         finish();
     }

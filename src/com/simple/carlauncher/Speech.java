@@ -31,11 +31,17 @@ final class Speech {
             case "v_greet_monday": return "¡Hola" + who + "! Arrancó la semana: hoy es lunes.";
             case "v_maintenance": return "Revisa el aceite, el agua del radiador y el líquido de frenos.";
             case "v_seatbelt": return "Ponte el cinturón de seguridad.";
-            case "v_picoplaca": return "Hoy es miércoles: recuerda el pico y placa.";
+            case "v_picoplaca": return "Hoy tienes pico y placa: recuerda el horario restringido.";
             case "v_careful": return "Maneja con cuidado. ¡Buen viaje!";
             case "v_oil_soon": return "Se acerca el cambio de aceite: quedan menos de quinientos kilómetros.";
             case "v_oil_due": return "Ya toca el cambio de aceite.";
             default: break;
+        }
+        if (clip.startsWith("v_maint:")) {
+            String[] names = clip.substring(8).split(",");
+            StringBuilder sb = new StringBuilder("Tienes mantenimiento vencido: ");
+            for (int i = 0; i < names.length && i < 3; i++) sb.append(i > 0 ? ", " : "").append(names[i].toLowerCase());
+            return sb.append(names.length > 3 ? " y otros." : ".").toString();
         }
         if (clip.startsWith("v_cond_")) return condition(clip.substring(7));
         if (clip.startsWith("v_temp_")) {

@@ -106,7 +106,13 @@ public class Odometer extends Service implements LocationListener {
     }
 
     static void setLastChangeKm(Context c, int km) {
-        prefs(c).edit().putInt("last_change_km", km).apply();
+        prefs(c).edit().putInt("last_change_km", km)
+                .putLong("last_change_ms", System.currentTimeMillis()).apply();
+    }
+
+    /** When the last oil change was registered (0 = unknown); used by Maintenance for the months limit. */
+    static long lastChangeMs(Context c) {
+        return prefs(c).getLong("last_change_ms", 0);
     }
 
     static int intervalKm(Context c) {
