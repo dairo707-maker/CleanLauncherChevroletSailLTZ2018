@@ -220,3 +220,20 @@ Evita que el radio cierre Clean Launcher al apagar la llave. Cambia un archivo d
 2. Éxito: el `grep -c` final muestra `1` o más, y tras reiniciar + apagar/prender la llave, `adb shell pidof com.simple.carlauncher` muestra el **mismo** número de proceso antes y después.
 3. Revertir: `tools\windows\qb_lista.bat revertir`.
 4. Reportar la línea agregada, el `ls -lZ` y el resultado del punto 2. Subir `C:\RadioBackup\qb_list.xml.orig` como `diagnostico\qb\qb_list.xml` (con `git add -f`) si aún no está en el repo.
+
+## T14 — Respaldo completo de particiones (solo lectura, requiere root, T12)
+
+Copia todas las particiones del radio al PC para poder restaurarlo con MediaTek SP Flash Tool si algo sale muy mal. No escribe en ninguna particion; solo usa `/data/local/tmp` como paso intermedio (una imagen a la vez, se borra al terminar). Omite `userdata`, `cache`, `metadata` y particiones de 2 GiB o mas. Necesita espacio libre en `/data` y en el PC (varios GB).
+1. `tools\windows\particiones.bat respaldar` — muestra la tabla, pide confirmacion, copia cada particion y las areas `mmcblk0boot0/1` (preloader).
+2. Esperado: por cada particion `OK <suma>`; al final "Todas las particiones copiadas coinciden con la suma del radio" y el tamano total. Carpeta: `C:\RadioBackup\particiones\<fecha_hora>\` con `*.img`, `tabla.txt`, `sumas.txt`, `LEEME.txt`. Puede tardar varios minutos.
+3. Revertir: no hay nada que revertir (solo lectura). Si se cancela a medias, borrar `/data/local/tmp/*.img` con `adb shell rm`.
+4. Reportar: cantidad OK/FALLO, lista de fallas (si las hay), tamano total y contenido de `tabla.txt` y `sumas.txt`. No subir las `*.img` al repositorio; pedir al humano que copie la carpeta a un segundo disco o a la nube. **Nunca** restaurar/flashear sin guia del orquestador.
+
+## T18 — Clean Launcher como app privilegiada del sistema (requiere root, T12 y T14)
+
+Para que Android nunca cierre el launcher. Escribe en `/system` (quedan ~114 MB libres; el APK ocupa pocos MB). Exige haber hecho T14 y tener instalado `com.simple.carlauncher` (T5).
+1. `tools\windows\launcher_sistema.bat estado` — antes y despues. Muestra `codePath`, `flags`, `pkgFlags`, `privateFlags`.
+2. `tools\windows\launcher_sistema.bat aplicar` — comprueba T14, espacio (`df /system` >= 2x APK + 10 MB), pide confirmacion, copia el APK a `/system/priv-app/CleanLauncher/CleanLauncher.apk` (755/644, root:root, restorecon), verifica con `cmp`, vuelve `/system` a solo lectura y ofrece reiniciar. Si `ro.control_privapp_permissions=enforce` avisa del riesgo y pide confirmar.
+3. Esperado tras reiniciar: `estado` muestra `pkgFlags` con `SYSTEM` y `privateFlags` con `PRIVILEGED`; el `codePath` puede seguir en `/data/app` (es la actualizacion); `adb install -r` sigue funcionando por la misma firma.
+4. Revertir: `tools\windows\launcher_sistema.bat revertir` (borra `/system/priv-app/CleanLauncher`; la copia de `/data` queda como app normal). Si el radio no arranca, parar y avisar al orquestador (el respaldo T14 es la red de seguridad).
+5. Reportar: salida de `estado` antes/despues, `ls -lZ` del directorio y si el launcher sobrevive al apagar/prender la llave (`adb shell pidof com.simple.carlauncher` igual antes y despues).
