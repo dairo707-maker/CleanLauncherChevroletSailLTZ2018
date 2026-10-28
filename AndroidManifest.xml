@@ -138,9 +138,14 @@
             android:label="Velocímetro"
             android:configChanges="orientation|screenSize|keyboardHidden|locale" />
 
-        <receiver android:name=".GreeterService$BootReceiver">
+        <receiver android:name=".CarEvents">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="autochips.intent.action.QB_POWERON" />
+                <action android:name="xy.android.acc.on" />
+                <action android:name="xy.android.acc.off" />
+                <action android:name="xy.xygala.lamplet" />
             </intent-filter>
         </receiver>
 

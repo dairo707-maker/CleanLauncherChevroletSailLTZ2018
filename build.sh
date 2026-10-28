@@ -14,7 +14,7 @@ set -e
 cd "$(dirname "$0")"
 
 MIN_SDK=25        # Android 7.1, the NWD head unit
-TARGET_SDK=28
+TARGET_SDK=25      # pre-Oreo rules: the head unit can start our services and wake us with its own broadcasts
 APK_NAME=CleanLauncher.apk
 
 die() { echo "error: $*" >&2; exit 1; }

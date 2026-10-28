@@ -131,7 +131,13 @@ final class XyAuto {
      * Works out the new headlight state: a boolean/number extra if the broadcast carries one, else
      * the "Headlamp" system setting, else flip the last state (each broadcast is one change).
      */
-    static void onLamp(Context c, Intent i) {
+    private static long lastLampAt;
+
+    static synchronized void onLamp(Context c, Intent i) {
+        // Both CarEvents and GreeterService hear the broadcast: handle each change once.
+        long now = android.os.SystemClock.elapsedRealtime();
+        if (now - lastLampAt < 500) return;
+        lastLampAt = now;
         Bundle b = i.getExtras();
         Log.d(TAG, "lamplet extras=" + b);
         Boolean on = null;

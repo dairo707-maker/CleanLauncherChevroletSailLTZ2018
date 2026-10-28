@@ -18,14 +18,15 @@ final class FuelTank {
 
     /** {percent 0-100, km of range left, 1 if measured by OBD else 0}, or null when unknown. */
     static double[] state(Context c) {
-        double kmPerGal = FuelLog.avgKmPerGal(FuelLog.load(c));
+        List<FuelLog.Entry> log = FuelLog.load(c); // parse the CSV once per refresh
+        double kmPerGal = FuelLog.avgKmPerGal(log);
         if (ObdClient.isFresh() && !Float.isNaN(ObdClient.fuelPct)) {
             double pct = ObdClient.fuelPct;
             double range = kmPerGal > 0 ? CAPACITY_L * pct / 100 / L_PER_GAL * kmPerGal : -1;
             return new double[]{pct, range, 1};
         }
         if (kmPerGal <= 0 || !Odometer.isConfigured(c)) return null;
-        FuelLog.Entry full = lastFull(FuelLog.load(c));
+        FuelLog.Entry full = lastFull(log);
         if (full == null) return null;
         double usedGal = Math.max(0, Odometer.currentKm(c) - full.km) / kmPerGal;
         double leftL = Math.max(0, CAPACITY_L - usedGal * L_PER_GAL);
@@ -40,14 +41,20 @@ final class FuelTank {
 
     /** Short text for the home chip, e.g. "⛽ 62 % · 230 km", or "" when unknown. */
     static String chip(Context c) {
-        double[] s = state(c);
+        return chip(state(c));
+    }
+
+    static String chip(double[] s) {
         if (s == null) return "";
         return "⛽ " + Math.round(s[0]) + " %" + (s[1] >= 0 ? " · " + Math.round(s[1]) + " km" : "")
                 + (s[2] == 0 ? " (est.)" : "");
     }
 
     static boolean low(Context c) {
-        double[] s = state(c);
+        return low(state(c));
+    }
+
+    static boolean low(double[] s) {
         return s != null && ((s[1] >= 0 && s[1] < LOW_KM) || s[0] < 12);
     }
 }
