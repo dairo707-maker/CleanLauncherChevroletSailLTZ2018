@@ -1,0 +1,170 @@
+# hosts_anuncios.txt - lista conservadora de anuncios y rastreadores para /system/etc/hosts
+# Se instala con tools\windows\hosts.bat aplicar. Revertir: hosts.bat revertir.
+# NO bloquea: youtube.com, googlevideo.com, ytimg.com, gstatic.com, googleapis.com, waze.com, google.com, google-analytics.com, googleadservices.com.
+# Si algo deja de funcionar, comenta la linea sospechosa o ejecuta hosts.bat revertir.
+
+127.0.0.1 localhost
+::1 ip6-localhost
+::1 ip6-loopback
+
+# Google Ads / DoubleClick (solo dominios publicitarios; NO se bloquea google.com, gstatic, googleapis, googlevideo, ytimg ni youtube)
+0.0.0.0 doubleclick.net
+0.0.0.0 ad.doubleclick.net
+0.0.0.0 googleads.g.doubleclick.net
+0.0.0.0 static.doubleclick.net
+0.0.0.0 m.doubleclick.net
+0.0.0.0 mediavisor.doubleclick.net
+0.0.0.0 securepubads.g.doubleclick.net
+0.0.0.0 stats.g.doubleclick.net
+0.0.0.0 pubads.g.doubleclick.net
+0.0.0.0 pagead2.googlesyndication.com
+0.0.0.0 tpc.googlesyndication.com
+0.0.0.0 googlesyndication.com
+0.0.0.0 2mdn.net
+
+# Analitica de apps
+0.0.0.0 app-measurement.com
+0.0.0.0 an.facebook.com
+0.0.0.0 pixel.facebook.com
+0.0.0.0 api.mixpanel.com
+0.0.0.0 decide.mixpanel.com
+0.0.0.0 mxpnl.com
+0.0.0.0 data.flurry.com
+0.0.0.0 flurry.com
+0.0.0.0 hotjar.com
+0.0.0.0 quantserve.com
+0.0.0.0 scorecardresearch.com
+0.0.0.0 sb.scorecardresearch.com
+0.0.0.0 b.scorecardresearch.com
+
+# AppLovin
+0.0.0.0 applovin.com
+0.0.0.0 ms.applovin.com
+0.0.0.0 ms4.applovin.com
+0.0.0.0 rt.applovin.com
+0.0.0.0 d.applovin.com
+0.0.0.0 a.applovin.com
+0.0.0.0 prod-a.applovin.com
+
+# Unity Ads
+0.0.0.0 unityads.unity3d.com
+0.0.0.0 auction.unityads.unity3d.com
+0.0.0.0 config.unityads.unity3d.com
+0.0.0.0 webview.unityads.unity3d.com
+0.0.0.0 adserver.unityads.unity3d.com
+0.0.0.0 ads-brand-postback.unityads.unity3d.com
+0.0.0.0 cdp.cloud.unity3d.com
+0.0.0.0 perf-events.cloud.unity3d.com
+
+# MoPub
+0.0.0.0 ads.mopub.com
+0.0.0.0 app.mopub.com
+0.0.0.0 analytics.mopub.com
+0.0.0.0 ads-staging.mopub.com
+
+# InMobi
+0.0.0.0 ads.inmobi.com
+0.0.0.0 i.l.inmobi.com
+0.0.0.0 sdk.inmobi.com
+0.0.0.0 config.inmobi.com
+
+# StartApp
+0.0.0.0 startappservice.com
+0.0.0.0 info.startappservice.com
+0.0.0.0 trk.startappservice.com
+0.0.0.0 startappexchange.com
+
+# Chartboost
+0.0.0.0 live.chartboost.com
+0.0.0.0 ads.chartboost.com
+0.0.0.0 da.chartboost.com
+
+# Vungle
+0.0.0.0 api.vungle.com
+0.0.0.0 ads.api.vungle.com
+0.0.0.0 events.ads.vungle.com
+0.0.0.0 config.ads.vungle.com
+
+# ironSource / Supersonic
+0.0.0.0 supersonicads.com
+0.0.0.0 www.supersonicads.com
+0.0.0.0 init.supersonicads.com
+0.0.0.0 outcome-ssp.supersonicads.com
+0.0.0.0 outcome-arm.supersonicads.com
+0.0.0.0 wall.supersonicads.com
+
+# AdColony
+0.0.0.0 adcolony.com
+0.0.0.0 ads30.adcolony.com
+0.0.0.0 events3alt.adcolony.com
+0.0.0.0 wd.adcolony.com
+0.0.0.0 androidads23.adcolony.com
+
+# Tapjoy
+0.0.0.0 tapjoy.com
+0.0.0.0 ads.tapjoy.com
+0.0.0.0 connect.tapjoy.com
+
+# Taboola / Outbrain
+0.0.0.0 taboola.com
+0.0.0.0 trc.taboola.com
+0.0.0.0 cdn.taboola.com
+0.0.0.0 api.taboola.com
+0.0.0.0 images.taboola.com
+0.0.0.0 outbrain.com
+0.0.0.0 widgets.outbrain.com
+0.0.0.0 log.outbrain.com
+0.0.0.0 odb.outbrain.com
+0.0.0.0 amplify.outbrain.com
+
+# Redes de anuncios y RTB
+0.0.0.0 adnxs.com
+0.0.0.0 ib.adnxs.com
+0.0.0.0 secure.adnxs.com
+0.0.0.0 mobile.adnxs.com
+0.0.0.0 criteo.com
+0.0.0.0 criteo.net
+0.0.0.0 static.criteo.net
+0.0.0.0 gum.criteo.com
+0.0.0.0 widget.criteo.com
+0.0.0.0 bidder.criteo.com
+0.0.0.0 dis.criteo.com
+0.0.0.0 pubmatic.com
+0.0.0.0 ads.pubmatic.com
+0.0.0.0 openx.net
+0.0.0.0 rubiconproject.com
+0.0.0.0 casalemedia.com
+0.0.0.0 adform.net
+0.0.0.0 smaato.net
+0.0.0.0 adtechus.com
+0.0.0.0 advertising.com
+0.0.0.0 serving-sys.com
+0.0.0.0 yieldmo.com
+0.0.0.0 mathtag.com
+0.0.0.0 bluekai.com
+0.0.0.0 krxd.net
+0.0.0.0 moatads.com
+0.0.0.0 z.moatads.com
+0.0.0.0 adsafeprotected.com
+0.0.0.0 adsymptotic.com
+0.0.0.0 amazon-adsystem.com
+0.0.0.0 aax.amazon-adsystem.com
+0.0.0.0 popads.net
+
+# Anuncios y telemetria comunes en radios chinos (Baidu, Tencent GDT, Xiaomi, Umeng)
+0.0.0.0 mobads.baidu.com
+0.0.0.0 mobads-logs.baidu.com
+0.0.0.0 cpro.baidu.com
+0.0.0.0 eclick.baidu.com
+0.0.0.0 pgdt.gtimg.cn
+0.0.0.0 mi.gdt.qq.com
+0.0.0.0 sdk.e.qq.com
+0.0.0.0 api.ad.xiaomi.com
+0.0.0.0 ad.xiaomi.com
+0.0.0.0 sdkconfig.ad.xiaomi.com
+0.0.0.0 data.mistat.xiaomi.com
+0.0.0.0 tracking.miui.com
+0.0.0.0 alog.umeng.com
+0.0.0.0 ulogs.umeng.com
+0.0.0.0 oc.umeng.com
+0.0.0.0 log.umsns.com

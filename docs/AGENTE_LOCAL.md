@@ -237,3 +237,35 @@ Para que Android nunca cierre el launcher. Escribe en `/system` (quedan ~114 MB 
 3. Esperado tras reiniciar: `estado` muestra `pkgFlags` con `SYSTEM` y `privateFlags` con `PRIVILEGED`; el `codePath` puede seguir en `/data/app` (es la actualizacion); `adb install -r` sigue funcionando por la misma firma.
 4. Revertir: `tools\windows\launcher_sistema.bat revertir` (borra `/system/priv-app/CleanLauncher`; la copia de `/data` queda como app normal). Si el radio no arranca, parar y avisar al orquestador (el respaldo T14 es la red de seguridad).
 5. Reportar: salida de `estado` antes/despues, `ls -lZ` del directorio y si el launcher sobrevive al apagar/prender la llave (`adb shell pidof com.simple.carlauncher` igual antes y despues).
+
+## T15 — Rendimiento: precompilación, zram, GPS asistido y WebView (requiere root; memoria exige T14)
+
+Cambia ajustes y, solo si zram no está activo, crea `/system/etc/init/cleanlauncher_mem.rc` (zram 512 MB + swappiness 100). No toca el minfree del LMK. **Requisito:** existir `C:\RadioBackup\particiones\*` (T14); si no, `aplicar` se niega.
+1. Antes: `tools\windows\rendimiento.bat estado` → guardar salida en `diagnostico\rendimiento_antes.txt`.
+2. `tools\windows\rendimiento.bat aplicar` — muestra el plan, pide confirmación y guarda cada valor previo en `C:\RadioBackup\rendimiento_previo.txt`. Pasos: `cmd package compile -m speed -f` a las apps instaladas (launcher, Waze, Maps, YouTube Music, Spotify, fmradio, bluetooth); zram inmediato + `.rc`; `assisted_gps_enabled 1`, `location_mode 3`, `wifi_scan_always_enabled 1`; WebView `com.google.android.webview` si está instalado y habilitado.
+3. Esperado: `/proc/swaps` lista `/dev/block/zram0` con ~524284 KB; `swappiness` = 100; `dumpsys webviewupdate` muestra `com.google.android.webview` como actual. Si zram ya estaba activo, el script lo informa y lo omite.
+4. Reiniciar el radio y repetir `estado`: zram debe seguir activo (lo levanta el `.rc`). Pedir al humano actualizar "Android System WebView" desde Play Store.
+5. Revertir: `tools\windows\rendimiento.bat revertir` (restaura filtro de compilación, borra el `.rc`, hace swapoff, devuelve swappiness, settings y proveedor WebView).
+6. Reportar: salida de `estado` antes/después (MemFree/SwapTotal), si zram estaba activo, el proveedor WebView previo y cualquier error de `compile`.
+7. Checklist de pruebas: Waze (iniciar una ruta y ver que hable y recalcule), Maps (buscar y navegar), YouTube Music (reproducir 2 min sin cortes), Play Store (abre y carga). Anotar OK/FALLA de cada una y si el radio se siente más lento o se reinicia.
+
+## T16 — Bloqueo de anuncios con /system/etc/hosts (requiere root y T14)
+
+Instala `tools\hosts\hosts_anuncios.txt` (lista conservadora, `0.0.0.0`) como `/system/etc/hosts`. No bloquea youtube, googlevideo, ytimg, gstatic, googleapis, waze ni google.com. Escribe en `/system`: `aplicar` se niega sin `C:\RadioBackup\particiones\*`.
+1. `tools\windows\hosts.bat estado` y luego `tools\windows\hosts.bat aplicar` — guarda `C:\RadioBackup\hosts.orig` (solo la primera vez), pide confirmación, remonta rw, empuja, `chmod 644`, `restorecon`, remonta ro.
+2. Esperado: `ls -lZ` muestra `-rw-r--r-- root root`, y el `grep -c` da ~150 líneas `0.0.0.0`. No requiere reinicio.
+3. Revertir: `tools\windows\hosts.bat revertir` (empuja `hosts.orig`).
+4. Reportar: `ls -lZ`, número de líneas bloqueadas y el resultado del checklist. Si algo falla, revertir primero y anotar qué app y qué pantalla.
+5. Checklist de pruebas: Waze (ruta con tráfico en vivo), Maps (buscar y navegar), YouTube Music (reproducir una canción), Play Store (abrir, buscar una app). Todas deben funcionar igual que antes.
+
+## T17 — Animación de arranque del Sail (requiere T14)
+
+Cambia solo la animación "Android" (`/system/media/bootanimation.zip`). El primer logo, el de Chevrolet, viene del cargador de arranque y **no** se toca.
+1. `tools\windows\animacion.bat estado`: muestra qué animaciones tiene el radio. Si `/system/media/bootanimation.zip` no aparece, detente y reporta la salida.
+2. `tools\windows\animacion.bat aplicar`: genera `build\bootanimation.zip` con `tools\bootanim.py` (Python + Pillow), guarda el original en `C:\RadioBackup\bootanimation.zip.orig`, pide confirmación, instala y ofrece reiniciar.
+3. Éxito: tras un reinicio completo se ve el Sail aparecer y encender los faros.
+4. Revertir: `tools\windows\animacion.bat revertir`.
+
+## Orden recomendado (entrega 7)
+
+T14 (respaldo de particiones, **obligatorio primero**) → T13 (QuickBoot) → T15 (rendimiento) → T16 (anuncios) → T17 (animación) → T18 (app del sistema). Después de cada paso: reiniciar, verificar que el radio arranca, que funcionan la cámara de reversa, la radio, el Bluetooth y el volumen, y reportar. Si algo falla, revertir **ese** paso antes de seguir.
