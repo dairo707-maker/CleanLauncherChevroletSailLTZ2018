@@ -34,9 +34,9 @@ if not exist "%BK%" (
 
 echo [1/6] Activando root en ADB...
 adb -s %RADIO% root >nul 2>&1
-timeout /t 4 >nul
+ping -n 5 127.0.0.1 >nul
 adb connect %RADIO% >nul 2>&1
-timeout /t 2 >nul
+ping -n 3 127.0.0.1 >nul
 adb -s %RADIO% shell id | findstr /c:"uid=0" >nul
 if errorlevel 1 (
   echo ERROR: no se obtuvo root. No se hizo nada.
@@ -54,8 +54,8 @@ set "TABLA=%DEST%\tabla.txt"
 set "SUMAS=%DEST%\sumas.txt"
 
 echo [2/6] Guardando la tabla de particiones en %TABLA%...
->"%TABLA%" echo === ls -l /dev/block/platform/*/by-name/ ===
-adb -s %RADIO% shell "ls -l /dev/block/platform/*/by-name/ 2>&1" >>"%TABLA%"
+>"%TABLA%" echo === ls -l /dev/block/platform/*/*/by-name/ ===
+adb -s %RADIO% shell "ls -l /dev/block/platform/*/*/by-name/ 2>&1" >>"%TABLA%"
 >>"%TABLA%" echo.
 >>"%TABLA%" echo === ls -l /dev/block/by-name/ ^(respaldo^) ===
 adb -s %RADIO% shell "ls -l /dev/block/by-name/ 2>&1" >>"%TABLA%"
@@ -70,7 +70,7 @@ adb -s %RADIO% shell cat /proc/mounts >>"%TABLA%"
 adb -s %RADIO% shell getprop ro.product.board >>"%TABLA%"
 >>"%TABLA%" echo.
 >>"%TABLA%" echo === nombre / sectores de 512 B / bloque ===
-adb -s %RADIO% shell "D=/dev/block/platform/*/by-name; [ -d /dev/block/by-name ] && D=/dev/block/by-name; for f in $D/*; do n=${f##*/}; b=`readlink -f $f`; k=${b##*/}; s=`cat /sys/class/block/$k/size 2>/dev/null`; echo $n $s $b .; done" >"%DEST%\lista.tmp"
+adb -s %RADIO% shell "D=/dev/block/platform/*/*/by-name; [ -d /dev/block/by-name ] && D=/dev/block/by-name; for f in $D/*; do n=${f##*/}; b=`readlink -f $f`; k=${b##*/}; s=`cat /sys/class/block/$k/size 2>/dev/null`; echo $n $s $b .; done" >"%DEST%\lista.tmp"
 type "%DEST%\lista.tmp" >>"%TABLA%"
 for /f %%c in ('type "%DEST%\lista.tmp" ^| find /c "/dev/"') do set "NPART=%%c"
 if not defined NPART set "NPART=0"
@@ -81,7 +81,7 @@ if "%NPART%"=="0" (
 type "%TABLA%"
 echo.
 echo Se encontraron %NPART% particiones. Se copiaran en modo SOLO LECTURA ^(dd a /data/local/tmp, pull y borrado, una por una^).
-choice /c SN /m "Iniciar el respaldo completo"
+if defined RADIO_SI (set "ERRORLEVEL=") else choice /c SN /m "Iniciar el respaldo completo"
 if errorlevel 2 (
   echo Cancelado. No se cambio nada.
   exit /b 0
