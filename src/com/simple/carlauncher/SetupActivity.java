@@ -31,7 +31,7 @@ public class SetupActivity extends Activity {
 
     private static final int PICK_PHOTO = 1;
 
-    private EditText name, plate, rotation, validTo, speedLimit;
+    private EditText name, plate, rotation, validTo, speedLimit, bands, seasonFrom, seasonTo;
     private ImageView carPreview;
     private Switch readMsgs, voice, picoPlaca, speedVol, fatigue, speedAlert;
     private TextView homeBtn, locationBtn, notifBtn, overlayBtn;
@@ -148,6 +148,34 @@ public class SetupActivity extends Activity {
         ppTip.setSingleLine(false);
         ppTip.setGravity(Gravity.START);
         card.addView(ppTip);
+
+        card.addView(label("Horarios de pico y placa"));
+        bands = new EditText(this);
+        bands.setText(PicoPlaca.bandsText(this));
+        bands.setTextColor(Color.WHITE);
+        bands.setTextSize(18);
+        card.addView(bands);
+        TextView bandTip = Ui.text(this, "Formato HH:mm-HH:mm separados por coma (de 1 a 4). Ej.: 07:00-09:00,18:00-20:00", 12, 0x99FFFFFF);
+        bandTip.setSingleLine(false);
+        bandTip.setGravity(Gravity.START);
+        card.addView(bandTip);
+
+        card.addView(label("Temporada especial 24 h: desde (aaaa-mm-dd)"));
+        seasonFrom = new EditText(this);
+        seasonFrom.setText(PicoPlaca.seasonFrom(this));
+        seasonFrom.setTextColor(Color.WHITE);
+        seasonFrom.setTextSize(18);
+        card.addView(seasonFrom);
+        card.addView(label("Temporada especial 24 h: hasta (aaaa-mm-dd)"));
+        seasonTo = new EditText(this);
+        seasonTo.setText(PicoPlaca.seasonTo(this));
+        seasonTo.setTextColor(Color.WHITE);
+        seasonTo.setTextSize(18);
+        card.addView(seasonTo);
+        TextView seasonTip = Ui.text(this, "Déjalas vacías si no hay temporada especial. En esas fechas la restricción es todo el día.", 12, 0x99FFFFFF);
+        seasonTip.setSingleLine(false);
+        seasonTip.setGravity(Gravity.START);
+        card.addView(seasonTip);
         showPhoto();
         return card;
     }
@@ -311,6 +339,18 @@ public class SetupActivity extends Activity {
             Toast.makeText(this, "Revisa la rotación y la fecha del pico y placa", Toast.LENGTH_LONG).show();
             return;
         }
+        String bandsTxt = bands.getText().toString().trim().replace(" ", "");
+        String sf = seasonFrom.getText().toString().trim(), st = seasonTo.getText().toString().trim();
+        if (PicoPlaca.parseBands(bandsTxt) == null) {
+            Toast.makeText(this, "Revisa los horarios (ej.: 07:00-09:00,18:00-20:00)", Toast.LENGTH_LONG).show();
+            return;
+        }
+        boolean seasonOff = sf.isEmpty() && st.isEmpty();
+        if (!seasonOff && (PicoPlaca.parseIso(sf) == null || PicoPlaca.parseIso(st) == null || sf.compareTo(st) > 0)) {
+            Toast.makeText(this, "Revisa las fechas de la temporada especial", Toast.LENGTH_LONG).show();
+            return;
+        }
+        PicoPlaca.setBands(this, bandsTxt, seasonOff ? "" : sf, seasonOff ? "" : st);
         String d = plate.getText().toString().trim();
         PicoPlaca.setPlateDigit(this, d.isEmpty() ? -1 : Integer.parseInt(d));
         // Keep the stored start date unless the new range would exclude today.

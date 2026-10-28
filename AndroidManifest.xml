@@ -114,11 +114,6 @@
 
         <service android:name=".DriverAssist" />
 
-        <activity
-            android:name=".XyRadioActivity"
-            android:label="Radio"
-            android:launchMode="singleTask"
-            android:configChanges="orientation|screenSize|keyboardHidden|locale" />
 
         <activity
             android:name=".XyBtActivity"

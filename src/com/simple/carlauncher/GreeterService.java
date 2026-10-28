@@ -29,23 +29,31 @@ public class GreeterService extends Service {
 
     private static final String TAG = "Greeter";
     private static final long DELAY_MS = 4_000; // short: the speech engine is warmed up at start
+    private static final long DELAY_PRERENDERED_MS = 1_500; // no TTS init needed
+    private static final long PRERENDER_AFTER_MS = 45_000; // do not compete with the greeting
+    private static final long WARN_BEFORE_MS = 15 * 60_000L;
     private static final long MIN_INTERVAL_MS = 60_000; // only skip duplicate wake signals
 
     // MCU source ids (ApplicationList.xml "Source") of the last audio source before ACC off.
     private static final int SRC_RADIO = 4, SRC_BT = -125, SRC_USB = -128;
 
     private final Handler handler = new Handler();
-    private final List<Integer> queue = new ArrayList<>();
+    private final List<Object> queue = new ArrayList<>();
     private final RadioClient radio = new RadioClient();
     private final SoundClient sound = new SoundClient();
     private MediaPlayer player;
     private boolean waitingForPhone;
     private boolean btPlaying;
+    private Runnable onQueueDone;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        Tts.warm(this); // loading the Spanish voice takes seconds on this CPU; do it before the greeting
+        // Loading the Spanish voice takes seconds on this CPU; do it before the greeting, unless the
+        // greeting is already pre-rendered (then the engine only starts for the rendering later).
+        if (!prerenderedReady()) Tts.warm(this);
+        handler.postDelayed(this::prerenderAll, PRERENDER_AFTER_MS);
+        handler.postDelayed(bandCheck, 60_000);
         radio.bind(this);
         sound.bind(this, () -> handler.post(() -> EqAuto.apply(this, sound)));
         IntentFilter f = new IntentFilter();
@@ -180,7 +188,7 @@ public class GreeterService extends Service {
         long last = prefs().getLong("last_greet", 0);
         if (System.currentTimeMillis() - last < MIN_INTERVAL_MS) return;
         handler.removeCallbacks(greet);
-        handler.postDelayed(greet, DELAY_MS);
+        handler.postDelayed(greet, prerenderedReady() ? DELAY_PRERENDERED_MS : DELAY_MS);
         Weather.fetch(this, w -> { }); // refresh the cache before speaking
     }
 
@@ -195,8 +203,113 @@ public class GreeterService extends Service {
             if (getResources().getIdentifier(c, "raw", getPackageName()) == 0) recorded = false;
         }
         if (recorded) speak(clips);
-        else speakTts(Speech.text(this, clips));
+        else if (!speakPrerendered(clips)) speakTts(Speech.text(this, clips));
+        handler.postDelayed(this::prerenderAll, 30_000); // refresh stale phrases (name, bands)
     };
+
+    // ---------- Pre-rendered greeting ----------
+
+    /** Fixed phrases this service can pre-render, by clip name. */
+    private static final String[] FIXED = {"v_greet_morning", "v_greet_afternoon", "v_greet_night",
+            "v_greet_monday", "v_seatbelt", "v_careful", "v_picoplaca", "v_maintenance",
+            "v_oil_soon", "v_oil_due"};
+
+    private void prerenderAll() {
+        if (!Profile.voiceEnabled(this)) return;
+        for (String clip : FIXED) Tts.prerender(this, clip, Speech.phrase(this, clip));
+    }
+
+    /** True when the opening greeting, seat belt and farewell are already rendered. */
+    private boolean prerenderedReady() {
+        if (!Profile.voiceEnabled(this)) return false;
+        Calendar now = Calendar.getInstance();
+        int h = now.get(Calendar.HOUR_OF_DAY);
+        String g = now.get(Calendar.DAY_OF_WEEK) == Calendar.MONDAY ? "v_greet_monday"
+                : h < 12 ? "v_greet_morning" : h < 19 ? "v_greet_afternoon" : "v_greet_night";
+        for (String clip : new String[]{g, "v_seatbelt", "v_careful"}) {
+            if (Tts.cached(this, clip, Speech.phrase(this, clip)) == null) return false;
+        }
+        return true;
+    }
+
+    /**
+     * Plays every fixed phrase from its rendered wav at once; dynamic ones (weather, maintenance
+     * list) are spoken by the TTS engine afterwards. False when any fixed phrase is missing.
+     */
+    private boolean speakPrerendered(List<String> clips) {
+        List<Object> files = new ArrayList<>();
+        List<String> dynamic = new ArrayList<>();
+        for (String clip : clips) {
+            if (Speech.isFixed(clip)) {
+                java.io.File f = Tts.cached(this, clip, Speech.phrase(this, clip));
+                if (f == null) return false;
+                files.add(f);
+            } else {
+                dynamic.add(clip);
+            }
+        }
+        if (files.isEmpty()) return false;
+        Log.d(TAG, "speaking prerendered " + clips);
+        queue.clear();
+        queue.addAll(files);
+        if (!dynamic.isEmpty()) {
+            final String text = Speech.text(this, dynamic);
+            onQueueDone = () -> Tts.say(this, text);
+        } else {
+            onQueueDone = null;
+        }
+        playNext();
+        return true;
+    }
+
+    // ---------- Pico y placa reminders ----------
+
+    private final Runnable bandCheck = new Runnable() {
+        @Override
+        public void run() {
+            handler.postDelayed(this, 60_000);
+            try {
+                checkBand();
+            } catch (RuntimeException e) {
+                Log.w(TAG, "band check failed", e);
+            }
+        }
+    };
+
+    private void checkBand() {
+        if (!Profile.voiceEnabled(this) || !Profile.picoPlacaEnabled(this)) return;
+        Calendar now = Calendar.getInstance();
+        if (!PicoPlaca.appliesToday(this, now)) return;
+        long next = PicoPlaca.nextBandStart(this, now);
+        long left = next - now.getTimeInMillis();
+        if (next > 0 && left <= WARN_BEFORE_MS && markSaid("warn" + next / 60_000)) {
+            Tts.say(this, "En quince minutos empieza el pico y placa.");
+            return;
+        }
+        int end = PicoPlaca.bandEndNow(this, now);
+        if (end >= 0 && DriverAssist.bestKmh() >= 10 && markSaid("in" + end)) {
+            Tts.say(this, PicoPlaca.inSeason(this, now)
+                    ? "Empezó el pico y placa; tu placa tiene restricción todo el día."
+                    : "Empezó el pico y placa; tu placa tiene restricción hasta las "
+                            + PicoPlaca.spokenHour(end) + ".");
+        }
+    }
+
+    /** True the first time a token is seen today (kept in prefs so a restart does not repeat it). */
+    private boolean markSaid(String token) {
+        String today = PicoPlaca.iso(Calendar.getInstance());
+        String saved = prefs().getString("pp_said", "");
+        String[] parts = saved.split(";");
+        StringBuilder keep = new StringBuilder(today);
+        if (parts[0].equals(today)) {
+            for (int i = 1; i < parts.length; i++) {
+                if (parts[i].equals(token)) return false;
+                keep.append(';').append(parts[i]);
+            }
+        }
+        prefs().edit().putString("pp_said", keep.append(';').append(token).toString()).apply();
+        return true;
+    }
 
     private void speakTts(String text) {
         Tts.say(this, text);
@@ -252,6 +365,7 @@ public class GreeterService extends Service {
     /** Plays the clips one after another. */
     void speak(List<String> clips) {
         queue.clear();
+        onQueueDone = null;
         for (String name : clips) {
             int id = getResources().getIdentifier(name, "raw", getPackageName());
             if (id != 0) queue.add(id);
@@ -265,16 +379,22 @@ public class GreeterService extends Service {
             player.release();
             player = null;
         }
-        if (queue.isEmpty()) return;
-        int id = queue.remove(0);
+        if (queue.isEmpty()) {
+            Runnable r = onQueueDone;
+            onQueueDone = null;
+            if (r != null) r.run();
+            return;
+        }
+        Object item = queue.remove(0);
         player = new MediaPlayer();
         try {
             player.setAudioAttributes(new AudioAttributes.Builder()
                     .setUsage(AudioAttributes.USAGE_ASSISTANCE_NAVIGATION_GUIDANCE)
                     .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH)
                     .build());
-            player.setDataSource(this, android.net.Uri.parse(
-                    "android.resource://" + getPackageName() + "/" + id));
+            if (item instanceof java.io.File) player.setDataSource(((java.io.File) item).getPath());
+            else player.setDataSource(this, android.net.Uri.parse(
+                    "android.resource://" + getPackageName() + "/" + item));
             player.setOnCompletionListener(mp -> playNext());
             player.setOnErrorListener((mp, what, extra) -> {
                 playNext();

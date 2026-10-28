@@ -17,8 +17,8 @@ final class PicoPlaca {
     static final String DEFAULT_FROM = "2026-10-05";
     static final String DEFAULT_TO = "2027-01-22";
 
-    // Restricted hours (24 h): morning and evening windows.
-    private static final int AM_FROM = 7, AM_TO = 9, PM_FROM = 18, PM_TO = 20;
+    static final String DEFAULT_BANDS = "07:00-09:00,18:00-20:00";
+    static final int MAX_BANDS = 4;
 
     private PicoPlaca() { }
 
@@ -54,6 +54,26 @@ final class PicoPlaca {
                 .putString("pp_hasta", to).apply();
     }
 
+    /** Configured time bands as "HH:mm-HH:mm,..." (always valid). */
+    static String bandsText(Context c) {
+        String s = prefs(c).getString("pp_bands", DEFAULT_BANDS);
+        return parseBands(s) == null ? DEFAULT_BANDS : s;
+    }
+
+    /** Special season (restriction all day), empty strings = off. */
+    static String seasonFrom(Context c) {
+        return prefs(c).getString("pp_temp_desde", "");
+    }
+
+    static String seasonTo(Context c) {
+        return prefs(c).getString("pp_temp_hasta", "");
+    }
+
+    static void setBands(Context c, String bands, String seasonFrom, String seasonTo) {
+        prefs(c).edit().putString("pp_bands", bands).putString("pp_temp_desde", seasonFrom)
+                .putString("pp_temp_hasta", seasonTo).apply();
+    }
+
     // ---------- Rules ----------
 
     /** True when the plate digit is restricted today (ignores the time of day). */
@@ -74,14 +94,120 @@ final class PicoPlaca {
         return today.compareTo(validFrom(c)) < 0 || today.compareTo(validTo(c)) > 0;
     }
 
+    /** True when today is inside the special 24 h season (both dates set and day within). */
+    static boolean inSeason(Context c, Calendar day) {
+        String f = seasonFrom(c), t = seasonTo(c);
+        if (parseIso(f) == null || parseIso(t) == null) return false;
+        String today = iso(day);
+        return today.compareTo(f) >= 0 && today.compareTo(t) <= 0;
+    }
+
+    /** Bands in force today as {startMin, endMin}; the whole day during the special season. */
+    static int[][] bandsFor(Context c, Calendar day) {
+        if (inSeason(c, day)) return new int[][]{{0, 24 * 60}};
+        int[][] b = parseBands(bandsText(c));
+        return b == null ? parseBands(DEFAULT_BANDS) : b;
+    }
+
+    /** True when the plate is restricted today and the current time is inside a band. */
+    static boolean inBandNow(Context c, Calendar now) {
+        return bandEndNow(c, now) >= 0;
+    }
+
+    /** End (minutes of day) of the band we are in, or -1 when not in one. */
+    static int bandEndNow(Context c, Calendar now) {
+        if (!appliesToday(c, now)) return -1;
+        int m = now.get(Calendar.HOUR_OF_DAY) * 60 + now.get(Calendar.MINUTE);
+        for (int[] b : bandsFor(c, now)) if (m >= b[0] && m < b[1]) return b[1];
+        return -1;
+    }
+
+    /** Start of the next band later today in ms since epoch, or -1 (none left / no restriction). */
+    static long nextBandStart(Context c, Calendar now) {
+        if (!appliesToday(c, now)) return -1;
+        int m = now.get(Calendar.HOUR_OF_DAY) * 60 + now.get(Calendar.MINUTE);
+        long best = -1;
+        for (int[] b : bandsFor(c, now)) {
+            if (b[0] > m && (best < 0 || b[0] < best)) best = b[0];
+        }
+        if (best < 0) return -1;
+        Calendar t = (Calendar) now.clone();
+        t.set(Calendar.HOUR_OF_DAY, (int) best / 60);
+        t.set(Calendar.MINUTE, (int) best % 60);
+        t.set(Calendar.SECOND, 0);
+        t.set(Calendar.MILLISECOND, 0);
+        return t.getTimeInMillis();
+    }
+
     /** Short Spanish status for the home card. */
     static String status(Context c, Calendar day) {
         if (plateDigit(c) < 0) return "Define tu placa en Configuración";
         if (rotationExpired(c, day)) return "Rotación vencida: verifica en Configuración";
-        if (appliesToday(c, day)) {
-            return "Hoy pico y placa " + AM_FROM + "–" + AM_TO + " y " + PM_FROM + "–" + PM_TO;
+        if (!appliesToday(c, day)) return "Sin pico y placa hoy";
+        if (inSeason(c, day)) return "Pico y placa todo el día (temporada especial)";
+        int end = bandEndNow(c, day);
+        if (end >= 0) return "En pico y placa ahora (hasta " + hm(end) + ")";
+        return "Hoy tienes pico y placa: " + bandsLabel(c, day);
+    }
+
+    /** "7:00–9:00 y 18:00–20:00". */
+    static String bandsLabel(Context c, Calendar day) {
+        int[][] b = bandsFor(c, day);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < b.length; i++) {
+            if (i > 0) sb.append(i == b.length - 1 ? " y " : ", ");
+            sb.append(hm(b[i][0])).append('–').append(hm(b[i][1]));
         }
-        return "Sin pico y placa hoy";
+        return sb.toString();
+    }
+
+    /** Same bands for speech: "de 7 a 9 y de 18 a 20". */
+    static String bandsSpoken(Context c, Calendar day) {
+        if (inSeason(c, day)) return "todo el día";
+        int[][] b = bandsFor(c, day);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < b.length; i++) {
+            if (i > 0) sb.append(i == b.length - 1 ? " y " : ", ");
+            sb.append("de ").append(spokenHour(b[i][0])).append(" a ").append(spokenHour(b[i][1]));
+        }
+        return sb.toString();
+    }
+
+    /** "las 9" style hour for speech: whole hours without minutes. */
+    static String spokenHour(int minutes) {
+        return minutes % 60 == 0 ? String.valueOf(minutes / 60 % 24) : hm(minutes);
+    }
+
+    /** 420 -> "7:00" */
+    static String hm(int minutes) {
+        return String.format(Locale.US, "%d:%02d", minutes / 60 % 24, minutes % 60);
+    }
+
+    /**
+     * "07:00-09:00,18:00-20:00" -> {{420,540},{1080,1200}}; null when malformed, empty, more than
+     * MAX_BANDS, or a band does not end after it starts.
+     */
+    static int[][] parseBands(String s) {
+        if (s == null || s.trim().isEmpty()) return null;
+        String[] parts = s.trim().split(",");
+        if (parts.length < 1 || parts.length > MAX_BANDS) return null;
+        int[][] out = new int[parts.length][2];
+        for (int i = 0; i < parts.length; i++) {
+            String p = parts[i].trim();
+            if (!p.matches("\\d{1,2}:\\d{2}-\\d{1,2}:\\d{2}")) return null;
+            String[] ft = p.split("-");
+            int a = minutes(ft[0]), z = minutes(ft[1]);
+            if (a < 0 || z < 0 || z <= a) return null;
+            out[i][0] = a;
+            out[i][1] = z;
+        }
+        return out;
+    }
+
+    private static int minutes(String hhmm) {
+        String[] p = hhmm.split(":");
+        int h = Integer.parseInt(p[0]), m = Integer.parseInt(p[1]);
+        return h > 23 || m > 59 ? -1 : h * 60 + m;
     }
 
     /** 0 = Monday .. 4 = Friday, -1 on weekends. */

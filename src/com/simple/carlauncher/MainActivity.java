@@ -23,6 +23,7 @@ import java.util.Calendar;
 public class MainActivity extends Activity implements NowPlaying.Listener {
 
 
+    private static final String MAPS_PKG = "com.google.android.apps.maps";
     private static final String MAPS = "com.google.android.apps.maps/com.google.android.maps.MapsActivity";
     private static final String EQ = "com.nwd.audioset/.home_horizontalActivity";
     private static final String SETTINGS = "com.android.car.setting/.home_horizontalActivity";
@@ -52,9 +53,11 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
                 speedNum.setText(v < 0 ? "--" : String.valueOf(v));
                 speedNum.setTextColor(v > DriverAssist.limit(MainActivity.this) ? 0xFFFF5252 : Color.WHITE);
             }
+            if (carMotion != null) carMotion.setSpeed(DriverAssist.bestKmh());
             handler.postDelayed(this, 1000);
         }
     };
+    private CarMotionView carMotion; // wheels and road streaks while driving
     private boolean hasLightsImage;
     private boolean receiversOn; // onResume can bail out to recreate() before registering
     private TextView oilInfo;
@@ -87,7 +90,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         LinearLayout middle = new LinearLayout(this);
         middle.setOrientation(LinearLayout.VERTICAL);
         middle.addView(buildClockCard(), vweight(0.62f, 0));
-        middle.addView(buildFmCard(), vweight(1.38f, dp(12)));
+        middle.addView(Profile.isXyAuto(this) ? buildMapCard() : buildFmCard(), vweight(1.38f, dp(12)));
         cards.addView(middle, weight(1f, dp(12)));
 
         cards.addView(buildMusicCard(), weight(1.05f, dp(12)));
@@ -156,6 +159,12 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         }
         carBox.addView(car, new FrameLayout.LayoutParams(-1, -1));
         carBox.addView(carLights, new FrameLayout.LayoutParams(-1, -1));
+        if (own == null && bundled != 0) { // only the bundled Sail has known wheel positions
+            android.graphics.drawable.Drawable d = getDrawable(bundled);
+            carMotion = new CarMotionView(this);
+            carMotion.setImageSize(d.getIntrinsicWidth(), d.getIntrinsicHeight());
+            carBox.addView(carMotion, new FrameLayout.LayoutParams(-1, -1));
+        }
         // Warnings drawn over the car: engine (scanner/maintenance), tires and brakes.
         carAlerts = Ui.text(this, "", 13, Color.WHITE);
         carAlerts.setPadding(dp(12), dp(4), dp(12), dp(4));
@@ -500,7 +509,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
     private String dayInfo(Calendar day) {
         String s = new java.text.SimpleDateFormat("EEEE d 'de' MMMM", new java.util.Locale("es")).format(day.getTime());
         if (PicoPlaca.isHoliday(day)) return s + " · Festivo";
-        return s + (PicoPlaca.appliesToday(this, day) ? " · Pico y placa 7–9 y 18–20" : " · Sin pico y placa");
+        return s + (PicoPlaca.appliesToday(this, day) ? " · Pico y placa " + PicoPlaca.bandsLabel(this, day) : " · Sin pico y placa");
     }
 
     // ---------- FM ----------
@@ -542,6 +551,88 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         return card;
     }
 
+    // ---------- Mini map (XY AUTO) ----------
+
+    private MiniMapView miniMap;
+    private LinearLayout mapNav;
+    private ImageView mapNavIcon;
+    private TextView mapNavInstr, mapNavSub;
+
+    private View buildMapCard() {
+        FrameLayout card = new FrameLayout(this);
+        card.setBackground(Ui.card(this));
+        card.setClipToOutline(true);
+        miniMap = new MiniMapView(this);
+        card.addView(miniMap, new FrameLayout.LayoutParams(-1, -1));
+        card.setOnClickListener(v -> openNavApp(NavInfo.WAZE, MAPS_PKG));
+        card.setOnLongClickListener(v -> { openNavApp(MAPS_PKG, NavInfo.WAZE); return true; });
+
+        // Next instruction, only while NavInfo is active.
+        mapNav = new LinearLayout(this);
+        mapNav.setGravity(Gravity.CENTER_VERTICAL);
+        mapNav.setPadding(dp(8), dp(5), dp(10), dp(5));
+        GradientDrawable nb = new GradientDrawable();
+        nb.setColor(0xE6102040);
+        nb.setCornerRadius(dp(12));
+        nb.setStroke(dp(1), 0x6633CCFF);
+        mapNav.setBackground(nb);
+        mapNav.setVisibility(View.GONE);
+        mapNavIcon = new ImageView(this);
+        mapNavIcon.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        mapNav.addView(mapNavIcon, new LinearLayout.LayoutParams(dp(34), dp(34)));
+        LinearLayout nt = new LinearLayout(this);
+        nt.setOrientation(LinearLayout.VERTICAL);
+        mapNavInstr = Ui.text(this, "", 15, Color.WHITE);
+        mapNavInstr.setTypeface(Typeface.DEFAULT_BOLD);
+        mapNavInstr.setSingleLine(true);
+        mapNavInstr.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        mapNavInstr.setGravity(Gravity.START);
+        nt.addView(mapNavInstr);
+        mapNavSub = Ui.text(this, "", 12, 0xCCFFFFFF);
+        mapNavSub.setSingleLine(true);
+        mapNavSub.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        mapNavSub.setGravity(Gravity.START);
+        nt.addView(mapNavSub);
+        LinearLayout.LayoutParams ntp = new LinearLayout.LayoutParams(0, -2, 1f);
+        ntp.leftMargin = dp(8);
+        mapNav.addView(nt, ntp);
+        FrameLayout.LayoutParams np = new FrameLayout.LayoutParams(-1, -2, Gravity.TOP);
+        np.setMargins(dp(8), dp(8), dp(8), 0);
+        card.addView(mapNav, np);
+
+        // App shortcuts, bottom-left (attribution sits bottom-right).
+        LinearLayout chips = new LinearLayout(this);
+        chips.addView(mapChip("Waze", () -> openNavApp(NavInfo.WAZE, MAPS_PKG)));
+        chips.addView(mapChip("Maps", () -> openNavApp(MAPS_PKG, NavInfo.WAZE)));
+        FrameLayout.LayoutParams cp = new FrameLayout.LayoutParams(-2, -2, Gravity.BOTTOM | Gravity.START);
+        cp.setMargins(dp(8), 0, 0, dp(8));
+        card.addView(chips, cp);
+        return card;
+    }
+
+    private View mapChip(String label, Runnable r) {
+        TextView t = Ui.text(this, label, 12, Color.WHITE);
+        t.setPadding(dp(10), dp(5), dp(10), dp(5));
+        GradientDrawable g = new GradientDrawable();
+        g.setColor(0xCC000000);
+        g.setCornerRadius(dp(12));
+        t.setBackground(g);
+        t.setOnClickListener(v -> r.run());
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(-2, -2);
+        lp.rightMargin = dp(6);
+        t.setLayoutParams(lp);
+        return t;
+    }
+
+    /** Launches the preferred navigation app, or the fallback if it is not installed. */
+    private void openNavApp(String first, String second) {
+        for (String pkg : new String[]{first, second}) {
+            Intent i = getPackageManager().getLaunchIntentForPackage(pkg);
+            if (i != null && safeStart(i)) return;
+        }
+        toast("Waze / Google Maps no están instalados");
+    }
+
     /** Lit when on; repeat-one is shown brighter than repeat-all. Hidden for sources without a session. */
     private void updateModes() {
         if (nowPlaying == null || shuffleBtn == null || repeatBtn == null) return;
@@ -577,22 +668,6 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         fmBand.setText(st.psName.isEmpty() ? "RADIO " + st.bandLabel() : st.bandLabel() + " · " + st.psName);
         fmFreq.setText(st.frequencyLabel());
         fmUnit.setText(st.isAm() ? "kHz" : "MHz");
-    }
-
-    /** XY AUTO: the factory FM app writes "FM   88.50" to a system setting on every tune. */
-    private final android.database.ContentObserver fmObserver = new android.database.ContentObserver(handler) {
-        @Override
-        public void onChange(boolean selfChange) {
-            updateXyRadio();
-        }
-    };
-
-    private void updateXyRadio() {
-        String[] f = XyAuto.fmStation(this);
-        if (f == null) return;
-        fmBand.setText("RADIO " + f[0]);
-        fmFreq.setText(f[1]);
-        fmUnit.setText("AM".equals(f[0]) ? "kHz" : "MHz");
     }
 
     private final Runnable radioPoll = new Runnable() {
@@ -850,9 +925,19 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
 
     private void updateNav() {
         boolean on = NavInfo.active;
-        navStrip.setVisibility(on ? View.VISIBLE : View.GONE);
-        songSource.setVisibility(on ? View.GONE : View.VISIBLE);
+        boolean xy = Profile.isXyAuto(this);
+        navStrip.setVisibility(on && !xy ? View.VISIBLE : View.GONE);
+        songSource.setVisibility(on && !xy ? View.GONE : View.VISIBLE);
+        if (mapNav != null) mapNav.setVisibility(on ? View.VISIBLE : View.GONE);
         if (!on) return;
+        if (mapNav != null) {
+            mapNavInstr.setText(NavInfo.instruction);
+            String ms = NavInfo.distance;
+            if (!NavInfo.eta.isEmpty()) ms += (ms.isEmpty() ? "" : "  ·  ") + NavInfo.eta;
+            mapNavSub.setText(ms);
+            if (NavInfo.icon != null) { mapNavIcon.setImageBitmap(NavInfo.icon); mapNavIcon.clearColorFilter(); }
+            else { mapNavIcon.setImageResource(R.drawable.ic_compass); mapNavIcon.setColorFilter(Color.WHITE); }
+        }
         navInstr.setText(NavInfo.instruction);
         String sub = NavInfo.distance;
         if (!NavInfo.eta.isEmpty()) sub += (sub.isEmpty() ? "" : "  ·  ") + NavInfo.eta;
@@ -898,7 +983,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
 
     private void openRadio() {
         if (Profile.isNwd(this)) startActivity(new Intent(this, RadioActivity.class));
-        else if (Profile.isXyAuto(this)) startActivity(new Intent(this, XyRadioActivity.class));
+        else if (Profile.isXyAuto(this)) Ui.launch(this, XyAuto.RADIO); // the factory app: direct control proved unreliable
         else if (!launchByKeyword("radio", "fm", "tuner")) toast("No se encontró una app de radio");
     }
 
@@ -995,11 +1080,7 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         registerReceiver(illReceiver, new android.content.IntentFilter("com.nwd.ACTION_ILL_STATE_CHANGE"));
         registerReceiver(lampReceiver, new android.content.IntentFilter(XyAuto.LAMP));
         receiversOn = true;
-        if (Profile.isXyAuto(this)) {
-            getContentResolver().registerContentObserver(
-                    android.provider.Settings.System.getUriFor(XyAuto.FM_TEXT), false, fmObserver);
-            updateXyRadio();
-        }
+        if (miniMap != null) miniMap.onResume();
         boolean lights = hasLightsImage && carLightsOn();
         android.util.Log.d("CarLights", "onResume lights=" + lights);
         carLights.setAlpha(lights ? 1f : 0f);
@@ -1009,6 +1090,8 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         }
         handler.post(periodic);
         handler.post(speedTick);
+        if (carMotion != null) carMotion.resume();
+        CarEvents.startAll(this); // services may have been killed while the car was off (quick boot)
         if (Profile.isNwd(this)) handler.post(radioPoll);
         nowPlaying.addListener(this);
         NavInfo.addListener(navListener);
@@ -1023,11 +1106,12 @@ public class MainActivity extends Activity implements NowPlaying.Listener {
         if (receiversOn) {
             unregisterReceiver(illReceiver);
             unregisterReceiver(lampReceiver);
-            getContentResolver().unregisterContentObserver(fmObserver);
             receiversOn = false;
         }
+        if (miniMap != null) miniMap.onPause();
         handler.removeCallbacks(periodic);
         handler.removeCallbacks(speedTick);
+        if (carMotion != null) carMotion.pause();
         handler.removeCallbacks(radioPoll);
         nowPlaying.removeListener(this);
         NavInfo.removeListener(navListener);

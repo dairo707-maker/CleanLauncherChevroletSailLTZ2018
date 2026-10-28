@@ -1,5 +1,7 @@
 # Guía para el agente local (Antigravity / Gemini Flash)
 
+> **Nota:** el agente local puede ser ahora **Google Argon 4 (u otro agente local)**. Las reglas de esta guía aplican igual a cualquiera de ellos.
+
 Esta guía es para el agente que ejecuta los scripts de `tools\windows\` en la PC del dueño.
 El dueño es quien decide. Si algo no está claro, **pregunta al humano antes de actuar**.
 
@@ -163,3 +165,18 @@ Requiere al humano en el carro: radio encendido con la app de radio de fábrica 
 4. Resultados: `diagnostico\experimento.txt` y `diagnostico\apk\`.
 5. Subir solo esos dos: `git add diagnostico\experimento.txt diagnostico\apk`, luego commit y push.
 6. Reporta: cada respuesta del humano (cambió la emisora, marcó) y las líneas de ecualizador encontradas.
+
+### T10. Arranque (arranque lento, quickboot)
+
+Qué hace: diagnostica por qué el radio hace un arranque completo (logo Chevrolet, logo Android, launcher) al dar ACC en vez de reanudar rápido. Es **solo lectura** en el radio. Guarda `getprop`, `settings`, `dumpsys power`, whitelist de `deviceidle`, servicios del launcher, el APK de `com.autochips.quickbootmanager` y archivos qb de `/system/etc` y `/vendor/etc`. Después pide al humano apagar y encender el ACC, y captura logcat y dmesg.
+
+Requiere al humano en el carro: contacto encendido y el humano disponible para las pausas y la pregunta del logo.
+
+1. Comando: `tools\windows\arranque.bat`
+2. El script pide al humano apagar el ACC (tecla), espera 20 s, y pide encenderlo (tecla) cuando aparezca el launcher. **Tú no tocas el contacto ni el radio.** El ADB por Wi-Fi se corta; el script reintenta `adb connect` hasta 3 minutos.
+3. El script pregunta `[S,N]` por el logo de Chevrolet. **Pide al humano** que responda. Tú no respondes por él.
+4. Éxito: la salida termina con `Arranque terminado en:`. Si aparece `RECONEXION FALLIDA` o `ERROR: el radio no volvio`, detente y reporta.
+5. Verifica que existan: `diagnostico\arranque.txt` y `diagnostico\arranque_logcat.txt`. `diagnostico\arranque_dmesg.txt` puede estar vacío o contener un error de permisos; repórtalo tal cual.
+6. Comandos `adb` usados por esta tarea (son todos de lectura): `get-state`, `connect`, `shell getprop`, `shell settings list system|global`, `shell dumpsys power|deviceidle whitelist|activity services com.simple.carlauncher`, `shell pm path com.autochips.quickbootmanager`, `pull` (APK y archivos qb), `shell ls`, `shell uptime`, `logcat -d -b all -t 3000`, `shell dmesg`.
+7. Subida (solo si el humano lo pide): `git add diagnostico\arranque*.txt diagnostico\apk\com.autochips.quickbootmanager.apk diagnostico\qb`, luego commit y push a `claude/amazing-lamport-auessa`.
+8. Reporta: la respuesta del logo (`S` o `N`), si `uptime` indica reinicio completo, y las rutas creadas.

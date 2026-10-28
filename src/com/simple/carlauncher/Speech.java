@@ -13,17 +13,23 @@ final class Speech {
     private Speech() { }
 
     static String text(Context c, List<String> clips) {
-        String name = Profile.name(c);
-        String who = name.isEmpty() ? "" : ", " + name;
         StringBuilder sb = new StringBuilder();
         for (String clip : clips) {
-            String part = phrase(clip, who);
+            String part = phrase(c, clip);
             if (part != null) sb.append(part).append(' ');
         }
         return sb.toString().trim();
     }
 
-    private static String phrase(String clip, String who) {
+    /** True for clips whose sentence does not depend on live data (can be pre-rendered). */
+    static boolean isFixed(String clip) {
+        return !(clip.startsWith("v_cond_") || clip.startsWith("v_temp_") || clip.startsWith("v_maint:"));
+    }
+
+    /** Sentence for one clip name, or null when unknown. */
+    static String phrase(Context c, String clip) {
+        String name = Profile.name(c);
+        String who = name.isEmpty() ? "" : ", " + name;
         switch (clip) {
             case "v_greet_morning": return "¡Buenos días" + who + "! Bienvenido.";
             case "v_greet_afternoon": return "¡Buenas tardes" + who + "! Bienvenido.";
@@ -31,7 +37,7 @@ final class Speech {
             case "v_greet_monday": return "¡Hola" + who + "! Arrancó la semana: hoy es lunes.";
             case "v_maintenance": return "Revisa el aceite, el agua del radiador y el líquido de frenos.";
             case "v_seatbelt": return "Ponte el cinturón de seguridad.";
-            case "v_picoplaca": return "Hoy tienes pico y placa: recuerda el horario restringido.";
+            case "v_picoplaca": return "Hoy tienes pico y placa " + PicoPlaca.bandsSpoken(c, java.util.Calendar.getInstance()) + ".";
             case "v_careful": return "Maneja con cuidado. ¡Buen viaje!";
             case "v_oil_soon": return "Se acerca el cambio de aceite: quedan menos de quinientos kilómetros.";
             case "v_oil_due": return "Ya toca el cambio de aceite.";
