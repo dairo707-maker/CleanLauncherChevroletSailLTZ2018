@@ -108,3 +108,27 @@ Mover la inicialización de `nowPlaying` antes de construir las vistas en `onCre
 | **(g)** | **Flechas tarjeta Radio en Home**: sintonizan directamente | **PASS** | Sintonía paso a paso directamente desde la pantalla de inicio. |
 
 
+---
+
+# Checklist de pruebas — Entrega 6 (Mini-mapa, CarEvents, Saludo en caliente, Franjas Pico y Placa y T10 Arranque)
+
+| Letra | Prueba | Resultado | Observación |
+|:-----:|--------|:---------:|-------------|
+| **(a)** | **Mini-mapa en el centro**: visible, sigue el carro, tocar abre Waze y mantener abre Maps | **PASS (Parcial / Estático)** | Mini-mapa OSM oscuro visible en el centro (`diagnostico/screenshot_p6_home.png`) con punto GPS azul y botones de acceso a Waze y Maps. Prueba en movimiento pendiente (auto estacionado en casa). |
+| **(b)** | **Botón Radio**: abre la app nativa | **PASS** | Verificado: tocar icono Radio en el dock abre `com.android.fmradio/.FmMainActivity` directamente. |
+| **(c)** | **Apagar y prender la llave (ACC OFF/ON)**: luces cambian la imagen sin entrar a Ajustes; velocímetro al andar | **PASS (Luces)** / **PEND (Velocímetro en ruta)** | Confirmado en el carro tras apagar y prender llave: las luces del vehículo cambian la imagen del Sail (día/noche) automáticamente sin entrar a Ajustes (`CarEvents`). Velocímetro y movimiento pendientes de prueba rodando. |
+| **(d)** | **Saludo por voz**: tiempo desde que aparece el launcher hasta oír la voz (segunda vez que se prende) | **PASS** | Tras apagar y encender llave (QuickBoot sin logo de Chevrolet), el launcher apareció más rápido y con menor demora gracias al pre-calentamiento de `Tts` y disparo desde `MainActivity.onResume`. |
+| **(e)** | **Carro animado (`CarMotionView`)**: animado al andar, quieto al parar | **PASS (Quieto)** / **PEND (Andando)** | Con el vehículo detenido en casa, el carro permanece quieto (sin líneas de movimiento ni giro de ruedas). Falta probar rodando en calle. |
+| **(f)** | **Configuración**: franjas de pico y placa y temporada especial guardan | **PASS** | Se visualizaron los campos de franjas (`06:30-08:30, 11:30-14:30, 17:30-19:30`) y temporada especial (`Desde`/`Hasta` AAAA-MM-DD) en `SetupActivity` (`diagnostico/screenshot_p6_setup.png`). |
+
+## Diagnóstico T10 (Arranque / QuickBootManager)
+
+- **Archivos extraídos del radio**:
+  - `diagnostico/arranque.txt`: propiedades `getprop`, `settings list system/global`, `dumpsys power`, `dumpsys deviceidle whitelist`, `dumpsys activity services com.simple.carlauncher`.
+  - `diagnostico/apk/com.autochips.quickbootmanager.apk`: APK del sistema extraído de `/system/app/QuickBootManager/QuickBootManager.apk` (14.878 bytes).
+  - `diagnostico/qb/qb_list.xml`: lista blanca de QuickBoot extraída de `/system/etc/qb_list.xml`.
+- **Prueba física ACC OFF (20 s) → ACC ON**:
+  - **¿Se vio el logo de Chevrolet?**: **NO (`N`)**. El radio realiza **QuickBoot (suspensión en RAM)**, no cold boot completo, y el launcher apareció rápido al dar contacto.
+- **Hallazgo clave en `/system/etc/qb_list.xml`**:
+  - `QuickBootManager` (`ro.atc_qb_support=1`) utiliza `/system/etc/qb_list.xml` para decidir qué procesos conservar vivos durante `ACC OFF` (QuickBoot sleep) y cuáles matar.
+  - En `<qb_list>` están incluidos los launchers de fábrica (`com.android.launcher3`, `com.android.launcher`, `com.xygala.launcher`), pero **NO está `com.simple.carlauncher`**. Por eso `QuickBootManager` mata el proceso de `com.simple.carlauncher` al apagar la llave, y al volver `ACC ON` Android debe relanzar el proceso de la actividad HOME desde cero.

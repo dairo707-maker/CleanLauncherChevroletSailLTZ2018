@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<qb_list>
+<!-- white list-->
+        <app_whitelist name="android" />
+        <app_whitelist name="com.android.basicsmsreceiver" />
+        <app_whitelist name="com.android.defcontainer" />
+        <app_whitelist name="com.xyauto.services" />
+        <app_whitelist name="com.android.inputmethod.latin" />
+        <app_whitelist name="com.android.keychain" />
+        <app_whitelist name="com.android.launcher3" />
+	<app_whitelist name="com.android.launcher" />
+        <app_whitelist name="com.xygala.launcher" />
+	<app_whitelist name="com.xygala.canbus" />
+	<app_whitelist name="com.kyhero.car.myhost" />
+	<app_whitelist name="com.bumblebee.remindeasy" />
+	<app_whitelist name="com.bumblebee.remindeasy.service" />
+        <app_whitelist name="com.android.location.fused" />
+        <app_whitelist name="com.android.mms" />
+        <app_whitelist name="com.android.mms.service" />
+        <app_whitelist name="com.android.phone" />
+        <app_whitelist name="com.android.providers.applications" />
+        <app_whitelist name="com.android.providers.blockednumber" />
+        <app_whitelist name="com.android.providers.calendar" />
+        <app_whitelist name="com.android.providers.contacts" />
+        <app_whitelist name="com.android.providers.downloads" />
+        <app_whitelist name="com.android.providers.downloads.ui" />
+        <app_whitelist name="com.android.providers.drm" />
+        <app_whitelist name="com.android.providers.media" />
+        <app_whitelist name="com.android.providers.phone" />
+        <app_whitelist name="com.android.providers.settings" />
+        <app_whitelist name="com.android.providers.telephony" />
+        <app_whitelist name="com.android.providers.userdictionary" />
+        <app_whitelist name="com.android.settings" />
+        <app_whitelist name="com.android.systemui" />
+        <app_whitelist name="com.android.wallpaper.livepicker" />
+        <app_whitelist name="com.android.wallpaperpicker" />
+        <app_whitelist name="com.autochips.dvr" />
+        <app_whitelist name="com.autochips.dvrmipi" />
+        <app_whitelist name="com.autochips.camera" />
+        <app_whitelist name="com.autochips.backcarapp" />
+        <app_whitelist name="com.mediatek.op01.plugin" />
+        <app_whitelist name="com.mediatek.settings.op01" />
+        <app_whitelist name="system" />
+
+<!-- yellow list-->
+</qb_list>

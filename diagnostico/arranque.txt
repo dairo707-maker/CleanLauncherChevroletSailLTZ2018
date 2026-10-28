@@ -1,0 +1,323 @@
+===== DIAGNOSTICO DE ARRANQUE DEL RADIO 192.168.1.7:5555 =====
+
+##### getprop (qb|quick|boot|sleep|acc)
+[dev.bootcomplete]: [1]
+[init.svc.bootanim]: [stopped]
+[pm.dexopt.boot]: [verify]
+[pm.dexopt.first-boot]: [quicken]
+[pm.dexopt.install]: [quicken]
+[ro.atc_qb_support]: [1]
+[ro.boot.bootreason]: [power_key]
+[ro.boot.hardware]: [ac8227l]
+[ro.boot.phandle]: []
+[ro.boot.selinux]: [permissive]
+[ro.boot.serialno]: [AAAUMBSS958SLZ9L]
+[ro.boot.verifiedbootstate]: [green]
+[ro.boot.veritymode]: [disabled]
+[ro.bootimage.build.date]: [2021年 06月 08日 星期二 16:36:59 CST]
+[ro.bootimage.build.date.utc]: [1623141419]
+[ro.bootimage.build.fingerprint]: [alps/full_8227L_demo/8227L_demo:9.1/O11019/1623141599:user/test-keys]
+[ro.bootloader]: [unknown]
+[ro.bootmode]: [unknown]
+[ro.boottime.DMAgent]: [7113557076]
+[ro.boottime.NvRAMAgent]: [6782042768]
+[ro.boottime.adbd]: [7067890153]
+[ro.boottime.aee-reinit]: [22946717077]
+[ro.boottime.aee_aed]: [5517092768]
+[ro.boottime.aee_aedv]: [5519293076]
+[ro.boottime.aeev-reinit]: [22957055077]
+[ro.boottime.atc_hal_audhw]: [6378467153]
+[ro.boottime.audio-hal-2-0]: [6350550537]
+[ro.boottime.audioserver]: [7092164230]
+[ro.boottime.backcar_daemon]: [6380914076]
+[ro.boottime.bluetooth-1-0]: [6352702307]
+[ro.boottime.bootanim]: [8382140768]
+[ro.boottime.broadcastradio-hal]: [6354833307]
+[ro.boottime.camerahalserver]: [7211725384]
+[ro.boottime.cameraserver]: [7094216461]
+[ro.boottime.camhal3lite]: [7213940230]
+[ro.boottime.cas-hal-1-0]: [6356851076]
+[ro.boottime.chg_mcu_val]: [23754874615]
+[ro.boottime.configstore-hal-1-0]: [6358960845]
+[ro.boottime.console]: [7061127691]
+[ro.boottime.drm]: [7115606845]
+[ro.boottime.drm-hal-1-0]: [6361755076]
+[ro.boottime.dvr_daemon]: [6383136384]
+[ro.boottime.einfo]: [5412581922]
+[ro.boottime.emsvr_user]: [7077848076]
+[ro.boottime.gatekeeper-1-0]: [6363703537]
+[ro.boottime.gatekeeperd]: [7251290537]
+[ro.boottime.ged_srv]: [23402388308]
+[ro.boottime.gnss_service]: [7241384614]
+[ro.boottime.gralloc-2-0]: [6365666845]
+[ro.boottime.healthd]: [6401470537]
+[ro.boottime.hidl_memory]: [6348421768]
+[ro.boottime.hwcomposer-2-1]: [6367894614]
+[ro.boottime.hwservicemanager]: [5446157384]
+[ro.boottime.iapd]: [6385279999]
+[ro.boottime.init]: [1275]
+[ro.boottime.init.cold_boot_wait]: [0]
+[ro.boottime.init.mount_all.default]: [3372]
+[ro.boottime.init.selinux]: [117]
+[ro.boottime.installd]: [7119597614]
+[ro.boottime.keymanage-1-0]: [6392388999]
+[ro.boottime.keymaster-3-0]: [5532809307]
+[ro.boottime.keystore]: [7151637614]
+[ro.boottime.lbs_hidl_service]: [7236736768]
+[ro.boottime.light-hal-2-0]: [6369941384]
+[ro.boottime.lmkd]: [6403670691]
+[ro.boottime.logd]: [5442197230]
+[ro.boottime.logd-reinit]: [6308477384]
+[ro.boottime.mdnsd]: [7248067922]
+[ro.boottime.media]: [7176454537]
+[ro.boottime.mediacodec]: [7209329768]
+[ro.boottime.mediadrm]: [7153823461]
+[ro.boottime.mediaextractor]: [7155919845]
+[ro.boottime.mediametrics]: [7158063922]
+[ro.boottime.memtrack-hal-1-0]: [6373965768]
+[ro.boottime.metalogo_daemon]: [6387385460]
+[ro.boottime.mnld]: [7084950768]
+[ro.boottime.mobile_log_d]: [7178554076]
+[ro.boottime.mtkcodecservice-1-1]: [6394631537]
+[ro.boottime.myspl]: [23929965461]
+[ro.boottime.netd]: [6064734153]
+[ro.boottime.netdagent]: [7401788307]
+[ro.boottime.netdiag]: [7191624999]
+[ro.boottime.nvram_daemon]: [7238951153]
+[ro.boottime.power-hal-1-1]: [6396813076]
+[ro.boottime.servicemanager]: [5444181307]
+[ro.boottime.storaged]: [7193824384]
+[ro.boottime.surfaceflinger]: [6406052999]
+[ro.boottime.thermal]: [7216108153]
+[ro.boottime.thermal_manager]: [7218237384]
+[ro.boottime.thermald]: [7117615691]
+[ro.boottime.thermalservice]: [6414352768]
+[ro.boottime.timash]: [22927435154]
+[ro.boottime.tombstoned]: [7350932537]
+[ro.boottime.ueventd]: [1641311460]
+[ro.boottime.usb-hal-1-1]: [6389921230]
+[ro.boottime.usbdaemon]: [7195953461]
+[ro.boottime.usbdongled]: [22700364846]
+[ro.boottime.vndservicemanager]: [5448592614]
+[ro.boottime.vold]: [5535707999]
+[ro.boottime.webview_zygote32]: [18216448615]
+[ro.boottime.welink]: [22929511538]
+[ro.boottime.wifi_hal_legacy]: [6376071999]
+[ro.boottime.wificond]: [7198121230]
+[ro.boottime.wmt_launcher]: [6419347999]
+[ro.boottime.wmt_loader]: [6417137614]
+[ro.boottime.wpa_supplicant]: [29453583615]
+[ro.boottime.xyrmfile2]: [23941305923]
+[ro.boottime.zygote]: [6066814230]
+[ro.runtime.firstboot]: [1793130943134]
+[service.bootanim.exit]: [1]
+[sys.boot_completed]: [1]
+[sys.logbootcomplete]: [1]
+[sys.rescue_boot_count]: [1]
+[sys.xy.accOffClear]: [false]
+[sys.xy.bootcompleted]: [true]
+##### settings list system (sleep|qb|acc|standby|off)
+Navigation_Sleep_Mode=0
+accelerometer_rotation=1
+canbus_back_off=0
+hasaccoff=0
+hide_rotation_lock_toggle_for_accessibility=1
+lightOffBrightness=51
+screen_off_timeout=1879048191
+xy_lockscreen_off=1
+##### settings list global (sleep|qb|acc|standby|off)
+dock_sounds_enabled_when_accessbility=0
+wifi_sleep_policy=2
+##### dumpsys power (120 lineas)
+POWER MANAGER (dumpsys power)
+
+Power Manager State:
+  Settings power_manager_constants:
+    no_cached_wake_locks=true
+  mDirty=0x0
+  mWakefulness=Awake
+  mWakefulnessChanging=false
+  mIsPowered=false
+  mPlugType=0
+  mBatteryLevel=100
+  mBatteryLevelWhenDreamStarted=0
+  mDockState=0
+  mStayOn=false
+  mProximityPositive=false
+  mBootCompleted=true
+  mSystemReady=true
+  mHalAutoSuspendModeEnabled=false
+  mHalInteractiveModeEnabled=true
+  mWakeLockSummary=0x1
+  mNotifyLongScheduled=+11s75ms
+  mNotifyLongDispatched=-48s926ms
+  mNotifyLongNextCheck=(none)
+  mUserActivitySummary=0x1
+  mRequestWaitForNegativeProximity=false
+  mSandmanScheduled=false
+  mSandmanSummoned=false
+  mLowPowerModeEnabled=false
+  mBatteryLevelLow=false
+  mLightDeviceIdleMode=false
+  mDeviceIdleMode=false
+  mDeviceIdleWhitelist=[2000, 10007, 10016, 10084]
+  mDeviceIdleTempWhitelist=[]
+  mLastWakeTime=6647855 (1664796 ms ago)
+  mLastSleepTime=6643231 (1669420 ms ago)
+  mLastUserActivityTime=8291621 (21030 ms ago)
+  mLastUserActivityTimeNoChangeLights=26564 (8286087 ms ago)
+  mLastInteractivePowerHintTime=8291621 (21030 ms ago)
+  mLastScreenBrightnessBoostTime=0 (8312651 ms ago)
+  mScreenBrightnessBoostInProgress=false
+  mDisplayReady=true
+  mHoldingWakeLockSuspendBlocker=true
+  mHoldingDisplaySuspendBlocker=true
+
+Settings and Configuration:
+  mDecoupleHalAutoSuspendModeFromDisplayConfig=false
+  mDecoupleHalInteractiveModeFromDisplayConfig=false
+  mWakeUpWhenPluggedOrUnpluggedConfig=true
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mTheaterModeEnabled=false
+  mSuspendWhenScreenOffDueToProximityConfig=false
+  mDreamsSupportedConfig=false
+  mDreamsEnabledByDefaultConfig=true
+  mDreamsActivatedOnSleepByDefaultConfig=false
+  mDreamsActivatedOnDockByDefaultConfig=true
+  mDreamsEnabledOnBatteryConfig=false
+  mDreamsBatteryLevelMinimumWhenPoweredConfig=-1
+  mDreamsBatteryLevelMinimumWhenNotPoweredConfig=15
+  mDreamsBatteryLevelDrainCutoffConfig=5
+  mDreamsEnabledSetting=true
+  mDreamsActivateOnSleepSetting=false
+  mDreamsActivateOnDockSetting=true
+  mDozeAfterScreenOffConfig=false
+  mLowPowerModeSetting=false
+  mAutoLowPowerModeConfigured=false
+  mAutoLowPowerModeSnoozing=false
+  mMinimumScreenOffTimeoutConfig=10000
+  mMaximumScreenDimDurationConfig=2147483647
+  mMaximumScreenDimRatioConfig=0.20000005
+  mScreenOffTimeoutSetting=1879048191
+  mSleepTimeoutSetting=-1
+  mMaximumScreenOffTimeoutFromDeviceAdmin=2147483647 (enforced=false)
+  mStayOnWhilePluggedInSetting=0
+  mScreenBrightnessSetting=255
+  mScreenAutoBrightnessAdjustmentSetting=0.0
+  mScreenBrightnessModeSetting=0
+  mScreenBrightnessOverrideFromWindowManager=-1
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+  mTemporaryScreenBrightnessSettingOverride=51
+  mTemporaryScreenAutoBrightnessAdjustmentSettingOverride=NaN
+  mDozeScreenStateOverrideFromDreamManager=0
+  mDozeScreenBrightnessOverrideFromDreamManager=-1
+  mScreenBrightnessSettingMinimum=10
+  mScreenBrightnessSettingMaximum=255
+  mScreenBrightnessSettingDefault=255
+  mScreenBrightnessForVrSettingDefault=86
+  mScreenBrightnessForVrSetting=86
+  mDoubleTapWakeEnabled=false
+  mIsVrModeEnabled=false
+
+Sleep timeout: -1 ms
+Screen off timeout: 1879048191 ms
+Screen dim duration: 375809728 ms
+
+UID states (changing=false changed=false):
+  UID 1000:   ACTIVE  count=0 state=0
+  UID 1001:   ACTIVE  count=0 state=0
+  UID 1002:   ACTIVE  count=0 state=6
+  UID 1037: INACTIVE  count=0 state=17
+  UID u0a4: INACTIVE  count=0 state=17
+  UID u0a5: INACTIVE  count=0 state=17
+  UID u0a6: INACTIVE  count=1 state=11
+  UID u0a7:   ACTIVE  count=0 state=3
+  UID u0a13:   ACTIVE  count=0 state=15
+  UID u0a15: INACTIVE  count=0 state=17
+  UID u0a16: INACTIVE  count=0 state=17
+  UID u0a18:   ACTIVE  count=0 state=0
+  UID u0a21:   ACTIVE  count=0 state=17
+  UID u0a34: INACTIVE  count=0 state=11
+  UID u0a35: INACTIVE  count=0 state=17
+  UID u0a36:   ACTIVE  count=0 state=0
+  UID u0a43:   ACTIVE  count=0 state=3
+  UID u0a47:   ACTIVE  count=0 state=14
+  UID u0a49: INACTIVE  count=0 state=17
+  UID u0a53:   ACTIVE  count=0 state=7
+  UID u0a77:   ACTIVE  count=0 state=17
+  UID u0a84:   ACTIVE  count=0 state=2
+  UID u0i2: INACTIVE  count=0 state=17
+
+##### dumpsys deviceidle whitelist
+system-excidle,com.android.providers.downloads,10016
+system-excidle,com.android.vending,10021
+system-excidle,com.google.android.apps.work.oobconfig,10017
+system-excidle,com.google.android.gms,10007
+system-excidle,com.android.shell,2000
+system,com.android.providers.downloads,10016
+system,com.google.android.gms,10007
+system,com.android.shell,2000
+user,com.simple.carlauncher,10084
+##### dumpsys activity services com.simple.carlauncher
+ACTIVITY MANAGER SERVICES (dumpsys activity services)
+  User 0 active services:
+  * ServiceRecord{aad711b u0 com.simple.carlauncher/.DriverAssist}
+    intent={cmp=com.simple.carlauncher/.DriverAssist}
+    packageName=com.simple.carlauncher
+    processName=com.simple.carlauncher
+    baseDir=/data/app/com.simple.carlauncher-Qx-beIVlQsdKDu7uAEWNyQ==/base.apk
+    dataDir=/data/user/0/com.simple.carlauncher
+    app=ProcessRecord{d618bce 12112:com.simple.carlauncher/u0a84}
+    isForeground=true foregroundId=4711 foregroundNoti=Notification(channel=running pri=0 contentView=null vibrate=null sound=null defaults=0x0 flags=0x62 color=0x00000000 vis=PRIVATE)
+    createTime=-38s96ms startingBgTimeout=--
+    lastActivity=-20s615ms restartTime=-38s95ms createdFromFg=true
+    startRequested=true delayedStop=false stopIfKilled=false callStart=true lastStartId=4
+
+  * ServiceRecord{76f3015 u0 com.simple.carlauncher/.GreeterService}
+    intent={cmp=com.simple.carlauncher/.GreeterService}
+    packageName=com.simple.carlauncher
+    processName=com.simple.carlauncher
+    baseDir=/data/app/com.simple.carlauncher-Qx-beIVlQsdKDu7uAEWNyQ==/base.apk
+    dataDir=/data/user/0/com.simple.carlauncher
+    app=ProcessRecord{d618bce 12112:com.simple.carlauncher/u0a84}
+    isForeground=true foregroundId=4711 foregroundNoti=Notification(channel=running pri=0 contentView=null vibrate=null sound=null defaults=0x0 flags=0x62 color=0x00000000 vis=PRIVATE)
+    createTime=-38s104ms startingBgTimeout=--
+    lastActivity=-20s622ms restartTime=-38s103ms createdFromFg=true
+    startRequested=true delayedStop=false stopIfKilled=false callStart=true lastStartId=4
+
+  * ServiceRecord{3c0f2a u0 com.simple.carlauncher/.Odometer}
+    intent={cmp=com.simple.carlauncher/.Odometer}
+    packageName=com.simple.carlauncher
+    processName=com.simple.carlauncher
+    baseDir=/data/app/com.simple.carlauncher-Qx-beIVlQsdKDu7uAEWNyQ==/base.apk
+    dataDir=/data/user/0/com.simple.carlauncher
+    app=ProcessRecord{d618bce 12112:com.simple.carlauncher/u0a84}
+    isForeground=true foregroundId=4711 foregroundNoti=Notification(channel=running pri=0 contentView=null vibrate=null sound=null defaults=0x0 flags=0x62 color=0x00000000 vis=PRIVATE)
+    createTime=-38s100ms startingBgTimeout=--
+    lastActivity=-20s621ms restartTime=-38s100ms createdFromFg=true
+    startRequested=true delayedStop=false stopIfKilled=false callStart=true lastStartId=4
+
+  Connection bindings to services:
+  * ConnectionRecord{eb1120f u0 CR FGS DEAD com.simple.carlauncher/.MediaListener:@2be8b6e}
+    binding=AppBindRecord{b933cad com.simple.carlauncher/.MediaListener:system}
+    conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@2be8b6e flags=0x5000001
+  * ConnectionRecord{d638df5 u0 CR FGS DEAD com.simple.carlauncher/.MediaListener:@41b8f2c}
+    binding=AppBindRecord{4fbbbe2 com.simple.carlauncher/.MediaListener:system}
+    conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@41b8f2c flags=0x5000001
+  * ConnectionRecord{10dd477 u0 CR FGS DEAD com.simple.carlauncher/.MediaListener:@4f4b676}
+    binding=AppBindRecord{53a0b73 com.simple.carlauncher/.MediaListener:system}
+    conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@4f4b676 flags=0x5000001
+  * ConnectionRecord{bc73024 u0 CR FGS DEAD com.simple.carlauncher/.MediaListener:@d42b0b7}
+    binding=AppBindRecord{7261a30 com.simple.carlauncher/.MediaListener:system}
+    conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@d42b0b7 flags=0x5000001
+  * ConnectionRecord{b0d6573 u0 CR FGS DEAD com.simple.carlauncher/.MediaListener:@efc3de2}
+    binding=AppBindRecord{4fbbbe2 com.simple.carlauncher/.MediaListener:system}
+    conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@efc3de2 flags=0x5000001
+##### pm path com.autochips.quickbootmanager
+/system/app/QuickBootManager/QuickBootManager.apk
+##### ls -l /system/etc /vendor/etc (qb|quick|boot)
+-rw-r--r-- 1 root root    2394 2008-12-31 12:00 qb_list.xml
+##### logo de Chevrolet visto: N (arranque rapido QuickBoot sin logo de Chevrolet, launcher aparecio rapido)
+##### logo de Chevrolet visto: N (arranque rapido QuickBoot sin logo de Chevrolet, launcher aparecio rapido)
+
