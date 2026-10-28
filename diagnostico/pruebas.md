@@ -132,3 +132,15 @@ Mover la inicialización de `nowPlaying` antes de construir las vistas en `onCre
 - **Hallazgo clave en `/system/etc/qb_list.xml`**:
   - `QuickBootManager` (`ro.atc_qb_support=1`) utiliza `/system/etc/qb_list.xml` para decidir qué procesos conservar vivos durante `ACC OFF` (QuickBoot sleep) y cuáles matar.
   - En `<qb_list>` están incluidos los launchers de fábrica (`com.android.launcher3`, `com.android.launcher`, `com.xygala.launcher`), pero **NO está `com.simple.carlauncher`**. Por eso `QuickBootManager` mata el proceso de `com.simple.carlauncher` al apagar la llave, y al volver `ACC ON` Android debe relanzar el proceso de la actividad HOME desde cero.
+
+## Entrega 7 (27-oct-2026)
+
+| Paso | Resultado | Detalle |
+|---|---|---|
+| T5 instalar build de firma fija | **PASS** | Build verde, `adb install` Success, HOME fijado. Radio, cámara, Bluetooth, volumen, Waze y YouTube Music verificados por el dueño. |
+| T14 respaldo de particiones | **PASS** | 24 particiones + `mmcblk0boot0/1`, 0 fallidas, todas con suma coincidente, 2154 MB en `C:\RadioBackup\particiones\20261027_215558`. `particiones.bat` corregido (ruta `by-name` real: `/dev/block/platform/soc/11230000.mmc/by-name`). |
+| T13 lista blanca de QuickBoot | **FALLO, revertido** | `/system` no es escribible. Con `adb root` la escritura parece válida pero se pierde al reiniciar o queda en ceros. `/sys/block/mmcblk0/mmcblk0p22/ro` = 1; `blockdev --setrw` lo pone en 0, pero no basta. `logcat -b kernel`: `[MSDC_WP] the wp partiton ANDROID will be write/erase ... force fail` / `write protect violation` → ext4 aborta el diario y remonta en solo lectura. El controlador MSDC del kernel protege la partición ANDROID. Original verificado tras reiniciar (md5 `56d0f06b…`). |
+| T15, T16, T18 | **No ejecutados** | Escriben en `/system`, bloqueado por la protección anterior. |
+| T17 animación de arranque | **No ejecutado** | Pendiente de revisar dónde guarda el radio la animación. |
+
+Conclusión: el radio protege `/system` (y probablemente `/vendor`) contra escritura a nivel de kernel. `/data` y `/cache` sí se pueden escribir. El plan debe usar solo `/data`, ajustes de Android y el propio launcher (p. ej. relanzarse con `CarEvents` en `xy.android.acc.on`).
