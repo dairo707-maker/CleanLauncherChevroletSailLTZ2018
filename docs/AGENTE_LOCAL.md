@@ -212,3 +212,11 @@ adb -s 192.168.1.7:5555 shell ls -l /system/xbin/su /system/bin/su /sbin/su
 adb -s 192.168.1.7:5555 shell getprop ro.debuggable
 ```
 Guardar la salida en `diagnostico\root.txt`. Subir también lo que faltó de T10: `diagnostico\arranque*.txt`, `diagnostico\qb\qb_list.xml` y `diagnostico\apk\com.autochips.quickbootmanager.apk` (con `git add -f` si `.gitignore` los excluye).
+
+## T13 — Launcher en la lista blanca de QuickBoot (requiere root, T12)
+
+Evita que el radio cierre Clean Launcher al apagar la llave. Cambia un archivo del sistema, con copia del original y reversión.
+1. `tools\windows\qb_lista.bat aplicar` — guarda `C:\RadioBackup\qb_list.xml.orig`, copia la línea del launcher de fábrica cambiando el paquete, valida el XML, pide confirmación, escribe y ofrece reiniciar.
+2. Éxito: el `grep -c` final muestra `1` o más, y tras reiniciar + apagar/prender la llave, `adb shell pidof com.simple.carlauncher` muestra el **mismo** número de proceso antes y después.
+3. Revertir: `tools\windows\qb_lista.bat revertir`.
+4. Reportar la línea agregada, el `ls -lZ` y el resultado del punto 2. Subir `C:\RadioBackup\qb_list.xml.orig` como `diagnostico\qb\qb_list.xml` (con `git add -f`) si aún no está en el repo.
