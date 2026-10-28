@@ -180,3 +180,35 @@ Requiere al humano en el carro: contacto encendido y el humano disponible para l
 6. Comandos `adb` usados por esta tarea (son todos de lectura): `get-state`, `connect`, `shell getprop`, `shell settings list system|global`, `shell dumpsys power|deviceidle whitelist|activity services com.simple.carlauncher`, `shell pm path com.autochips.quickbootmanager`, `pull` (APK y archivos qb), `shell ls`, `shell uptime`, `logcat -d -b all -t 3000`, `shell dmesg`.
 7. Subida (solo si el humano lo pide): `git add diagnostico\arranque*.txt diagnostico\apk\com.autochips.quickbootmanager.apk diagnostico\qb`, luego commit y push a `claude/amazing-lamport-auessa`.
 8. Reporta: la respuesta del logo (`S` o `N`), si `uptime` indica reinicio completo, y las rutas creadas.
+
+## T11 — Llave de firma fija (una sola vez)
+
+Objetivo: que todos los APK salgan con la misma firma y se instalen encima sin desinstalar (desinstalar borra km, tanqueadas, turnos y mantenimiento).
+
+1. **Antes**, el humano exporta sus datos: Combustible y costos → Exportar a USB, y anota el km del tablero.
+2. Generar la llave en el PC. El **humano** elige la contraseña y la escribe él mismo; el agente no la anota en archivos, commits ni chats. `keytool` viene con el JDK o con Android Studio (`C:\Program Files\Android\Android Studio\jbr\bin\keytool.exe`).
+   ```
+   keytool -genkeypair -keystore C:\RadioBackup\cleanlauncher.keystore -alias cleanlauncher -keyalg RSA -keysize 2048 -validity 20000 -dname "CN=Clean Launcher Sail"
+   ```
+3. Copiar la llave en base64 al portapapeles (PowerShell):
+   ```
+   [Convert]::ToBase64String([IO.File]::ReadAllBytes("C:\RadioBackup\cleanlauncher.keystore")) | Set-Clipboard
+   ```
+4. El **humano** crea dos secretos en GitHub: repositorio → Settings → Secrets and variables → Actions → New repository secret:
+   - `SIGNING_KEYSTORE_B64` = lo copiado en el paso 3.
+   - `SIGNING_KEYSTORE_PASS` = la contraseña del paso 2.
+5. Guardar `C:\RadioBackup\cleanlauncher.keystore` en un lugar seguro (si se pierde, habrá que desinstalar una vez más). **Nunca** subirlo al repositorio.
+6. Pedir al orquestador un build nuevo (o re-ejecutar el workflow). Esta primera vez sí hay que desinstalar (`adb -s 192.168.1.7:5555 uninstall com.simple.carlauncher`) e instalar con T5; desde ahí, siempre encima.
+7. Reportar: "secretos creados" y el resultado de T5. No reportar la contraseña.
+
+## T12 — ¿Hay acceso root? (solo lectura)
+
+Para saber si se puede añadir el launcher a la lista de QuickBoot (`/system/etc/qb_list.xml`). No modificar nada.
+```
+adb -s 192.168.1.7:5555 shell id
+adb -s 192.168.1.7:5555 root
+adb -s 192.168.1.7:5555 shell id
+adb -s 192.168.1.7:5555 shell ls -l /system/xbin/su /system/bin/su /sbin/su
+adb -s 192.168.1.7:5555 shell getprop ro.debuggable
+```
+Guardar la salida en `diagnostico\root.txt`. Subir también lo que faltó de T10: `diagnostico\arranque*.txt`, `diagnostico\qb\qb_list.xml` y `diagnostico\apk\com.autochips.quickbootmanager.apk` (con `git add -f` si `.gitignore` los excluye).

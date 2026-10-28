@@ -104,6 +104,15 @@ exit /b 0
 :instalacion_fallo
 call :log "FALLO la instalacion de %APK%"
 echo ERROR: la instalacion fallo. Revisa el mensaje de arriba.
+findstr /c:"INCOMPATIBLE" "%SALIDA%" >nul
+if not errorlevel 1 (
+  echo.
+  echo El APK instalado tiene otra firma. Para cambiarla hay que DESINSTALAR, y eso BORRA los datos
+  echo de la app ^(km, tanqueadas, turnos, mantenimiento^). ANTES de desinstalar, en el radio:
+  echo   Combustible y costos ^> Exportar a USB, y anota el km del tablero.
+  echo Luego: adb -s %RADIO% uninstall com.simple.carlauncher y vuelve a ejecutar este script.
+  echo Con la llave de firma fija ^(T11 en docs\AGENTE_LOCAL.md^) no vuelve a pasar.
+)
 exit /b 1
 
 :log

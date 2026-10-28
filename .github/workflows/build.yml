@@ -21,10 +21,25 @@ jobs:
         with:
           packages: "platforms;android-33 build-tools;36.0.0"
 
+      # Same signature on every build, so the radio installs updates without wiping the app's data.
+      # Uses the repo secrets SIGNING_KEYSTORE_B64 / SIGNING_KEYSTORE_PASS when set (see T11 in
+      # docs/AGENTE_LOCAL.md); without them build.sh falls back to a throwaway debug key.
+      - name: Restore signing key
+        env:
+          KS_B64: ${{ secrets.SIGNING_KEYSTORE_B64 }}
+        if: env.KS_B64 != ''
+        run: echo "$KS_B64" | base64 -d > "$RUNNER_TEMP/cleanlauncher.keystore"
+
       - name: Build
         env:
           BUILD_TOOLS: "36.0.0"
-        run: sh build.sh
+          KS_B64: ${{ secrets.SIGNING_KEYSTORE_B64 }}
+          KS_PASS: ${{ secrets.SIGNING_KEYSTORE_PASS }}
+        run: |
+          if [ -n "$KS_B64" ]; then
+            export KEYSTORE="$RUNNER_TEMP/cleanlauncher.keystore" KEYSTORE_PASS="$KS_PASS" KEY_ALIAS=cleanlauncher
+          fi
+          sh build.sh
 
       - uses: actions/upload-artifact@v4
         with:
